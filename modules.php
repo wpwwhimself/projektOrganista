@@ -2,32 +2,30 @@
 $conn = new mysqli("localhost", "root", "", "szszsz");
 if($conn->connect_error) echo "Nie można połączyć się z bazą: ".$conn->connect_error;
 $conn->set_charset("utf8");
+
+if(preg_match("/ostatni/", $_GET['sub'])){
+  $_GET = json_decode(file_get_contents("songhistory.json"), true);
+}
 ?>
 <script type="text/babel">
-/*
- * TODO
- * - dodawanie pieśni w locie
- * - formuły: ślubna, majowa, czerwcowa, pogrzebowa, adwentowa itd...
- * - 
- */
 /* BETONIARKA DANYCH */
 
 var piesni = [];
+var okazja = 0;
 
 <?php
 switch($_GET['a_formula']){
-  case "Adwent":
-    $inneokazje .= ", 5"; break;
-  case "Boże Narodzenie":
-    $inneokazje .= ", 6"; break;
-  case "Wielki Post":
-    $inneokazje .= ", 7"; break;
+  case "Adwent": $inneokazje = ", 5"; break;
+  case "Boże Narodzenie": $inneokazje = ", 6"; break;
+  case "Wielki Post": $inneokazje = ", 7"; break;
   case "zwykła wielkanocna":
-  case "Wielkanoc":
-    $inneokazje .= ", 8"; break;
-  default:
-    $inneokazje = "";
+    case "Wielkanoc": $inneokazje = ", 8"; break;
+  default: $inneokazje = "";
 }
+
+if($inneokazje != ""){ ?>
+okazja = <?php echo substr($inneokazje, -1); ?>;
+<?php }
 
 $q = "SELECT * 
       FROM pieśni p 
@@ -100,14 +98,17 @@ var songlist = new Array();
 /* lista pieśni */
 $songlist = [
   "Przed mszą" => $_GET["a_pre"],
+  "Majowe/Czerwcowe" => (in_array($_GET["a_formula"], ["majowe", "czerwcowe"])) ? $_GET["a_formula"] : "",
+  "Gorzkie żale" => ($_GET["a_formula"] == "Wielki Post") ? "czst" : "",
   "Wejście" => $_GET["a_piesn_wejscie"],
   "Kyrie" => "czst",
   "Przed Gloria" => $_GET["a_piesn_przedgloria"],
   "Gloria" => (in_array($_GET["a_formula"], ["Adwent", "Wielki Post"])) ? "" : "czst",
   "Psalm" => $_GET["a_psalm"],
-  "Sekwencja wielkanocna" => ($_GET["a_formula"] == "zwykła wielkanocna") ? "Niech w święto radosne" : "",
+  "Sekwencja wielkanocna" => (in_array($_GET["a_formula"], ["Wielkanoc", "zwykła wielkanocna"])) ? "Niech w święto radosne" : "",
   "Aklamacja" => $_GET["a_aklamacja"],
-  "Credo" => "czst",
+  "Credo" => ($_GET['a_formula'] == "ślubna") ? "" : "czst",
+  "Ślub" => ($_GET['a_formula'] == "ślubna") ? "czst" : "",
   "Przygotowanie darów" => $_GET["a_piesn_dary"],
   "Sanctus" => "czst",
   "Przemienienie" => "czst",
@@ -138,8 +139,11 @@ var preferencje_names = ["Wejście", "Przygotowanie darów", "Komunia", "Uwielbi
 const czst_color = "<?php echo $_GET['a_czescistale']; ?>";
 
 function Lyrics(props){
-  let raw = props.raw.replace(/Ref\.\n/g, '<span class="chorus">');
-  raw = raw.replace(/\d\.\n/g, match => {return "<li start="+match.substring(0, match.length - 2)+">"});
+  let raw = props.raw;
+  raw = raw.replace(/\*\*\n/g, '</span><br>');
+  raw = raw.replace(/\*\n/g, '<span class="chorus">');
+  raw = raw.replace(/_(.{1,5})_/g, '<u>$1</u>');
+  raw = raw.replace(/\d+\.\n/g, match => {return "<li start="+match.substring(0, match.length - 2)+">"});
   raw = raw.replace(/\n/g, "<br />");
 
   return(<ol className="lyrics" dangerouslySetInnerHTML={{ __html: raw}} />);
@@ -150,6 +154,196 @@ function Song(){
   const [kiedy, title] = window.songlist[page - 1];
   
   switch(kiedy){
+    case "Majowe/Czerwcowe":
+      let flag = (title == "majowe");
+      let subtitle = (flag) ? "Pod Twoją obronę" : "Do Serca Twojego";
+
+      return(
+        <>
+          <h1>Nabożeństwo {title}</h1>
+          <h2>Litania {flag ? "Loretańska" : "do Serca"}</h2>
+          <img src={"nuty/"+title+".png"} />
+          <h2>Antyfona</h2>
+          {
+            flag ?
+            <>
+              <Antyfona
+                ksiadz="Módl się za nami, święta Boża rodzicielko"
+                wierni="Abyśmy się stali godnymi obietnic chrystusowych"
+                />
+              <Albo />
+              <Antyfona
+                ksiadz="Raduj się i wesel, Panno Maryjo, Alleluja"
+                wierni="Bo zmartwychwstał prawdziwie, Alleluja"
+              />
+              <p>Módlmy się: Panie nasz, Boże, dozwól nam, sługom swoim, cieszyć się trwałym zdrowiem duszy i ciała. I za wstawiennictwem Najświętszej Maryi zawsze dziewicy, uwolnij nas od doczesnych utrapień i obdarz wieczną radością, przez Chrystusa, Pana naszego...</p>
+            </> :
+            <>
+              <Antyfona
+                ksiadz="Jezu cichy i pokornego serca"
+                wierni="Uczyń serca nasze według serca Twego"
+              />
+              <p>Módlmy się: wszechmogący, wieczny Boże, wejrzyj na Serce najmilszego Syna swego i na chwałę, i zadość uczynienie, jakie w imieniu grzeszników ci składa; daj się przebłagać tym, którzy żebrzą Twego miłosierdzia i racz udzielić przebaczenia w imię tegoż Syna swego, Jezusa Chrystusa, który z tobą żyje i króluje na wieki wieków...</p>
+            </>
+          }
+          <h2>{subtitle}</h2>
+          <Lyrics raw={window.piesni[subtitle]["tekst"]} />
+        </>
+      )
+    case "Gorzkie żale":
+      return(
+        <>
+          <h1>Gorzkie żale</h1>
+          <h2>Pobudka</h2>
+          <img src="nuty/gorzkieżale_pobudka.png" />
+          <ol className="lyrics">
+          {[
+            "Gorzkie żale, przybywajcie * Serca nasze przenikajcie.",
+            "Rozpłyńcie się, me źrenice * Toczcie smutnych łez krynice.",
+            "Słońce, gwiazdy omdlewają * Żałobą się pokrywają.",
+            "Płaczą rzewnie aniołowie * A któż żałość ich wypowie?",
+            "Opoki się twarde krają * Z grobów umarli powstają",
+            "Cóż jest, pytam, co się dzieje? * Wszystko stworzenie truchleje",
+            "Na ból męki Chrystusowej * Żal przejmuje bez wymowy",
+            "Uderz, Jezu, bez odwłoki * W twarde serc naszych opoki",
+            "Jezu mój, we krwi ran Twoich * Obmyj duszę z grzechów moich",
+            "Upał serca swego chłodzę * Gdy w przepaść męki Twej wchodzę."
+          ].map((val, i) => <li key={i}>{val}</li>)}
+          </ol>
+          <h2>Intencja</h2>
+          {[
+            "Przy pomocy łaski Bożej przystępujemy do rozważania męki Pana naszego Jezusa Chrystusa. Ofiarować ją będziemy Ojcu niebieskiemu na cześć i chwałę Jego Boskiego Majestatu, pokornie Mu dziękując za wielką i niepojętą miłość ku rodzajowi ludzkiemu, iż raczył zesłać Syna swego, aby za nas wycierpiał okrutne męki i śmierć podjął krzyżową. To rozmyślanie ofiarujemy również ku czci Najświętszej Maryi Panny, Matki Bolesnej, oraz ku uczczeniu Świętych Pańskich, którzy wyróżniali się nabożeństwem ku Męce Chrystusowej.",
+            "W pierwszej części będziemy rozważali, co Pan Jezus wycierpiał od modlitwy w Ogrójcu aż do niesłusznego przed sądem oskarżenia. Te zniewagi i zelżywości temuż Panu, za nas bolejącemu, ofiarujemy za Kościół święty katolicki, za najwyższego Pasterza z całym duchowieństwem, nadto za nieprzyjaciół krzyża Chrystusowego i wszystkich niewiernych, aby im Pan Bóg dał łaskę nawrócenia i opamiętania.",
+            "W drugiej części rozmyślania męki Pańskiej będziemy rozważali, co Pan Jezus wycierpiał od niesłusznego przed sądem oskarżenia aż do okrutnego cierniem ukoronowania. Te zaś rany, zniewagi i zelżywości temuż Jezusowi cierpiącemu ofiarujemy, prosząc Go o pomyślność dla Ojczyzny naszej, o pokój i zgodę dla wszystkich narodów, a dla siebie o odpuszczenie grzechów, oddalenie klęsk i nieszczęść doczesnych, a szczególnie zarazy, głodu, ognia i wojny.",
+            "W tej ostatniej części będziemy rozważali, co Pan Jezus wycierpiał od chwili ukoronowania aż do ciężkiego skonania na krzyżu. Te bluźnierstwa, zelżywości i zniewagi, jakie Mu wyrządzano, ofiarujemy za grzeszników zatwardziałych, aby Zbawiciel pobudził ich serca zbłąkane do pokuty i prawdziwej życia poprawy oraz za dusze w czyśćcu cierpiące, aby im litościwy Jezus krwią swoją świętą ogień zagasił; prosimy nadto, by i nam wyjednał na godzinę śmierci skruchę za grzechy i szczęśliwe w łasce Bożej wytrwanie."
+          ].map((val, i) => <p key={i}>{val}</p>)}
+          <h2>Hymn</h2>
+          <img src="nuty/gorzkieżale_hymn.png" />
+          <Lyrics raw={
+            `1.\nŻal duszę ściska, serce boleść czuje, * Gdy słodki Jezus na śmierć się gotuje;
+            Klęczy w Ogrójcu, gdy krwawy pot leje, * Me serce mdleje.
+            2.\nPana świętości uczeń zły całuje, *Żołnierz okrutny powrozmi krępuje!
+            Jezus tym więzom dla nas się poddaje, * Na śmierć wydaje.
+            3.\nBije, popycha tłum nieposkromiony, * Nielitościwie z tej i owej strony,
+            Za włosy targa: znosi w cierpliwości * Król z wysokości.
+            4.\nZsiniałe przedtem krwią zachodzą usta, * Gdy zbrojną żołnierz rękawicą chlusta;
+            Wnet się zmieniło w płaczliwe wzdychanie * Serca kochanie.
+            5.\nOby się serce we łzy rozpływało, * Że Cię, mój Jezu, sprośnie obrażało!
+            Żal mi, ach, żal mi ciężkich moich złości * Dla Twej miłości!`
+          } />
+          <hr />
+          <Lyrics raw={
+            `1.\nPrzypatrz się, duszo, jak cię Bóg miłuje, * Jako dla ciebie sobie nie folguje.
+            Przecież Go bardziej niż katowska, dręczy, * Złość twoja męczy.
+            2.\nStoi przed sędzią Pan wszego stworzenia, * Cichy Baranek, z wielkiego wzgardzenia;
+            Dla białej szaty, którą jest odziany, * Głupim nazwany.
+            3.\nZa moje złości grzbiet srodze biczują; * Pójdźmyż, grzesznicy, oto nam gotują
+            Ze Krwi Jezusa dla serca ochłody * Zdrój żywej wody.
+            4.\nPycha światowa niechaj, co chce, wróży, * Co na swe skronie wije wieniec z róży,
+            W szkarłat na pośmiech, cierniem Król zraniony, * Jest ozdobiony!
+            5.\nOby się serce we łzy rozpływało, * Że Cię, mój Jezu, sprośnie obrażało!
+            Żal mi, ach, żal mi ciężkich moich złości, * Dla Twej miłości!`
+                      } />
+                      <hr />
+                      <Lyrics raw={
+            `1.\nDuszo oziębła, czemu nie gorejesz? * Serce me, czemu całe nie truchlejesz?
+            Toczy twój Jezus z ognistej miłości * Krew w obfitości.
+            2.\nOgień miłości, gdy Go tak rozpala, * Sromotne drzewo na ramiona zwala;
+            Zemdlony Jezus pod krzyżem uklęka, * Jęczy i stęka.
+            3.\nOkrutnym katom posłuszny się staje, * Ręce i nogi przebić sobie daje,
+            Wisi na krzyżu, ból ponosi srogi * Nasz Zbawca drogi!
+            4.\nO słodkie drzewo, spuśćże nam już Ciało, * Aby na tobie dłużej nie wisiało!
+            My je uczciwie w grobie położymy, * Płacz uczynimy.
+            5.\nOby się serce we łzy rozpływało * Że Cię, mój Jezu, sprośnie obrażało!
+            Żal mi, ach, żal mi ciężkich moich złości, * Dla Twej miłości!
+            6.\nNiech Ci, mój Jezu, cześć będzie w wieczności * Za Twe obelgi, męki, zelżywości,
+            Któreś ochotnie, Syn Boga jedyny, Cierpiał bez winy!`
+          } />
+          <h2>Lament duszy nad cierpiącym Jezusem</h2>
+          <img src="nuty/gorzkieżale_lament.png" />
+          <Lyrics raw={
+            `1.\nJezu, na zabicie okrutne, * Cichy Ba_ran_ku od wro_gów_ szukany, * Jezu mój kochany!
+            2.\nJezu, za trzydzieści srebrników * Od niewdzięcz_ne_go ucznia _za_przedany, * Jezu mój kochany!
+            3.\nJezu, w ciężkim smutku żałością, * Jakoś sam _wyz_nał, przed śmier_cią_ nękany, * Jezu mój kochany!
+            4.\nJezu, na modlitwie w Ogrójcu * Strumieniem _po_tu krwawe_go_ zalany, * Jezu mój kochany!
+            5.\nJezu, całowaniem zdradliwym * Od niegod_ne_go Juda_sza_ wydany, * Jezu mój kochany!
+            6.\nJezu, powrozami grubymi * Od swawol_ne_go żołdact_wa_ związany, * Jezu mój kochany!
+            7.\nJezu, od pospólstwa zelżywie * Przed Anna_szo_wym sądem _znie_ważany, * Jezu mój kochany!
+            8.\nJezu, przez ulice sromotnie * Przed sąd Kaj_fa_sza za wło_sy_ targany, * Jezu mój kochany!
+            9.\nJezu, od Malchusa srogiego * Ręką zbrod_ni_czą wypo_licz_kowany, * Jezu mój kochany!
+            10.\nJezu, od fałszywych dwóch świadków * Za zwodzi_cie_la niesłusz_nie_ podany, * Jezu mój kochany!
+            *\nBądź pozdrowiony, bądź pochwalony * Dla nas zelżony i pohańbiony
+            Bądź uwielbiony! Bądź wysławiony! Boże nieskończony!`
+          } />
+          <hr />
+          <Lyrics raw={
+            `1.\nJezu, od pospólstwa niewinnie * Jako łotr _go_dzien śmierci _ob_wołany, * Jezu mój kochany!
+            2.\nJezu, od złośliwych morderców * Po ślicznej _twa_rzy tak sproś_nie_ zeplwany, * Jezu mój kochany!
+            3.\nJezu, pod przysięgą od Piotra * Po trzykroć z _wiel_kiej bojaź_ni_ zaprzany, * Jezu mój kochany!
+            4.\nJezu, od okrutnych oprawców * Na sąd Pi_ła_ta, jak zbój_ca_ szarpany, * Jezu mój kochany!
+            5.\nJezu, od Heroda i dworzan, * Królu nie_bies_ki, zelży_wie_ wyśmiany, * Jezu mój kochany!
+            6.\nJezu, w białą szatę szydersko * Na większy _po_śmiech i hań_bę_ ubrany, * Jezu mój kochany!
+            7.\nJezu, u kamiennego słupa * Niemiło_sier_nie biczmi _wy_smagany, * Jezu mój kochany!
+            8.\nJezu, przez szyderstwo okrutne * Cierniowym _wień_cem uko_ro_nowany, * Jezu mój kochany!
+            9.\nJezu, od żołnierzy niegodnie * Na pośmie_wis_ko purpu_rą_ odziany, * Jezu mój kochany!
+            10.\nJezu, trzciną po głowie bity, * Królu bo_leś_ci, przez lud _wy_szydzany, * Jezu mój kochany!
+            *\nBądź pozdrowiony, bądź pochwalony * Dla nas zelżony, wszystek skrwawiony
+            Bądź uwielbiony! Bądź wysławiony! Boże nieskończony!`
+          } />
+          <hr />
+          <Lyrics raw={
+            `1.\nJezu, od pospólstwa niezbożnie * Jako zło_czyń_ca z łotry po_rów_nany, * Jezu mój kochany!
+            2.\nJezu, przez Piłata niesłusznie * Na śmierć krzy_żo_wą za lu_dzi_ skazany, * Jezu mój kochany!
+            3.\nJezu, srogim krzyża ciężarem * Na kalwa_ry_jskiej drodze _zmor_dowany, * Jezu mój kochany!
+            4.\nJezu, do sromotnego drzewa * Przytępio_ny_mi gwoźdźmi _przy_kowany, * Jezu mój kochany!
+            5.\nJezu, jawnie pośród dwu łotrów * Na drzewie _hań_by u_krzy_żowany, * Jezu mój kochany!
+            6.\nJezu, od stojących wokoło * I przecho_dzą_cych szyder_czo_ wyśmiany, * Jezu mój kochany!
+            7.\nJezu, bluźnierstwami od złego, * Współwiszą_ce_go łotra _wy_szydzany, * Jezu mój kochany!
+            8.\nJezu, gorzką żółcią i octem * W wielkim pra_gnie_niu swoim _na_pawany, * Jezu mój kochany!
+            9.\nJezu, w swej miłości niezmiernej * Jeszcze po _śmier_ci włócznią _prze_orany, * Jezu mój kochany!
+            10.\nJezu, od Józefa uczciwie * I Niko_de_ma w grobie _po_chowany, * Jezu mój kochany!
+            *\nBądź pozdrowiony, bądź pochwalony, * Dla nas zmęczony i krwią zbroczony.
+            Bądź uwielbiony! Bądź wysławiony! Boże nieskończony!`
+          } />
+          <h2>Rozmowa duszy z Matką Bolesną</h2>
+          <img src="nuty/gorzkieżale_rozmowa.png" />
+          <Lyrics raw={
+            `1.\nAch! Ja Matka tak żałosna! * Boleść mnie ściska nieznośna. * Miecz me serce przenika.
+            2.\nCzemuś, Matko ukochana, * Ciężko na sercu stroskana? * Czemu wszystka truchlejesz?
+            3.\nCo mię pytasz? Wszystkam w mdłości, * Mówić nie mogę z żałości, * Krew mi serce zalewa.
+            4.\nPowiedz mi, o Panno moja, * Czemu blednieje twarz Twoja? * Czemu gorzkie łzy lejesz?
+            5.\nWidzę, że Syn ukochany * W Ogrójcu cały zalany * Potu krwawym potokiem.
+            6.\nO Matko, źródło miłości, * Niech czuję gwałt Twej żałości! *Dozwól mi z sobą płakać.`
+          } />
+          <hr />
+          <Lyrics raw={
+            `1.\nAch, widzę Syna mojego * Przy słupie obnażonego, * Rózgami zsieczonego!
+            2.\nŚwięta Panno, uproś dla mnie, * Bym ran Syna Twego znamię * Miał na sercu wyryte!
+            3.\nAch, widzę jako niezmiernie * Ostre głowę ranią ciernie! * Dusza moja ustaje!
+            4.\nO Maryjo, Syna swego, * Ostrym cierniem zranionego, * Podzielże ze mną mękę!
+            5.\nObym ja, Matka strapiona, * Mogła na swoje ramiona * Złożyć krzyż Twój, Synu mój!
+            6.\nProszę, o Panno jedyna, * Niechaj krzyż Twojego Syna * Zawsze w sercu swym noszę!`
+          } />
+          <hr />
+          <Lyrics raw={
+            `1.\nAch, Ja Matka boleściwa, * Pod krzyżem stoję smutliwa, * Serce żałość przejmuje.
+            2.\nO Matko, niechaj prawdziwie, * Patrząc na krzyż żałośliwie, * Płaczę z Tobą rzewliwie.
+            3.\nJużci, już moje Kochanie * Gotuje się na skonanie! * Toć i ja z Nim umieram!
+            4.\nPragnę, Matko, zostać z Tobą, * Dzielić się Twoją żałobą * Śmierci Syna Twojego.
+            5.\nZamknął słodką Jezus mowę, * Już ku ziemi skłania głowę, * Żegna już Matkę swoją!
+            6.\nO Maryjo, Ciebie proszę, * Niech Jezusa rany noszę * I serdecznie rozważam.`
+          } />
+          <h2>Któryś za nas cierpiał rany</h2>
+          <h4>
+          {[
+            window.piesni["Któryś za nas cierpiał rany"]["katsiedlecki"],
+            window.piesni["Któryś za nas cierpiał rany"]["nr"],
+            "in "+window.piesni["Któryś za nas cierpiał rany"]["tonacja"]
+          ].join(" • ")}
+          </h4>
+          <Lyrics raw={window.piesni["Któryś za nas cierpiał rany"]["tekst"]} />
+        </>
+      )
     case "Kyrie":
       return(
         <>
@@ -237,6 +431,26 @@ function Song(){
             <tr><td>I oczekuję wskrzeszenia umarłych</td></tr>
             <tr><td>I życia wiecznego w przyszłym świecie, amen</td></tr>
           </tbody></table>
+          <h2>Modlitwa powszechna</h2>
+          <Antyfona 
+            ksiadz="Ciebie prosimy"
+            wierni="Wysłuchaj nas, Panie"
+          />
+        </>
+      )
+    case "Ślub":
+      dane = [
+        window.piesni["O Stworzycielu Duchu"]['katsiedlecki'],
+        window.piesni["O Stworzycielu Duchu"]['nr'],
+        "in " + window.piesni["O Stworzycielu Duchu"]['tonacja']
+      ].join(" • ");
+
+      return(
+        <>
+          <p className="ksiadz">Prośmy więc Ducha Świętego... ...Chrystusa i Kościoła</p>
+          <h1>O Stworzycielu Duchu</h1>
+          <h4>{dane}</h4>
+          <Lyrics raw={window.piesni["O Stworzycielu Duchu"]["tekst"]} />
           <h2>Modlitwa powszechna</h2>
           <Antyfona 
             ksiadz="Ciebie prosimy"
@@ -414,7 +628,7 @@ function Song(){
       preferencje = preferencje.filter((val) => val != 0);
       if(preferencje.length == 0) preferencje = ["brak preferencji"];
       
-      const dane = [
+      let dane = [
         window.piesni[title]['katsiedlecki'],
         window.piesni[title]['nr'],
         "in " + window.piesni[title]['tonacja'],
@@ -435,7 +649,9 @@ function Song(){
 
 function RightSide(props) {
   const page = React.useContext(PageNumber);
+  const setPageno = props.setPageno;
   const color = React.useContext(ColorContext);
+  const setColor = props.setColor;
 
   return (
     <div id="rightside">
@@ -443,7 +659,7 @@ function RightSide(props) {
         <h4>Kolor</h4>
         <select 
           value={color}
-          onChange={val => {props.setColor(val.target.value);}}
+          onChange={val => {setColor(val.target.value);}}
         >
         {[
           ["zielony", "green"],
@@ -459,9 +675,13 @@ function RightSide(props) {
       <ol id="list">
       {songlist.map((val, i) => {
         if(["czst"].includes(val[1]) || ["Psalm", "Aklamacja"].includes(val[0])){
-          return (i+1 == page) ? <li className="currentpage" key={i}>{val[0]}</li> : <li key={i}>{val[0]}</li>;
+          return (i+1 == page) ? 
+            <li className="currentpage" key={i}>{val[0]}</li> :
+            <li key={i} onClick={() => setPageno(i+1)}>{val[0]}</li>;
         }else{
-          return (i+1 == page) ? <li className="currentpage" key={i}>{val[1]}</li> : <li key={i}>{val[1]}</li>;
+          return (i+1 == page) ?
+            <li className="currentpage" key={i}>{val[1]}</li> :
+            <li key={i} onClick={() => setPageno(i+1)}>{val[1]}</li>;
         }
       })}
       </ol>
@@ -469,12 +689,12 @@ function RightSide(props) {
   );
 }
 
-function CurrentPage(){
+function CurrentPage({setPageno}){
   const [color, setColor] = React.useState(window.czst_color);
 
   return(
     <ColorContext.Provider value={color}>
-      <RightSide setColor={setColor} />
+      <RightSide setColor={setColor} setPageno={setPageno} />
       <Song />
     </ColorContext.Provider>
   )
@@ -494,11 +714,14 @@ function SongAdder({setAddmode}){
   };
 
   // sugestie pieśni
-  var piesni_sugg = {"Fitting" : [], "Maryjne" : [], "Do Serca" : []};
+  var piesni_sugg = {"Fitting" : [], "Okresowe" : [], "Maryjne" : [], "Do Serca" : []};
   for(const song of Object.keys(window.piesni)){
     // sugestia na podstawie tego, gdzie jestem
     if(window.piesni[song]["naco"].match(whereami_kody[whereami])){
       piesni_sugg["Fitting"][song] = window.piesni[song];
+    }
+    if(window.piesni[song]["klasa"] == window.okazja && window.okazja != 0){
+      piesni_sugg["Okresowe"][song] = window.piesni[song];
     }
     if(window.piesni[song]["klasa"] == 3){
       piesni_sugg["Maryjne"][song] = window.piesni[song];
@@ -531,6 +754,7 @@ function SongAdder({setAddmode}){
     <div id="songadder">
       <h1>Dodaj pieśń</h1>
       <SongSuggestions header={"Pasujące na "+whereami} list={piesni_sugg["Fitting"]} />
+      {window.okazja != 0 && <SongSuggestions header={"Pasujące na "+window.a_formula} list={piesni_sugg["Okresowe"]} />}
       <SongSuggestions header={"Maryjne"} list={piesni_sugg["Maryjne"]} />
       <SongSuggestions header={"Do Serca"} list={piesni_sugg["Do Serca"]} />
       <SongSuggestions header={"Dowolne"} list={window.piesni} />
@@ -551,8 +775,8 @@ function Everything(){
         <a className="button" onClick={() => setAddmode(true)}>+</a>
         <a className="button" onClick={() => {if(pageno < window.songlist.length) setPageno(pageno + 1);}}>»</a>
       </div>
-      <div className="page currentpage">
-      {(pageno == 0) ? <TitlePage /> : <CurrentPage /> }
+      <div className="page">
+      {(pageno == 0) ? <TitlePage /> : <CurrentPage setPageno={setPageno} /> }
       </div>
     </PageNumber.Provider>
   )

@@ -12,7 +12,11 @@
 			<h3>Formuła mszy</h3>
 			<select name="a_formula">
 			<?php
-			foreach(['zwykła', 'zwykła wielkanocna', 'Adwent', 'Boże Narodzenie', 'Wielki Post', 'Wielkanoc'] as $x){
+			foreach(
+				[
+					'zwykła', 'zwykła wielkanocna', 'ślubna', 'pogrzebowa', 'majowe', 'czerwcowe',
+					'Adwent', 'Boże Narodzenie', 'Wielki Post', 'Wielkanoc'
+				] as $x){
 				echo "<option value='$x'>$x</option>";
 			}
 			?>
@@ -125,19 +129,25 @@
 					<td><?php echo $history['a_piesn_zakonczenie']; ?></td>
 				</tr>
 			</table>
+			<div class="a_container">
+				<input type="submit" name="sub" value="Wyświetl ostatni" onclick="formshow();return true;">
+				<input type="submit" name="sub" value="Procesuj ostatni" onclick="formproc();return true;">
+			</div>
 		</div>
 
 		<div>
 			<script>
-				function formshow() {
+			function formshow() {
 				document.forms[0].action = 'out.php';
 			}
 			function formproc() {
 				document.forms[0].action = 'process.php';
 			}
 			</script>
-			<input type="submit" value="Wyświetl" onclick="formshow();return true;">
-			<input type="submit" value="Procesuj" onclick="formproc();return true;">
+			<div class="a_container">
+				<input type="submit" name="sub" value="Wyświetl" onclick="formshow();return true;">
+				<input type="submit" name="sub" value="Procesuj" onclick="formproc();return true;">
+			</div>
 		</div>
 	</form>
 </body>
