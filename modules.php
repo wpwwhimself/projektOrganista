@@ -86,9 +86,9 @@ function CzescStala({name}){
   const color = React.useContext(ColorContext);
 
   if(name == "post_aklamacja"){
-    return <img className="czescstala" src={"czescistale/"+name.toLowerCase().replace(/\s/g, "")+".png"} />;
+    return <img className="czescstala" src={"nuty/czescistale/"+name.toLowerCase().replace(/\s/g, "")+".png"} />;
   }else{
-    return <img className="czescstala" src={"czescistale/"+color+"_"+name.toLowerCase().replace(/\s/g, "")+".png"} />;
+    return <img className="czescstala" src={"nuty/czescistale/"+color+"_"+name.toLowerCase().replace(/\s/g, "")+".png"} />;
   }
 }
 
