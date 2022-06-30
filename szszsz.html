@@ -33236,21 +33236,17 @@ r=function(){return e};var e={},t=Object.prototype,a=t.hasOwnProperty,n="functio
 </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="UTF-8">
-		<link rel=stylesheet type='text/css' href='style.css?1656532004'>
+		<link rel=stylesheet type='text/css' href='style.css?1656616216'>
 	</head>
 <body class='kontener'>
 	<div id="main"></div>
 </body>
 
 <script type="text/babel">
-/*
- * TODO
- * - formuły: ślubna, majowa, czerwcowa, pogrzebowa, adwentowa itd...
- * - 
- */
 /* BETONIARKA DANYCH */
 
 var piesni = [];
+var okazja = 0;
 
 piesni["Barka"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Barka"]['klasa'] = `1`;
@@ -33258,40 +33254,172 @@ piesni["Barka"]['katsiedlecki'] = ``;
 piesni["Barka"]['nr'] = `66`;
 piesni["Barka"]['tonacja'] = `B`;
 piesni["Barka"]['naco'] = `1/0/1/0/1/0`;
-piesni["Barka"]['tekst'] = ``;
-piesni["Barka"]['kategoria'] = ``;
+piesni["Barka"]['tekst'] = `1.
+Pan kiedyś stanął nad brzegiem,
+Szukał ludzi gotowych pójść za Nim;
+By łowić serca Słów Bożych prawdą.
+*
+O Panie, to Ty na mnie spojrzałeś,
+Twoje usta dziś wyrzekły me imię.
+Swoją barkę pozostawiam na brzegu,
+Razem z Tobą nowy zacznę dziś łów.
+2.
+Jestem ubogim człowiekiem,
+Moim skarbem są ręce gotowe
+Do pracy z Tobą i czyste serce.
+*
+O Panie, to Ty na mnie spojrzałeś…
+3.
+Ty, potrzebujesz mych dłoni,
+Mego serca młodego zapałem
+Mych kropli potu i samotności.
+*
+O Panie, to Ty na mnie spojrzałeś…
+4.
+Dziś wypłyniemy już razem
+Łowić serca na morzach dusz ludzkich
+Twej prawdy siecią i słowem życia.
+*
+O Panie, to Ty na mnie spojrzałeś…`;
 piesni["Bądź uwielbiony, miłosierny Boże"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Bądź uwielbiony, miłosierny Boże"]['klasa'] = `1`;
 piesni["Bądź uwielbiony, miłosierny Boże"]['katsiedlecki'] = `Pieśni przygodne`;
 piesni["Bądź uwielbiony, miłosierny Boże"]['nr'] = `60`;
 piesni["Bądź uwielbiony, miłosierny Boże"]['tonacja'] = `Es`;
 piesni["Bądź uwielbiony, miłosierny Boże"]['naco'] = `0/1/0/1/0/0`;
-piesni["Bądź uwielbiony, miłosierny Boże"]['tekst'] = ``;
-piesni["Bądź uwielbiony, miłosierny Boże"]['kategoria'] = ``;
+piesni["Bądź uwielbiony, miłosierny Boże"]['tekst'] = `1.
+Bądź uwielbiony, miłosierny Boże
+Wszechmocny Stwórco, dobry nasz Panie
+Cześć Ci oddajem w najgłębszej pokorze
+W Bóstwa Twojego tonąc oceanie
+2.
+Bądź uwielbiony Ty, w Trójcy Jedyny
+Tak niezgłębiony i niepojęty
+Ty, co przebaczać umiesz wszystkie winy
+Trzykroć wołamy: Święty, Święty, Święty
+3.
+Bądź uwielbiony, miłosierny Boże
+Żeś zstąpić raczył z niebios na ziemię
+Wielbimy Ciebie w najgłębszej pokorze
+Żeś tak wywyższył całe ludzkie plemię
+4.
+Bądź uwielbiony w miłosierdzia dziele
+Przez wszystkie serca Tobie zawsze wierne
+Które Cię wielbią tu, w Twoim Kościele
+A którym dałeś życie nieśmiertelne
+5.
+Bądź uwielbiony, Stwórco nasz i Panie
+Przez wszechświat, który wielbi Cię w pokorze
+Dziękujmy Stwórcy, ile sił nam stanie
+I wysławiajmy Miłosierdzie Boże`;
 piesni["Bądźże pozdrowiona"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Bądźże pozdrowiona"]['klasa'] = `1`;
 piesni["Bądźże pozdrowiona"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
 piesni["Bądźże pozdrowiona"]['nr'] = `61`;
 piesni["Bądźże pozdrowiona"]['tonacja'] = `F`;
 piesni["Bądźże pozdrowiona"]['naco'] = `0/0/1/0/0/0`;
-piesni["Bądźże pozdrowiona"]['tekst'] = ``;
-piesni["Bądźże pozdrowiona"]['kategoria'] = ``;
+piesni["Bądźże pozdrowiona"]['tekst'] = `1.
+Bądźże pozdrowiona, Hostio żywa
+W której Jezus Chrystus Bóstwo ukrywa
+*
+Witaj, Jezu, Synu Maryi
+Tyś jest Bóg prawdziwy w świętej Hostyi
+2.
+Bądźże pozdrowione, drzewo żywota
+Niech kwitnie niewinność, anielska cnota 
+*
+Witaj, Jezu, Synu Maryi…
+3.
+Bądźże pozdrowiony, Baranku Boży
+Zbaw nas, gdy miecz Pański na złych się sroży 
+*
+Witaj, Jezu, Synu Maryi…
+4.
+Bądźże pozdrowiony, Anielski Chlebie
+W tym tu Sakramencie wielbimy Ciebie 
+*
+Witaj, Jezu, Synu Maryi…
+5.
+Bądźże pozdrowiona, święta Krynico
+Serce Przenajświętsze, łaski świątnico 
+*
+Witaj, Jezu, Synu Maryi…
+6.
+Bądźże pozdrowiony, Boski kapłanie
+Przyjm nasze ofiary, usłysz błaganie 
+*
+Witaj, Jezu, Synu Maryi…
+7.
+Bądźże pozdrowiona, żywa Ofiaro
+Broń nas przed doczesną i wieczną karą 
+*
+Witaj, Jezu, Synu Maryi…
+8.
+Bądźże pozdrowiony, Wszechmocny Boże
+Już Cię kocham szczerze, jak serce może 
+*
+Witaj, Jezu, Synu Maryi`;
 piesni["Będę Cię wielbił, mój Panie"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Będę Cię wielbił, mój Panie"]['klasa'] = `1`;
 piesni["Będę Cię wielbił, mój Panie"]['katsiedlecki'] = `Pieśni przygodne`;
 piesni["Będę Cię wielbił, mój Panie"]['nr'] = `69`;
 piesni["Będę Cię wielbił, mój Panie"]['tonacja'] = `d`;
 piesni["Będę Cię wielbił, mój Panie"]['naco'] = `1/0/0/0/0/0`;
-piesni["Będę Cię wielbił, mój Panie"]['tekst'] = ``;
-piesni["Będę Cię wielbił, mój Panie"]['kategoria'] = ``;
+piesni["Będę Cię wielbił, mój Panie"]['tekst'] = `1.
+Będę Cię wielbił, mój Panie
+Póki mnie na świecie stanie
+Boś mnie w przygodzie ratował
+I śmiechów ludzkich uchował
+2.
+Panie, wołałem ku Tobie
+A Tyś mnie wsparł w mej chorobie
+Dodałeś mi swej pomocy
+Żem wiecznej nie ujrzał nocy
+3.
+Użyłeś zwykłej litości
+Płacz obróciłeś w radości
+Wór ze mnie zdjąłeś żałobny
+A płaszcz włożyłeś ozdobny
+4.
+Przeto Cię wesoła wszędzie
+Lutnia ma uwielbiać będzie
+Twa chwała, o wieczny Panie
+W mych ustach już nie ustanie`;
 piesni["Bliskie jest Królestwo Boże"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Bliskie jest Królestwo Boże"]['klasa'] = `1`;
 piesni["Bliskie jest Królestwo Boże"]['katsiedlecki'] = `Pieśni na Wielki Post`;
 piesni["Bliskie jest Królestwo Boże"]['nr'] = `76`;
 piesni["Bliskie jest Królestwo Boże"]['tonacja'] = `c`;
 piesni["Bliskie jest Królestwo Boże"]['naco'] = `0/1/0/0/0/0`;
-piesni["Bliskie jest Królestwo Boże"]['tekst'] = ``;
-piesni["Bliskie jest Królestwo Boże"]['kategoria'] = ``;
+piesni["Bliskie jest Królestwo Boże"]['tekst'] = `*
+Bliskie jest królestwo Boże,
+nawracajmy się i wierzmy w Ewangelię.
+**
+1.
+Bóg _jest_ światłością
+i nie ma w Nim żad_nej_ ciemności.
+*
+Bliskie jest królestwo Boże…
+2.
+Jeżeli chodzi_my_ w światłości,
+wtedy mamy łączność _mię_dzy sobą.
+*
+Bliskie jest królestwo Boże…
+3.
+Krew Jezusa, _Je_go Syna
+oczyszcza nas z wszel_kie_go grzechu.
+*
+Bliskie jest królestwo Boże…
+4.
+Jeżeli mówimy, że nie _ma_my grzechu,
+to samych siebie o_szu_kujemy.
+*
+Bliskie jest królestwo Boże…
+5.
+Jeżeli wyznajemy _na_sze grzechy,
+Bóg oczyści nas z wszelkiej _nie_prawości.
+*
+Bliskie jest królestwo Boże…`;
 piesni["Błogosław, Panie, nas"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Błogosław, Panie, nas"]['klasa'] = `1`;
 piesni["Błogosław, Panie, nas"]['katsiedlecki'] = `Pieśni przygodne`;
@@ -33330,63 +33458,225 @@ Miłością złącz nas swą i nią przemieniaj świat
 Niech pozna przyjaźń Twą, żeś Ty dlań lekarz, brat 
 *
 Błogosław, Panie, nas…`;
-piesni["Błogosław, Panie, nas"]['kategoria'] = ``;
 piesni["Błogosławione serca"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Błogosławione serca"]['klasa'] = `1`;
 piesni["Błogosławione serca"]['katsiedlecki'] = `Pieśni wspólne o Świętych`;
 piesni["Błogosławione serca"]['nr'] = `89`;
 piesni["Błogosławione serca"]['tonacja'] = `d`;
 piesni["Błogosławione serca"]['naco'] = `1/0/0/0/0/Do świętych Pasterzy`;
-piesni["Błogosławione serca"]['tekst'] = ``;
-piesni["Błogosławione serca"]['kategoria'] = ``;
+piesni["Błogosławione serca"]['tekst'] = `1.
+Błogosławione serca, które płoną
+Miłością Boga i Jego przykazań
+Błogosławione oczy, które widzą
+Majestat Stwórcy i marność stworzenia
+2.
+Błogosławione ręce, które sieją
+Zbawienne ziarno Nowiny Chrystusa
+Błogosławione dłonie namaszczone
+Co leczą rany balsamem pokoju
+3.
+Błogosławione usta pełne wiary
+Głoszące prawdę o Słowie wcielonym
+Błogosławione stopy, co szukają
+Zbłąkanych owiec wśród cierni pustkowia
+4.
+Błogosławieni, który własne życie
+Złożyli w darze dla dobra Kościoła
+Błogosławieni słudzy odkupienia
+Pasterze ludu Nowego Przymierza
+5.
+Błogosławiony jesteś ponad wszystko
+Jedyny Boże na tronie swej chwały
+Panie wszechświata: Ojcze z Twoim Synem
+I Duchem Świętym pociechy i łaski `;
 piesni["Boże mocny, Boże cudów"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Boże mocny, Boże cudów"]['klasa'] = `1`;
 piesni["Boże mocny, Boże cudów"]['katsiedlecki'] = `Pieśni przygodne`;
 piesni["Boże mocny, Boże cudów"]['nr'] = `122`;
 piesni["Boże mocny, Boże cudów"]['tonacja'] = `A`;
 piesni["Boże mocny, Boże cudów"]['naco'] = `0/1/0/0/0/0`;
-piesni["Boże mocny, Boże cudów"]['tekst'] = ``;
-piesni["Boże mocny, Boże cudów"]['kategoria'] = ``;
+piesni["Boże mocny, Boże cudów"]['tekst'] = `1.
+Boże mocny, Boże cudów
+Przenajświętszy Ojcze nasz
+Co dla szczęścia wszystkich ludów
+Dobroć, moc i łaskę masz
+Który widzisz serca drgnienie
+I najskrytsze myśli znasz
+Racz wysłuchać me westchnienie
+Przenajświętszy Ojcze nasz
+2.
+Spraw, abyśmy korzystali
+Z darów udzielonych nam
+Byśmy przez nie uzyskali
+Wstęp do Twych niebieskich bram
+Udziel w pracy wytrwałości
+Łaska Twa niech wzmacnia nas
+Byśmy mężnie ku wieczności
+Szli z weselem, a bez zmaz`;
 piesni["Boże w dobroci"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Boże w dobroci"]['klasa'] = `1`;
 piesni["Boże w dobroci"]['katsiedlecki'] = `Sakramenty i sakramentalia`;
 piesni["Boże w dobroci"]['nr'] = `126`;
 piesni["Boże w dobroci"]['tonacja'] = `Es`;
 piesni["Boże w dobroci"]['naco'] = `1/1/0/0/0/0`;
-piesni["Boże w dobroci"]['tekst'] = ``;
-piesni["Boże w dobroci"]['kategoria'] = ``;
+piesni["Boże w dobroci"]['tekst'] = `1.
+Boże w dobroci nigdy nie przebrany
+Żadnym językiem niewypowiedziany
+Ty jesteś godzien, Ty jesteś godzien wszelakiej miłości
+Poszanowania, poszanowania, chwały, uczciwości
+2.
+Ciebie czczę, pragnę i ważę samego
+Nad wszystkie dobra Tyś u serca mego
+Najwyższe dobro, najwyższe dobro, Tyś w najwyższej cenie
+Sam jeden u mnie, sam jeden u mnie nad wszystko stworzenie
+3.
+Choćbyś za grzechy nie karał mnie, Panie
+Przecież skruszony żałowałbym za nie
+A żałowałbym, a żałowałbym dla tego samego
+Żem Cię obraził, żem Cię obraził, Pana tak dobrego
+4.
+Więc, o mój Boże, i teraz żałuję
+Dlatego, że Cię nad wszystko miłuję
+I to u siebie, i to u siebie, statecznie stanowię
+Że grzechów swoich, że grzechów swoich nigdy nie ponowię
+5.
+Mam mocną wolę spowiadać się szczerze
+I zawsze trzymać z Tobą to przymierze
+Co gdy uczynię, co gdy uczynię, spodziewam się, Panie
+Mieć w niebie z Tobą, mieć w niebie z Tobą wieczne królowanie`;
 piesni["Boże, lud Twój"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Boże, lud Twój"]['klasa'] = `1`;
 piesni["Boże, lud Twój"]['katsiedlecki'] = `Pieśni mszalne`;
 piesni["Boże, lud Twój"]['nr'] = `132`;
 piesni["Boże, lud Twój"]['tonacja'] = `D`;
 piesni["Boże, lud Twój"]['naco'] = `1/0/0/0/0/0`;
-piesni["Boże, lud Twój"]['tekst'] = ``;
-piesni["Boże, lud Twój"]['kategoria'] = ``;
+piesni["Boże, lud Twój"]['tekst'] = `Boże, lud Twój czcią przejęty
+Twoich dzieł wszechmocność głosi
+Oczy na Twój ołtarz święty
+Serce swe do Ciebie wznosi
+
+Liczne nasze ciążą winy
+Lecz niech żal nasz litość wznieci
+Przyjmij, Ojcze, grzeszne syny
+Nie odpychaj swoich dzieci`;
 piesni["Boże, obdarz Kościół Twój"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Boże, obdarz Kościół Twój"]['klasa'] = `1`;
 piesni["Boże, obdarz Kościół Twój"]['katsiedlecki'] = `Pieśni przygodne`;
 piesni["Boże, obdarz Kościół Twój"]['nr'] = `133`;
 piesni["Boże, obdarz Kościół Twój"]['tonacja'] = `C`;
 piesni["Boże, obdarz Kościół Twój"]['naco'] = `1/0/0/0/0/0`;
-piesni["Boże, obdarz Kościół Twój"]['tekst'] = ``;
-piesni["Boże, obdarz Kościół Twój"]['kategoria'] = ``;
+piesni["Boże, obdarz Kościół Twój"]['tekst'] = `*
+Boże, obdarz Kościół Twój
+Jednością i pokojem
+**
+1.
+Uradowałem się wezwaniem
+Pójdziemy do domu Pana
+*
+Boże, obdarz Kościół Twój…
+2.
+I oto stoję u bram Twoich
+Jeruzalem nowe, Kościele Święty
+*
+Boże, obdarz Kościół Twój…
+3.
+O Jeruzalem, miasto pokoju
+W Tobie wszyscy się jednoczą 
+*
+Boże, obdarz Kościół Twój…
+4.
+Przychodzą doń pokolenia
+Aby wielbić imię Pana 
+*
+Boże, obdarz Kościół Twój…
+5.
+Prosimy o pokój dla ludu Twego
+Niech będą bezpieczni, którzy Cię miłują 
+*
+Boże, obdarz Kościół Twój…
+6.
+Dla braci i bliźnich naszych
+Prosimy o dobra Twoje 
+*
+Boże, obdarz Kościół Twój...`;
 piesni["Boże, zmiłuj się nad nami"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Boże, zmiłuj się nad nami"]['klasa'] = `1`;
 piesni["Boże, zmiłuj się nad nami"]['katsiedlecki'] = `Pieśni przygodne`;
 piesni["Boże, zmiłuj się nad nami"]['nr'] = `128`;
 piesni["Boże, zmiłuj się nad nami"]['tonacja'] = `Es`;
 piesni["Boże, zmiłuj się nad nami"]['naco'] = `1/1/0/0/1/0`;
-piesni["Boże, zmiłuj się nad nami"]['tekst'] = ``;
-piesni["Boże, zmiłuj się nad nami"]['kategoria'] = ``;
+piesni["Boże, zmiłuj się nad nami"]['tekst'] = `1.
+Boże, zmiłuj się nad nami
+Pobłogosław, udziel łaski
+Niechaj znowu oglądamy
+Twe oblicze pełne blasku
+*
+Niechaj sławią Cię narody
+Niechaj sławią Cię narody wszystkie
+2.
+Niech świat cały pozna wreszcie
+Ciebie, Panie, Twoje drogi
+Niechaj przyjmą Twe zbawienie
+Wszyscy ludzie i narody
+*
+Niechaj sławią Cię narody…
+3.
+Niechaj radość zapanuje
+Pośród ludów całej ziemi
+Żeś Ty, Panie sprawiedliwy
+Rządzisz i kierujesz nimi
+*
+Niechaj sławią Cię narody…
+4.
+Ziemia plony już wydała
+Bóg nam dał błogosławieństwo
+Niech rozbrzmiewa Jego chwała
+W każdym czasie, w każdym miejscu
+*
+Niechaj sławią Cię narody…`;
 piesni["Bóg kiedyś stał się jednym z nas"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Bóg kiedyś stał się jednym z nas"]['klasa'] = `1`;
 piesni["Bóg kiedyś stał się jednym z nas"]['katsiedlecki'] = ``;
 piesni["Bóg kiedyś stał się jednym z nas"]['nr'] = `101`;
 piesni["Bóg kiedyś stał się jednym z nas"]['tonacja'] = `C`;
 piesni["Bóg kiedyś stał się jednym z nas"]['naco'] = `0/1/1/0/0/0`;
-piesni["Bóg kiedyś stał się jednym z nas"]['tekst'] = ``;
-piesni["Bóg kiedyś stał się jednym z nas"]['kategoria'] = ``;
+piesni["Bóg kiedyś stał się jednym z nas"]['tekst'] = `1.
+Bóg kiedyś stał się jednym z nas,
+by nas przemienić w siebie.
+*
+Przyjdź, Jezu mój,
+zostań wśród nas
+na zawsze już.=
+2.
+Uczył, że Pan Bóg kocha nas,
+wszyscy jesteśmy braćmi.
+*
+Przyjdź, Jezu mój…
+3.
+Cierpiał na krzyżu wiele ran,
+by zmazać nasze grzechy.
+*
+Przyjdź, Jezu mój…
+4.
+Zmartwychwstał z grobu po trzech dniach,
+by niebo nam otworzyć.
+*
+Przyjdź, Jezu mój…
+5.
+Ducha Świętego zesłał nam,
+by wszystkich nas uświęcił.
+*
+Przyjdź, Jezu mój…
+6.
+Założył Święty Kościół swój,
+byśmy z Nim jedno byli.
+*
+Przyjdź, Jezu mój…
+7.
+Maryję Matkę ludziom dał,
+by wspomożeniem była.
+*
+Przyjdź, Jezu mój…`;
 piesni["Być bliżej Ciebie chcę"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Być bliżej Ciebie chcę"]['klasa'] = `1`;
 piesni["Być bliżej Ciebie chcę"]['katsiedlecki'] = `Pieśni przygodne`;
@@ -33413,55 +33703,224 @@ Być bliżej Ciebie chcę i w śmierci czas
 Gdy mnie już będzie krył grobowy głaz
 Być bliżej Ciebie chcę, to me pragnienie czuj
 Bom ja jest dziecię Twe, Tyś Ojciec mój`;
-piesni["Być bliżej Ciebie chcę"]['kategoria'] = ``;
 piesni["Cały świat niech śpiewa"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Cały świat niech śpiewa"]['klasa'] = `1`;
 piesni["Cały świat niech śpiewa"]['katsiedlecki'] = `Pieśni przygodne`;
 piesni["Cały świat niech śpiewa"]['nr'] = `145`;
 piesni["Cały świat niech śpiewa"]['tonacja'] = `G`;
 piesni["Cały świat niech śpiewa"]['naco'] = `0/0/0/1/0/0`;
-piesni["Cały świat niech śpiewa"]['tekst'] = ``;
-piesni["Cały świat niech śpiewa"]['kategoria'] = ``;
+piesni["Cały świat niech śpiewa"]['tekst'] = `*
+Cały świat niech śpiewa tę pieśń
+Panem naszym Bóg
+**
+1.
+Niech cały świat weseli się w Bogu
+Z radością niechaj służy i czcią
+Albowiem Pan Bóg jest naszym Stwórcą
+On w dłoniach swoich dzierży nasz los
+*
+Cały świat niech śpiewa tę pieśń…
+2.
+Pan Bóg jest naszym najlepszym Ojcem
+Z radością każdy niech śpieszy doń
+Pan Bój jest także naszym Pasterzem
+Za Nim jak owce dążymy wciąż 
+*
+Cały świat niech śpiewa tę pieśń…
+3.
+Bóg okazuje nam miłosierdzie
+Niech wdzięczność nigdy nie gaśnie w nas
+Chwała bądź Bogu po wszystkie wieki
+Za dobrodziejstwa dawane nam 
+*
+Cały świat niech śpiewa tę pieśń…`;
 piesni["Chrystus Pan karmi nas"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Chrystus Pan karmi nas"]['klasa'] = `1`;
 piesni["Chrystus Pan karmi nas"]['katsiedlecki'] = `Pieśni mszalne`;
 piesni["Chrystus Pan karmi nas"]['nr'] = `171`;
 piesni["Chrystus Pan karmi nas"]['tonacja'] = `f`;
 piesni["Chrystus Pan karmi nas"]['naco'] = `0/0/1/1/0/W święta NMP`;
-piesni["Chrystus Pan karmi nas"]['tekst'] = ``;
-piesni["Chrystus Pan karmi nas"]['kategoria'] = ``;
+piesni["Chrystus Pan karmi nas"]['tekst'] = `*
+Chrystus Pan karmi nas
+Swoim świętym Ciałem
+Chwalmy Go na wieki
+**
+1.
+Duchem całym wielbię Pana
+Boga Zbawcę jedynego
+Bo w Nim samym odnajduję
+Wszystką radość życia mego
+*
+Chrystus Pan karmi nas…
+2.
+Wielbię, bo chciał wejrzeć z nieba
+Na swą sługę uniżoną
+By mnie odtąd wszyscy ludzie
+Mogli zwać błogosławioną 
+*
+Chrystus Pan karmi nas…
+3.
+Sprawił we mnie wielkie dzieła
+W swej dobroci niepojętej
+On wszechmocny, On najwyższy
+On sam jeden zawsze święty 
+*
+Chrystus Pan karmi nas…
+4.
+On, który przez pokolenia
+Pozostaje miłosierny
+Wobec tego, kto Mu służy
+I chce zostać Jemu wierny 
+*
+Chrystus Pan karmi nas…
+5.
+On, który swą moc objawia
+Gdy wyniosłość serc uniża
+Każdy zamiar może zburzyć
+Który pychą Mu ubliża 
+*
+Chrystus Pan karmi nas…
+6.
+W mocy Jego odjąć władzę
+A wydźwignąć pokornego
+Wszystkich głodnych zaspokoić
+Głodem wstrząsnąć bogatego 
+*
+Chrystus Pan karmi nas…
+7.
+On się ujął za swym ludem
+Dziećmi wiary Abrahama
+Pomny na swe miłosierdzie
+Obietnicy swej nie złamał 
+*
+Chrystus Pan karmi nas…`;
 piesni["Chrystus Wodzem"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Chrystus Wodzem"]['klasa'] = `1`;
 piesni["Chrystus Wodzem"]['katsiedlecki'] = `Pieśni do Chrystusa Króla`;
 piesni["Chrystus Wodzem"]['nr'] = `175`;
 piesni["Chrystus Wodzem"]['tonacja'] = `C`;
 piesni["Chrystus Wodzem"]['naco'] = `1/0/0/0/1/0`;
-piesni["Chrystus Wodzem"]['tekst'] = ``;
-piesni["Chrystus Wodzem"]['kategoria'] = ``;
+piesni["Chrystus Wodzem"]['tekst'] = `*
+Chrystus Wodzem, Chrystus Królem
+Chrystus, Chrystus władcą nam
+**
+1.
+Boga naszego chwalcie wszystkie ziemie
+Daj Mu cześć winną całe ludzkie plemię
+Bo litość Jego nad nami stwierdzona
+A prawda Pańska wiecznie uiszczona
+*
+Chrystus Wodzem, Chrystus Królem…
+2.
+Chwała bądź Bogu w Trójcy Jedynemu
+Ojcu, Synowi, Duchowi Świętemu
+Jak od początku była tak i ninie
+I na wiek wieków niechaj zawsze słynie
+*
+Chrystus Wodzem, Chrystus Królem…`;
 piesni["Chrystus, Chrystus to nadzieja"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Chrystus, Chrystus to nadzieja"]['klasa'] = `1`;
 piesni["Chrystus, Chrystus to nadzieja"]['katsiedlecki'] = `Pieśni przygodne`;
 piesni["Chrystus, Chrystus to nadzieja"]['nr'] = `178`;
 piesni["Chrystus, Chrystus to nadzieja"]['tonacja'] = `G`;
 piesni["Chrystus, Chrystus to nadzieja"]['naco'] = `1/0/0/0/0/0`;
-piesni["Chrystus, Chrystus to nadzieja"]['tekst'] = ``;
-piesni["Chrystus, Chrystus to nadzieja"]['kategoria'] = ``;
+piesni["Chrystus, Chrystus to nadzieja"]['tekst'] = `*
+Chrystus, Chrystus to nadzieja cała nasza
+Umierając zło zwyciężył, pokój nam ogłasza
+On do Ojca nas prowadzi, miłość czyni życia prawem
+Chrystus naszym jest pokojem, naszym pojednaniem
+** 
+1.
+On jest Słowem nad wiekami
+Pierworodnym pośród stworzeń
+Bóg przez Niego dał nam życie
+I ukazał nam swą chwałę
+*
+Chrystus, Chrystus to nadzieja cała nasza…
+2.
+To On Głową jest Kościoła
+I początkiem wszystkich rzeczy
+Zechciał Bóg, by cała Pełnia
+W Jego ciele zamieszkała 
+*
+Chrystus, Chrystus to nadzieja cała nasza…
+3.
+Pokój przyszedł On budować
+Między ludźmi dobrej woli
+Z Bogiem znowu nas pojednał
+Gdy na krzyżu oddał życie 
+*
+Chrystus, Chrystus to nadzieja cała nasza…
+4.
+On jednoczy we wspólnocie
+Przezwyciężył mur wrogości
+Jak Brat starszy nas prowadzi
+Do radości swego Ojca 
+*
+Chrystus, Chrystus to nadzieja cała nasza…`;
 piesni["Chwal, Syjonie, Zbawiciela"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Chwal, Syjonie, Zbawiciela"]['klasa'] = `1`;
 piesni["Chwal, Syjonie, Zbawiciela"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
 piesni["Chwal, Syjonie, Zbawiciela"]['nr'] = `179`;
 piesni["Chwal, Syjonie, Zbawiciela"]['tonacja'] = `Es`;
 piesni["Chwal, Syjonie, Zbawiciela"]['naco'] = `0/0/1/0/0/0`;
-piesni["Chwal, Syjonie, Zbawiciela"]['tekst'] = ``;
-piesni["Chwal, Syjonie, Zbawiciela"]['kategoria'] = ``;
+piesni["Chwal, Syjonie, Zbawiciela"]['tekst'] = `1.
+Chwal, Syjonie, Zbawiciela
+Chwal hymnami wśród wesela
+Wodza i Pasterza rzesz
+Ile zdołasz, sław Go śmiało
+Bo przewyższa wszystko chwałą
+Co wyśpiewać pieśnią chcesz
+2.
+Chwały przedmiot nad podziwy
+Chleb żywiący, pokarm żywy
+Dzisiaj się przedkłada nam
+Chleb ten za wieczerzy stołem
+Chrystus, łamiąc z braćmi społem
+Apostołom dał go sam
+3.
+Co Pan czynił przy Wieczerzy
+Wskazał, że i nam należy
+Spełniać dla pamięci Nań
+Pouczeni tą ustawą
+Chleb i wino na bezkrwawą
+Odkupienia święcim dań
+4.
+Dogmat dan jest do wierzenia
+Że się w Ciało chleb przemienia
+Wino zaś w Najświętszą Krew
+Gdzie zmysł darmo dojść się stara
+Serca żywa krzepi wiara
+Porządkowi rzeczy wbrew
+5.
+Pod odmiennych szat figurą
+W znakach różny, nie naturą
+Kryje się tajemnic dziw
+Ciało strawą, Krew napojem
+W obu znakach z Bóstwem swoim
+Chrystus cały mieszka żyw`;
 piesni["Cóż Ci, Jezu, damy"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Cóż Ci, Jezu, damy"]['klasa'] = `1`;
 piesni["Cóż Ci, Jezu, damy"]['katsiedlecki'] = `Pieśni przygodne`;
 piesni["Cóż Ci, Jezu, damy"]['nr'] = `218`;
 piesni["Cóż Ci, Jezu, damy"]['tonacja'] = `D`;
 piesni["Cóż Ci, Jezu, damy"]['naco'] = `0/1/0/1/0/0`;
-piesni["Cóż Ci, Jezu, damy"]['tekst'] = ``;
-piesni["Cóż Ci, Jezu, damy"]['kategoria'] = ``;
+piesni["Cóż Ci, Jezu, damy"]['tekst'] = `1.
+Cóż Ci, Jezu, damy za Twych łask strumienie
+Z serca Ci składamy korne dziękczynienie
+*
+Panie nasz, króluj nam, Boże nasz, króluj nam
+Poprzez wieczny czas króluj, Jezu, nam
+2.
+W serca Twego ranie, o serc naszych Królu
+Pokój i wytrwanie, ukojenie w bólu
+*
+Panie nasz, króluj nam…
+3.
+Ty nas wspieraj w znoju, strzeż przez życie całe
+Byśmy w serc pokoju Twą wielbili chwałę
+*
+Panie nasz, króluj nam…`;
 piesni["Czego chcesz od nas, Panie"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Czego chcesz od nas, Panie"]['klasa'] = `1`;
 piesni["Czego chcesz od nas, Panie"]['katsiedlecki'] = `Pieśni przygodne`;
@@ -33488,151 +33947,555 @@ Bądź na wieki pochwalon, nieśmiertelny Panie
 Twoja łaska, Twoja dobroć nigdy nie ustanie
 Chowaj nas, póki raczysz, na tej niskiej ziemi
 Jeno zawżdy niech będziem pod skrzydłami Twymi`;
-piesni["Czego chcesz od nas, Panie"]['kategoria'] = ``;
 piesni["Dzięki Ci, Panie"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Dzięki Ci, Panie"]['klasa'] = `1`;
 piesni["Dzięki Ci, Panie"]['katsiedlecki'] = ``;
 piesni["Dzięki Ci, Panie"]['nr'] = `285`;
 piesni["Dzięki Ci, Panie"]['tonacja'] = `a`;
 piesni["Dzięki Ci, Panie"]['naco'] = `0/0/0/1/0/0`;
-piesni["Dzięki Ci, Panie"]['tekst'] = ``;
-piesni["Dzięki Ci, Panie"]['kategoria'] = ``;
+piesni["Dzięki Ci, Panie"]['tekst'] = `*
+= Dzięki Ci, Panie, za Ciało Twe i Krew
+Za dary nieskończone wielbimy Cię
+**
+1.
+Chwalimy Cię, wszechmocny, za dary Twe nieskończone
+Za Ciało i Twoją Krew
+Przebacz w swojej dobroci tym, co Ciebie niegodni
+Kiedy do Twego stołu się zbliżamy
+*
+Dzięki Ci, Panie, za Ciało Twe i Krew…
+2.
+Przebacz, żeś hojny i wierny
+Uwolnij z więzów grzechu
+Byśmy się odmienili
+Przez tajemnice najświętsze 
+*
+Dzięki Ci, Panie, za Ciało Twe i Krew…
+3.
+?
+4.
+?
+5.
+?`;
 piesni["Dzięki, o Panie"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Dzięki, o Panie"]['klasa'] = `1`;
 piesni["Dzięki, o Panie"]['katsiedlecki'] = `Pieśni przygodne`;
 piesni["Dzięki, o Panie"]['nr'] = `287`;
 piesni["Dzięki, o Panie"]['tonacja'] = `F`;
 piesni["Dzięki, o Panie"]['naco'] = `0/0/0/1/0/0`;
-piesni["Dzięki, o Panie"]['tekst'] = ``;
-piesni["Dzięki, o Panie"]['kategoria'] = ``;
+piesni["Dzięki, o Panie"]['tekst'] = `*
+Dzięki, o Panie
+składamy dzięki
+o Wszechmogący nasz Królu w niebie
+**
+1.
+Za to, że dałeś nam wiarę
+Za to, że dałeś nam miłość
+*
+Dzięki, o Panie…
+2.
+Za to, że dałeś nam siebie
+Za to że jesteś z nami 
+*
+Dzięki, o Panie…
+3.
+Ty nam przebaczasz grzechy
+Ty nam przywracasz życie 
+*
+Dzięki, o Panie…
+4.
+Tobie śpiewamy z radością
+Ciebie wielbimy bez końca 
+*
+Dzięki, o Panie…`;
 piesni["Dziękujemy Ci, Ojcze nasz"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Dziękujemy Ci, Ojcze nasz"]['klasa'] = `1`;
 piesni["Dziękujemy Ci, Ojcze nasz"]['katsiedlecki'] = `Pieśni przygodne`;
 piesni["Dziękujemy Ci, Ojcze nasz"]['nr'] = `289`;
 piesni["Dziękujemy Ci, Ojcze nasz"]['tonacja'] = `B`;
 piesni["Dziękujemy Ci, Ojcze nasz"]['naco'] = `0/0/0/1/0/0`;
-piesni["Dziękujemy Ci, Ojcze nasz"]['tekst'] = ``;
-piesni["Dziękujemy Ci, Ojcze nasz"]['kategoria'] = ``;
+piesni["Dziękujemy Ci, Ojcze nasz"]['tekst'] = `1.
+Dziękujemy Ci, Ojcze nasz
+Za święty winny szczep Dawida 
+Który nam poznać dałeś
+Przez Jezusa, Syna Twego
+Tobie chwała na wieki
+2.
+Dziękujemy Ci, Ojcze nasz
+Za życie i za wiarę
+Którą nam poznać dałeś
+Przez Jezusa, Syna Twego
+Tobie chwała na wieki
+3.
+Dziękujemy Ci, Ojcze nasz
+Za święte imię Twoje
+Któremu zgotowałeś
+Mieszkanie w sercach naszych 
+Tobie chwała na wieki
+4.
+Dziękujemy Ci, Ojcze nasz
+Za wiarę i za nieśmiertelność
+Którą nam poznać dałeś
+Przez Jezusa, Syna Twego 
+Tobie chwała na wieki
+5.
+Ty, o Panie wszechmocny
+Stworzyłeś wszystko dla imienia swego
+Pokarm i napój dałeś
+Ludziom na pożywienie 
+Tobie chwała na wieki
+6.
+Nam zaś darowałeś
+Pokarm duchowy oraz napój
+I żywot wieczny
+Przez Jezusa, Syna Twego 
+Tobie chwała na wieki
+7.
+Pomnij, Panie, na Twój Kościół
+I wybaw go od wszelkiego złego
+I doprowadź go w miłości swojej
+Do Królestwa Twego 
+Tobie chwała na wieki
+8.
+Niechaj przyjdzie Twa łaska
+I niech przeminie ten świat
+Kto święty, niech przystąpi
+Kto nim nie jest, niech czyni pokutę 
+Tobie chwała na wieki`;
 piesni["Gdzie miłość wzajemna"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Gdzie miłość wzajemna"]['klasa'] = `1`;
 piesni["Gdzie miłość wzajemna"]['katsiedlecki'] = `Pieśni mszalne`;
 piesni["Gdzie miłość wzajemna"]['nr'] = `324`;
 piesni["Gdzie miłość wzajemna"]['tonacja'] = `d`;
 piesni["Gdzie miłość wzajemna"]['naco'] = `0/1/0/0/0/0`;
-piesni["Gdzie miłość wzajemna"]['tekst'] = ``;
-piesni["Gdzie miłość wzajemna"]['kategoria'] = ``;
+piesni["Gdzie miłość wzajemna"]['tekst'] = `*
+Gdzie miłość wzajemna i dobroć
+Tam znajdziesz Boga żywego
+**
+1.
+W jedno nas tu zgromadziła miłość Chrystusa
+Weselmy się w Nim i radujmy
+*
+Gdzie miłość wzajemna i dobroć…
+2.
+Z pokorą szczerą miłujmy Boga
+Z czystego serca miłujmy się nawzajem 
+*
+Gdzie miłość wzajemna i dobroć…
+3.
+Skoro się wszyscy tu gromadzimy
+Strzeżmy się tego, co nas rozdziela 
+*
+Gdzie miłość wzajemna i dobroć…
+4.
+Niech ustaną wszystkie gniewy i spory
+A pośrodku nas niech będzie Chrystus 
+*
+Gdzie miłość wzajemna i dobroć…
+5.
+Obyśmy oglądali Twoje oblicze, Chryste Boże
+Razem ze świętymi w chwale Twego Królestwa 
+*
+Gdzie miłość wzajemna i dobroć…
+6.
+To będzie naszą radością czystą i bez granic
+Przez nieskończone wieki wieków, amen 
+*
+Gdzie miłość wzajemna i dobroć…`;
 piesni["Głoś imię Pana"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Głoś imię Pana"]['klasa'] = `1`;
 piesni["Głoś imię Pana"]['katsiedlecki'] = `Pieśni przygodne`;
 piesni["Głoś imię Pana"]['nr'] = `329`;
 piesni["Głoś imię Pana"]['tonacja'] = `D`;
 piesni["Głoś imię Pana"]['naco'] = `1/1/0/1/0/0`;
-piesni["Głoś imię Pana"]['tekst'] = ``;
-piesni["Głoś imię Pana"]['kategoria'] = ``;
+piesni["Głoś imię Pana"]['tekst'] = `1.
+Głoś imię Pana, Króla wszechmocy i chwały
+Złącz się z chórami niebios, zastępów wspaniałych
+Harfa i róg niech zagra „Któż jest jak Bóg”
+By krańce ziemi słyszały
+2.
+Głoś imię Pana, On twoim losem kieruje
+Na skrzydłach niesie, jak orzeł się opiekuje
+Daj Mu swą dłoń, w przygodzie zawołaj doń
+On cię od zła zachowuje
+3.
+Głoś imię Pana, razem ze wszystkim, co żyje
+On twoim światłem, Jemu niech serce twe bije
+On życiem twym, wdzięczności śpiewaj mu hymn
+Teraz i na wieki, amen`;
 piesni["Idźcie na cały świat"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Idźcie na cały świat"]['klasa'] = `1`;
 piesni["Idźcie na cały świat"]['katsiedlecki'] = `Pieśni przygodne`;
 piesni["Idźcie na cały świat"]['nr'] = `370`;
 piesni["Idźcie na cały świat"]['tonacja'] = `d`;
 piesni["Idźcie na cały świat"]['naco'] = `1/1/0/0/0/0`;
-piesni["Idźcie na cały świat"]['tekst'] = ``;
-piesni["Idźcie na cały świat"]['kategoria'] = ``;
+piesni["Idźcie na cały świat"]['tekst'] = `*
+Idźcie na cały świat
+I nauczajcie wszystkie narody
+**
+1.
+Żniwo wprawdzie wielkie
+Ale robotników mało
+Proście więc Pana żniwa
+Żeby wyprawił robotników na żniwo swoje
+*
+Idźcie na cały świat…
+2.
+Nie wyście mnie wybrali
+Ale Ja was wybrałem
+I przeznaczyłem was na to
+Abyście szli i owoc przynosili 
+*
+Idźcie na cały świat…
+3.
+To wam przykazuję
+Abyście się wzajemnie miłowali
+Po tym wszyscy poznają, żeście uczniami Moimi
+Jeśli będziecie się wzajemnie miłowali 
+*
+Idźcie na cały świat…
+4.
+Jak Ojciec Mnie posłał
+Tak i Ja was posyłam
+Weźmijcie Ducha Świętego
+I bądźcie Moimi świadkami aż po krańce ziemi 
+*
+Idźcie na cały świat…`;
 piesni["Jak miłe przybytki"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Jak miłe przybytki"]['klasa'] = `1`;
 piesni["Jak miłe przybytki"]['katsiedlecki'] = `Sakramenty i sakramentalia`;
 piesni["Jak miłe przybytki"]['nr'] = `386`;
 piesni["Jak miłe przybytki"]['tonacja'] = `Es`;
 piesni["Jak miłe przybytki"]['naco'] = `1/0/0/0/0/0`;
-piesni["Jak miłe przybytki"]['tekst'] = ``;
-piesni["Jak miłe przybytki"]['kategoria'] = ``;
+piesni["Jak miłe przybytki"]['tekst'] = `1.
+Jak miłe przybytki nam dał
+Wszechmocny i dobry nasz Bóg
+Że sam w nich zamieszkał, wszak chciał
+Wieczności zostawić nam próg
+*
+Oto nasz Boży dom
+Pokłonem uczcijmy go wraz
+Witaj nam, tu nasz Pan
+_Przyjmuje_ nas
+2.
+Tu ołtarz krynicą wszech łask
+Gdzie nie ma dostępu nasz wróg
+Tu cichy wszechmocny Twój blask
+By życie płynęło bez trwóg
+*
+Oto nasz Boży dom
+Pokłonem uczcijmy go wraz
+Witaj nam, tu nasz Pan
+_Wysłucha_ nas`;
 piesni["Jam jest chlebem żywym"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Jam jest chlebem żywym"]['klasa'] = `1`;
 piesni["Jam jest chlebem żywym"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
 piesni["Jam jest chlebem żywym"]['nr'] = `397`;
 piesni["Jam jest chlebem żywym"]['tonacja'] = `a`;
 piesni["Jam jest chlebem żywym"]['naco'] = `0/0/1/0/0/0`;
-piesni["Jam jest chlebem żywym"]['tekst'] = ``;
-piesni["Jam jest chlebem żywym"]['kategoria'] = ``;
+piesni["Jam jest chlebem żywym"]['tekst'] = `*
+Jam jest chlebem żywym
+Który zstąpił z nieba
+**
+1.
+Ciało moje _est pokarmem
+A krew mo_ja_ jest napojem
+*
+Jam jest chlebem żywym…
+2.
+Kto pożywa Ciało i Krew moją
+Ten _ma_ życie wieczne
+*
+Jam jest chlebem żywym…
+3.
+Kto przyjmuje Ciało i Krew moją
+Ten we Mnie, _a_ Ja w nim mieszkam
+*
+Jam jest chlebem żywym…
+4.
+Ja go wskrzeszę w dzień ostateczny
+I bę_dzie_ żył na wieki
+*
+Jam jest chlebem żywym…`;
 piesni["Jeden Chleb"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Jeden Chleb"]['klasa'] = `1`;
 piesni["Jeden Chleb"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
 piesni["Jeden Chleb"]['nr'] = `406`;
 piesni["Jeden Chleb"]['tonacja'] = `F`;
 piesni["Jeden Chleb"]['naco'] = `0/0/1/0/0/0`;
-piesni["Jeden Chleb"]['tekst'] = ``;
-piesni["Jeden Chleb"]['kategoria'] = ``;
+piesni["Jeden Chleb"]['tekst'] = `1.
+Jeden chleb co zmienia się w Chrystusa Ciało,
+z wielu ziaren pszenicznych się rodzi.
+Jedno wino, co się Krwią Chrystusa stało,
+z soku wielu winnych gron pochodzi.
+*
+Jak ten chleb, co złączył złote ziarna,
+tak niech miłość złączy nas ofiarna.
+Jak ten kielich łączy kropel wiele,
+tak nas, Chryste, w swoim złącz Kościele.
+2.
+O Pasterzu, zgromadź w jednej swej owczarni
+zabłąkane owce, które giną.
+W jeden Kościół zbierz na nowo i przygarnij,
+byśmy jedną stali się rodziną
+*
+Jak ten chleb, co złączył złote ziarna…
+3.
+Na ramiona swoje weź, o (dobry) Panie,
+tych, co sami wrócić już nie mogą!
+Niechaj zjednoczenia cud się (wielki) stanie,
+prowadź nas ku niebu wspólną drogą
+*
+Jak ten chleb, co złączył złote ziarna…`;
 piesni["Jezu drogi, Tyś miłością"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Jezu drogi, Tyś miłością"]['klasa'] = `1`;
 piesni["Jezu drogi, Tyś miłością"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
 piesni["Jezu drogi, Tyś miłością"]['nr'] = `432`;
 piesni["Jezu drogi, Tyś miłością"]['tonacja'] = `F`;
 piesni["Jezu drogi, Tyś miłością"]['naco'] = `0/0/1/0/0/0`;
-piesni["Jezu drogi, Tyś miłością"]['tekst'] = ``;
-piesni["Jezu drogi, Tyś miłością"]['kategoria'] = ``;
+piesni["Jezu drogi, Tyś miłością"]['tekst'] = `1.
+Jezu drogi, Tyś miłością, przyjdź, daj siebie nam
+Duszy mojej Tyś ufnością, króluj w niej Ty sam
+*
+Jezu, Jezu, przyjdź do duszy mej
+Obdarz ją łaskami swymi i bądź królem jej
+2.
+Choć mnie brudzą grzechu cienie, Ty mi siebie daj
+Duszę moją łaski tchnieniem przemień w cichy raj
+*
+Jezu, Jezu, przyjdź do duszy mej…
+3.
+Dodaj siły w życia znoju, usuń zwątpień noc
+I zachowaj nas w pokoju, sercom daj Twą moc
+*
+Jezu, Jezu, przyjdź do duszy mej…`;
 piesni["Jezu, Jezu, do mnie przyjdź"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Jezu, Jezu, do mnie przyjdź"]['klasa'] = `1`;
 piesni["Jezu, Jezu, do mnie przyjdź"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
 piesni["Jezu, Jezu, do mnie przyjdź"]['nr'] = `441`;
 piesni["Jezu, Jezu, do mnie przyjdź"]['tonacja'] = `d`;
 piesni["Jezu, Jezu, do mnie przyjdź"]['naco'] = `0/0/1/0/0/0`;
-piesni["Jezu, Jezu, do mnie przyjdź"]['tekst'] = ``;
-piesni["Jezu, Jezu, do mnie przyjdź"]['kategoria'] = ``;
+piesni["Jezu, Jezu, do mnie przyjdź"]['tekst'] = `1.
+Jezu, Jezu, do mnie przyjdź
+Ach, do serca mego wnijdź
+Przyjacielu prostych dusz
+Niech się z Tobą złączę już
+2.
+Serce się ku Tobie rwie
+Żyć bez Ciebie, Panie, źle
+Pragnę, wzdycham, Jezu mój
+W Tobie słodycz, życia zdrój
+3.
+Żadna rozkosz w świecie tym
+Nie ma miejsca w sercu mym
+Tylko miłość, Jezu, Twa
+Błogi pokój sercu da
+4.
+Choć niegodny sługa Twój
+Byś majestat zniżył swój
+Uzdrów słowem duszę mą
+Niech się zbudzi z grzechu snu
+5.
+Przyjdź, o Jezu, proszę Cię
+Niech Twym dzieckiem stanę się
+Chroń od złego duszę mą
+Niech na wieki będzie Twą`;
 piesni["Jezu, w Hostii utajony"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Jezu, w Hostii utajony"]['klasa'] = `1`;
 piesni["Jezu, w Hostii utajony"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
 piesni["Jezu, w Hostii utajony"]['nr'] = `439`;
 piesni["Jezu, w Hostii utajony"]['tonacja'] = `B`;
 piesni["Jezu, w Hostii utajony"]['naco'] = `0/0/1/0/0/0`;
-piesni["Jezu, w Hostii utajony"]['tekst'] = ``;
-piesni["Jezu, w Hostii utajony"]['kategoria'] = ``;
+piesni["Jezu, w Hostii utajony"]['tekst'] = `1.
+Jezu w Hostii utajony
+Daj mi serce Twoje, daj
+Tyś mi jeden ulubiony
+Tyś mojego serca raj
+2.
+Wszędzie dobrze mi, o Panie
+Choćby krzyż me siły rwał
+Słodkie ziemskie me wygnanie
+Byleś mi sam siebie dał
+3.
+Wszystko, wszystko chętnie zniosę
+Panie, dla miłości Twej
+Tylko błagam, tylko proszę
+Ty mnie w Sercu zawsze miej`;
 piesni["Jezusa ukrytego"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Jezusa ukrytego"]['klasa'] = `1`;
 piesni["Jezusa ukrytego"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
 piesni["Jezusa ukrytego"]['nr'] = `468`;
 piesni["Jezusa ukrytego"]['tonacja'] = `B`;
 piesni["Jezusa ukrytego"]['naco'] = `0/0/1/0/0/0`;
-piesni["Jezusa ukrytego"]['tekst'] = ``;
-piesni["Jezusa ukrytego"]['kategoria'] = ``;
+piesni["Jezusa ukrytego"]['tekst'] = `1.
+Jezusa ukrytego mam w Sakramencie czcić
+Wszystko oddać dla Niego, Jego miłością żyć
+On się nam daje cały, z nami zamieszkał tu
+Dla Jego Boskiej chwały życie poświęćmy Mu
+Wiarą ukorzyć trzeba zmysły i rozum swój
+Bo tu już nie ma chleba, to Bóg, to Jezus mój
+2.
+Tu Mu ciągle Hosanna śpiewa anielski chór
+A ta cześć nieustanna to dla nas biednych wzór
+Dzielić z nami wygnanie Jego rozkosze są
+Niechże z Nim przebywanie będzie radością mą
+On wie, co udręczenie, On zna, co smutku łzy
+Powiem Mu swe cierpienie, bo serce z bólu drży
+3.
+O Niebo mojej duszy, najsłodszy Jezu mój
+Dla mnie wśród ziemskiej suszy Tyś szczęścia pełen zdrój
+Tyś w Wieczerniku siebie raz tylko uczniom dał
+W ołtarzuś się jak w niebie powszednim chlebem stał
+Chciałbym tu być aniołem, co śpiewa ciągle cześć
+Z rozpromienionym czołem Tobie swe serce nieść `;
 piesni["Jezusowi cześć i chwała"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Jezusowi cześć i chwała"]['klasa'] = `1`;
 piesni["Jezusowi cześć i chwała"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
 piesni["Jezusowi cześć i chwała"]['nr'] = `469`;
 piesni["Jezusowi cześć i chwała"]['tonacja'] = `e`;
 piesni["Jezusowi cześć i chwała"]['naco'] = `0/0/1/0/0/0`;
-piesni["Jezusowi cześć i chwała"]['tekst'] = ``;
-piesni["Jezusowi cześć i chwała"]['kategoria'] = ``;
+piesni["Jezusowi cześć i chwała"]['tekst'] = `*
+Jezusowi cześć i chwała
+Za miłości cud
+Niech Mu śpiewa ziemia cała
+Niech Go wielbi lud
+**
+1.
+On nam wskazał nieomylną drogę
+On za owce swoje życie dał
+On przez krzyż zwyciężył śmierci trwogę
+W nas nadzieję zmartwychwstania wlał
+*
+Jezusowi cześć i chwała…
+2.
+On prowadzi nas do nowej ziemi
+Gdzie nie będzie cierpień ani łez
+Choć krzyżową drogą z Nim idziemy
+Wiedzie tam, gdzie wieczne szczęście jest 
+*
+Jezusowi cześć i chwała…
+3.
+Więc dziękujmy Jemu z całej duszy
+Że się dla nas w małej Hostii skrył
+Niech ta miłość serca nasze wzruszy
+Byśmy Go kochali z wszystkich sił 
+*
+Jezusowi cześć i chwała…`;
 piesni["Kiedy w jasną"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Kiedy w jasną"]['klasa'] = `1`;
 piesni["Kiedy w jasną"]['katsiedlecki'] = ``;
 piesni["Kiedy w jasną"]['nr'] = `491`;
 piesni["Kiedy w jasną"]['tonacja'] = `Es`;
 piesni["Kiedy w jasną"]['naco'] = `0/0/1/0/0/0`;
-piesni["Kiedy w jasną"]['tekst'] = ``;
-piesni["Kiedy w jasną"]['kategoria'] = ``;
+piesni["Kiedy w jasną"]['tekst'] = `1.
+Kiedy w jasną, spokojną, cichą noc
+Spoglądam na niebo pełne gwiazd
+Wtedy myślę, czy życie to ma sens
+I wołam do Ciebie, Ojcze nasz
+*
+O Boże, o Boże, Panie mój
+Nie pamiętaj, że czasem było źle
+Wiesz dobrze, że zawsze jestem Twój
+I że tylko Twoją drogą kroczyć chcę
+2.
+Kiedy w życiu tak pełnym rozczarowań
+Przez grzechu kamienie potknę się
+Kiedy spokój utonie w fali knowań
+Każdym drżeniem mej duszy szukam Cię
+*
+O Boże, o Boże, Panie mój…
+3.
+Życie ludzi przebiega krętą drogą
+Hen w górze cel wędrówki mojej tkwi
+I choć czasem sił braknie moim nogom
+To ja dojdę, bo zaufałem Ci
+*
+O Boże, o Boże, Panie mój…`;
 piesni["Kłaniam się Tobie"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Kłaniam się Tobie"]['klasa'] = `1`;
 piesni["Kłaniam się Tobie"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
 piesni["Kłaniam się Tobie"]['nr'] = `495`;
 piesni["Kłaniam się Tobie"]['tonacja'] = `G`;
 piesni["Kłaniam się Tobie"]['naco'] = `1/0/1/0/0/0`;
-piesni["Kłaniam się Tobie"]['tekst'] = ``;
-piesni["Kłaniam się Tobie"]['kategoria'] = ``;
+piesni["Kłaniam się Tobie"]['tekst'] = `1.
+Kłaniam się Tobie, przedwieczny Boże
+Którego niebo pojąć nie może
+Ja, proch mizerny, przed Twą możnością
+Z wojskiem aniołów klękam z radością
+2.
+Tu Stwórcę swego z wiarą wyznaję
+Kocham serdecznie, pokłon oddaję
+Cieszę się wielce z Twej Boskiej chwały
+Niech Ci się kłania z niebem świat cały
+3.
+Dziękuję za to, żeś się zostawił
+W tym Sakramencie, abyś nas zbawił
+Za swoje łaski tu wyświadczony
+Odbieraj od nas serca skruszone
+4.
+?
+5.
+?
+6.
+?`;
 piesni["Króluj nam, Chryste"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Króluj nam, Chryste"]['klasa'] = `1`;
 piesni["Króluj nam, Chryste"]['katsiedlecki'] = `Pieśni do Chrystusa Króla`;
 piesni["Króluj nam, Chryste"]['nr'] = `508`;
 piesni["Króluj nam, Chryste"]['tonacja'] = `F`;
 piesni["Króluj nam, Chryste"]['naco'] = `0/0/0/0/1/0`;
-piesni["Króluj nam, Chryste"]['tekst'] = ``;
-piesni["Króluj nam, Chryste"]['kategoria'] = ``;
+piesni["Króluj nam, Chryste"]['tekst'] = `1.
+Króluj nam, Chryste, zawsze i wszędzie
+To nasze rycerskie hasło
+= Ono nas zawsze prowadzić będzie
+I świecić jak słońce jasno
+2.
+Naprzód, przebojem, młodzi rycerze
+Do walki z grzechem swej duszy
+= Wodzem nam Jezus w Hostii ukryty
+Z Nim w bój nasz zastęp wyruszy
+3.
+Pójdziemy naprzód, naprzód radośnie
+Podnosząc w górę swe czoła
+= Przed nami życie rozkwita w wiośnie
+Odważnie, bo Jezus woła`;
 piesni["Kto się w opiekę"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Kto się w opiekę"]['klasa'] = `1`;
 piesni["Kto się w opiekę"]['katsiedlecki'] = `Pieśni przygodne`;
 piesni["Kto się w opiekę"]['nr'] = `520`;
 piesni["Kto się w opiekę"]['tonacja'] = `C`;
 piesni["Kto się w opiekę"]['naco'] = `1/0/0/0/0/0`;
-piesni["Kto się w opiekę"]['tekst'] = ``;
-piesni["Kto się w opiekę"]['kategoria'] = ``;
+piesni["Kto się w opiekę"]['tekst'] = `1.
+Kto się w opiekę odda Panu swemu
+A całym sercem szczerze ufa Jemu
+Śmiele rzec może – mam obrońcę Boga
+Nie przyjdzie na mnie = żadna straszna trwoga
+2.
+Ciebie On z łowczych obieży wyzuje
+I w zaraźliwym powietrzu ratuje
+W cieniu swych skrzydeł zachowa cię wiecznie
+Pod Jego pióry = uleżysz bezpiecznie
+3.
+Stateczność Jego tarcz i puklerz mocny
+Za którym stojąc, na żaden strach nocny
+Na żadną trwogę ani dbaj na strzały
+Którymi sieje = przygoda w dzień biały
+4.
+?
+5.
+Iżeś rzekł Panu – Tyś nadzieja moja
+Iż Bóg najwyższy jest ucieczka twoja
+Nie padnie na cię żadna zła przygoda
+Ani się znajdzie = w domu twoim szkoda
+6.
+?
+7.
+?
+8.
+Słysz, co Pan mówi – Ten kto mnie miłuje
+I ze Mną sobie szczerze postępuje
+I Ja go także w jego każdą trwogę
+I nie zapomnę, = i owszem, pomogę`;
 piesni["Liczę na Ciebie, Ojcze"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Liczę na Ciebie, Ojcze"]['klasa'] = `1`;
 piesni["Liczę na Ciebie, Ojcze"]['katsiedlecki'] = ``;
@@ -33640,15 +34503,36 @@ piesni["Liczę na Ciebie, Ojcze"]['nr'] = `1290`;
 piesni["Liczę na Ciebie, Ojcze"]['tonacja'] = `C`;
 piesni["Liczę na Ciebie, Ojcze"]['naco'] = `0/0/1/0/1/0`;
 piesni["Liczę na Ciebie, Ojcze"]['tekst'] = ``;
-piesni["Liczę na Ciebie, Ojcze"]['kategoria'] = ``;
 piesni["Miłujcie się wzajemnie"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Miłujcie się wzajemnie"]['klasa'] = `1`;
 piesni["Miłujcie się wzajemnie"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
 piesni["Miłujcie się wzajemnie"]['nr'] = `594`;
 piesni["Miłujcie się wzajemnie"]['tonacja'] = `c`;
 piesni["Miłujcie się wzajemnie"]['naco'] = `0/1/0/0/0/0`;
-piesni["Miłujcie się wzajemnie"]['tekst'] = ``;
-piesni["Miłujcie się wzajemnie"]['kategoria'] = ``;
+piesni["Miłujcie się wzajemnie"]['tekst'] = `*
+Miłujcie się wzajemnie
+Jak ja was umiłowałem
+**
+1.
+To jest nowe przykazanie
+Abyście się wzajemnie miłowali
+*
+Miłujcie się wzajemnie…
+2.
+Nie ma większej miłości
+Jak oddać życie za przyjaciół swoich 
+*
+Miłujcie się wzajemnie…
+3.
+Nie nazywam was sługami
+Ale przyjaciółmi 
+*
+Miłujcie się wzajemnie…
+4.
+Jesteście przyjaciółmi moimi
+Gdy czynicie, co wam nakazałem
+*
+Miłujcie się wzajemnie…`;
 piesni["Nasze plany i nadzieje"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Nasze plany i nadzieje"]['klasa'] = `1`;
 piesni["Nasze plany i nadzieje"]['katsiedlecki'] = ``;
@@ -33683,127 +34567,435 @@ Ufność w Boże miłosierdzie
 troskom twym położy kres
 *
 Jezu, ufam Tobie…`;
-piesni["Nasze plany i nadzieje"]['kategoria'] = ``;
 piesni["Nawróć się, ludu"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Nawróć się, ludu"]['klasa'] = `1`;
 piesni["Nawróć się, ludu"]['katsiedlecki'] = `Pieśni na Wielki Post`;
 piesni["Nawróć się, ludu"]['nr'] = `631`;
 piesni["Nawróć się, ludu"]['tonacja'] = `e`;
 piesni["Nawróć się, ludu"]['naco'] = `0/1/0/0/0/Posypanie głów`;
-piesni["Nawróć się, ludu"]['tekst'] = ``;
-piesni["Nawróć się, ludu"]['kategoria'] = ``;
+piesni["Nawróć się, ludu"]['tekst'] = `1.
+Nawróć się, ludu, w pokorze
+W poście i w płaczu, i w żalu
+A światłość twoja jak zorze
+Rozbłyśnie nad Jeruzalem
+2.
+Nawróć się, córko Syjonu
+Do Pana, Boga swojego
+Tułaczy przyjmij do domu
+Łaknących obdaruj chlebem
+3.
+Obmyj się dziś żywą wodą
+Bo Bóg ci przebaczyć gotów
+Jak orzeł odnów swą młodość
+I wzmocnij skrzydła do lotu
+4.
+Wtedy Pańskiego Imienia
+Zawezwiesz, a On odpowie
+Wprowadzi do bram zbawienia
+Pasterzem będzie swych owiec`;
 piesni["Nie lękajcie się"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Nie lękajcie się"]['klasa'] = `1`;
 piesni["Nie lękajcie się"]['katsiedlecki'] = ``;
 piesni["Nie lękajcie się"]['nr'] = `641`;
 piesni["Nie lękajcie się"]['tonacja'] = `C`;
 piesni["Nie lękajcie się"]['naco'] = `0/0/1/0/0/0`;
-piesni["Nie lękajcie się"]['tekst'] = ``;
-piesni["Nie lękajcie się"]['kategoria'] = ``;
+piesni["Nie lękajcie się"]['tekst'] = `*
+Nie lękajcie się, ja jestem z wami,
+nie lękajcie się, ja jestem z wami
+Nie lękajcie się, Bóg jest miłością,
+nie lękajcie się, trwajcie mocni w wierze
+**
+1.
+Ty jesteś skałą zbawienia
+Jedyną naszą ostoją
+Przychodzimy do Ciebie po światło
+Ulecz nasze serca, zmartwychwstać daj
+*
+Nie lękajcie się, ja jestem z wami…
+2.
+Pomóż nam wytrwać przy Tobie
+Być wiernym w wierze przez życia czas
+Tylko w Tobie cała nasza nadzieja
+Miłosierdziem swoim uzdrawiaj nas
+*
+Nie lękajcie się, ja jestem z wami…
+3.
+Przekażcie światu Mój ogień
+Pokoju i miłosierdzia
+Nieście wszystkim orędzie nadziei
+Moje światło niech świeci wśród was
+*
+Nie lękajcie się, ja jestem z wami…`;
 piesni["Nie opuszczaj nas"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Nie opuszczaj nas"]['klasa'] = `1`;
 piesni["Nie opuszczaj nas"]['katsiedlecki'] = ``;
 piesni["Nie opuszczaj nas"]['nr'] = `647`;
 piesni["Nie opuszczaj nas"]['tonacja'] = `G`;
 piesni["Nie opuszczaj nas"]['naco'] = `0/0/0/0/1/0`;
-piesni["Nie opuszczaj nas"]['tekst'] = ``;
-piesni["Nie opuszczaj nas"]['kategoria'] = ``;
+piesni["Nie opuszczaj nas"]['tekst'] = `1.
+Nie opuszczaj nas, nie opuszczaj nas
+*
+Jezu, nie opuszczaj nas
+**
+Tyś powiedział, że na ziemi
+Nie zostawisz nas samymi
+Twoje serce czuło w niebie
+Jak nam ciężko żyć bez Ciebie
+2.
+Nie opuszczaj nas, nie opuszczaj nas
+Jezu, nie opuszczaj nas
+Gdzie pociechę my znajdziemy
+Gdzie łzy żalu ukoimy?
+W sercu Twoim tylko, Panie,
+I pociecha i wytrwanie
+3.
+Nie opuszczaj nas, nie opuszczaj nas
+Jezu, nie opuszczaj nas
+W serca Twego słodkiej ranie
+Wszystko mamy, dobry Panie
+Tam ucieczka, tam schronienie
+Tam wesele, tam wzmocnienie
+<hr />
+1.
+Nie opuszczaj nas, nie opuszczaj nas
+*
+Matko, nie opuszczaj nas
+**
+Matko, pociesz, bo płaczemy
+Matko, prowadź, bo zginiemy
+Ucz nas kochać, choć w cierpieniu
+Ucz nas cierpieć, lecz w milczeniu
+2.
+Nie opuszczaj nas, nie opuszczaj nas
+Matko, nie opuszczaj nas
+Cóż dziwnego, że łzy płyną
+Gdy to życie łez doliną
+Dusza smutkiem zamroczona
+Pod ciężarem krzyża kona
+3.
+Nie opuszczaj nas, nie opuszczaj nas
+Matko, nie opuszczaj nas
+Wyjednało Twe wstawienie
+Nie jednemu już zbawienie
+Kto swą ufność w Tobie złożył
+Nowem łaski życia ożył`;
 piesni["Niech będzie chwała"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Niech będzie chwała"]['klasa'] = `1`;
 piesni["Niech będzie chwała"]['katsiedlecki'] = ``;
 piesni["Niech będzie chwała"]['nr'] = `0`;
 piesni["Niech będzie chwała"]['tonacja'] = `F`;
 piesni["Niech będzie chwała"]['naco'] = `0/0/0/1/0/0`;
-piesni["Niech będzie chwała"]['tekst'] = ``;
-piesni["Niech będzie chwała"]['kategoria'] = ``;
+piesni["Niech będzie chwała"]['tekst'] = `Niech będzie chwała i cześć, i uwielbienie
+Chwała i cześć Jezusowi
+Chwała, niech będzie chwała
+Tak, Jemu chwała i cześć`;
 piesni["Niechaj z nami będzie Pan"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Niechaj z nami będzie Pan"]['klasa'] = `1`;
-piesni["Niechaj z nami będzie Pan"]['katsiedlecki'] = ``;
+piesni["Niechaj z nami będzie Pan"]['katsiedlecki'] = `Pieśni przygodne`;
 piesni["Niechaj z nami będzie Pan"]['nr'] = `677`;
 piesni["Niechaj z nami będzie Pan"]['tonacja'] = `Es`;
 piesni["Niechaj z nami będzie Pan"]['naco'] = `1/1/0/0/0/0`;
-piesni["Niechaj z nami będzie Pan"]['tekst'] = ``;
-piesni["Niechaj z nami będzie Pan"]['kategoria'] = ``;
+piesni["Niechaj z nami będzie Pan"]['tekst'] = `1.
+Niechaj z nami będzie Pan, Alleluja
+Niech obroną będzie nam, Alleluja
+2.
+Jego Słowo zawsze trwa, Alleluja
+Wieczną prawdę w sobie ma, Alleluja
+3.
+Chcemy zgłębiać Słowa treść, Alleluja
+Braciom je radośnie nieść, Alleluja
+4.
+Chcemy Nim na co dzień żyć, Alleluja
+I w przyjaźni z Bogiem być, Alleluja
+5.
+Źródło życia, Panie nasz, Alleluja
+Ty nam wieczne życie dasz, Alleluja
+6.
+Prowadź wśród zawiłych dróg, Alleluja
+W Trójcy Świętej Jeden Bóg, Alleluja`;
 piesni["O Boże, dzięki Ci składamy"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["O Boże, dzięki Ci składamy"]['klasa'] = `1`;
 piesni["O Boże, dzięki Ci składamy"]['katsiedlecki'] = `Pieśni mszalne`;
 piesni["O Boże, dzięki Ci składamy"]['nr'] = `690`;
 piesni["O Boże, dzięki Ci składamy"]['tonacja'] = `Es`;
 piesni["O Boże, dzięki Ci składamy"]['naco'] = `0/0/0/1/1/0`;
-piesni["O Boże, dzięki Ci składamy"]['tekst'] = ``;
-piesni["O Boże, dzięki Ci składamy"]['kategoria'] = ``;
+piesni["O Boże, dzięki Ci składamy"]['tekst'] = `1.
+O Boże, dzięki Ci składamy za ten wielki cud.
+Za Twej miłości wieczny zamysł, by odkupić lud.
+Tyś Syna swego dał, by człowiek życie miał.
+On przyjął na się ludzkie ciało, jednym z nas się stał.
+2.
+Lecz nie dość było tej miłości, że wśród ludzi żył.
+On w Eucharystii wśród nas gości, w Hostii tej się skrył.
+Tu otwarł Serce swe i łaski wiernym śle,
+On jest pokarmem naszych dusz i umocnieniem sił.
+3.
+Zawitaj, Jezu, drogi Gościu, źródło hojnych łask.
+Ty nas gromadzisz w jeden Kościół, Ty jednoczysz nas.
+Bądź siłą naszych dusz, ostoją pośród burz,
+pozostań z nami w doczesności i po wieczny czas.`;
 piesni["O mój Jezu w Hostii skryty"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["O mój Jezu w Hostii skryty"]['klasa'] = `1`;
 piesni["O mój Jezu w Hostii skryty"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
 piesni["O mój Jezu w Hostii skryty"]['nr'] = `726`;
 piesni["O mój Jezu w Hostii skryty"]['tonacja'] = `Es`;
 piesni["O mój Jezu w Hostii skryty"]['naco'] = `0/0/1/0/0/0`;
-piesni["O mój Jezu w Hostii skryty"]['tekst'] = ``;
-piesni["O mój Jezu w Hostii skryty"]['kategoria'] = ``;
+piesni["O mój Jezu w Hostii skryty"]['tekst'] = `1.
+O mój Jezu w Hostii skryty
+Na kolanach wielbię Cię
+W postać chleba Tyś spowity
+Bóstwo Twoje kryje się
+Ty, co rządzisz całym światem
+Me zbawienie w ręku masz
+Tu przed Twoim Majestatem
+Aniołowie kryją twarz
+2.
+O światłości przysłoniona
+Rzuć mi Twój promienny blask
+O Dobroci nieskończona
+Otwórz dla nas skarby łask
+Chlebie życia przeobfity
+Nasyć duszy mojej głód
+Boski ogniu tu zakryty
+Rozgrzej serca mego chłód
+3.
+Jezu, Tyś jest Zbawicielem
+Ustrzeż mnie od zgubnych dróg
+Bądź mi siłą i weselem
+Boś w tej Hostii żywy Bóg
+Dla miłości Matki Twojej
+Racz wysłuchać prośbę mą
+Bądź miłością duszy mojej
+Nie gardź moją cichą łzą`;
 piesni["O Panie, Ty nam dajesz"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["O Panie, Ty nam dajesz"]['klasa'] = `1`;
 piesni["O Panie, Ty nam dajesz"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
 piesni["O Panie, Ty nam dajesz"]['nr'] = `732`;
 piesni["O Panie, Ty nam dajesz"]['tonacja'] = `c`;
 piesni["O Panie, Ty nam dajesz"]['naco'] = `0/1/1/0/0/0`;
-piesni["O Panie, Ty nam dajesz"]['tekst'] = ``;
-piesni["O Panie, Ty nam dajesz"]['kategoria'] = ``;
+piesni["O Panie, Ty nam dajesz"]['tekst'] = `1.
+= O Panie, Ty nam dajesz Ciało swe i Krew =
+Do Ciebie więc idziemy, wciąż radosną niosąc pieśń
+*
+= Ty jesteś Bogiem wiernym na wieczny czas
+2.
+= Przez dar Twojego chleba, dobry Boże nasz =
+Rodzinę bratnią czynisz z nas, miłować uczysz nas
+*
+= Ty jesteś Bogiem wiernym na wieczny czas
+3.
+= To Twoje miłowanie dało wolność nam =
+Chwalimy święte Imię Boga, jak uczyłeś nas
+*
+= Ty jesteś Bogiem wiernym na wieczny czas
+4.
+= Tyś nam wyznaczył drogę wiodącą na Twój szlak =
+Idziemy więc, by radość nieść tam, gdzie jej światu brak
+*
+= Ty jesteś Bogiem wiernym na wieczny czas`;
 piesni["O Panie, Tyś moim pasterzem"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["O Panie, Tyś moim pasterzem"]['klasa'] = `1`;
 piesni["O Panie, Tyś moim pasterzem"]['katsiedlecki'] = `Pieśni przygodne`;
 piesni["O Panie, Tyś moim pasterzem"]['nr'] = `733`;
 piesni["O Panie, Tyś moim pasterzem"]['tonacja'] = `D`;
 piesni["O Panie, Tyś moim pasterzem"]['naco'] = `1/1/1/0/0/0`;
-piesni["O Panie, Tyś moim pasterzem"]['tekst'] = ``;
-piesni["O Panie, Tyś moim pasterzem"]['kategoria'] = ``;
+piesni["O Panie, Tyś moim pasterzem"]['tekst'] = `1.
+O Panie, Tyś moim Pasterzem
+Tak dobrym, że nic mi nie braknie
+Do źródeł wód żywych mnie wiedziesz
+Prostymi ścieżkami prowadzisz
+*
+Pasterzem moim jest Pan
+I nie brak mi niczego
+2.
+Choć idę przez ciemną dolinę
+Niczego nie muszę się trwożyć
+Bo Pasterz mój zawsze jest przy mnie
+W obronie mej stanąć gotowy
+*
+Pasterzem moim jest Pan…
+3.
+Do stołu swojego zaprasza
+Na oczach mych wrogów to czyni
+Olejkiem mą głowę namaszcza
+A kielich napełnia obficie 
+*
+Pasterzem moim jest Pan…
+4.
+Twa łaska i dobroć podążą
+W ślad za mną po dzień mój ostatni
+Aż dotrę, o Panie, do domu
+By z Tobą zamieszkać na zawsze 
+*
+Pasterzem moim jest Pan…`;
 piesni["Ojcze z niebios"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Ojcze z niebios"]['klasa'] = `1`;
 piesni["Ojcze z niebios"]['katsiedlecki'] = `Pieśni przygodne`;
 piesni["Ojcze z niebios"]['nr'] = `778`;
 piesni["Ojcze z niebios"]['tonacja'] = `D`;
 piesni["Ojcze z niebios"]['naco'] = `0/0/1/0/0/0`;
-piesni["Ojcze z niebios"]['tekst'] = ``;
-piesni["Ojcze z niebios"]['kategoria'] = ``;
+piesni["Ojcze z niebios"]['tekst'] = `1.
+Ojcze z niebios, Boże Panie,
+tu na ziemię ześlij nam,
+Twoje święte zmiłowanie,
+tu na ziemię ześlij nam.
+2.
+Boże wielki! My w pokorze
+do Twych stóp garniemy się,
+wola Twoja wszystko może,
+Ty nad nami zlituj się.
+3.
+A przez Syna Twego mękę
+ulżyj ludzkiej doli złej.
+Każdą życia skróć udrękę,
+Boże wielki, zlituj się.`;
 piesni["Pan Jezus już się zbliża"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Pan Jezus już się zbliża"]['klasa'] = `1`;
 piesni["Pan Jezus już się zbliża"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
 piesni["Pan Jezus już się zbliża"]['nr'] = `812`;
 piesni["Pan Jezus już się zbliża"]['tonacja'] = `A`;
 piesni["Pan Jezus już się zbliża"]['naco'] = `0/0/1/0/0/0`;
-piesni["Pan Jezus już się zbliża"]['tekst'] = ``;
-piesni["Pan Jezus już się zbliża"]['kategoria'] = ``;
+piesni["Pan Jezus już się zbliża"]['tekst'] = `1.
+Pan Jezus już się zbliża
+Już puka do mych drzwi
+Pobiegnę go przywitać
+Z radości serce drży
+*
+O szczęście niepojęte
+Bóg sam odwiedza mnie
+O Jezu, wspomóż łaską
+Bym godnie przyjął Cię
+2.
+Nie jestem godzien, Panie
+Byś w sercu moim był
+Tyś Królem wszego świata
+A jam jest marny pył
+*
+O szczęście niepojęte…
+3.
+Gdy wspomnę na me grzechy
+To z żalu [Ze żalu] płyną łzy
+Bom Serce Twoje zranił
+O Jezu, odpuść mi 
+*
+O szczęście niepojęte…
+4.
+Pragnąłbym Cię tak kochać
+Jak Ty kochałeś mnie
+Przyjm serce me oziębłe
+A daj mi Serce Twe 
+*
+O szczęście niepojęte…`;
 piesni["Pan wieczernik przygotował"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Pan wieczernik przygotował"]['klasa'] = `1`;
 piesni["Pan wieczernik przygotował"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
 piesni["Pan wieczernik przygotował"]['nr'] = `819`;
 piesni["Pan wieczernik przygotował"]['tonacja'] = `C`;
 piesni["Pan wieczernik przygotował"]['naco'] = `0/0/1/0/0/0`;
-piesni["Pan wieczernik przygotował"]['tekst'] = ``;
-piesni["Pan wieczernik przygotował"]['kategoria'] = ``;
+piesni["Pan wieczernik przygotował"]['tekst'] = `*
+Pan wieczernik przygotował, swój zaprasza lud
+Dla nas wszystkich dom otworzył i zastawił stół
+**
+1.
+Przyjdźcie z ulic i opłotków, bowiem mija czas
+Przyjdźcie chorzy i ubodzy, Pan uzdrowi was
+*
+Pan wieczernik przygotował…
+2.
+Każdy człowiek w domu Pańskim swoje miejsce ma
+Niech nikogo w nim nie braknie, uczta Pańska trwa
+*
+Pan wieczernik przygotował…
+3.
+Przystępujmy z dziękczynieniem, pożywajmy chleb
+Pijmy napój nieśmiertelnych, aby życie mieć
+*
+Pan wieczernik przygotował…
+4.
+Zakosztujcie i poznajcie tej Wieczerzy smak
+Z obfitości boskich darów bierzcie pełnię łask
+*
+Pan wieczernik przygotował…
+5.
+Kto się z Panem tu spotyka tworzy jedno z Nim
+Bóg z miłością go nazywa przyjacielem swym
+*
+Pan wieczernik przygotował…
+6.
+Nakarmieni Chlebem Żywym wznieśmy Panu pieśń
+Bóg żyjący i prawdziwy strzeże naszych serc
+*
+Pan wieczernik przygotował…`;
 piesni["Pan zstąpił z nieba"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Pan zstąpił z nieba"]['klasa'] = `1`;
 piesni["Pan zstąpił z nieba"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
 piesni["Pan zstąpił z nieba"]['nr'] = `823`;
 piesni["Pan zstąpił z nieba"]['tonacja'] = `G`;
 piesni["Pan zstąpił z nieba"]['naco'] = `0/0/1/0/0/0`;
-piesni["Pan zstąpił z nieba"]['tekst'] = ``;
-piesni["Pan zstąpił z nieba"]['kategoria'] = ``;
+piesni["Pan zstąpił z nieba"]['tekst'] = `1.
+Pan zstąpił z nieba pod postacią Chleba
+Choć skryty, bez świty, lecz prawy Bóg
+Cichy, bez chwały, daje nam się cały
+*
+Padnijmy na kolana
+Uczcijmy z niebios Pana
+Z miłością, z czułością
+Wiernych sług
+2.
+Jezus przychodzi, troski nam osłodzi
+Więc bieżmy, więc spieszmy do jego stóp
+On nas z ołtarza łaską swą obdarza
+*
+Padnijmy na kolana…`;
 piesni["Panie dobry jak chleb"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Panie dobry jak chleb"]['klasa'] = `1`;
 piesni["Panie dobry jak chleb"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
 piesni["Panie dobry jak chleb"]['nr'] = `835`;
 piesni["Panie dobry jak chleb"]['tonacja'] = `C`;
 piesni["Panie dobry jak chleb"]['naco'] = `0/0/1/1/0/0`;
-piesni["Panie dobry jak chleb"]['tekst'] = ``;
-piesni["Panie dobry jak chleb"]['kategoria'] = ``;
+piesni["Panie dobry jak chleb"]['tekst'] = `*
+Panie dobry jak chleb
+Bądź uwielbiony od swego Kościoła
+Bo Tyś do końca nas umiłował
+Do końca nas umiłował
+**
+1.
+Tyś na pustkowiu chleb rozmnożył, Panie
+Byśmy do nieba w drodze nie ustali
+Tyś stał się manną wędrowców przez ziemię
+Dla tych co dotąd przy Tobie wytrwali
+*
+Panie dobry jak chleb…
+2.
+Ziarna zbierzemy, odrzucimy chwasty
+Bo łan dojrzewa, pachnie świeżym chlebem
+Niech ziemia nasza stanie się ołtarzem
+A chleb Komunią dla spragnionych Ciebie 
+*
+Panie dobry jak chleb…
+3.
+Ty nas nazwałeś swymi przyjaciółmi
+Jeśli spełnimy, co nam przykazałeś
+Cóż my bez Ciebie, Panie, uczynimy
+Tyś naszym Życiem i Oczekiwaniem 
+*
+Panie dobry jak chleb…`;
 piesni["Pod Twą obronę"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Pod Twą obronę"]['klasa'] = `1`;
 piesni["Pod Twą obronę"]['katsiedlecki'] = `Pieśni przygodne`;
 piesni["Pod Twą obronę"]['nr'] = `870`;
 piesni["Pod Twą obronę"]['tonacja'] = `B`;
 piesni["Pod Twą obronę"]['naco'] = `1/0/0/0/1/0`;
-piesni["Pod Twą obronę"]['tekst'] = ``;
-piesni["Pod Twą obronę"]['kategoria'] = ``;
+piesni["Pod Twą obronę"]['tekst'] = `1.
+Pod Twą obronę, Ojcze na niebie
+Grono Twych dzieci swój powierza los
+= Ty nam błogosław, ratuj w potrzebie
+I broń od zguby, gdy zagraża cios
+2.
+Czy toń spokojna, czy szumią fale
+Gdy Ty Twe dzieci w swej opiece masz
+= Wznosimy modły dziś ku Twej chwale
+Boś Ty nam tarczą, Boże Ojcze nasz`;
 piesni["Pójdź do Jezusa"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Pójdź do Jezusa"]['klasa'] = `1`;
 piesni["Pójdź do Jezusa"]['katsiedlecki'] = `Pieśni przygodne`;
@@ -33827,23 +35019,58 @@ Daj przetrwać mężnie prób ciężki czas
 O Jezu, pociesz nas
 *
 Słuchaj, Jezu, jak Cię błaga lud…`;
-piesni["Pójdź do Jezusa"]['kategoria'] = ``;
 piesni["Pójdźmy do Pana"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Pójdźmy do Pana"]['klasa'] = `1`;
 piesni["Pójdźmy do Pana"]['katsiedlecki'] = `Pieśni przygodne`;
 piesni["Pójdźmy do Pana"]['nr'] = `878`;
 piesni["Pójdźmy do Pana"]['tonacja'] = `B`;
 piesni["Pójdźmy do Pana"]['naco'] = `1/0/0/0/0/0`;
-piesni["Pójdźmy do Pana"]['tekst'] = ``;
-piesni["Pójdźmy do Pana"]['kategoria'] = ``;
+piesni["Pójdźmy do Pana"]['tekst'] = `1.
+Pójdźmy do Pana z winnym pokłonem
+A złóżmy serca przed Jego tronem
+Dobroć nam Jego, wszechmocność znana
+Pójdźmy do Pana, pójdźmy do Pana
+2.
+Pan święty, mocny i nieśmiertelny
+Jeden w Osobach Trzech, nierozdzielny
+Moc, mądrość, miłość w Nim niezrównana
+Pójdźmy do Pana, pójdźmy do Pana
+3.
+Bóg Stwórcą naszym, Ojcem i Panem
+Wszelkim łaskawie zarządza stanem
+Jego Opatrzność wszędzie widziana
+Pójdźmy do Pana, pójdźmy do Pana`;
 piesni["Przygotuję Ci serce"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Przygotuję Ci serce"]['klasa'] = `1`;
 piesni["Przygotuję Ci serce"]['katsiedlecki'] = `Pieśni mszalne`;
 piesni["Przygotuję Ci serce"]['nr'] = `940`;
 piesni["Przygotuję Ci serce"]['tonacja'] = `D`;
 piesni["Przygotuję Ci serce"]['naco'] = `0/1/0/0/0/0`;
-piesni["Przygotuję Ci serce"]['tekst'] = ``;
-piesni["Przygotuję Ci serce"]['kategoria'] = ``;
+piesni["Przygotuję Ci serce"]['tekst'] = `1.
+Przygotuję Ci serce, o Chryste
+Przygotuję Ci serce niewinne
+Takie jasne, radosne i czyste
+Przygotuję Ci serce, o Chryste
+2.
+Przygotuję Ci serce ofiarne
+Precz odrzucę, co kusi i wabi
+Przygotuję nadzieją i wiarą
+Przygotuję Ci serce ofiarą
+3.
+Przyozdobię Ci serce miłością
+Taką wielką, co wszystko zwycięża
+Abyś wstąpił do niego z radością
+Przyozdobię Ci serce miłością
+4.
+Przyozdobię Ci serce dziecinne
+Takie małe, tak biedne i słabe
+A Ty wlejesz w nie siły swe dziwne
+Kiedy wstąpisz w me serce niewinne
+5.
+Przygotuję Ci serce, mój Boże
+Ja, stworzenie niegodne i grzeszne
+Tobie troski, radości me złożę
+Kiedy wstąpisz w me serce, o Boże`;
 piesni["Przyjdźcie do mnie wszyscy"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Przyjdźcie do mnie wszyscy"]['klasa'] = `1`;
 piesni["Przyjdźcie do mnie wszyscy"]['katsiedlecki'] = `Pieśni przygodne`;
@@ -33871,47 +35098,145 @@ O, pójdźmy wszyscy z pokłonem…
 ?
 4.
 ?`;
-piesni["Przyjdźcie do mnie wszyscy"]['kategoria'] = ``;
 piesni["Przyjmij, o Najświętszy Panie"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Przyjmij, o Najświętszy Panie"]['klasa'] = `1`;
 piesni["Przyjmij, o Najświętszy Panie"]['katsiedlecki'] = `Pieśni mszalne`;
 piesni["Przyjmij, o Najświętszy Panie"]['nr'] = `954`;
 piesni["Przyjmij, o Najświętszy Panie"]['tonacja'] = `cis`;
 piesni["Przyjmij, o Najświętszy Panie"]['naco'] = `0/1/0/0/0/0`;
-piesni["Przyjmij, o Najświętszy Panie"]['tekst'] = ``;
-piesni["Przyjmij, o Najświętszy Panie"]['kategoria'] = ``;
+piesni["Przyjmij, o Najświętszy Panie"]['tekst'] = `1.
+Przyjmij, o Najświętszy Panie
+Tę ofiarę chleba, wina
+Co się wkrótce Ciałem stanie
+I Krwią świętą Twego Syna
+2.
+Przyjmij nasze wyrzeczenia
+Które w chlebie tym niesiemy
+Przyjmij trudy i cierpienia
+Które w winie dać Ci chcemy
+3.
+Chwała Ojcu i Synowi
+I Duchowi również chwała
+Bogu w Trójcy Jedynemu
+Niechaj śpiewa ziemia cała`;
 piesni["Radośnie Panu hymn śpiewajmy"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Radośnie Panu hymn śpiewajmy"]['klasa'] = `1`;
 piesni["Radośnie Panu hymn śpiewajmy"]['katsiedlecki'] = `Pieśni przygodne`;
 piesni["Radośnie Panu hymn śpiewajmy"]['nr'] = `973`;
 piesni["Radośnie Panu hymn śpiewajmy"]['tonacja'] = `C`;
 piesni["Radośnie Panu hymn śpiewajmy"]['naco'] = `1/0/0/1/0/0`;
-piesni["Radośnie Panu hymn śpiewajmy"]['tekst'] = ``;
-piesni["Radośnie Panu hymn śpiewajmy"]['kategoria'] = ``;
+piesni["Radośnie Panu hymn śpiewajmy"]['tekst'] = `*
+Radośnie Panu hymn śpiewajmy, Alleluja!
+I dobroć Jego wysławiajmy, Alleluja!
+**
+1.
+Wychwalajcie ze mną dzieła Bożej mocy, Alleluja!
+Wychwalajcie pana nad wszystko na wieki, Alleluja!
+Wychwalajcie Pana, aniołowie Pańscy, Alleluja!
+Wychwalajcie Pana, Zastępy niebieskie, Alleluja!
+*
+Radośnie Panu hymn śpiewajmy…
+2.
+Wychwalajcie Pana, słońce i księżycu. Alleluja!
+Wychwalajcie Pana, wszystkie gwiazdy nieba. Alleluja!
+Wychwalajcie Pana, rzeki, oceany. Alleluja!
+Wychwalajcie Pana, pagórki i góry. Alleluja!
+*
+Radośnie Panu hymn śpiewajmy…
+3.
+Wychwalajcie Pana, rośliny, zwierzęta. Alleluja!
+Niech wychwala Pana, cały rodzaj ludzki. Alleluja!
+Wychwalajcie Pana, ludzie sprawiedliwi. Alleluja!
+Wychwalajcie Pana, pokorni i święci. Alleluja!
+*
+Radośnie Panu hymn śpiewajmy…
+4.
+Wychwalajcie Pana, kapłani Kościoła. Alleluja!
+Niech cały Lud Boży sławi Jego dobroć. Alleluja!
+Wychwalajcie Ojca, wraz z Synem i Duchem. Alleluja!
+Wychwalajmy Pana, Stwórcę nieba, ziemi. Alleluja!
+*
+Radośnie Panu hymn śpiewajmy…`;
 piesni["Rzućmy się wszyscy społem"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Rzućmy się wszyscy społem"]['klasa'] = `1`;
 piesni["Rzućmy się wszyscy społem"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
 piesni["Rzućmy się wszyscy społem"]['nr'] = `990`;
 piesni["Rzućmy się wszyscy społem"]['tonacja'] = `G`;
 piesni["Rzućmy się wszyscy społem"]['naco'] = `0/0/1/0/0/0`;
-piesni["Rzućmy się wszyscy społem"]['tekst'] = ``;
-piesni["Rzućmy się wszyscy społem"]['kategoria'] = ``;
+piesni["Rzućmy się wszyscy społem"]['tekst'] = `1.
+Rzućmy się wszyscy społem
+Uderzmy w ziemię czołem
+Dając pokłon Najwyższemu
+W Sakramencie ukrytemu
+Bogu naszemu
+2.
+Wszak pod utratą nieba
+Wierzyć każdemu trzeba
+Że pod tymi przymiotami
+Chleba, wina, jest Bóg z nami
+Choć utajony
+3.
+A jeśli kto nie wierzy
+Ma z ostatniej wieczerzy
+Jasny dowód, co się stało
+Że wino w Krew, a chleb w Ciało
+Bóg swe przemienił
+4.
+I tę moc dał kapłanom
+Nie królom ani panom
+Aby oni poświęcali
+I nam grzesznym rozdawali
+Ciało, Krew Pańską.
+5.
+…`;
 piesni["Schowaj mnie"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Schowaj mnie"]['klasa'] = `1`;
 piesni["Schowaj mnie"]['katsiedlecki'] = ``;
 piesni["Schowaj mnie"]['nr'] = `1295`;
 piesni["Schowaj mnie"]['tonacja'] = `B`;
 piesni["Schowaj mnie"]['naco'] = `0/0/1/0/0/0`;
-piesni["Schowaj mnie"]['tekst'] = ``;
-piesni["Schowaj mnie"]['kategoria'] = ``;
+piesni["Schowaj mnie"]['tekst'] = `1.
+Schowaj mnie pod skrzydła Twe
+Ukryj mnie w silnej dłoni Swej.
+*
+Kiedy fale mórz chcą porwać mnie
+Z Tobą wzniosę się, podniesiesz mnie
+Panie Królem Tyś spienionych wód
+Ja ufam Ci - Ty jesteś Bóg.
+2.
+Odpocznę dziś w ramionach Twych
+Dusza ma w Tobie będzie trwać.
+*
+Kiedy fale mórz chcą porwać mnie…`;
 piesni["Serce me do Ciebie wznoszę"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Serce me do Ciebie wznoszę"]['klasa'] = `1`;
 piesni["Serce me do Ciebie wznoszę"]['katsiedlecki'] = `Pieśni na Wielki Post`;
 piesni["Serce me do Ciebie wznoszę"]['nr'] = `999`;
 piesni["Serce me do Ciebie wznoszę"]['tonacja'] = `d`;
 piesni["Serce me do Ciebie wznoszę"]['naco'] = `0/1/0/0/0/0`;
-piesni["Serce me do Ciebie wznoszę"]['tekst'] = ``;
-piesni["Serce me do Ciebie wznoszę"]['kategoria'] = ``;
+piesni["Serce me do Ciebie wznoszę"]['tekst'] = `*
+Serce me do Ciebie wznoszę, Panie, szukam Cię
+**
+1.
+Usłysz, Panie, głos wołania i ulituj się
+Serce me do Ciebie wznoszę, Panie, szukam Cię
+*
+Serce me do Ciebie wznoszę, Panie, szukam Cię
+2.
+Nie ukrywaj się przede mną, nie odpychaj mnie
+Nie opuszczaj mnie, Wybawco, wstrzymaj srogi gniew 
+*
+Serce me do Ciebie wznoszę, Panie, szukam Cię
+3.
+Choćby o mnie zapomnieli ojciec, matka ma
+Ty mnie przyjmiesz i przygarniesz w utrapienia dniu 
+*
+Serce me do Ciebie wznoszę, Panie, szukam Cię
+4.
+Wskaż mi drogę Twoją, Panie, prowadź ścieżką Twą
+Bo wróg czyha na bezdrożach, wyrwij z jego rąk 
+*
+Serce me do Ciebie wznoszę, Panie, szukam Cię`;
 piesni["Skosztujcie i zobaczcie"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Skosztujcie i zobaczcie"]['klasa'] = `1`;
 piesni["Skosztujcie i zobaczcie"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
@@ -33961,191 +35286,624 @@ W nędzy znajdą się bogacze, będą łaknąć chleba
 Ci zaś, co szukają Pana, obfitować będą 
 *
 Skosztujcie i zobaczcie, jak dobry jest Pan `;
-piesni["Skosztujcie i zobaczcie"]['kategoria'] = ``;
 piesni["U drzwi Twoich"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["U drzwi Twoich"]['klasa'] = `1`;
 piesni["U drzwi Twoich"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
 piesni["U drzwi Twoich"]['nr'] = `1086`;
 piesni["U drzwi Twoich"]['tonacja'] = `D`;
 piesni["U drzwi Twoich"]['naco'] = `0/0/1/0/0/0`;
-piesni["U drzwi Twoich"]['tekst'] = ``;
-piesni["U drzwi Twoich"]['kategoria'] = ``;
+piesni["U drzwi Twoich"]['tekst'] = `1.
+= U drzwi Twoich stoję, Panie, * = czekam na Twe zmiłowanie.
+2.
+= Który pod postacią chleba * = prawdziwy Bóg jesteś z nieba.
+3.
+= W tej Hostyi jest Bóg żywy, * = choć zakryty, lecz prawdziwy.
+4.
+= W tym Najświętszym Sakramencie * = z nieba stawa w tym momencie.
+5.
+= Jak wielki cud Bóg uczynił, * = gdy chleb w Ciało swe przemienił.
+6.
+= A nam pożywać zostawił, * = ażeby nas przez to zbawił.
+7.
+= Święty, Mocny, Nieśmiertelny, * = w majestacie swym niezmierny!
+8.
+= Aniołowie się lękają, * = gdy na Jego twarz patrzają.
+9.
+= Wszyscy niebiescy duchowie * = lękają się i królowie;
+10.
+= Niebo, ziemia ani morze * = pojąć, co jest Bóg, nie może.
+11.
+= Żaden z wojska anielskiego * = nie dostąpi nigdy tego.
+12.
+= Czego człowiek dostępuje, * = Ciało i Krew gdy przyjmuje.
+13.
+= Jam nie godzien, Panie, tego, * = abyś wszedł do serca mego;
+14.
+= Rzeknij tylko słowo swoje, * = a tym zbawisz duszę moją.
+15.
+= Kłaniam się Tobie samemu, * = bądź miłościw mnie grzesznemu.
+16.
+= Niechaj żyję z Tobą, Panem, * = aż na wieki wieków. Amen.`;
 piesni["Uczyńcie, co wam mówi Syn"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Uczyńcie, co wam mówi Syn"]['klasa'] = `1`;
 piesni["Uczyńcie, co wam mówi Syn"]['katsiedlecki'] = ``;
 piesni["Uczyńcie, co wam mówi Syn"]['nr'] = `1283`;
 piesni["Uczyńcie, co wam mówi Syn"]['tonacja'] = `e`;
 piesni["Uczyńcie, co wam mówi Syn"]['naco'] = `0/1/1/0/0/0`;
-piesni["Uczyńcie, co wam mówi Syn"]['tekst'] = ``;
-piesni["Uczyńcie, co wam mówi Syn"]['kategoria'] = ``;
+piesni["Uczyńcie, co wam mówi Syn"]['tekst'] = `1.
+Usłysz Bożej Matki głos,
+która wzywa dzisiaj nas,
+Chce u Syna znów wyprosić
+cud przemiany serc.
+*
+Uczyńcie, co wam mówi Syn,
+Przyobleczcie wiarę w czyn,
+Niech się Słowo Boże stanie
+Ciałem w każdym z nas.
+2.
+Serce ludzkie dręczy głód,
+ciągle szuka, gdzie jest Bóg,
+Naucz, Matko, jak powtórzyć
+betlejemską noc.
+*
+Uczyńcie, co wam mówi Syn…
+3.
+Bóg ukochał w Synu świat,
+chce zamieszkać w każdym z nas,
+Naucz, Matko, jak zbudować
+Bogu w sercu dom.
+*
+Uczyńcie, co wam mówi Syn…`;
 piesni["Upadnij na kolana"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Upadnij na kolana"]['klasa'] = `1`;
 piesni["Upadnij na kolana"]['katsiedlecki'] = `Pieśni mszalne`;
 piesni["Upadnij na kolana"]['nr'] = `1095`;
 piesni["Upadnij na kolana"]['tonacja'] = `e`;
 piesni["Upadnij na kolana"]['naco'] = `0/0/0/1/0/0`;
-piesni["Upadnij na kolana"]['tekst'] = ``;
-piesni["Upadnij na kolana"]['kategoria'] = ``;
+piesni["Upadnij na kolana"]['tekst'] = `1.
+Upadnij na kolana
+Ludu czcią przejęty
+Uwielbiaj swego Pana
+Święty, święty, święty
+2.
+Zabrzmijcie z nami, nieba
+Bóg nasz niepojęty
+W postaci przyszedł chleba
+Święty, święty, święty
+3.
+Powtarzaj, ludzki rodzie
+Wiarą przeniknięty
+Na wschodzie i zachodzie
+Święty, święty, święty
+4.
+Pan wieczny zawsze, wszędzie
+Ku nam łaską zdjęty
+Niech wiecznie wielbion będzie
+Święty, święty, święty`;
+piesni["W krzyżu cierpienie"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
+piesni["W krzyżu cierpienie"]['klasa'] = `1`;
+piesni["W krzyżu cierpienie"]['katsiedlecki'] = ``;
+piesni["W krzyżu cierpienie"]['nr'] = `1120`;
+piesni["W krzyżu cierpienie"]['tonacja'] = `G`;
+piesni["W krzyżu cierpienie"]['naco'] = `0/0/0/0/1/0`;
+piesni["W krzyżu cierpienie"]['tekst'] = `1.
+W krzyżu cierpienie, w krzyżu zbawienie, * w krzyżu miłości nauka.
+Kto Ciebie, Boże, raz pojąć może, * ten nic nie pragnie, ni szuka.
+2.
+W krzyżu osłoda, w krzyżu ochłoda * dla duszy smutkiem zmroczonej.
+Kto krzyż odgadnie, ten nie upadnie * w boleści sercu zadanej.
+3.
+Kiedy cierpienie, kiedy zwątpienie * serce ci na wskroś przepali
+gdy grom się zbliża, pośpiesz do krzyża, * On ciebie wesprze, ocali.
+4.
+Gdy cię skrzywdzono albo zraniono, * lub serce czyjeś zawiodło,
+o, nie rozpaczaj, módl się, przebaczaj, * krzyż niech ci stanie za godło.`;
 piesni["Wielbię Ciebie"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Wielbię Ciebie"]['klasa'] = `1`;
 piesni["Wielbię Ciebie"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
 piesni["Wielbię Ciebie"]['nr'] = `1151`;
 piesni["Wielbię Ciebie"]['tonacja'] = `C`;
 piesni["Wielbię Ciebie"]['naco'] = `0/0/0/1/0/0`;
-piesni["Wielbię Ciebie"]['tekst'] = ``;
-piesni["Wielbię Ciebie"]['kategoria'] = ``;
+piesni["Wielbię Ciebie"]['tekst'] = `Wielbię Ciebie w każdym momencie
+O, Żywy Chlebie nasz, w tym Sakramencie`;
 piesni["Witaj pokarmie"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Witaj pokarmie"]['klasa'] = `1`;
 piesni["Witaj pokarmie"]['katsiedlecki'] = ``;
 piesni["Witaj pokarmie"]['nr'] = `1168`;
 piesni["Witaj pokarmie"]['tonacja'] = `d`;
 piesni["Witaj pokarmie"]['naco'] = `0/0/1/0/0/0`;
-piesni["Witaj pokarmie"]['tekst'] = ``;
-piesni["Witaj pokarmie"]['kategoria'] = ``;
+piesni["Witaj pokarmie"]['tekst'] = `1.
+Witaj, Pokarmie, w którym niezmierzony
+nieba i ziemi Twórca jest zamkniony,
+witaj, Napoju zupełnie gaszący
+umysł pragnący.
+2.
+Witaj, Krynico wszystkiego dobrego
+gdy bowiem w sobie masz Boga samego
+z Nim ludziom wszystkie Jego wszechmocności
+niesiesz godności.
+3.
+Witaj, z niebiosów Manno padająca,
+rozkoszny w sercu naszym smak czyniąca:
+wszystko na świecie co tylko smakuje,
+w tym się znajduje.
+4.
+Witaj, rozkoszne z ogrodu rajskiego
+Drzewo owocu pełne żywiącego:
+kto Cię skosztuje śmierci się nie boi,
+choć nad nim stoi. `;
 piesni["Witaj, Chrystusowe ciało"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Witaj, Chrystusowe ciało"]['klasa'] = `1`;
 piesni["Witaj, Chrystusowe ciało"]['katsiedlecki'] = `Pieśni mszalne`;
 piesni["Witaj, Chrystusowe ciało"]['nr'] = `0`;
 piesni["Witaj, Chrystusowe ciało"]['tonacja'] = `D`;
 piesni["Witaj, Chrystusowe ciało"]['naco'] = `0/0/1/0/0/0`;
-piesni["Witaj, Chrystusowe ciało"]['tekst'] = ``;
-piesni["Witaj, Chrystusowe ciało"]['kategoria'] = ``;
+piesni["Witaj, Chrystusowe ciało"]['tekst'] = `Witaj, Chrystusowe Ciało
+Z Panny świętej narodzone
+Coś na krzyżu życie dało
+Chociaż z Bóstwem połączone
+
+Witaj, Krwi Bożego Syna
+Na zbawienie dusz przelana
+Któraś z boku wytrysnęła
+Najświętszego mego Pana`;
 piesni["Wszystko Tobie oddać pragnę"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Wszystko Tobie oddać pragnę"]['klasa'] = `1`;
 piesni["Wszystko Tobie oddać pragnę"]['katsiedlecki'] = `Pieśni przygodne`;
 piesni["Wszystko Tobie oddać pragnę"]['nr'] = `1205`;
 piesni["Wszystko Tobie oddać pragnę"]['tonacja'] = `C`;
 piesni["Wszystko Tobie oddać pragnę"]['naco'] = `1/1/0/1/0/0`;
-piesni["Wszystko Tobie oddać pragnę"]['tekst'] = ``;
-piesni["Wszystko Tobie oddać pragnę"]['kategoria'] = ``;
+piesni["Wszystko Tobie oddać pragnę"]['tekst'] = `1.
+Wszystko Tobie oddać pragnę
+I dla Ciebie tylko żyć
+Chcę Cię, Jezu, kochać wiernie
+Dzieckiem Twoim zawsze być
+*
+Serce moje weź
+Niech Twą śpiewa cześć
+Serce moje, duszę moją
+Panie Jezu weź
+2.
+Wszystko Tobie oddać pragnę
+Od najmłodszych moich lat
+Pomóż, Jezu, by mnie nie zwiódł
+Pokusami swymi świat
+*
+Serce moje weź...`;
 piesni["Z rąk kapłańskich"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Z rąk kapłańskich"]['klasa'] = `1`;
 piesni["Z rąk kapłańskich"]['katsiedlecki'] = `Pieśni mszalne`;
 piesni["Z rąk kapłańskich"]['nr'] = `1226`;
 piesni["Z rąk kapłańskich"]['tonacja'] = `D`;
 piesni["Z rąk kapłańskich"]['naco'] = `0/1/0/0/0/0`;
-piesni["Z rąk kapłańskich"]['tekst'] = ``;
-piesni["Z rąk kapłańskich"]['kategoria'] = ``;
+piesni["Z rąk kapłańskich"]['tekst'] = `Z rąk kapłańskich przyjmij Panie
+Tę ofiarę chleba, wina
+Co się wkrótce dla nas stanie
+Krwią i Ciałem Twego Syna
+
+Niech przestępstwa nasze zmywa
+I uśmierza gniew Twój, Panie
+Niech nas z niebem pojednywa
+I uzyska przebłaganie`;
 piesni["Za rękę weź mnie, Panie"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Za rękę weź mnie, Panie"]['klasa'] = `1`;
 piesni["Za rękę weź mnie, Panie"]['katsiedlecki'] = `Pieśni przygodne`;
 piesni["Za rękę weź mnie, Panie"]['nr'] = `1237`;
 piesni["Za rękę weź mnie, Panie"]['tonacja'] = `C`;
 piesni["Za rękę weź mnie, Panie"]['naco'] = `0/1/0/0/0/0`;
-piesni["Za rękę weź mnie, Panie"]['tekst'] = ``;
-piesni["Za rękę weź mnie, Panie"]['kategoria'] = ``;
+piesni["Za rękę weź mnie, Panie"]['tekst'] = `1.
+Za rękę weź mnie, Panie, i prowadź sam
+Aż dusza moja stanie u niebios bram
+Bez Ciebie ani kroku nie zrobię, nie
+Stań Ty u mego boku i prowadź mnie
+2.
+Do serca miłosiernie me serce tul
+By zniosło wszystkie ciernie, i krzyż i ból
+Niech dziecię Twe przybieży do Twoich nóg
+Niech w miłość Twą uwierzy, boś Ty mój Bóg`;
 piesni["Zbliżam się w pokorze"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Zbliżam się w pokorze"]['klasa'] = `1`;
 piesni["Zbliżam się w pokorze"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
 piesni["Zbliżam się w pokorze"]['nr'] = `1252`;
 piesni["Zbliżam się w pokorze"]['tonacja'] = `C`;
 piesni["Zbliżam się w pokorze"]['naco'] = `0/0/1/0/0/0`;
-piesni["Zbliżam się w pokorze"]['tekst'] = ``;
-piesni["Zbliżam się w pokorze"]['kategoria'] = ``;
+piesni["Zbliżam się w pokorze"]['tekst'] = `1.
+Zbliżam się w pokorze i niskości swej
+Wielbię Twój majestat, skryty w Hostii tej
+Tobie dziś w ofierze serce daję swe
+O utwierdzaj w wierze, Jezu, dzieci Twe
+2.
+Mylą się, o Boże, w Tobie wzrok i smak
+Kto się im poddaje, temu wiary brak
+Ja jedynie wierzyć Twej nauce chcę
+Że w postaci Chleba utaiłeś się
+3.
+Bóstwo swe na krzyżu skryłeś wobec nas
+Tu ukryte z Bóstwem Człowieczeństwo wraz
+Lecz w Oboje wierząc, wiem, że dojdę tam
+Gdzieś przygarnął łotra, do Twych niebios bram
+4.
+Jak niewierny Tomasz Twych nie szukam ran
+Lecz wyznaję z wiarą, żeś mój Bóg i Pan
+Pomóż wierze mojej, Jezu, łaską swą
+Ożyw mą nadzieję, rozpal miłość mą
+5.
+Ty, co jak Pelikan, Krwią swą karmisz lud
+Przywróć mi niewinność, oddal grzechów brud
+Oczyść mię Krwią swoją, która wszystkich nas
+Jedną kroplą może obmyć z win i zmaz
+6.
+Pod zasłoną teraz, Jezu, widzę Cię
+Niech pragnienie serca kiedyś spełni się
+Bym oblicze Twoje tam oglądać mógł
+Gdzie wybranym miejsce przygotował Bóg`;
 piesni["Złącz, Panie, miłujących Cię"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Złącz, Panie, miłujących Cię"]['klasa'] = `1`;
 piesni["Złącz, Panie, miłujących Cię"]['katsiedlecki'] = `Pieśni przygodne`;
 piesni["Złącz, Panie, miłujących Cię"]['nr'] = `1262`;
 piesni["Złącz, Panie, miłujących Cię"]['tonacja'] = `F`;
 piesni["Złącz, Panie, miłujących Cię"]['naco'] = `0/1/0/0/1/0`;
-piesni["Złącz, Panie, miłujących Cię"]['tekst'] = ``;
-piesni["Złącz, Panie, miłujących Cię"]['kategoria'] = ``;
+piesni["Złącz, Panie, miłujących Cię"]['tekst'] = `1.
+Złącz, Panie, miłujących Cię
+Złącz w jedną drogę wiele dróg
+Wszak jedna miłość wiedzie nas
+A Bogiem wszystkich jeden Bóg
+2.
+Ze wszech stron świata dąży lud
+By ujrzeć Ojca twarzą w twarz
+Na górny Syjon, w Jego dom
+Wszak mieszkań wiele dla nas ma
+3.
+Bogu Zwycięzcy wieczny hołd
+Niech Panu wieków chwała brzmi
+Bo w naszych sercach Święty Duch
+Wieczyste Sanctus śpiewa Ci`;
 piesni["Zróbcie Mu miejsce"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Zróbcie Mu miejsce"]['klasa'] = `1`;
 piesni["Zróbcie Mu miejsce"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
 piesni["Zróbcie Mu miejsce"]['nr'] = `1276`;
 piesni["Zróbcie Mu miejsce"]['tonacja'] = `G`;
 piesni["Zróbcie Mu miejsce"]['naco'] = `0/0/1/0/0/0`;
-piesni["Zróbcie Mu miejsce"]['tekst'] = ``;
-piesni["Zróbcie Mu miejsce"]['kategoria'] = ``;
+piesni["Zróbcie Mu miejsce"]['tekst'] = `1.
+Zróbcie Mu miejsce, Pan idzie z nieba
+Pod przymiotami ukryty chleba
+Zagrody nasze widzieć przychodzi
+I jak się Jego dzieciom powodzi
+2.
+Otocz Go wkoło, rzeszo wybrana
+Przed twoim Bogiem zginaj kolana
+Pieśń chwały Jego śpiewaj z weselem
+On twoim Ojcem, On przyjacielem
+3.
+Nie dosyć było to dla człowieka
+Że na ołtarzu co dzień Go czeka
+Sam ludu swego odwiedza ściany
+Bo pragnie bawić między ziemiany
+4.
+Zielem, kwiatami ścielcie Mu drogi
+Którędy Pańskie iść będą nogi
+I okrzyknijcie na wszystkie strony
+Pośród nas idzie błogosławiony`;
 piesni["Boże, coś Polskę"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Boże, coś Polskę"]['klasa'] = `2`;
 piesni["Boże, coś Polskę"]['katsiedlecki'] = `Hymny`;
 piesni["Boże, coś Polskę"]['nr'] = `129`;
 piesni["Boże, coś Polskę"]['tonacja'] = `B`;
 piesni["Boże, coś Polskę"]['naco'] = `0/0/0/0/1/0`;
-piesni["Boże, coś Polskę"]['tekst'] = ``;
-piesni["Boże, coś Polskę"]['kategoria'] = ``;
+piesni["Boże, coś Polskę"]['tekst'] = `1.
+Boże, coś Polskę przez tak liczne wieki,
+otaczał blaskiem potęgi i chwały,
+coś ją osłaniał tarczą swej opieki 
+od nieszczęść, które pognębić ją miały.
+*
+Przed Twe ołtarze zanosim błaganie
+ojczyznę wolną pobłogosław, Panie!
+2.
+Ty, któryś potem, tknięty jej upadkiem,
+wspierał walczących za najświętszą sprawę 
+i chcąc świat cały mieć jej męstwa świadkiem, 
+w nieszczęściach samych pomnażał jej sławę.
+*
+Przed Twe ołtarze zanosim błaganie…
+3.
+Powstała z grobu na Twe władne słowo 
+Polska, wolności narodów chorąży, 
+pierzchnęły straże, a ponad jej głową 
+znowu swobodnie orzeł biały krąży!
+*
+Przed Twe ołtarze zanosim błaganie…`;
 piesni["Chwała i dziękczynienie"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Chwała i dziękczynienie"]['klasa'] = `2`;
 piesni["Chwała i dziękczynienie"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
 piesni["Chwała i dziękczynienie"]['nr'] = `184`;
 piesni["Chwała i dziękczynienie"]['tonacja'] = `B`;
 piesni["Chwała i dziękczynienie"]['naco'] = `0/0/0/1/0/0`;
-piesni["Chwała i dziękczynienie"]['tekst'] = ``;
-piesni["Chwała i dziękczynienie"]['kategoria'] = ``;
+piesni["Chwała i dziękczynienie"]['tekst'] = `Chwała i dziękczynienie, bądź w każdym momencie
+Jezusowi w Najświętszym Boskim Sakramencie
+Ile minut w godzinie, a godzin w wieczności
+Tylekroć bądź pochwalon, Jezu, ma miłości`;
 piesni["Chwała Ojcu i Synowi"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Chwała Ojcu i Synowi"]['klasa'] = `2`;
 piesni["Chwała Ojcu i Synowi"]['katsiedlecki'] = ``;
-piesni["Chwała Ojcu i Synowi"]['nr'] = `0`;
+piesni["Chwała Ojcu i Synowi"]['nr'] = ``;
 piesni["Chwała Ojcu i Synowi"]['tonacja'] = `Es`;
 piesni["Chwała Ojcu i Synowi"]['naco'] = `0/0/0/0/1/0`;
-piesni["Chwała Ojcu i Synowi"]['tekst'] = ``;
-piesni["Chwała Ojcu i Synowi"]['kategoria'] = ``;
+piesni["Chwała Ojcu i Synowi"]['tekst'] = `Chwała Ojcu i Synowi,
+i Duchowi Świętemu,
+jak była na początku,
+teraz, i zawsze, i na wieki wieków. Amen.`;
 piesni["Ciebie wzywamy"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Ciebie wzywamy"]['klasa'] = `2`;
-piesni["Ciebie wzywamy"]['katsiedlecki'] = ``;
-piesni["Ciebie wzywamy"]['nr'] = `0`;
+piesni["Ciebie wzywamy"]['katsiedlecki'] = `Pieśni do Trójcy Przenajświętszej`;
+piesni["Ciebie wzywamy"]['nr'] = ``;
 piesni["Ciebie wzywamy"]['tonacja'] = `d`;
-piesni["Ciebie wzywamy"]['naco'] = `1/0/0/0/0/Trójca Święta`;
-piesni["Ciebie wzywamy"]['tekst'] = ``;
-piesni["Ciebie wzywamy"]['kategoria'] = ``;
+piesni["Ciebie wzywamy"]['naco'] = `1/0/0/0/0/0`;
+piesni["Ciebie wzywamy"]['tekst'] = `1.
+Ciebie wzywamy, Ciebie błagamy, * o błogosławiona Trójco!
+Ratuj stworzenie, daj opatrzenie, * o błogosławiona Trójco!
+2.
+Wlej Ducha Twego do serca mego, * o błogosławiona Trójco!
+Wspomóż w potrzebie proszących Ciebie, * o błogosławiona Trójco!
+3.
+Daj dar miłości i pobożności, * o błogosławiona Trójco!
+Szczęść zebranemu ludowi Twemu, * o błogosławiona Trójco!
+4.
+Odpuść nam złości dla Twej miłości, * o błogosławiona Trójco!
+Oddal głód, wojny, daj czas spokojny, * o błogosławiona Trójco!
+5.
+Strzeż nas żyjących, broń konających, * o błogosławiona Trójco!
+Daj nam być w niebie, prosimy Ciebie, * o błogosławiona Trójco!`;
 piesni["Ciebie, Boga, wysławiamy"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Ciebie, Boga, wysławiamy"]['klasa'] = `2`;
 piesni["Ciebie, Boga, wysławiamy"]['katsiedlecki'] = `Hymny`;
 piesni["Ciebie, Boga, wysławiamy"]['nr'] = `1309`;
 piesni["Ciebie, Boga, wysławiamy"]['tonacja'] = `d`;
-piesni["Ciebie, Boga, wysławiamy"]['naco'] = `0/0/0/1/0/0`;
-piesni["Ciebie, Boga, wysławiamy"]['tekst'] = ``;
-piesni["Ciebie, Boga, wysławiamy"]['kategoria'] = ``;
+piesni["Ciebie, Boga, wysławiamy"]['naco'] = `0/0/0/1/0/Te Deum`;
+piesni["Ciebie, Boga, wysławiamy"]['tekst'] = `1.
+Ciebie, Boga, wysławiamy,
+Tobie, Panu, wieczna chwała
+Ciebie, Ojca, niebios bramy
+Ciebie wielbi ziemia cała.
+2.
+Tobie wszyscy aniołowie
+Tobie moce i niebiosy
+cheruby, Serafinowie
+ślą wieczystej pieśni głosy:
+3.
+Święty, Święty, nad Świętymi
+Bóg Zastępów, Król łaskawy,
+pełne niebo z kręgiem ziemi
+majestatu Twojej sławy.
+4.
+Apostołów Tobie rzesza,
+chór proroków, pełen chwały,
+Tobie hołdy nieść pośpiesza
+męczenników orszak biały.
+5.
+Ciebie, poprzez okrąg ziemi,
+z głębi serca, ile zdoła,
+głosy ludów zgodzonymi
+wielbi święta pieśń Kościoła.
+6.
+Niezmierzonej Ojca chwały,
+Syna, Słowo wiekuiste,
+z Duchem, wszechświat wielbi cały:
+Królem chwały Tyś, o Chryste!
+7.
+Tyś Rodzica Syn z wiek wieka.
+By świat zbawić swoim zgonem,
+przyoblókłszy się w człowieka,
+nie wzgardziłeś Panny łonem.
+8.
+Tyś pokruszył śmierci wrota,
+starł jej oścień w męki dobie
+i rajskiego kraj żywota
+otworzyłeś wiernym sobie.
+9.
+Po prawicy siedzisz Boga,
+w chwale Ojca, Syn jedyny,
+lecz gdy zabrzmi trąba sroga,
+przyjdziesz sądzić ludzkie czyny.
+10.
+Prosim, słudzy łask niegodni,
+wspomóż, obmyj grzech, co plami,
+gdyś odkupił nas od zbrodni
+drogiej swojej Krwi strugami.
+11.
+Ze świętymi, w blaskach mocy,
+wiecznej chwały zlej nam zdroje,
+zbaw, o Panie, lud sierocy,
+błogosław dziedzictwo swoje!
+12.
+Rządź je, broń po wszystkie lata,
+prowadź w niebios błogie bramy.
+My w dzień każdy, Władco świata,
+imię Twoje wysławiamy.
+13.
+Po wiek wieków nie ustanie
+pieśń, co sławi Twoje czyny.
+O, w dniu onym racz nas, Panie,
+od wszelakiej ustrzec winy.
+14.
+Zjaw swą litość w życiu całym
+tym, co żebrzą Twej opieki;
+w Tobie, Panie, zaufałem,
+nie zawstydzę się na wieki.`;
 piesni["Com przyrzekł Bogu"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Com przyrzekł Bogu"]['klasa'] = `2`;
 piesni["Com przyrzekł Bogu"]['katsiedlecki'] = `Sakramenty i sakramentalia`;
 piesni["Com przyrzekł Bogu"]['nr'] = `216`;
 piesni["Com przyrzekł Bogu"]['tonacja'] = `C`;
 piesni["Com przyrzekł Bogu"]['naco'] = `0/1/1/0/0/Chrzest`;
-piesni["Com przyrzekł Bogu"]['tekst'] = ``;
-piesni["Com przyrzekł Bogu"]['kategoria'] = ``;
+piesni["Com przyrzekł Bogu"]['tekst'] = `1.
+Com przyrzekł Bogu przy chrzcie raz,
+dotrzymać pragnę szczerze;
+Kościoła słuchać w każdy czas
+i w świętej wytrwać wierze.
+*
+O, Panie, Boże, dzięki Ci,
+żeś mi Kościoła otwarł drzwi.
+W nim żyć, umierać pragnę.
+2.
+W Kościele tym jest z Ciałem, Krwią,
+Bóg pod postacią chleba.
+Swym Ciałem karmi duszę mą,
+by żyła w Nim dla nieba.
+*
+W to wierzyć zawsze mocno chcę,
+bo tego Kościół uczy mnie.
+W Nim żyć umierać pragnę.`;
+piesni["Do Serca Twojego"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
+piesni["Do Serca Twojego"]['klasa'] = `2`;
+piesni["Do Serca Twojego"]['katsiedlecki'] = `Nabożeństwa`;
+piesni["Do Serca Twojego"]['nr'] = ``;
+piesni["Do Serca Twojego"]['tonacja'] = `c`;
+piesni["Do Serca Twojego"]['naco'] = `0/0/0/0/0/Czerwcowe`;
+piesni["Do Serca Twojego"]['tekst'] = `Do Serca Twojego • uciekamy się • Jezu, Boski Zbawicielu.
+Naszymi grzechami • racz się nie zrażać, • o Panie święty
+ale od wszelakich złych czynów • racz nas zawsze zachować, • Boże łaskawy • i najlitościwszy
+O Jezu, o Jezu, o Jezu dobry, • Zbawicielu słodki • Pośredniku Boski • jedyna ucieczko nasza!
+W Sercu Twoim racz nas obmyć • Do Serca Twojego racz nas przytulić • W Twym Sercu na wieki racz nas zachować.
+O Jezu, o Jezu, o Jezu dobry, • Zbawicielu słodki • Pośredniku Boski • jedyna ucieczko nasza!`;
 piesni["Dobry Jezu, a nasz Panie"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Dobry Jezu, a nasz Panie"]['klasa'] = `2`;
 piesni["Dobry Jezu, a nasz Panie"]['katsiedlecki'] = `Pieśni za zmarłych`;
-piesni["Dobry Jezu, a nasz Panie"]['nr'] = `0`;
+piesni["Dobry Jezu, a nasz Panie"]['nr'] = ``;
 piesni["Dobry Jezu, a nasz Panie"]['tonacja'] = `c`;
 piesni["Dobry Jezu, a nasz Panie"]['naco'] = `0/0/0/0/0/Pogrzebowo`;
-piesni["Dobry Jezu, a nasz Panie"]['tekst'] = ``;
-piesni["Dobry Jezu, a nasz Panie"]['kategoria'] = ``;
+piesni["Dobry Jezu, a nasz Panie"]['tekst'] = `Dobry Jezu, a nasz Panie • Daj im wieczne spoczywanie.`;
+piesni["Duszo moja"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
+piesni["Duszo moja"]['klasa'] = `2`;
+piesni["Duszo moja"]['katsiedlecki'] = `Pieśni ku czci św. Józefa`;
+piesni["Duszo moja"]['nr'] = `279`;
+piesni["Duszo moja"]['tonacja'] = `Es`;
+piesni["Duszo moja"]['naco'] = `1/0/1/1/0/0`;
+piesni["Duszo moja"]['tekst'] = `1.
+Duszo moja, niech pieśń twoja 
+głosi Józefowi cześć.
+On wybrany, niezrównany,
+więc mu hołdy trzeba nieść.
+*
+Z nami chwałę niebo całe,
+niech u Bożych złoży nóg,
+że bez miary swoje dary
+na Józefa rozlał Bóg.
+2.
+On w świętości i czystości
+po Maryi pierwszym był,
+przy Panience on w stajence
+pierwszy Boże Dziecię czcił.
+*
+Z nami chwałę niebo całe…
+3.
+Na swym łonie jak na tronie
+Króla niebios Józef niósł;
+w Nazarecie Boskie Dziecię,
+słodki Jezus przy nim rósł. 
+*
+Z nami chwałę niebo całe…`;
 piesni["Dziś moją duszę"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Dziś moją duszę"]['klasa'] = `2`;
 piesni["Dziś moją duszę"]['katsiedlecki'] = `Nabożeństwa`;
 piesni["Dziś moją duszę"]['nr'] = `297`;
 piesni["Dziś moją duszę"]['tonacja'] = `D`;
 piesni["Dziś moją duszę"]['naco'] = `0/0/0/0/0/Pogrzebowo`;
-piesni["Dziś moją duszę"]['tekst'] = ``;
-piesni["Dziś moją duszę"]['kategoria'] = ``;
+piesni["Dziś moją duszę"]['tekst'] = `*
+Dziś moją duszę w ręce Twe powierzam
+Mój Stworzycielu i najlepszy Ojcze
+Do domu wracam jak strudzony pielgrzym
+A Ty z miłością przyjmij mnie z powrotem
+**
+1.
+Stanę przed Stwórcą i przed moim Bogiem
+On mnie z miłości wezwał do istnienia
+Tchnął swego Ducha, stworzył na swój obraz
+Jak własne dziecko znał mnie po imieniu
+*
+Dziś moją duszę w ręce Twe powierzam…
+2.
+Wstyd mnie ogarnia, że przed Tobą stanę
+Tak niepodobny, Boże mój, do Ciebie
+Nie karz mnie za to zbyt surowym sądem
+Rozpoznaj, Ojcze, swoje dziecko we mnie 
+*
+Dziś moją duszę w ręce Twe powierzam…
+3.
+Tułaczka moja już dobiegła kresu
+Dla moich oczu słońce ziemi zgasło
+W Tobie, mój Panie, znajdę pokój wieczny
+Ty będziesz dla mnie nie gasnącym światłem 
+*
+Dziś moją duszę w ręce Twe powierzam…`;
 piesni["Kiedy ranne wstają zorze"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Kiedy ranne wstają zorze"]['klasa'] = `2`;
 piesni["Kiedy ranne wstają zorze"]['katsiedlecki'] = `Pieśni przygodne`;
 piesni["Kiedy ranne wstają zorze"]['nr'] = `488`;
 piesni["Kiedy ranne wstają zorze"]['tonacja'] = `D`;
 piesni["Kiedy ranne wstają zorze"]['naco'] = `0/0/0/0/1/0`;
-piesni["Kiedy ranne wstają zorze"]['tekst'] = ``;
-piesni["Kiedy ranne wstają zorze"]['kategoria'] = ``;
+piesni["Kiedy ranne wstają zorze"]['tekst'] = `1.
+Kiedy ranne wstają zorze,
+Tobie ziemia, Tobie morze,
+Tobie śpiewa żywioł wszelki:
+bądź pochwalon, Boże wielki!
+2.
+A człowiek, który bez miary
+obsypany Twymi dary,
+coś go stworzył i ocalił,
+a czemuż by Cię nie chwalił?
+3.
+Ledwie oczy przetrzeć zdołam,
+wnet do mego Pana wołam,
+do mego Boga na niebie
+i szukam Go koło siebie.
+4.
+Wielu snem śmierci upadli,
+co się wczoraj spać pokładli;
+my się jeszcze obudzili,
+byśmy Cię, Boże, chwalili.
+5.
+Boże w Trójcy niepojęty,
+Ojcze, Synu, Duchu Święty,
+Tobie chwałę oddajemy,
+niech dla Ciebie dziś żyjemy.`;
+piesni["Któryś za nas cierpiał rany"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
+piesni["Któryś za nas cierpiał rany"]['klasa'] = `2`;
+piesni["Któryś za nas cierpiał rany"]['katsiedlecki'] = `Pieśni na Wielki Post`;
+piesni["Któryś za nas cierpiał rany"]['nr'] = `1331`;
+piesni["Któryś za nas cierpiał rany"]['tonacja'] = `d`;
+piesni["Któryś za nas cierpiał rany"]['naco'] = `0/0/0/0/1/0`;
+piesni["Któryś za nas cierpiał rany"]['tekst'] = `Któryś za nas cierpiał rany,
+Jezu Chryste, zmiłuj się nad nami.
+
+I Ty, któraś współcierpiała
+Matko Bolesna, przyczyń się za nami.`;
 piesni["Nie rzucim, Chryste"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Nie rzucim, Chryste"]['klasa'] = `2`;
 piesni["Nie rzucim, Chryste"]['katsiedlecki'] = `Hymny`;
 piesni["Nie rzucim, Chryste"]['nr'] = `649`;
 piesni["Nie rzucim, Chryste"]['tonacja'] = `e`;
 piesni["Nie rzucim, Chryste"]['naco'] = `0/0/0/0/1/0`;
-piesni["Nie rzucim, Chryste"]['tekst'] = ``;
-piesni["Nie rzucim, Chryste"]['kategoria'] = ``;
-piesni["Niech w święto radosne"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
-piesni["Niech w święto radosne"]['klasa'] = `2`;
-piesni["Niech w święto radosne"]['katsiedlecki'] = `Śpiewy na Wielki Tydzień`;
-piesni["Niech w święto radosne"]['nr'] = `672`;
-piesni["Niech w święto radosne"]['tonacja'] = `c`;
-piesni["Niech w święto radosne"]['naco'] = `0/0/0/0/0/Sekwencja`;
-piesni["Niech w święto radosne"]['tekst'] = ``;
-piesni["Niech w święto radosne"]['kategoria'] = ``;
+piesni["Nie rzucim, Chryste"]['tekst'] = `1.
+Nie rzucim, Chryste, świątyń Twych,
+Nie damy pogrześć wiary!
+Próżne zakusy duchów złych
+i próżne ich zamiary.
+Bronić będziemy Twoich dróg.
+Tak nam dopomóż Bóg! =
+2.
+Ze wszystkich świątyń, chat i pól
+Popłynie hymn wspaniały;
+Niech żyje Jezus Chrystus Król
+w koronie wiecznej chwały!
+Niech, żyje Maria! Zagrzmi róg.
+Tak nam dopomóż Bóg! = 
+3.
+I taki triumf, taki cud
+Powieje z Jasnej Góry
+I z taką wiarą ruszy lud
+Synowie Polski, córy,
+Że jak mgławica pierzchnie wróg.
+Tak nam dopomóż Bóg! =`;
 piesni["Niechaj będzie + O zbawcza Hostio"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Niechaj będzie + O zbawcza Hostio"]['klasa'] = `2`;
 piesni["Niechaj będzie + O zbawcza Hostio"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu/Nabożeństwa`;
@@ -34153,375 +35911,1409 @@ piesni["Niechaj będzie + O zbawcza Hostio"]['nr'] = `1308`;
 piesni["Niechaj będzie + O zbawcza Hostio"]['tonacja'] = `C/D`;
 piesni["Niechaj będzie + O zbawcza Hostio"]['naco'] = `0/0/0/0/0/0`;
 piesni["Niechaj będzie + O zbawcza Hostio"]['tekst'] = ``;
-piesni["Niechaj będzie + O zbawcza Hostio"]['kategoria'] = ``;
+piesni["Niechaj będzie pochwalony"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
+piesni["Niechaj będzie pochwalony"]['klasa'] = `2`;
+piesni["Niechaj będzie pochwalony"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu/Nabożeństwa`;
+piesni["Niechaj będzie pochwalony"]['nr'] = `1308`;
+piesni["Niechaj będzie pochwalony"]['tonacja'] = `C`;
+piesni["Niechaj będzie pochwalony"]['naco'] = `0/0/0/0/0/0`;
+piesni["Niechaj będzie pochwalony"]['tekst'] = `Niechaj będzie pochwalony * od nas wszystkich uwielbiony
+Przenajświętszy Sakrament * ten niebieski testament`;
 piesni["O Stworzycielu Duchu"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["O Stworzycielu Duchu"]['klasa'] = `2`;
 piesni["O Stworzycielu Duchu"]['katsiedlecki'] = `Pieśni do Ducha Świętego`;
 piesni["O Stworzycielu Duchu"]['nr'] = `745`;
 piesni["O Stworzycielu Duchu"]['tonacja'] = `G`;
 piesni["O Stworzycielu Duchu"]['naco'] = `0/0/0/0/0/0`;
-piesni["O Stworzycielu Duchu"]['tekst'] = ``;
-piesni["O Stworzycielu Duchu"]['kategoria'] = ``;
+piesni["O Stworzycielu Duchu"]['tekst'] = `1.
+*
+O Stworzycielu, Duchu, przyjdź,
+nawiedź dusz wiernych Tobie krąg, 
+niebieską łaskę zesłać racz,
+sercom co dziełem są Twych rąk.
+2.
+*
+Pocieszycielem jesteś zwan
+i Najwyższego Boga dar, 
+Tyś namaszczenie naszych dusz,
+zdrój żywy, miłość, ognia żar.
+3.
+Ty darzysz łaską siedemkroć,
+bo moc z prawicy Ojca masz;
+przez Ojca obiecany nam,
+mową wzbogacasz język nasz.
+4.
+Światłem rozjaśnij naszą myśl,
+w serca nam miłość świętą wlej 
+i wątłą słabość naszych ciał
+pokrzep stałością mocy swej.
+5.
+Nieprzyjaciela odpędź w dal
+i Twym pokojem obdarz wraz; 
+niech w drodze za przewodem Twym
+miniemy zło, co kusi nas.
+6.
+*
+Daj nam przez Ciebie Ojca znać,
+daj, by i Syn poznany był 
+i Ciebie, jedno Tchnienie Dwóch
+niech wyznajemy z wszystkich sił.
+*
+7.
+Niech Bogu Ojcu chwała brzmi,
+Synowi, który zmartwychwstał, 
+i Temu co pociesza nas,
+niech hołd wieczystych płynie chwał.
+*
+Amen.`;
+piesni["O zbawcza Hostio"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
+piesni["O zbawcza Hostio"]['klasa'] = `2`;
+piesni["O zbawcza Hostio"]['katsiedlecki'] = `Nabożeństwa`;
+piesni["O zbawcza Hostio"]['nr'] = `1308`;
+piesni["O zbawcza Hostio"]['tonacja'] = `D`;
+piesni["O zbawcza Hostio"]['naco'] = `0/0/0/0/0/0`;
+piesni["O zbawcza Hostio"]['tekst'] = `1.
+O zbawcza Hostio, godna czci
+Co lud do niebios wiedziesz bram
+Bój srogi nęka wiernych Ci
+Daj siłę, pomoc ześlij nam
+2.
+Jednemu w Trójcy Władcy ziem
+Niech będzie chwała w każdy czas
+Niech On wieczystym życiem swym
+W ojczyźnie rajskiej darzy nas
+Amen`;
 piesni["Otoczon gronem świętych"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Otoczon gronem świętych"]['klasa'] = `2`;
 piesni["Otoczon gronem świętych"]['katsiedlecki'] = `Pieśni na Wniebowstąpienie`;
 piesni["Otoczon gronem świętych"]['nr'] = `796`;
 piesni["Otoczon gronem świętych"]['tonacja'] = `B`;
 piesni["Otoczon gronem świętych"]['naco'] = `1/0/0/0/1/0`;
-piesni["Otoczon gronem świętych"]['tekst'] = ``;
-piesni["Otoczon gronem świętych"]['kategoria'] = ``;
+piesni["Otoczon gronem świętych"]['tekst'] = `1.
+Otoczon gronem świętych aniołów
+Dziwiąc triumfem świat cały
+Z pośrodka wiernych swych Apostołów
+Wzniósł się do nieba Pan chwały
+2.
+Płakał i bolał nad grzesznym ludem
+Nim prawdę w sercach odrodził
+Nim zgładził grzechy odkupu cudem
+I ludzi z Bogiem pogodził
+3.
+Wraca do Ojca jako Syn prawy
+Słowo Przedwieczne, Bóg wielki
+By Go na tronie mocy i sławy
+Wielbił i kochał dusz wszelki`;
+piesni["Pod Twoją obronę"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
+piesni["Pod Twoją obronę"]['klasa'] = `2`;
+piesni["Pod Twoją obronę"]['katsiedlecki'] = `Nabożeństwa`;
+piesni["Pod Twoją obronę"]['nr'] = ``;
+piesni["Pod Twoją obronę"]['tonacja'] = `c`;
+piesni["Pod Twoją obronę"]['naco'] = `0/0/0/0/0/Majowe`;
+piesni["Pod Twoją obronę"]['tekst'] = `Pod Twoją obronę • uciekamy się • święta boża rodzicielko
+Z naszymi prośbami • racz nie gardzić • w potrzebach naszych
+Ale od wszelakich złych przygód • racz nas zawsze wybawiać • Panno chwalebna • i błogosławiona
+O pani, o pani, o pani nasza • Orędowniczko nasza • Pośredniczko nasza • Pocieszycielko nasza
+Z synem swoim nas pojednaj • Synowi swojemu nas polecaj • Swojemu synowi nas oddawaj
+O pani, o pani, o pani nasza • Orędowniczko nasza • Pośredniczko nasza • Pocieszycielko nasza`;
 piesni["Przed tak wielkim Sakramentem"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Przed tak wielkim Sakramentem"]['klasa'] = `2`;
 piesni["Przed tak wielkim Sakramentem"]['katsiedlecki'] = `Nabożeństwa`;
 piesni["Przed tak wielkim Sakramentem"]['nr'] = `920`;
-piesni["Przed tak wielkim Sakramentem"]['tonacja'] = `B`;
+piesni["Przed tak wielkim Sakramentem"]['tonacja'] = `A`;
 piesni["Przed tak wielkim Sakramentem"]['naco'] = `0/0/0/0/0/0`;
-piesni["Przed tak wielkim Sakramentem"]['tekst'] = ``;
-piesni["Przed tak wielkim Sakramentem"]['kategoria'] = ``;
+piesni["Przed tak wielkim Sakramentem"]['tekst'] = `1.
+Przed tak wielkim Sakramentem
+upadajmy wszyscy wraz
+Niech przed Nowym Testamentem
+starych prawd ustąpi czas
+Co dla zmysłów niepojęte
+niech dopełni wiara w nas
+2.
+Bogu Ojcu i Synowi
+hołd po wszystkie nieśmy dni
+Niech podaje wiek wiekowi
+hymn tryumfu, dzięki czci
+A równemu Im Duchowi
+niechaj wieczna chwała brzmi.
+Amen.`;
 piesni["Przybądź, Duchu Święty"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Przybądź, Duchu Święty"]['klasa'] = `2`;
-piesni["Przybądź, Duchu Święty"]['katsiedlecki'] = ``;
+piesni["Przybądź, Duchu Święty"]['katsiedlecki'] = `Pieśni do Ducha Świętego`;
 piesni["Przybądź, Duchu Święty"]['nr'] = `934`;
 piesni["Przybądź, Duchu Święty"]['tonacja'] = `f`;
 piesni["Przybądź, Duchu Święty"]['naco'] = `0/0/0/0/0/Sekwencja`;
-piesni["Przybądź, Duchu Święty"]['tekst'] = ``;
-piesni["Przybądź, Duchu Święty"]['kategoria'] = ``;
+piesni["Przybądź, Duchu Święty"]['tekst'] = `1.
+Przybądź, Duchu Święty,
+Ześlij z nieba wzięty
+Światła Twego strumień.
+Przyjdź, Ojcze ubogich,
+Przyjdź, Dawco łask drogich,
+Przyjdź, Światłości sumień.
+2.
+O, najmilszy z gości,
+Słodka serc radości,
+Słodkie orzeźwienie.
+W pracy Tyś ochłodą,
+W skwarze żywą wodą,
+W płaczu utulenie.
+3.
+Światłości najświętsza,
+Serc wierzących wnętrza
+Poddaj Twej potędze.
+Bez Twojego tchnienia,
+Cóż jest wśród stworzenia?
+Jeno cierń i nędze.
+4.
+Obmyj, co nieświęte,
+Oschłym wlej zachętę,
+Ulecz serca ranę.
+Nagnij, co jest harde,
+Rozgrzej serca twarde,
+Prowadź zabłąkane.
+5.
+Daj Twoim wierzącym,
+W Tobie ufającym,
+Siedmiorakie dary.
+Daj zasługę męstwa,
+Daj wieniec zwycięstwa,
+Daj szczęście bez miary.`;
 piesni["Sław, języku, tajemnicę"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Sław, języku, tajemnicę"]['klasa'] = `2`;
 piesni["Sław, języku, tajemnicę"]['katsiedlecki'] = `Śpiewy na Wielki Tydzień/Nieszpory`;
 piesni["Sław, języku, tajemnicę"]['nr'] = `1333`;
 piesni["Sław, języku, tajemnicę"]['tonacja'] = `G`;
 piesni["Sław, języku, tajemnicę"]['naco'] = `0/0/0/0/0/Wielki Piątek`;
-piesni["Sław, języku, tajemnicę"]['tekst'] = ``;
-piesni["Sław, języku, tajemnicę"]['kategoria'] = ``;
+piesni["Sław, języku, tajemnicę"]['tekst'] = `1.
+Sław, języku, tajemnicę
+Ciała i najdroższej Krwi,
+którą, jako łask krynicę,
+wylał w czasie ziemskich dni
+Ten, co Matkę miał Dziewicę,
+Król narodów godzien czci.
+2.
+Z Panny czystej narodzony,
+posłan zbawić ludzki ród,
+gdy po świecie na wsze strony
+ziarno słowa rzucił w lud,
+wtedy cudem niezgłębionym
+zamknął swej pielgrzymki trud.
+3.
+W noc ostatnią przy wieczerzy,
+z tymi, których braćmi zwał,
+pełniąc wszystko, jak należy,
+czego przepis prawny chciał.
+Sam Dwunastu się powierzył
+i za pokarm z rąk swych dał.
+4.
+Słowem więc, Wcielone Słowo,
+chleb zamienia w Ciało swe.
+Wino Krwią jest Chrystusową,
+darmo wzrok to widzieć chce:
+tylko wiara Bożą mową
+pewność o tym w serca śle.`;
 piesni["Święty Boże"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Święty Boże"]['klasa'] = `2`;
 piesni["Święty Boże"]['katsiedlecki'] = `Nabożeństwa`;
 piesni["Święty Boże"]['nr'] = `1047`;
 piesni["Święty Boże"]['tonacja'] = `e`;
 piesni["Święty Boże"]['naco'] = `0/0/0/0/0/0`;
-piesni["Święty Boże"]['tekst'] = ``;
-piesni["Święty Boże"]['kategoria'] = ``;
+piesni["Święty Boże"]['tekst'] = `Święty Boże, Święty Mocny,
+Święty, a Nieśmiertelny
+Zmiłuj się nad nami
+1.
+Od powietrza, głodu, ognia i wojny
+Wybaw nas, Panie
+2.
+Od nagłej i niespodzianej śmierci
+Zachowaj nas Panie
+3.
+My grzeszni Ciebie, Boga, prosimy
+Wysłuchaj nas Panie`;
 piesni["Święty X, patronie nasz"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Święty X, patronie nasz"]['klasa'] = `2`;
 piesni["Święty X, patronie nasz"]['katsiedlecki'] = `Pieśni ku czci św. Józefa`;
-piesni["Święty X, patronie nasz"]['nr'] = `0`;
+piesni["Święty X, patronie nasz"]['nr'] = `1328/1329/1288/1327/1330`;
 piesni["Święty X, patronie nasz"]['tonacja'] = `Es`;
 piesni["Święty X, patronie nasz"]['naco'] = `0/0/0/0/1/0`;
-piesni["Święty X, patronie nasz"]['tekst'] = ``;
-piesni["Święty X, patronie nasz"]['kategoria'] = ``;
+piesni["Święty X, patronie nasz"]['tekst'] = `Święty X, patronie nasz
+Święty X, patronie nasz
+Módl się, módl się, módl się za nami`;
 piesni["Twoja cześć, chwała"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Twoja cześć, chwała"]['klasa'] = `2`;
 piesni["Twoja cześć, chwała"]['katsiedlecki'] = `Pieśni do Najświętszego Sakramentu`;
 piesni["Twoja cześć, chwała"]['nr'] = `1070`;
 piesni["Twoja cześć, chwała"]['tonacja'] = `C`;
 piesni["Twoja cześć, chwała"]['naco'] = `0/0/0/0/0/Procesja`;
-piesni["Twoja cześć, chwała"]['tekst'] = ``;
-piesni["Twoja cześć, chwała"]['kategoria'] = ``;
+piesni["Twoja cześć, chwała"]['tekst'] = `1.
+Twoja cześć, chwała, nasz wieczny Panie,
+na wieczne czasy niech nie ustanie!
+2.
+Tobie dziś dajem z rzeszą tych ludzi
+pokłon i pienie, my, Twoi słudzy.
+3.
+Dziękując wielce Twej wielmożności
+za ten dar zacny, Twej wszechmocności;
+4.
+Żeś się darował nam nic niegodnym
+w tym Sakramencie nam tu przytomnym.
+5.
+Raczyłeś zostać w takiej postaci,
+nie szczędząc siebie dla nas, swych braci.
+6.
+Ciało Twe Święte, co krzyżowali,
+i Krew najświętszą, którą przelali.
+7.
+Przyszedłszy na świat, Pan wiecznej chwały,
+użyłeś wiele nędzy niemałej.
+8.
+Dałeś się potem z wielkiej miłości
+na męki srogie bez wszej litości.
+9.
+Wstępując potem do chwały wiecznej,
+zostawiłeś nam ten to dar zacny.
+10.
+Na co my patrząc w tym Sakramencie,
+z pociechą wielką serce nam rośnie.
+11.
+Tobie my, Boże, teraz śpiewamy,
+przed Twą światłością nisko padamy.
+12.
+Użycz nam łaski, wszechmocny Boże,
+bez Twej pomocy człek nic nie może.`;
 piesni["Uwielbiaj, duszo moja"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Uwielbiaj, duszo moja"]['klasa'] = `2`;
 piesni["Uwielbiaj, duszo moja"]['katsiedlecki'] = `Nieszpory`;
 piesni["Uwielbiaj, duszo moja"]['nr'] = `1100`;
 piesni["Uwielbiaj, duszo moja"]['tonacja'] = `Es`;
-piesni["Uwielbiaj, duszo moja"]['naco'] = `0/0/0/0/0/0`;
-piesni["Uwielbiaj, duszo moja"]['tekst'] = ``;
-piesni["Uwielbiaj, duszo moja"]['kategoria'] = ``;
+piesni["Uwielbiaj, duszo moja"]['naco'] = `0/0/0/0/0/Magnificat`;
+piesni["Uwielbiaj, duszo moja"]['tekst'] = `1.
+Uwielbiaj, duszo moja, sławę Pana mego
+Chwal Boga Stworzyciela tak bardzo dobrego
+Bóg mój, zbawienie moje jedyna otucha
+Bóg mi rozkoszą serca i weselem ducha
+2.
+Bo mile przyjąć raczył swej sługi pokorę
+Łaskawym okiem wejrzał na Dawida córę
+Przeto wszystkie narody, co ziemię osiądą
+Odtąd błogosławioną mnie nazywać będą
+3.
+Bo wielkimi darami uczczonam od Tego,
+Którego moc przedziwna, święte imię Jego
+Którzy się Pana boją, szczęśliwi na wieki
+Bo z nimi miłosierdzie z rodu w ród daleki
+4.
+Na cały świat pokazał moc swych ramion świętych
+Rozproszył dumne myśli głów pychą nadętych
+Wyniosłych złożył z tronu, znikczemnił wielmożne
+Wywyższył, uwielmożnił w pokorę zamożne
+5.
+Głodnych nasycił hojnie i w dobra spanoszył
+Bogaczów z torbą puścił i nędznie rozproszył
+Przyjął do łaski sługę Izraela cnego
+Wspomniał nań, użyczył mu miłosierdzia swego
+6.
+Wypełnił, co był przyrzekł niegdyś ojcom naszym
+Abrahamowi z potomstwem jego, wiecznym czasem
+Wszyscy śpiewajmy Bogu w Trójcy Jedynemu
+Chwała Ojcu, Synowi, Duchowi Świętemu
+
+Jak była na początku, tak zawsze niech będzie
+Teraz i na wiek wieków niechaj słynie wszędzie`;
 piesni["Witaj, Królowo, Matko litości"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Witaj, Królowo, Matko litości"]['klasa'] = `2`;
 piesni["Witaj, Królowo, Matko litości"]['katsiedlecki'] = `Nabożeństwa`;
 piesni["Witaj, Królowo, Matko litości"]['nr'] = `1176`;
 piesni["Witaj, Królowo, Matko litości"]['tonacja'] = `D`;
 piesni["Witaj, Królowo, Matko litości"]['naco'] = `0/0/0/0/0/Pogrzebowo`;
-piesni["Witaj, Królowo, Matko litości"]['tekst'] = ``;
-piesni["Witaj, Królowo, Matko litości"]['kategoria'] = ``;
+piesni["Witaj, Królowo, Matko litości"]['tekst'] = `1.
+Witaj, Królowo, Matko litości
+Nadziejo nasza, życia słodkości
+Witaj, Maryjo, Matko jedyna
+Matko nas, ludzi, Salve Regina
+2.
+Nędzne my dzieci Ewy wołamy
+Do Ciebie, Matko, z płaczem wzdychamy
+Niech nas wspomaga Twoja przyczyna
+Na tym padole, Salve Regina
+3.
+Zwróć, Pośredniczko, na nas wejrzenie
+Przyjmij łaskawie nasze westchnienie
+Pokaż nam, Matko, swojego Syna
+W górnej krainie, Salve Regina`;
 piesni["Wszystkie nasze dzienne sprawy"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Wszystkie nasze dzienne sprawy"]['klasa'] = `2`;
 piesni["Wszystkie nasze dzienne sprawy"]['katsiedlecki'] = `Pieśni przygodne`;
 piesni["Wszystkie nasze dzienne sprawy"]['nr'] = `1203`;
 piesni["Wszystkie nasze dzienne sprawy"]['tonacja'] = `D`;
 piesni["Wszystkie nasze dzienne sprawy"]['naco'] = `0/0/0/0/1/0`;
-piesni["Wszystkie nasze dzienne sprawy"]['tekst'] = ``;
-piesni["Wszystkie nasze dzienne sprawy"]['kategoria'] = ``;
+piesni["Wszystkie nasze dzienne sprawy"]['tekst'] = `1.
+Wszystkie nasze dzienne sprawy,
+przyjm litośnie, Boże prawy,
+a gdy będziem zasypiali,
+niech Cię nawet sen nasz chwali.
+2.
+Twoje oczy obrócone
+dzień i noc patrzą w tę stronę,
+gdzie niedołężność człowieka
+Twojego ratunku czeka.
+3.
+Odwracaj nocne przygody,
+od wszelakiej broń nas szkody.
+Miej nas wiecznie w swojej pieczy,
+Stróżu i Sędzio człowieczy.
+4.
+A gdy niebo już osiądziem,
+Tobie wspólnie śpiewać będziem,
+Boże w Trójcy niepojęty,
+Święty, na wiek wieków Święty.`;
 piesni["Zapada zmrok"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Zapada zmrok"]['klasa'] = `2`;
 piesni["Zapada zmrok"]['katsiedlecki'] = ``;
 piesni["Zapada zmrok"]['nr'] = `845`;
 piesni["Zapada zmrok"]['tonacja'] = `B`;
 piesni["Zapada zmrok"]['naco'] = `0/0/0/0/1/0`;
-piesni["Zapada zmrok"]['tekst'] = ``;
-piesni["Zapada zmrok"]['kategoria'] = ``;
+piesni["Zapada zmrok"]['tekst'] = `1.
+Zapada zmrok, już świat ukołysany,
+znów jeden dzień odfrunął nam jak ptak.
+Panience swej piosenkę na dobranoc
+zaśpiewać chcę w ostatnią chwilę dnia.
+2.
+I chociaż wnet ostatnie światła zgasną,
+opieka Twa rozproszy nocy mrok.
+Uśpionym wsiom, ukołysanym miastom,
+Panienko, daj szczęśliwą, dobrą noc.
+3.
+I ludzkim snom błogosław dłonią jasną
+i oddal od nich cień codziennych trosk.
+I tym, co znów nie będą mogli zasnąć,
+Panienko, daj szczęśliwą, dobrą noc.
+4.
+A komu noc czuwaniem jest niełatwym,
+na czas bezsenny siłę daj i moc.
+I tym, co dzisiaj zasną raz ostatni,
+Panienko, daj szczęśliwą, dobrą noc.`;
 piesni["Zawitaj, Królowo Różańca Świętego"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Zawitaj, Królowo Różańca Świętego"]['klasa'] = `2`;
 piesni["Zawitaj, Królowo Różańca Świętego"]['katsiedlecki'] = `Pieśni ku czci NMP`;
 piesni["Zawitaj, Królowo Różańca Świętego"]['nr'] = `1245`;
 piesni["Zawitaj, Królowo Różańca Świętego"]['tonacja'] = `E`;
 piesni["Zawitaj, Królowo Różańca Świętego"]['naco'] = `0/0/0/0/0/0`;
-piesni["Zawitaj, Królowo Różańca Świętego"]['tekst'] = ``;
-piesni["Zawitaj, Królowo Różańca Świętego"]['kategoria'] = ``;
+piesni["Zawitaj, Królowo Różańca Świętego"]['tekst'] = `1.
+Zawitaj, Królowo Różańca świętego
+Jedyna nadziejo człowieka grzesznego
+*
+Zawitaj, bez zmazy lilijo
+Matko Różańcowa, Maryjo
+2.
+Panno nad pannami, Święta nad świętymi
+Najświętsza Królowo Pani nieba, ziemi
+*
+Najśliczniejszy kwiecie, lilijo
+Matko Różańcowa, Maryjo`;
 piesni["Zawitaj, Matko Różańca Świętego"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Zawitaj, Matko Różańca Świętego"]['klasa'] = `2`;
 piesni["Zawitaj, Matko Różańca Świętego"]['katsiedlecki'] = `Pieśni ku czci NMP`;
 piesni["Zawitaj, Matko Różańca Świętego"]['nr'] = `1248`;
 piesni["Zawitaj, Matko Różańca Świętego"]['tonacja'] = `C`;
 piesni["Zawitaj, Matko Różańca Świętego"]['naco'] = `0/0/0/0/0/0`;
-piesni["Zawitaj, Matko Różańca Świętego"]['tekst'] = ``;
-piesni["Zawitaj, Matko Różańca Świętego"]['kategoria'] = ``;
+piesni["Zawitaj, Matko Różańca Świętego"]['tekst'] = `1.
+Zawitaj, Matko Różańca świętego
+Przybytku Boga w Trójcy jedynego
+*
+Ucieczko nasza, ucieczko nasza
+w życia doczesności
+O cedrze czystości
+2.
+Najozdobniejsza Różo ogrodowa
+Najprzyjemniejsza Różdżko Aronowa
+*
+Wonność balsamu, wonność balsamu
+balsam przechodząca
+Matko kochająca `;
 piesni["Była cicha i piękna"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Była cicha i piękna"]['klasa'] = `3`;
 piesni["Była cicha i piękna"]['katsiedlecki'] = ``;
 piesni["Była cicha i piękna"]['nr'] = `144`;
 piesni["Była cicha i piękna"]['tonacja'] = `F`;
 piesni["Była cicha i piękna"]['naco'] = `0/0/1/0/0/0`;
-piesni["Była cicha i piękna"]['tekst'] = ``;
-piesni["Była cicha i piękna"]['kategoria'] = ``;
+piesni["Była cicha i piękna"]['tekst'] = `1.
+Była cicha i piękna jak wiosna
+Żyła prosto, zwyczajnie jak my
+Ona Boga na świat nam przyniosła
+I na Ziemi wśród łez nowe dni zajaśniały
+*
+Matka, która wszystko rozumie
+Sercem ogarnia każdego z nas
+Matka zobaczyć dobro w nas umie
+Ona jest z nami w każdy czas
+2.
+Dzisiaj światu potrzeba dobroci
+By niepokój zwyciężyć i zło
+Trzeba ciepła, co życie ozłoci
+Trzeba Boga, więc ludziom nieśmy Go, tak jak Ona
+*
+Matka, która wszystko rozumie…
+3.
+Życie niesie ze sobą cierpienie
+Zewsząd krzyże, zawody i ból
+Serce ludzkie wśród męki, udręczenia
+Ma nadzieję, że wciąż Ona czuwa i kocha
+*
+Matka, która wszystko rozumie…`;
 piesni["Chwalcie, łąki umajone"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Chwalcie, łąki umajone"]['klasa'] = `3`;
 piesni["Chwalcie, łąki umajone"]['katsiedlecki'] = `Pieśni ku czci NMP`;
 piesni["Chwalcie, łąki umajone"]['nr'] = `190`;
 piesni["Chwalcie, łąki umajone"]['tonacja'] = `F`;
 piesni["Chwalcie, łąki umajone"]['naco'] = `1/0/0/0/1/0`;
-piesni["Chwalcie, łąki umajone"]['tekst'] = ``;
-piesni["Chwalcie, łąki umajone"]['kategoria'] = ``;
+piesni["Chwalcie, łąki umajone"]['tekst'] = `1.
+Chwalcie łąki umajone, 
+góry, doliny zielone; 
+chwalcie cieniste gaiki, 
+źródła i kręte strumyki!
+2.
+Co igra z morza falami,
+w powietrzu buja skrzydłami, 
+chwalcie z nami Panią świata, 
+Jej dłoń nasza wieniec splata.
+3.
+Ona, dzieł Boskich korona,
+nad anioły wywyższona; 
+choć jest Panią nieba, ziemi, 
+nie gardzi dary naszymi.
+4.
+Wdzięcznym strumyki mruczeniem, 
+ptaszęta słodkim kwileniem 
+i co czuje, i co żyje,
+niech z nami sławi Maryję!`;
 piesni["Ciebie na wieki"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Ciebie na wieki"]['klasa'] = `3`;
 piesni["Ciebie na wieki"]['katsiedlecki'] = `Pieśni ku czci NMP`;
 piesni["Ciebie na wieki"]['nr'] = `1281`;
 piesni["Ciebie na wieki"]['tonacja'] = `F`;
 piesni["Ciebie na wieki"]['naco'] = `0/0/0/0/1/0`;
-piesni["Ciebie na wieki"]['tekst'] = ``;
-piesni["Ciebie na wieki"]['kategoria'] = ``;
+piesni["Ciebie na wieki"]['tekst'] = `1.
+Ciebie na wieki wychwalać będziemy,
+Królowo nieba, Maryjo!
+W Twojej opiece niechaj zostajemy,
+śliczna, bez zmazy, Lilijo!
+*
+Wdzięczna Estero, o Panienko Święta,
+tyś przez aniołów jest do nieba wzięta;
+Niepokalanie Poczęta!
+2.
+Na każdy moment, na każdą godzinę
+Twojej pomocy żądamy;
+Pani anielska, odproś naszą winę,
+do Ciebie grzeszni wzdychamy.
+*
+O furto rajska! Ucieczko grzeszników!
+O Matko Boska! Ratuj niewolników!
+Niepokalanie Poczęta!
+3.
+Masz berło w ręce, znać, żeś Monarchinią,
+masz drugie: Syna swojego;
+zjednaj nam łaskę w ostatnią godzinę,
+w on dzień skonania naszego.
+*
+Niech Cię chwalimy z Synem Twym społecznie,
+jak teraz w życiu, tak i potem wiecznie,
+Niepokalanie Poczęta!`;
 piesni["Cześć Maryi"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Cześć Maryi"]['klasa'] = `3`;
 piesni["Cześć Maryi"]['katsiedlecki'] = `Pieśni ku czci NMP`;
 piesni["Cześć Maryi"]['nr'] = `229`;
 piesni["Cześć Maryi"]['tonacja'] = `C`;
 piesni["Cześć Maryi"]['naco'] = `1/0/0/1/0/0`;
-piesni["Cześć Maryi"]['tekst'] = ``;
-piesni["Cześć Maryi"]['kategoria'] = ``;
+piesni["Cześć Maryi"]['tekst'] = `1.
+Cześć Maryi, cześć i chwała
+Pannie świętej cześć
+= Śpiewaj, śpiewaj, ziemio cała
+Hołd jej śpiesz
+2.
+Jej to ręce piastowały
+Tego, co ten świat
+= Stworzył wielki i wspaniały
+Syn Jej, a nasz brat
+3.
+On jak matkę Ją miłował
+Jej posłusznym był
+= Każde słowo Jej szanował
+Chociaż Bogiem był
+4.
+Dziatki lube, jeśli chcecie
+Błogi żywot mieć
+= Jako święte Jezus Dziecię
+Marię chciejcie czcić
+5.
+Czystość, cichość i pokora
+To Maryi strój
+= Przez nie miła niebios Córa
+Łask zyskała zdrój
+6.
+Ten Maryi, dziatwo droga
+W sercu obraz noś
+= O opiekę Matki Boga
+Zawsze kornie proś`;
 piesni["Do Ciebie, Matko"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Do Ciebie, Matko"]['klasa'] = `3`;
 piesni["Do Ciebie, Matko"]['katsiedlecki'] = `Pieśni ku czci NMP`;
 piesni["Do Ciebie, Matko"]['nr'] = `240`;
 piesni["Do Ciebie, Matko"]['tonacja'] = `Es`;
 piesni["Do Ciebie, Matko"]['naco'] = `0/0/1/0/1/0`;
-piesni["Do Ciebie, Matko"]['tekst'] = ``;
-piesni["Do Ciebie, Matko"]['kategoria'] = ``;
+piesni["Do Ciebie, Matko"]['tekst'] = `1.
+Do Ciebie, Matko, szafarko łask,
+błagalne pienia wciąż płyną.
+Twa dobroć świeci nad słońca blask,
+nadzieją Tyś nam jedyną.
+*
+W cierpienia czas pomocą darz
+i nieustannie ratuj nas.
+2.
+Gdy Twojej chwały niebieski tron,
+daleki duszy cierpiącej,
+spoglądnij na nas przez obraz on
+Pomocy Nieustającej.
+*
+W cierpienia czas pomocą darz…
+3.
+Twe oczy jakże łaskawe są,
+pociąga słodycz z nich Twoja,
+ufamy mocno, że ulżysz łzom
+i wsparciem staniesz się w znojach
+*
+W cierpienia czas pomocą darz…`;
 piesni["Do Twej dążym kaplicy"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Do Twej dążym kaplicy"]['klasa'] = `3`;
 piesni["Do Twej dążym kaplicy"]['katsiedlecki'] = `Pieśni ku czci NMP`;
 piesni["Do Twej dążym kaplicy"]['nr'] = `246`;
 piesni["Do Twej dążym kaplicy"]['tonacja'] = `G`;
 piesni["Do Twej dążym kaplicy"]['naco'] = `0/0/0/0/1/0`;
-piesni["Do Twej dążym kaplicy"]['tekst'] = ``;
-piesni["Do Twej dążym kaplicy"]['kategoria'] = ``;
+piesni["Do Twej dążym kaplicy"]['tekst'] = `1.
+Do Twej dążym kaplicy
+Co z brzegu czeka nas
+Wśród wichrów nawałnicy
+W pochmurny, słotny czas
+Byśmy tam wciąż dążyli
+I nigdy nie zbłądzili
+Maryjo, Maryjo, o Maryjo, świeć
+2.
+Jak cudnie w zmierzchu cieni
+Twój obraz w sercu lśni
+Wód kryształ się rumieni
+Na nim Twój promień drży
+O Jutrznio powstająca
+O Gwiazdo z chmur świecąca
+Maryjo, Maryjo, o Maryjo, świeć`;
 piesni["Gdy trwoga nas ogarnie"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Gdy trwoga nas ogarnie"]['klasa'] = `3`;
 piesni["Gdy trwoga nas ogarnie"]['katsiedlecki'] = `Pieśni ku czci NMP`;
 piesni["Gdy trwoga nas ogarnie"]['nr'] = `316`;
 piesni["Gdy trwoga nas ogarnie"]['tonacja'] = `C`;
 piesni["Gdy trwoga nas ogarnie"]['naco'] = `0/0/0/0/1/Do MB Nieustającej Pomocy`;
-piesni["Gdy trwoga nas ogarnie"]['tekst'] = ``;
-piesni["Gdy trwoga nas ogarnie"]['kategoria'] = ``;
+piesni["Gdy trwoga nas ogarnie"]['tekst'] = `1.
+Gdy trwoga nas ogarnie
+Matko, wspomóż nas
+I w smutku skróć cierpienia
+Matko, wspomóż nas
+*
+Matko, Ty wspomagaj nas
+nieustannie w każdy czas,
+nieustannie w każdy czas!
+2.
+Gdy wiarę tracim żywą,
+Matko, wspomóż nas!
+Nadzieję wzbudź prawdziwą;
+Matko, wspomóż nas! 
+*
+Matko, Ty wspomagaj nas…
+3.
+Gdy miłość gaśnie w duszy,
+Matko, wspomóż nas!
+Niech głos nasz Ciebie wzruszy;
+Matko, wspomóż nas! 
+*
+Matko, Ty wspomagaj nas…
+4.
+W pokusy złej godzinie,
+Matko, wspomóż nas!
+Kto wzywa Cię, nie zginie;
+Matko, wspomóż nas! 
+*
+Matko, Ty wspomagaj nas…
+5.
+Gdy śmierć się do nas zbliży,
+Matko, wspomóż nas!
+Do nieba wprowadź wyżyn;
+Matko, wspomóż nas! 
+*
+Matko, Ty wspomagaj nas…`;
 piesni["Gwiazdo śliczna, wspaniała"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Gwiazdo śliczna, wspaniała"]['klasa'] = `3`;
 piesni["Gwiazdo śliczna, wspaniała"]['katsiedlecki'] = `Pieśni ku czci NMP`;
 piesni["Gwiazdo śliczna, wspaniała"]['nr'] = `352`;
 piesni["Gwiazdo śliczna, wspaniała"]['tonacja'] = `C`;
 piesni["Gwiazdo śliczna, wspaniała"]['naco'] = `0/0/1/1/0/0`;
-piesni["Gwiazdo śliczna, wspaniała"]['tekst'] = ``;
-piesni["Gwiazdo śliczna, wspaniała"]['kategoria'] = ``;
+piesni["Gwiazdo śliczna, wspaniała"]['tekst'] = `1.
+Gwiazdo śliczna wspaniała,
+Częstochowska (Kalwaryjska) Maryjo,
+do Ciebie się uciekamy,
+o Maryjo, Maryjo!
+2.
+Słyszeliśmy wdzięczny głos,
+jak Maryja woła nas:
+„Pójdźcie do mnie, moje dzieci,
+przyszedł czas, ach! przyszedł czas”.
+3.
+Gdy ptaszkowie śpiewają,
+Maryję wychwalają,
+słowiczkowie wdzięcznym głosem,
+śpiewają, ach! śpiewają.
+4.
+I my też zgromadzeni
+pokłon dajmy Maryi,
+czyste serce Bożej Matce
+darujmy, ach! darujmy.
+5.
+O przedrogi klejnocie,
+Maryjo, na tym świecie!
+Kto Ciebie ma, ten się z Tobą
+raduje, ach! raduje.
+6.
+Jak szczęśliwy tron Boży,
+Pannie Maryi służy,
+cherubiny, serafiny
+śpiewają, ach! śpiewają.
+7.
+O Maryjo, Maryjo!
+Tyś pomocą jedyną.
+Dusza ma się w moim ciele
+raduje, ach! raduje.
+8.
+Ty się przyczyń za nami,
+o Częstochowska (Kalwaryjska) Pani,
+Niech się nad nami zmiłuje
+Twój Synaczek kochany.
+9.
+O Ty, Pani Anielska,
+Maryjo Częstochowska (Kalwaryjska),
+prosimy Cię, dopomóż nam
+przyjść tam, gdzie Twój Syn mieszka.`;
 piesni["Idźmy, tulmy się"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Idźmy, tulmy się"]['klasa'] = `3`;
 piesni["Idźmy, tulmy się"]['katsiedlecki'] = `Pieśni ku czci NMP`;
 piesni["Idźmy, tulmy się"]['nr'] = `375`;
 piesni["Idźmy, tulmy się"]['tonacja'] = `Es`;
 piesni["Idźmy, tulmy się"]['naco'] = `0/0/1/0/0/0`;
-piesni["Idźmy, tulmy się"]['tekst'] = ``;
-piesni["Idźmy, tulmy się"]['kategoria'] = ``;
+piesni["Idźmy, tulmy się"]['tekst'] = `1.
+Idźmy, tulmy się jak dziatki
+do Serca Maryi Matki
+czy nas nęka życia trud
+czy to winy czerni brud
+*
+Idźmy, idźmy ufnym krokiem
+z rzewnym sercem, z łzawym okiem
+Serce to zna dzieci głos
+odwróci bolesny cios.
+2.
+Ach, to Serce dobroć sama
+najczulszej z córek Adama
+jest otwarte w każdy czas,
+samo szuka, wzywa nas
+*
+Pójdźcie do mnie, dziatki moje
+Wyczerpnijcie łaski zdroje
+Kto mnie znajdzie, życie ma
+temu Syn zbawienie da
+3.
+To Maryi Serca chwałą
+że zgubionym Zbawcę dało
+Jemuś winien, świecie, cud
+że Bóg zstąpił zbawić lud
+*
+Pod nim Jezusa nosiła
+do niego czule tuliła
+wychowała, by Bóg-Syn 
+zgładził długi naszych win.
+4.
+Więc do Ciebie, jak do Matki
+idziem, tulim się, Twe dziatki
+Matko, ulżyj życia trud
+zmyj z serc naszych winy brud
+*
+Ty nas kochasz, a my Ciebie
+niech się z Tobą złączym w niebie
+Matko, kto nie kocha Cię
+dzieckiem Twym nie zowie się`;
 piesni["Jak szczęśliwa Polska cała"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Jak szczęśliwa Polska cała"]['klasa'] = `3`;
 piesni["Jak szczęśliwa Polska cała"]['katsiedlecki'] = ``;
 piesni["Jak szczęśliwa Polska cała"]['nr'] = `389`;
 piesni["Jak szczęśliwa Polska cała"]['tonacja'] = `B`;
 piesni["Jak szczęśliwa Polska cała"]['naco'] = `1/0/1/1/1/0`;
-piesni["Jak szczęśliwa Polska cała"]['tekst'] = ``;
-piesni["Jak szczęśliwa Polska cała"]['kategoria'] = ``;
+piesni["Jak szczęśliwa Polska cała"]['tekst'] = `1.
+Jak szczęśliwa Polska cała,
+W niej Maryi kwitnie chwała,
+Od Bałtyku po gór szczyty,
+Kraj nasz płaszczem Jej okryty.
+*
+Matko Boska, Królowo Polska,
+O Pani nasza Częstochowska.
+2.
+W Częstochowie tron swój wzniosła,
+Wielka, można i wyniosła,
+Lecz najczulsza z matek ziemi,
+Cierpi razem z dziećmi swymi.
+*
+Matko Boska, Królowo Polska…
+3.
+Tyś cudami zajaśniała,
+Swoje serce nam oddała.
+Ludu Polski, dziecię drogie,
+Masz tu Matkę, szczęście błogie.
+*
+Matko Boska, Królowo Polska…`;
 piesni["Jasnogórska Pani"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Jasnogórska Pani"]['klasa'] = `3`;
 piesni["Jasnogórska Pani"]['katsiedlecki'] = `Pieśni ku czci NMP`;
 piesni["Jasnogórska Pani"]['nr'] = `405`;
 piesni["Jasnogórska Pani"]['tonacja'] = `F`;
 piesni["Jasnogórska Pani"]['naco'] = `0/0/0/0/1/0`;
-piesni["Jasnogórska Pani"]['tekst'] = ``;
-piesni["Jasnogórska Pani"]['kategoria'] = ``;
+piesni["Jasnogórska Pani"]['tekst'] = `*
+Jasnogórska Pani, Tyś naszą hetmanką
+Polski Tyś Królową i najlepszą Matką
+**
+1.
+Spójrz na polskie domy, na miasta i wioski
+Niech z miłości Twojej słynie naród polski
+*
+Jasnogórska Pani, Tyś naszą hetmanką…
+2.
+Weź w opiekę młodzież i niewinne dziatki
+By się nie wyrzekły swej niebieskiej Matki
+*
+Jasnogórska Pani, Tyś naszą hetmanką…
+3.
+Niech i Kościół święty, dzieło Twego Syna
+U Bożego tronu wspiera Twa przyczyna
+*
+Jasnogórska Pani, Tyś naszą hetmanką…`;
 piesni["Już od rana rozśpiewana"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Już od rana rozśpiewana"]['klasa'] = `3`;
 piesni["Już od rana rozśpiewana"]['katsiedlecki'] = `Pieśni ku czci NMP`;
 piesni["Już od rana rozśpiewana"]['nr'] = `474`;
 piesni["Już od rana rozśpiewana"]['tonacja'] = `D`;
 piesni["Już od rana rozśpiewana"]['naco'] = `1/0/0/1/0/0`;
-piesni["Już od rana rozśpiewana"]['tekst'] = ``;
-piesni["Już od rana rozśpiewana"]['kategoria'] = ``;
+piesni["Już od rana rozśpiewana"]['tekst'] = `1.
+Już od rana rozśpiewana,
+chwal o duszo, Maryję!
+Cześć Jej świątkom, cześć pamiątkom,
+co dzień w niebo niech bije!
+*
+Cud bo żywy, nad podziwy,
+Jej wielmożność u Boga:
+Panna czysta, Matka Chrysta,
+przechwalebna, przebłoga.
+2.
+Serce rośnij w cześć rozgłośniej,
+dźwięków Marii nieś krocie;
+świat w niemocy, świat sierocy
+odmieniła w żywocie
+*
+Cud bo żywy, nad podziwy…
+3.
+Przez Cię czarta pycha starta
+i na wszystkie plemiona
+Tyś otucha znów dla ducha,
+Panno błogosławiona 
+*
+Cud bo żywy, nad podziwy…
+4.
+O Królowo! Tyś na nowo
+światu rozradowaniem,
+z Twej opieki na wiek wieki
+chwałę niebios dostaniem 
+*
+Cud bo żywy, nad podziwy…
+5.
+Bądź ochłodą i osłodą
+tym, co wiernie i stale
+Twoje świątki i pamiątki
+podawają ku chwale. 
+*
+Cud bo żywy, nad podziwy…`;
 piesni["Królowej Anielskiej śpiewajmy"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Królowej Anielskiej śpiewajmy"]['klasa'] = `3`;
 piesni["Królowej Anielskiej śpiewajmy"]['katsiedlecki'] = `Pieśni ku czci NMP`;
 piesni["Królowej Anielskiej śpiewajmy"]['nr'] = `503`;
 piesni["Królowej Anielskiej śpiewajmy"]['tonacja'] = `Es`;
 piesni["Królowej Anielskiej śpiewajmy"]['naco'] = `0/0/1/0/1/0`;
-piesni["Królowej Anielskiej śpiewajmy"]['tekst'] = ``;
-piesni["Królowej Anielskiej śpiewajmy"]['kategoria'] = ``;
+piesni["Królowej Anielskiej śpiewajmy"]['tekst'] = `1.
+Królowej Anielskiej śpiewajmy
+Różami uwieńczmy Jej skroń
+Jej serca w ofierze składajmy
+Ze łzami wołajmy doń
+*
+= O Maryjo, bądź nam pozdrowiona
+Bądź Ty zawsze Matką nam
+2.
+Przez Ciebie, o Matko miłości
+Łask wszelkich udziela nam Bóg
+A my Ci hołd dajem wdzięczności
+Upadłszy do Twoich nóg
+*
+= O lilijo, jakżeś Ty wspaniała
+Wszelkich cnót rozlewasz woń
+3.
+O tronie Ty Boga wiecznego
+O Słońce nadziei i łask
+O Różdżko przedziwna Jessego
+Jak wielki cnót Twych jest blask
+*
+= O Maryjo, bądź nam pozdrowiona
+Bądź Ty zawsze Matką nam`;
 piesni["Maryjo, ja Twe dziecię"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Maryjo, ja Twe dziecię"]['klasa'] = `3`;
 piesni["Maryjo, ja Twe dziecię"]['katsiedlecki'] = `Pieśni ku czci NMP`;
 piesni["Maryjo, ja Twe dziecię"]['nr'] = `556`;
 piesni["Maryjo, ja Twe dziecię"]['tonacja'] = `Es`;
 piesni["Maryjo, ja Twe dziecię"]['naco'] = `0/1/0/0/0/0`;
-piesni["Maryjo, ja Twe dziecię"]['tekst'] = ``;
-piesni["Maryjo, ja Twe dziecię"]['kategoria'] = ``;
+piesni["Maryjo, ja Twe dziecię"]['tekst'] = `1.
+Maryjo, ja Twe dziecię, o podaj mi Twą dłoń
+od złego mnie w tym świecie, od grzechu, Matko, chroń
+*
+Bądź z nami w każdy czas
+wspieraj i ratuj nas
+Matko, Matko, bądź z nami, w każdy czas
+2.
+O, tkliwe Twoje oczy ku dzieciom, Matko, zniż
+Gdy niemoc serce tłoczy, Ty je pociągnij wzwyż
+*
+Bądź z nami w każdy czas…
+3.
+Ty płoniesz blaskiem słońca, rozpraszasz świata mrok
+niech w obraz Twój bez końca utkwiony mamy wzrok
+*
+Bądź z nami w każdy czas…`;
 piesni["Maryjo, Królowo Polski"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Maryjo, Królowo Polski"]['klasa'] = `3`;
 piesni["Maryjo, Królowo Polski"]['katsiedlecki'] = ``;
 piesni["Maryjo, Królowo Polski"]['nr'] = `558`;
 piesni["Maryjo, Królowo Polski"]['tonacja'] = `Es`;
 piesni["Maryjo, Królowo Polski"]['naco'] = `0/0/0/0/1/0`;
-piesni["Maryjo, Królowo Polski"]['tekst'] = ``;
-piesni["Maryjo, Królowo Polski"]['kategoria'] = ``;
+piesni["Maryjo, Królowo Polski"]['tekst'] = `Maryjo, Królowo Polski =
+= Jestem przy Tobie, pamiętam
+Jestem przy Tobie, czuwam =`;
 piesni["My chcemy Boga"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["My chcemy Boga"]['klasa'] = `3`;
 piesni["My chcemy Boga"]['katsiedlecki'] = `Hymny`;
 piesni["My chcemy Boga"]['nr'] = `611`;
 piesni["My chcemy Boga"]['tonacja'] = `Es`;
 piesni["My chcemy Boga"]['naco'] = `0/0/0/0/1/0`;
-piesni["My chcemy Boga"]['tekst'] = ``;
-piesni["My chcemy Boga"]['kategoria'] = ``;
+piesni["My chcemy Boga"]['tekst'] = `1.
+My chcemy Boga, Panno Święta!
+O, usłysz naszych wołań głos!
+Miłości Bożej dźwigać pęta,
+to nasza chluba, to nasz los.
+*
+Błogosław, słodka Pani!
+Błogosław wszelki stan!
+= My chcemy Boga! My poddani!
+On naszym Królem, On nasz Pan!
+2.
+My chcemy Boga w rodzin kole,
+w troskach rodziców, w dziatek snach;
+my chcemy Boga w książce, w szkole,
+w godzinach wytchnień, w pracy dniach.
+*
+Błogosław, słodka Pani…
+3.
+My chcemy Boga w naszym kraju,
+wśród starodawnych polskich strzech,
+w polskim języku i zwyczaju
+niech Boga wielbi Chrobry, Lech. 
+*
+Błogosław, słodka Pani…
+4.
+My chcemy Boga w każdej chwili,
+i dziś, i jutro, w szczęściu, w łzach;
+czy nam się pociech niebo schyli,
+czy w gruzach legnie szczęścia gmach.
+*
+Błogosław, słodka Pani…
+5.
+My chcemy Boga! Jego prawo
+niech będzie naszych czynów tchem!
+Byśmy umieli chętnie, żwawo:
+obierać dobro, gardzić złem!
+*
+Błogosław, słodka Pani…`;
 piesni["Pieśnią wesela witamy"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Pieśnią wesela witamy"]['klasa'] = `3`;
 piesni["Pieśnią wesela witamy"]['katsiedlecki'] = `Pieśni ku czci NMP`;
 piesni["Pieśnią wesela witamy"]['nr'] = `856`;
 piesni["Pieśnią wesela witamy"]['tonacja'] = `B`;
 piesni["Pieśnią wesela witamy"]['naco'] = `1/0/0/0/0/0`;
-piesni["Pieśnią wesela witamy"]['tekst'] = ``;
-piesni["Pieśnią wesela witamy"]['kategoria'] = ``;
+piesni["Pieśnią wesela witamy"]['tekst'] = `1.
+Pieśnią wesela witamy
+O Maryjo, miesiąc Twój
+My Ci z serca cześć składamy
+Ty nam otwórz łaski zdrój
+W tym miesiącu ziemia cała
+Życiem, wonią, wdziękiem lśni
+=Wszędzie Twoja dźwięczy chwała
+Gdy majowe płyną dni.`;
 piesni["Po górach, dolinach"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Po górach, dolinach"]['klasa'] = `3`;
 piesni["Po górach, dolinach"]['katsiedlecki'] = ``;
 piesni["Po górach, dolinach"]['nr'] = `861`;
 piesni["Po górach, dolinach"]['tonacja'] = `F`;
 piesni["Po górach, dolinach"]['naco'] = `0/0/1/0/1/0`;
-piesni["Po górach, dolinach"]['tekst'] = ``;
-piesni["Po górach, dolinach"]['kategoria'] = ``;
+piesni["Po górach, dolinach"]['tekst'] = `1.
+Po górach, dolinach rozlega się dzwon,
+Anielskie witanie ludziom głosi on:
+*
+Ave, ave, ave Maryja.
+Zdrowaś, zdrowaś, zdrowaś Maryja.
+2.
+Bernadka dziewczynka szła po drzewo w las,
+Anioł ją tam wiedzie, Bóg sam wybrał czas.
+*
+Ave, ave, ave Maryja….
+3.
+Modlitwę serdeczną szepczą usta jej,
+„Zdrowaś bądź Panienko łaski na nas zlej”.
+*
+Ave, ave, ave Maryja….
+4.
+„Pokornej mej prośbie odpowiedź swą daj:
+„Kto jesteś, o Pani, przed nami nie taj”.
+*
+Ave, ave, ave Maryja….
+5.
+Klęczącej Bernadce rzekła Pani ta:
+„Poczęciem Niepokalanym jestem ja”.
+*
+Ave, ave, ave Maryja….
+6.
+O gwiazdo najświętsza, wiedź nas w niebios kraj,
+Gdzie wieczną szczęśliwość, o Boże nam daj.
+*
+Ave, ave, ave Maryja…`;
 piesni["Serdeczna Matko"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Serdeczna Matko"]['klasa'] = `3`;
 piesni["Serdeczna Matko"]['katsiedlecki'] = `Pieśni ku czci NMP`;
 piesni["Serdeczna Matko"]['nr'] = `1005`;
 piesni["Serdeczna Matko"]['tonacja'] = `C`;
 piesni["Serdeczna Matko"]['naco'] = `0/0/0/0/1/0`;
-piesni["Serdeczna Matko"]['tekst'] = ``;
-piesni["Serdeczna Matko"]['kategoria'] = ``;
+piesni["Serdeczna Matko"]['tekst'] = `1.
+Serdeczna Matko, Opiekunko ludzi
+Niech Cię płacz sierot do litości wzbudzi.
+Wygnańcy Ewy do Ciebie wołamy,
+Zlituj się, zlituj, niech się nie tułamy.
+2.
+Do kogóż wzdychać mamy nędzne dziatki?
+Tylko do Ciebie, ukochanej Matki,
+U której serce otwarte każdemu,
+A osobliwie nędzą strapionemu.
+3.
+Dla Twego Syna wszystko Bóg uczyni,
+Daruje plagi, choć człowiek zawini,
+Jak Cię cna Matko nie kochać serdecznie,
+Gdy się skryć można pod Twój płaszcz bezpiecznie.
+4.
+Ratuj nas, ratuj Matko ukochana,
+Zagniewanego, gdy zobaczysz Pana,
+Mieczem przebite pokazuj Mu serce,
+Gdy Syna na krzyż wbijali morderce.
+5.
+Dla tych boleści, któreś wycierpiała,
+Kiedyś pod krzyżem Syna Swego stała.
+Bóg nam daruje byśmy nie cierpieli,
+Cośmy wytrzymać za złość naszą mieli.`;
 piesni["Witaj, święta i poczęta"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Witaj, święta i poczęta"]['klasa'] = `3`;
 piesni["Witaj, święta i poczęta"]['katsiedlecki'] = `Pieśni ku czci NMP`;
 piesni["Witaj, święta i poczęta"]['nr'] = `1184`;
 piesni["Witaj, święta i poczęta"]['tonacja'] = `D`;
 piesni["Witaj, święta i poczęta"]['naco'] = `1/0/0/0/0/0`;
-piesni["Witaj, święta i poczęta"]['tekst'] = ``;
-piesni["Witaj, święta i poczęta"]['kategoria'] = ``;
+piesni["Witaj, święta i poczęta"]['tekst'] = `1.
+Witaj, Święta i Poczęta Niepokalanie
+Maryja, śliczna lilija, nasze kochanie
+Witaj, czysta Panienko, najjaśniejsza Jutrzenko
+Witaj, Święta, Wniebowzięta, Niepokalana
+2.
+Swą pięknością, niewinnością w niebie górujesz
+w dostojeństwie i panieństwie wszystkim celujesz
+w pierwszym, Panno, momencie święte Twoje Poczęcie
+jaśniejące jako słońce, Niepokalana
+3.
+Sam Bóg Święty z Ciebie wzięty dla tej przyczyny
+żeś się stała i została zawsze bez winy
+Tyś przed wieki przejrzana i za Matkę wybrana
+Jezusowi Chrystusowi, Niepokalana
+4.
+My też sławiąc, błogosławiąc, Ciebie prosimy
+niech czystymi, niewinnymi zawsze będziemy
+Za to życie dajemy i mocno wyznajemy
+żeś jest Święta i poczęta, Niepokalana`;
 piesni["Z dawna Polski Tyś Królową"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Z dawna Polski Tyś Królową"]['klasa'] = `3`;
 piesni["Z dawna Polski Tyś Królową"]['katsiedlecki'] = `Pieśni ku czci NMP`;
 piesni["Z dawna Polski Tyś Królową"]['nr'] = `1223`;
 piesni["Z dawna Polski Tyś Królową"]['tonacja'] = `d`;
 piesni["Z dawna Polski Tyś Królową"]['naco'] = `0/0/0/0/1/0`;
-piesni["Z dawna Polski Tyś Królową"]['tekst'] = ``;
-piesni["Z dawna Polski Tyś Królową"]['kategoria'] = ``;
+piesni["Z dawna Polski Tyś Królową"]['tekst'] = `1.
+Z dawna Polski Tyś Królową, Maryjo
+Ty za nami przemów słowo, Maryjo
+Ociemniałym podaj rękę
+niewytrwałym skracaj mękę
+Twe Królestwo weź pod rękę, Maryjo
+2.
+Gdyś pod krzyżem Syna stała, Maryjo
+Tyleś, Matko, wycierpiała, Maryjo
+Przez Twego Syna konanie
+uproś sercom zmartwychwstanie
+w ojców wierze daj wytrwanie, Maryjo
+3.
+Z dawna Polski Tyś Królową, Maryjo
+Ty za nami przemów słowo, Maryjo
+Miej w opiece naród cały
+który żyje dla Twej chwały
+niech rozwija się wspaniały, Maryjo`;
 piesni["Zdrowaś, Maryjo"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Zdrowaś, Maryjo"]['klasa'] = `3`;
 piesni["Zdrowaś, Maryjo"]['katsiedlecki'] = `Pieśni ku czci NMP`;
 piesni["Zdrowaś, Maryjo"]['nr'] = `1255`;
 piesni["Zdrowaś, Maryjo"]['tonacja'] = `Es`;
 piesni["Zdrowaś, Maryjo"]['naco'] = `0/1/0/0/0/0`;
-piesni["Zdrowaś, Maryjo"]['tekst'] = ``;
-piesni["Zdrowaś, Maryjo"]['kategoria'] = ``;
+piesni["Zdrowaś, Maryjo"]['tekst'] = `1.
+Zdrowaś, Maryjo, Boga Rodzico
+Błagamy Ciebie, święta Dziewico
+Niech łaska Twoja zawsze nam sprzyja
+Módl się za nami, Zdrowaś Maryja
+2.
+Wśród czystych duchów, w obliczu Pana
+Tyś przenajświętsza, niepokalana
+Jak wpośród kwiatów wonna lilija
+Jak wśród gwiazd zorza, Zdrowaś Maryja
+3.
+Ty, coś karmiła świata Zbawienie
+Ty nam jak matka daj pożywienie
+Niech brak żywności nas nie zabija
+Broń nas od głodu, Zdrowaś Maryja
+4.
+Ty, coś płakała nad śmiercią Syna
+Przez te łzy gorzkie, Matko jedyna
+Oddal śmiertelność, co lud zabija
+Broń nas od moru, Zdrowaś Maryja 
+5.
+Ty, coś płomieni innych nie znała
+Tylko miłością Bożą pałała
+Spraw, niechaj pożar dom nasz omija
+Broń nas od ognia, Zdrowaś Maryja
+6.
+Ty w całym życiu łagodna, cicha
+Daj, niech pokojem kraj nasz oddycha
+Niech duch niezgody nas nie rozbija
+Broń nas od wojny, Zdrowaś Maryja
+7.
+Królowo nasza wśród Cherubinów
+Usłysz pokorny głos ziemi synów
+Co się do tronu Twojego wzbija
+Ratuj nas, Matko, Zdrowaś Maryja`;
 piesni["Jezu, miłości Twej"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Jezu, miłości Twej"]['klasa'] = `4`;
 piesni["Jezu, miłości Twej"]['katsiedlecki'] = `Pieśni do Serca Jezusowego`;
 piesni["Jezu, miłości Twej"]['nr'] = `443`;
 piesni["Jezu, miłości Twej"]['tonacja'] = `F`;
 piesni["Jezu, miłości Twej"]['naco'] = `0/0/1/1/0/0`;
-piesni["Jezu, miłości Twej"]['tekst'] = ``;
-piesni["Jezu, miłości Twej"]['kategoria'] = ``;
+piesni["Jezu, miłości Twej"]['tekst'] = `1.
+Jezu, miłości Twej,
+ukryty w Hostii tej
+wielbimy cud,
+żeś się pokarmem stał,
+żeś nam swe Ciało dał,
+żeś skarby łaski zlał,
+na wierny lud.
+2.
+Dla biednych stworzeń Twych, 
+co ostrzem grzechów swych
+zraniły Cię,
+włócznią, co w boku tkwi,
+otwierasz serca drzwi,
+by w Twojej Boskiej Krwi
+obmyły się.
+3.
+I w Boskim Sercu tam
+schronienie dajesz nam,
+o Jezu mój!
+Aby nas żądłem swym
+wróg nasz nie dotknął w Nim,
+by się przed piekła złem
+lud ukrył Twój.
+4.
+Twe Serce tronem łask,
+i miłosierdzia blask
+w Nim świeci się.
+Panie, Ty widzisz sam,
+jak bardzo ciężko nam,
+więc grzesznym pozwól tam
+przytulić się.
+5.
+O Jezu, Zbawco nasz,
+co nędzę naszą znasz,
+grzeszników zbaw,
+by święte życie wieść,
+a potem Tobie cześć
+w niebiosach mogli nieść,
+o Jezu, spraw!`;
 piesni["Każda żyjąca dusza"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Każda żyjąca dusza"]['klasa'] = `4`;
 piesni["Każda żyjąca dusza"]['katsiedlecki'] = `Pieśni do Serca Jezusowego`;
 piesni["Każda żyjąca dusza"]['nr'] = `483`;
 piesni["Każda żyjąca dusza"]['tonacja'] = `G`;
 piesni["Każda żyjąca dusza"]['naco'] = `0/1/0/0/0/0`;
-piesni["Każda żyjąca dusza"]['tekst'] = ``;
-piesni["Każda żyjąca dusza"]['kategoria'] = ``;
+piesni["Każda żyjąca dusza"]['tekst'] = `1.
+Każda żyjąca dusza
+Niech się miłością wzrusza
+Uwielbiając, wychwalając
+Serce Jezusa
+2.
+Bo niebo ani ziemia
+Nic tak słodkiego nie ma
+Jako Serce Jezusowe
+Pełne zbawienia
+3.
+Dla nas otwarte stoi
+Niech grzesznik się nie boi
+Niech żałuje, pokutuje
+Tu rany zgoi
+4.
+W Najświętszym Sakramencie
+To Serce uwielbiajcie
+Za te dary serc ofiary
+Chętnie oddajcie
+5.
+Niech, Jezu, Twe mieszkanie
+Wśród naszych serc zostanie
+Niechaj dusza ma Jezusa
+Na posilanie
+6.
+Posilaj, Jezu drogi
+Rzucam się pod Twe nogi
+Serce kruszę, dając duszę
+Człowiek ubogi
+7.
+Gdy zbliży się konanie
+A serce me ustanie
+Z Twej opieki mnie na wieki
+Nie wypuść, Panie`;
 piesni["Kiedyś, o Jezu"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Kiedyś, o Jezu"]['klasa'] = `4`;
 piesni["Kiedyś, o Jezu"]['katsiedlecki'] = `Pieśni do Serca Jezusowego`;
 piesni["Kiedyś, o Jezu"]['nr'] = `493`;
 piesni["Kiedyś, o Jezu"]['tonacja'] = `C`;
 piesni["Kiedyś, o Jezu"]['naco'] = `0/0/1/0/0/0`;
-piesni["Kiedyś, o Jezu"]['tekst'] = ``;
-piesni["Kiedyś, o Jezu"]['kategoria'] = ``;
+piesni["Kiedyś, o Jezu"]['tekst'] = `1.
+Kiedyś, o Jezu, chodził po świecie,
+brałeś dziateczki w objęcia swe,
+patrz, tu przed Tobą stoi Twe dziecię,
+do Serca Twego przytul i mnie!
+2.
+Byłeś Dzieciątkiem, Ty wielki Boże!
+W żłóbku płakałeś nad światem złym.
+Nie płacz, Dzieciątko! Ja Ci w pokorze
+serce me daję! Ty mieszkaj w nim!
+3.
+Kto by u siebie dziecko przyjmował,
+rzekłeś, że wtenczas przyjmuje Cię.
+Dzięki Ci, Jezu, żeś nas miłował!
+Za to Cię kochać na wieki chcę!
+4.
+Rzekłeś: „Nie może ze Mną być w niebie,
+kto nie chce dziecku podobnym być”!
+Ja, dziecko Twoje, chcę przyjść do Ciebie!
+Daj mi niewinnie do śmierci żyć!
+5.
+Kiedy w ostatniej będę potrzebie,
+gdy się rozstanę ze światem tym
+– zlituj się, Jezu! Weź mnie do siebie!
+Niech wiecznie spocznę przy Sercu Twym!`;
 piesni["Kochajmy Pana"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Kochajmy Pana"]['klasa'] = `4`;
 piesni["Kochajmy Pana"]['katsiedlecki'] = `Pieśni do Serca Jezusowego`;
 piesni["Kochajmy Pana"]['nr'] = `496`;
 piesni["Kochajmy Pana"]['tonacja'] = `G`;
 piesni["Kochajmy Pana"]['naco'] = `0/1/0/0/1/0`;
-piesni["Kochajmy Pana"]['tekst'] = ``;
-piesni["Kochajmy Pana"]['kategoria'] = ``;
+piesni["Kochajmy Pana"]['tekst'] = `1.
+Kochajmy Pana, bo Serce Jego
+Żąda i pragnie serca naszego
+Dla nas Mu włócznią rana zadana
+Kochajmy Pana, kochajmy Pana
+2.
+O pójdź do Niego wszystko stworzenie
+Sercu Jezusa złóż dziękczynienie
+I twoje przed Nim zegnij kolana
+Kochajmy Pana, kochajmy Pana
+3.
+Pójdźcie do Niego, biedni grzesznicy
+Zmyć grzechów zmazy w czystej Krynicy
+Nad śnieg zbieleje dusza zmazana
+Kochajmy Pana, kochajmy Pana
+4.
+Pójdźcie do Niego, szczęśliwe dusze
+Obmyte we łzach, w pokuty skrusze
+Już niewinności szata wam dana
+Kochajmy Pana, kochajmy Pana`;
 piesni["Najświętsze Serce Boże"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Najświętsze Serce Boże"]['klasa'] = `4`;
 piesni["Najświętsze Serce Boże"]['katsiedlecki'] = `Pieśni do Serca Jezusowego`;
 piesni["Najświętsze Serce Boże"]['nr'] = `623`;
 piesni["Najświętsze Serce Boże"]['tonacja'] = `G`;
 piesni["Najświętsze Serce Boże"]['naco'] = `0/0/0/0/1/0`;
-piesni["Najświętsze Serce Boże"]['tekst'] = ``;
-piesni["Najświętsze Serce Boże"]['kategoria'] = ``;
+piesni["Najświętsze Serce Boże"]['tekst'] = `Najświętsze Serce Boże,
+poświęcamy Ci
+naszą ojczyznę, miasta i wioski,
+nasze rodziny i nas samych.
+Serce Boże, przyjdź Królestwo Twoje!`;
 piesni["O niewysłowione"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["O niewysłowione"]['klasa'] = `4`;
 piesni["O niewysłowione"]['katsiedlecki'] = `Pieśni do Serca Jezusowego`;
 piesni["O niewysłowione"]['nr'] = `727`;
 piesni["O niewysłowione"]['tonacja'] = `F`;
 piesni["O niewysłowione"]['naco'] = `0/0/1/0/0/0`;
-piesni["O niewysłowione"]['tekst'] = ``;
-piesni["O niewysłowione"]['kategoria'] = ``;
+piesni["O niewysłowione"]['tekst'] = `1.
+O niewysłowione szczęście zajaśniało,
+gdy Słowo Wcielone Serce swe nam dało.
+*
+Cud Boskiej miłości, o duszo ludzka, głoś;
+ku wiecznej światłości dźwięki twej pieśni wznoś.
+2.
+Miłość świat ten cały w niebo przemieniła,
+gdy w tej Hostii małej Serce Boże skryła
+*
+Cud Boskiej miłości, o duszo ludzka, głoś…
+3.
+Jako hołd wdzięczności serca Sercu dajmy,
+w bólu i radości zawsze Je kochajmy. 
+*
+Cud Boskiej miłości, o duszo ludzka, głoś…
+4.
+A nam Serce Boże po cierpieniach w świecie
+szczęścia wieczystego w raju wieniec splecie. 
+*
+Cud Boskiej miłości, o duszo ludzka, głoś…`;
 piesni["Pan blisko jest"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Pan blisko jest"]['klasa'] = `4`;
 piesni["Pan blisko jest"]['katsiedlecki'] = ``;
 piesni["Pan blisko jest"]['nr'] = `806`;
 piesni["Pan blisko jest"]['tonacja'] = `d`;
 piesni["Pan blisko jest"]['naco'] = `0/1/0/0/0/0`;
-piesni["Pan blisko jest"]['tekst'] = ``;
-piesni["Pan blisko jest"]['kategoria'] = ``;
+piesni["Pan blisko jest"]['tekst'] = `Pan blisko jest, oczekuj Go.
+Pan blisko jest, w Nim serca moc!`;
 piesni["Pobłogosław, Jezu drogi"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Pobłogosław, Jezu drogi"]['klasa'] = `4`;
 piesni["Pobłogosław, Jezu drogi"]['katsiedlecki'] = `Pieśni do Serca Jezusowego`;
 piesni["Pobłogosław, Jezu drogi"]['nr'] = `863`;
 piesni["Pobłogosław, Jezu drogi"]['tonacja'] = `Es`;
 piesni["Pobłogosław, Jezu drogi"]['naco'] = `0/0/0/0/1/0`;
-piesni["Pobłogosław, Jezu drogi"]['tekst'] = ``;
-piesni["Pobłogosław, Jezu drogi"]['kategoria'] = ``;
+piesni["Pobłogosław, Jezu drogi"]['tekst'] = `1.
+Pobłogosław, Jezu drogi
+Tym, co Serce Twe kochają
+Niechaj skarb ten cenny, drogi
+Na wiek wieków posiadają
+2.
+Za Twe łaski dziękujemy
+Które Serce Twoje dało
+W dani dusze Ci niesiemy
+By nas Serce Twe kochało
+3.
+Trzykroć święte Serce Boga
+Tobie śpiewa niebo całe
+Ciebie wielbi Matka droga
+Tobie lud Twój składa chwałę
+4.
+Nie opuszczaj nas, o Panie
+Odpuść grzesznym liczne winy
+Daj nam w Serca Twego ranie
+Błogosławieństw zdrój jedyny`;
 piesni["Serce Twe, Jezu"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Serce Twe, Jezu"]['klasa'] = `4`;
 piesni["Serce Twe, Jezu"]['katsiedlecki'] = `Pieśni do Serca Jezusowego`;
 piesni["Serce Twe, Jezu"]['nr'] = `1002`;
 piesni["Serce Twe, Jezu"]['tonacja'] = `G`;
 piesni["Serce Twe, Jezu"]['naco'] = `0/0/0/0/1/0`;
-piesni["Serce Twe, Jezu"]['tekst'] = ``;
-piesni["Serce Twe, Jezu"]['kategoria'] = ``;
+piesni["Serce Twe, Jezu"]['tekst'] = `1.
+Serce Twe Jezu, miłością goreje,
+Serce Twe w ogniu miłości topnieje.
+A nasze serca zimne jak lód,
+I próżny zda się Twej męki trud.
+2.
+Kiedyż, o kiedyż, słodki mój Panie,
+Poznamy Serca Twego kochanie?
+Kiedyż Twa miłość rozpali nas,
+dobry Jezu, czas to już czas!
+3.
+Rzuć tej miłości iskrę choć jedną,
+Ziemię serc naszych suchą i biedną.
+By Ci wydała obfity plon,
+Za Twój na krzyżu bolesny zgon.
+4.
+Gdy już na krzyżu, Jezu, skonałeś,
+Z miłości jeszcze zranion być chciałeś,
+By w Sercu Twoim otworzyć drzwi
+I nam ostatnią dać kroplę krwi.`;
 piesni["Twemu Sercu cześć składamy"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
 piesni["Twemu Sercu cześć składamy"]['klasa'] = `4`;
 piesni["Twemu Sercu cześć składamy"]['katsiedlecki'] = `Pieśni do Serca Jezusowego`;
 piesni["Twemu Sercu cześć składamy"]['nr'] = `1069`;
 piesni["Twemu Sercu cześć składamy"]['tonacja'] = `As`;
 piesni["Twemu Sercu cześć składamy"]['naco'] = `0/0/0/1/1/0`;
-piesni["Twemu Sercu cześć składamy"]['tekst'] = ``;
-piesni["Twemu Sercu cześć składamy"]['kategoria'] = ``;
+piesni["Twemu Sercu cześć składamy"]['tekst'] = `1.
+Twemu Sercu cześć składamy,
+O Jezu nasz, o Jezu;
+Twej litości przyzywamy,
+O Zbawicielu drogi.
+*
+Chwała niech będzie zawsze i wszędzie,
+Twemu Sercu, o mój Jezu.
+2.
+Serce to nam otworzone,
+O Jezu nasz, o Jezu;
+Włócznią na krzyżu zranione,
+O Zbawicielu drogi.
+*
+Chwała niech będzie zawsze i wszędzie…
+3.
+Gdy nas ciśnie utrapienie,
+O Jezu nasz, o Jezu;
+W Nim ucieczka, w Nim schronienie,
+O Zbawicielu drogi.
+*
+Chwała niech będzie zawsze i wszędzie…
+4.
+Więc do Niego się udajmy,
+O Jezu nasz, o Jezu;
+I ratunku tam szukajmy,
+O Zbawicielu drogi.
+*
+Chwała niech będzie zawsze i wszędzie…
+5.
+Nie odrzucaj nas od siebie,
+O Jezu nasz, o Jezu,
+Przyjm na ziemi, przyjmij w niebie,
+O Zbawicielu drogi.
+*
+Chwała niech będzie zawsze i wszędzie…
+6.
+Byśmy Twymi zawsze byli,
+O Jezu nasz, o Jezu;
+Twoje Serce wiecznie czcili,
+O Zbawicielu drogi.
+*
+Chwała niech będzie zawsze i wszędzie…`;
 
 var a_formula = "zwykła";
 
@@ -34540,7 +37332,7 @@ function TitlePage(){
       <h1 id="title">Szpiewnik Szybkiego Szukania 2</h1>
       <h4>
       Przygotowany na dzień {today},<br />
-      tj. {a_identyfikator}, formuła {window.a_formula}
+      tj. {a_identyfikator}, formuła: {window.a_formula}
       </h4>
     </>
   );
@@ -34632,7 +37424,8 @@ function Lyrics(props){
   let raw = props.raw;
   raw = raw.replace(/\*\*\n/g, '</span><br>');
   raw = raw.replace(/\*\n/g, '<span class="chorus">');
-  raw = raw.replace(/\d\.\n/g, match => {return "<li start="+match.substring(0, match.length - 2)+">"});
+  raw = raw.replace(/_(.{1,5})_/g, '<u>$1</u>');
+  raw = raw.replace(/\d+\.\n/g, match => {return "<li start="+match.substring(0, match.length - 2)+">"});
   raw = raw.replace(/\n/g, "<br />");
 
   return(<ol className="lyrics" dangerouslySetInnerHTML={{ __html: raw}} />);
@@ -34643,6 +37436,201 @@ function Song(){
   const [kiedy, title] = window.songlist[page - 1];
   
   switch(kiedy){
+    case "Majowe/Czerwcowe":
+      let flag = (title == "majowe");
+      let subtitle = (flag) ? "Pod Twoją obronę" : "Do Serca Twojego";
+
+      return(
+        <>
+          <h1>Nabożeństwo {title}</h1>
+          <h2>Litania {flag ? "Loretańska" : "do Serca"}</h2>
+          <img src={"nuty/"+title+".png"} />
+          <h2>Antyfona</h2>
+          {
+            flag ?
+            <>
+              <Antyfona
+                ksiadz="Módl się za nami, święta Boża rodzicielko"
+                wierni="Abyśmy się stali godnymi obietnic chrystusowych"
+                />
+              <Albo />
+              <Antyfona
+                ksiadz="Raduj się i wesel, Panno Maryjo, Alleluja"
+                wierni="Bo zmartwychwstał prawdziwie, Alleluja"
+              />
+              <p>Módlmy się: Panie nasz, Boże, dozwól nam, sługom swoim, cieszyć się trwałym zdrowiem duszy i ciała. I za wstawiennictwem Najświętszej Maryi zawsze dziewicy, uwolnij nas od doczesnych utrapień i obdarz wieczną radością, przez Chrystusa, Pana naszego...</p>
+            </> :
+            <>
+              <Antyfona
+                ksiadz="Jezu cichy i pokornego serca"
+                wierni="Uczyń serca nasze według serca Twego"
+              />
+              <p>Módlmy się: wszechmogący, wieczny Boże, wejrzyj na Serce najmilszego Syna swego i na chwałę, i zadość uczynienie, jakie w imieniu grzeszników ci składa; daj się przebłagać tym, którzy żebrzą Twego miłosierdzia i racz udzielić przebaczenia w imię tegoż Syna swego, Jezusa Chrystusa, który z tobą żyje i króluje na wieki wieków...</p>
+            </>
+          }
+          <h2>{subtitle}</h2>
+          <Lyrics raw={window.piesni[subtitle]["tekst"]} />
+        </>
+      )
+    case "Gorzkie żale":
+      let gorzkie_tonacje = window.piesni["Gorzkie żale"]["tonacja"].split("/");
+      return(
+        <>
+          <h1>Gorzkie żale</h1>
+          <h2>Pobudka</h2>
+          <h4>in {gorzkie_tonacje[0]}</h4>
+          <img src="nuty/gorzkieżale_pobudka.png" />
+          <ol className="lyrics">
+          {[
+            "Gorzkie żale, przybywajcie * Serca nasze przenikajcie.",
+            "Rozpłyńcie się, me źrenice * Toczcie smutnych łez krynice.",
+            "Słońce, gwiazdy omdlewają * Żałobą się pokrywają.",
+            "Płaczą rzewnie aniołowie * A któż żałość ich wypowie?",
+            "Opoki się twarde krają * Z grobów umarli powstają",
+            "Cóż jest, pytam, co się dzieje? * Wszystko stworzenie truchleje",
+            "Na ból męki Chrystusowej * Żal przejmuje bez wymowy",
+            "Uderz, Jezu, bez odwłoki * W twarde serc naszych opoki",
+            "Jezu mój, we krwi ran Twoich * Obmyj duszę z grzechów moich",
+            "Upał serca swego chłodzę * Gdy w przepaść męki Twej wchodzę."
+          ].map((val, i) => <li key={i}>{val}</li>)}
+          </ol>
+          <h2>Intencja</h2>
+          {[
+            "Przy pomocy łaski Bożej przystępujemy do rozważania męki Pana naszego Jezusa Chrystusa. Ofiarować ją będziemy Ojcu niebieskiemu na cześć i chwałę Jego Boskiego Majestatu, pokornie Mu dziękując za wielką i niepojętą miłość ku rodzajowi ludzkiemu, iż raczył zesłać Syna swego, aby za nas wycierpiał okrutne męki i śmierć podjął krzyżową. To rozmyślanie ofiarujemy również ku czci Najświętszej Maryi Panny, Matki Bolesnej, oraz ku uczczeniu Świętych Pańskich, którzy wyróżniali się nabożeństwem ku Męce Chrystusowej.",
+            "W pierwszej części będziemy rozważali, co Pan Jezus wycierpiał od modlitwy w Ogrójcu aż do niesłusznego przed sądem oskarżenia. Te zniewagi i zelżywości temuż Panu, za nas bolejącemu, ofiarujemy za Kościół święty katolicki, za najwyższego Pasterza z całym duchowieństwem, nadto za nieprzyjaciół krzyża Chrystusowego i wszystkich niewiernych, aby im Pan Bóg dał łaskę nawrócenia i opamiętania.",
+            "W drugiej części rozmyślania męki Pańskiej będziemy rozważali, co Pan Jezus wycierpiał od niesłusznego przed sądem oskarżenia aż do okrutnego cierniem ukoronowania. Te zaś rany, zniewagi i zelżywości temuż Jezusowi cierpiącemu ofiarujemy, prosząc Go o pomyślność dla Ojczyzny naszej, o pokój i zgodę dla wszystkich narodów, a dla siebie o odpuszczenie grzechów, oddalenie klęsk i nieszczęść doczesnych, a szczególnie zarazy, głodu, ognia i wojny.",
+            "W tej ostatniej części będziemy rozważali, co Pan Jezus wycierpiał od chwili ukoronowania aż do ciężkiego skonania na krzyżu. Te bluźnierstwa, zelżywości i zniewagi, jakie Mu wyrządzano, ofiarujemy za grzeszników zatwardziałych, aby Zbawiciel pobudził ich serca zbłąkane do pokuty i prawdziwej życia poprawy oraz za dusze w czyśćcu cierpiące, aby im litościwy Jezus krwią swoją świętą ogień zagasił; prosimy nadto, by i nam wyjednał na godzinę śmierci skruchę za grzechy i szczęśliwe w łasce Bożej wytrwanie."
+          ].map((val, i) => <p key={i}>{val}</p>)}
+          <h2>Hymn</h2>
+          <h4>in {gorzkie_tonacje[1]}</h4>
+          <img src="nuty/gorzkieżale_hymn.png" />
+          <Lyrics raw={
+            `1.\nŻal duszę ściska, serce boleść czuje, * Gdy słodki Jezus na śmierć się gotuje;
+            Klęczy w Ogrójcu, gdy krwawy pot leje, * Me serce mdleje.
+            2.\nPana świętości uczeń zły całuje, *Żołnierz okrutny powrozmi krępuje!
+            Jezus tym więzom dla nas się poddaje, * Na śmierć wydaje.
+            3.\nBije, popycha tłum nieposkromiony, * Nielitościwie z tej i owej strony,
+            Za włosy targa: znosi w cierpliwości * Król z wysokości.
+            4.\nZsiniałe przedtem krwią zachodzą usta, * Gdy zbrojną żołnierz rękawicą chlusta;
+            Wnet się zmieniło w płaczliwe wzdychanie * Serca kochanie.
+            5.\nOby się serce we łzy rozpływało, * Że Cię, mój Jezu, sprośnie obrażało!
+            Żal mi, ach, żal mi ciężkich moich złości * Dla Twej miłości!`
+          } />
+          <hr />
+          <Lyrics raw={
+            `1.\nPrzypatrz się, duszo, jak cię Bóg miłuje, * Jako dla ciebie sobie nie folguje.
+            Przecież Go bardziej niż katowska, dręczy, * Złość twoja męczy.
+            2.\nStoi przed sędzią Pan wszego stworzenia, * Cichy Baranek, z wielkiego wzgardzenia;
+            Dla białej szaty, którą jest odziany, * Głupim nazwany.
+            3.\nZa moje złości grzbiet srodze biczują; * Pójdźmyż, grzesznicy, oto nam gotują
+            Ze Krwi Jezusa dla serca ochłody * Zdrój żywej wody.
+            4.\nPycha światowa niechaj, co chce, wróży, * Co na swe skronie wije wieniec z róży,
+            W szkarłat na pośmiech, cierniem Król zraniony, * Jest ozdobiony!
+            5.\nOby się serce we łzy rozpływało, * Że Cię, mój Jezu, sprośnie obrażało!
+            Żal mi, ach, żal mi ciężkich moich złości, * Dla Twej miłości!`
+                      } />
+                      <hr />
+                      <Lyrics raw={
+            `1.\nDuszo oziębła, czemu nie gorejesz? * Serce me, czemu całe nie truchlejesz?
+            Toczy twój Jezus z ognistej miłości * Krew w obfitości.
+            2.\nOgień miłości, gdy Go tak rozpala, * Sromotne drzewo na ramiona zwala;
+            Zemdlony Jezus pod krzyżem uklęka, * Jęczy i stęka.
+            3.\nOkrutnym katom posłuszny się staje, * Ręce i nogi przebić sobie daje,
+            Wisi na krzyżu, ból ponosi srogi * Nasz Zbawca drogi!
+            4.\nO słodkie drzewo, spuśćże nam już Ciało, * Aby na tobie dłużej nie wisiało!
+            My je uczciwie w grobie położymy, * Płacz uczynimy.
+            5.\nOby się serce we łzy rozpływało * Że Cię, mój Jezu, sprośnie obrażało!
+            Żal mi, ach, żal mi ciężkich moich złości, * Dla Twej miłości!
+            6.\nNiech Ci, mój Jezu, cześć będzie w wieczności * Za Twe obelgi, męki, zelżywości,
+            Któreś ochotnie, Syn Boga jedyny, Cierpiał bez winy!`
+          } />
+          <h2>Lament duszy nad cierpiącym Jezusem</h2>
+          <h4>in {gorzkie_tonacje[2]}</h4>
+          <img src="nuty/gorzkieżale_lament.png" />
+          <Lyrics raw={
+            `1.\nJezu, na zabicie okrutne, * Cichy Ba_ran_ku od wro_gów_ szukany, * Jezu mój kochany!
+            2.\nJezu, za trzydzieści srebrników * Od niewdzięcz_ne_go ucznia _za_przedany, * Jezu mój kochany!
+            3.\nJezu, w ciężkim smutku żałością, * Jakoś sam _wyz_nał, przed śmier_cią_ nękany, * Jezu mój kochany!
+            4.\nJezu, na modlitwie w Ogrójcu * Strumieniem _po_tu krwawe_go_ zalany, * Jezu mój kochany!
+            5.\nJezu, całowaniem zdradliwym * Od niegod_ne_go Juda_sza_ wydany, * Jezu mój kochany!
+            6.\nJezu, powrozami grubymi * Od swawol_ne_go żołdact_wa_ związany, * Jezu mój kochany!
+            7.\nJezu, od pospólstwa zelżywie * Przed Anna_szo_wym sądem _znie_ważany, * Jezu mój kochany!
+            8.\nJezu, przez ulice sromotnie * Przed sąd Kaj_fa_sza za wło_sy_ targany, * Jezu mój kochany!
+            9.\nJezu, od Malchusa srogiego * Ręką zbrod_ni_czą wypo_licz_kowany, * Jezu mój kochany!
+            10.\nJezu, od fałszywych dwóch świadków * Za zwodzi_cie_la niesłusz_nie_ podany, * Jezu mój kochany!
+            *\nBądź pozdrowiony, bądź pochwalony * Dla nas zelżony i pohańbiony
+            Bądź uwielbiony! Bądź wysławiony! Boże nieskończony!`
+          } />
+          <hr />
+          <Lyrics raw={
+            `1.\nJezu, od pospólstwa niewinnie * Jako łotr _go_dzien śmierci _ob_wołany, * Jezu mój kochany!
+            2.\nJezu, od złośliwych morderców * Po ślicznej _twa_rzy tak sproś_nie_ zeplwany, * Jezu mój kochany!
+            3.\nJezu, pod przysięgą od Piotra * Po trzykroć z _wiel_kiej bojaź_ni_ zaprzany, * Jezu mój kochany!
+            4.\nJezu, od okrutnych oprawców * Na sąd Pi_ła_ta, jak zbój_ca_ szarpany, * Jezu mój kochany!
+            5.\nJezu, od Heroda i dworzan, * Królu nie_bies_ki, zelży_wie_ wyśmiany, * Jezu mój kochany!
+            6.\nJezu, w białą szatę szydersko * Na większy _po_śmiech i hań_bę_ ubrany, * Jezu mój kochany!
+            7.\nJezu, u kamiennego słupa * Niemiło_sier_nie biczmi _wy_smagany, * Jezu mój kochany!
+            8.\nJezu, przez szyderstwo okrutne * Cierniowym _wień_cem uko_ro_nowany, * Jezu mój kochany!
+            9.\nJezu, od żołnierzy niegodnie * Na pośmie_wis_ko purpu_rą_ odziany, * Jezu mój kochany!
+            10.\nJezu, trzciną po głowie bity, * Królu bo_leś_ci, przez lud _wy_szydzany, * Jezu mój kochany!
+            *\nBądź pozdrowiony, bądź pochwalony * Dla nas zelżony, wszystek skrwawiony
+            Bądź uwielbiony! Bądź wysławiony! Boże nieskończony!`
+          } />
+          <hr />
+          <Lyrics raw={
+            `1.\nJezu, od pospólstwa niezbożnie * Jako zło_czyń_ca z łotry po_rów_nany, * Jezu mój kochany!
+            2.\nJezu, przez Piłata niesłusznie * Na śmierć krzy_żo_wą za lu_dzi_ skazany, * Jezu mój kochany!
+            3.\nJezu, srogim krzyża ciężarem * Na kalwa_ry_jskiej drodze _zmor_dowany, * Jezu mój kochany!
+            4.\nJezu, do sromotnego drzewa * Przytępio_ny_mi gwoźdźmi _przy_kowany, * Jezu mój kochany!
+            5.\nJezu, jawnie pośród dwu łotrów * Na drzewie _hań_by u_krzy_żowany, * Jezu mój kochany!
+            6.\nJezu, od stojących wokoło * I przecho_dzą_cych szyder_czo_ wyśmiany, * Jezu mój kochany!
+            7.\nJezu, bluźnierstwami od złego, * Współwiszą_ce_go łotra _wy_szydzany, * Jezu mój kochany!
+            8.\nJezu, gorzką żółcią i octem * W wielkim pra_gnie_niu swoim _na_pawany, * Jezu mój kochany!
+            9.\nJezu, w swej miłości niezmiernej * Jeszcze po _śmier_ci włócznią _prze_orany, * Jezu mój kochany!
+            10.\nJezu, od Józefa uczciwie * I Niko_de_ma w grobie _po_chowany, * Jezu mój kochany!
+            *\nBądź pozdrowiony, bądź pochwalony, * Dla nas zmęczony i krwią zbroczony.
+            Bądź uwielbiony! Bądź wysławiony! Boże nieskończony!`
+          } />
+          <h2>Rozmowa duszy z Matką Bolesną</h2>
+          <h4>in {gorzkie_tonacje[3]}</h4>
+          <img src="nuty/gorzkieżale_rozmowa.png" />
+          <Lyrics raw={
+            `1.\nAch! Ja Matka tak żałosna! * Boleść mnie ściska nieznośna. * Miecz me serce przenika.
+            2.\nCzemuś, Matko ukochana, * Ciężko na sercu stroskana? * Czemu wszystka truchlejesz?
+            3.\nCo mię pytasz? Wszystkam w mdłości, * Mówić nie mogę z żałości, * Krew mi serce zalewa.
+            4.\nPowiedz mi, o Panno moja, * Czemu blednieje twarz Twoja? * Czemu gorzkie łzy lejesz?
+            5.\nWidzę, że Syn ukochany * W Ogrójcu cały zalany * Potu krwawym potokiem.
+            6.\nO Matko, źródło miłości, * Niech czuję gwałt Twej żałości! *Dozwól mi z sobą płakać.`
+          } />
+          <hr />
+          <Lyrics raw={
+            `1.\nAch, widzę Syna mojego * Przy słupie obnażonego, * Rózgami zsieczonego!
+            2.\nŚwięta Panno, uproś dla mnie, * Bym ran Syna Twego znamię * Miał na sercu wyryte!
+            3.\nAch, widzę jako niezmiernie * Ostre głowę ranią ciernie! * Dusza moja ustaje!
+            4.\nO Maryjo, Syna swego, * Ostrym cierniem zranionego, * Podzielże ze mną mękę!
+            5.\nObym ja, Matka strapiona, * Mogła na swoje ramiona * Złożyć krzyż Twój, Synu mój!
+            6.\nProszę, o Panno jedyna, * Niechaj krzyż Twojego Syna * Zawsze w sercu swym noszę!`
+          } />
+          <hr />
+          <Lyrics raw={
+            `1.\nAch, Ja Matka boleściwa, * Pod krzyżem stoję smutliwa, * Serce żałość przejmuje.
+            2.\nO Matko, niechaj prawdziwie, * Patrząc na krzyż żałośliwie, * Płaczę z Tobą rzewliwie.
+            3.\nJużci, już moje Kochanie * Gotuje się na skonanie! * Toć i ja z Nim umieram!
+            4.\nPragnę, Matko, zostać z Tobą, * Dzielić się Twoją żałobą * Śmierci Syna Twojego.
+            5.\nZamknął słodką Jezus mowę, * Już ku ziemi skłania głowę, * Żegna już Matkę swoją!
+            6.\nO Maryjo, Ciebie proszę, * Niech Jezusa rany noszę * I serdecznie rozważam.`
+          } />
+          <h2>Któryś za nas cierpiał rany</h2>
+          <h4>
+          {[
+            window.piesni["Któryś za nas cierpiał rany"]["katsiedlecki"],
+            window.piesni["Któryś za nas cierpiał rany"]["nr"],
+            "in "+window.piesni["Któryś za nas cierpiał rany"]["tonacja"]
+          ].join(" • ")}
+          </h4>
+          <Lyrics raw={window.piesni["Któryś za nas cierpiał rany"]["tekst"]} />
+        </>
+      )
     case "Kyrie":
       return(
         <>
@@ -34738,18 +37726,23 @@ function Song(){
         </>
       )
     case "Ślub":
+      dane = [
+        window.piesni["O Stworzycielu Duchu"]['katsiedlecki'],
+        window.piesni["O Stworzycielu Duchu"]['nr'],
+        "in " + window.piesni["O Stworzycielu Duchu"]['tonacja']
+      ].join(" • ");
+
       return(
         <>
           <p className="ksiadz">Prośmy więc Ducha Świętego... ...Chrystusa i Kościoła</p>
           <h1>O Stworzycielu Duchu</h1>
-          <h4>
-          {[
-            window.piesni[title]['katsiedlecki'],
-            window.piesni[title]['nr'],
-            "in " + window.piesni[title]['tonacja']
-          ].join(" • ")}
-          </h4>
+          <h4>{dane}</h4>
           <Lyrics raw={window.piesni["O Stworzycielu Duchu"]["tekst"]} />
+          <h2>Modlitwa powszechna</h2>
+          <Antyfona 
+            ksiadz="Ciebie prosimy"
+            wierni="Wysłuchaj nas, Panie"
+          />
         </>
       )
     case "Sanctus":
@@ -34922,7 +37915,7 @@ function Song(){
       preferencje = preferencje.filter((val) => val != 0);
       if(preferencje.length == 0) preferencje = ["brak preferencji"];
       
-      const dane = [
+      let dane = [
         window.piesni[title]['katsiedlecki'],
         window.piesni[title]['nr'],
         "in " + window.piesni[title]['tonacja'],
@@ -35008,17 +38001,29 @@ function SongAdder({setAddmode}){
   };
 
   // sugestie pieśni
-  var piesni_sugg = {"Fitting" : [], "Maryjne" : [], "Do Serca" : []};
+  var piesni_sugg = {
+    "Fitting" : [],
+    "Okresowe" : [],
+    "Maryjne" : [],
+    "Do Serca" : [],
+    "Nietypowe" : []
+  };
   for(const song of Object.keys(window.piesni)){
     // sugestia na podstawie tego, gdzie jestem
     if(window.piesni[song]["naco"].match(whereami_kody[whereami])){
       piesni_sugg["Fitting"][song] = window.piesni[song];
+    }
+    if(window.piesni[song]["klasa"] == window.okazja && window.okazja != 0){
+      piesni_sugg["Okresowe"][song] = window.piesni[song];
     }
     if(window.piesni[song]["klasa"] == 3){
       piesni_sugg["Maryjne"][song] = window.piesni[song];
     }
     if(window.piesni[song]["klasa"] == 4){
       piesni_sugg["Do Serca"][song] = window.piesni[song];
+    }
+    if(window.piesni[song]["klasa"] == 2){
+      piesni_sugg["Nietypowe"][song] = window.piesni[song];
     }
   }
 
@@ -35029,25 +38034,33 @@ function SongAdder({setAddmode}){
 
   function SongSuggestions({header, list}){
     return(
-      <>
-        <h2>{header}</h2>
+      <div>
+        <h4>{header}</h4>
         <select onChange={songAdd}>
           <option value=""></option>
         {Object.keys(list).map((value, index) => {
           return <option key={index} value={value}>{value}</option>;
         })}
         </select>
-      </>
+      </div>
     )
   }
 
   return(
     <div id="songadder">
       <h1>Dodaj pieśń</h1>
-      <SongSuggestions header={"Pasujące na "+whereami} list={piesni_sugg["Fitting"]} />
-      <SongSuggestions header={"Maryjne"} list={piesni_sugg["Maryjne"]} />
-      <SongSuggestions header={"Do Serca"} list={piesni_sugg["Do Serca"]} />
-      <SongSuggestions header={"Dowolne"} list={window.piesni} />
+      <div className="a_container">
+        <SongSuggestions header={"Pasujące na "+whereami} list={piesni_sugg["Fitting"]} />
+        {window.okazja != 0 && <SongSuggestions header={"Pasujące na "+window.a_formula} list={piesni_sugg["Okresowe"]} />}
+      </div>
+      <div className="a_container">
+        <SongSuggestions header={"Maryjne"} list={piesni_sugg["Maryjne"]} />
+        <SongSuggestions header={"Do Serca"} list={piesni_sugg["Do Serca"]} />
+      </div>
+      <div className="a_container">
+        <SongSuggestions header={"Z reguły na mszy nie grane"} list={piesni_sugg["Nietypowe"]} />
+        <SongSuggestions header={"Dowolne"} list={window.piesni} />
+      </div>
       <a className="button" onClick={() => setAddmode(false)}>×</a>
     </div>
   );
@@ -35065,7 +38078,7 @@ function Everything(){
         <a className="button" onClick={() => setAddmode(true)}>+</a>
         <a className="button" onClick={() => {if(pageno < window.songlist.length) setPageno(pageno + 1);}}>»</a>
       </div>
-      <div className="page currentpage">
+      <div className="page">
       {(pageno == 0) ? <TitlePage /> : <CurrentPage setPageno={setPageno} /> }
       </div>
     </PageNumber.Provider>

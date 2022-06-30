@@ -82,9 +82,17 @@
 				<?php
 				a_piesn("Wejście", "piesn_wejscie");
 				a_piesn("Przygotowanie darów", "piesn_dary");
+				?>
+			</div>
+			<div class="a_container">
+				<?php
 				a_piesn("Komunia 1", "piesn_komunia1");
 				a_piesn("Komunia 2", "piesn_komunia2");
 				a_piesn("Komunia 3", "piesn_komunia3");
+				?>
+			</div>
+			<div class="a_container">
+				<?php
 				a_piesn("Uwielbienie", "piesn_uwielbienie");
 				a_piesn("Zakończenie", "piesn_zakonczenie");
 				?>

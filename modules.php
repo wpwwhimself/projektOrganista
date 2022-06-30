@@ -29,7 +29,6 @@ okazja = <?php echo substr($inneokazje, -1); ?>;
 
 $q = "SELECT * 
       FROM pieśni p 
-      LEFT JOIN kategorie k ON p.klasa = k.kategoria 
       WHERE p.klasa IN (1, 2, 3, 4$inneokazje)
       ORDER BY p.klasa, p.tytuł";
 $r = $conn->query($q) or die($q.$conn->error);
@@ -61,7 +60,7 @@ function TitlePage(){
       <h1 id="title">Szpiewnik Szybkiego Szukania 2</h1>
       <h4>
       Przygotowany na dzień {today},<br />
-      tj. {a_identyfikator}, formuła {window.a_formula}
+      tj. {a_identyfikator}, formuła: {window.a_formula}
       </h4>
     </>
   );
@@ -191,10 +190,12 @@ function Song(){
         </>
       )
     case "Gorzkie żale":
+      let gorzkie_tonacje = window.piesni["Gorzkie żale"]["tonacja"].split("/");
       return(
         <>
           <h1>Gorzkie żale</h1>
           <h2>Pobudka</h2>
+          <h4>in {gorzkie_tonacje[0]}</h4>
           <img src="nuty/gorzkieżale_pobudka.png" />
           <ol className="lyrics">
           {[
@@ -218,6 +219,7 @@ function Song(){
             "W tej ostatniej części będziemy rozważali, co Pan Jezus wycierpiał od chwili ukoronowania aż do ciężkiego skonania na krzyżu. Te bluźnierstwa, zelżywości i zniewagi, jakie Mu wyrządzano, ofiarujemy za grzeszników zatwardziałych, aby Zbawiciel pobudził ich serca zbłąkane do pokuty i prawdziwej życia poprawy oraz za dusze w czyśćcu cierpiące, aby im litościwy Jezus krwią swoją świętą ogień zagasił; prosimy nadto, by i nam wyjednał na godzinę śmierci skruchę za grzechy i szczęśliwe w łasce Bożej wytrwanie."
           ].map((val, i) => <p key={i}>{val}</p>)}
           <h2>Hymn</h2>
+          <h4>in {gorzkie_tonacje[1]}</h4>
           <img src="nuty/gorzkieżale_hymn.png" />
           <Lyrics raw={
             `1.\nŻal duszę ściska, serce boleść czuje, * Gdy słodki Jezus na śmierć się gotuje;
@@ -260,6 +262,7 @@ function Song(){
             Któreś ochotnie, Syn Boga jedyny, Cierpiał bez winy!`
           } />
           <h2>Lament duszy nad cierpiącym Jezusem</h2>
+          <h4>in {gorzkie_tonacje[2]}</h4>
           <img src="nuty/gorzkieżale_lament.png" />
           <Lyrics raw={
             `1.\nJezu, na zabicie okrutne, * Cichy Ba_ran_ku od wro_gów_ szukany, * Jezu mój kochany!
@@ -306,6 +309,7 @@ function Song(){
             Bądź uwielbiony! Bądź wysławiony! Boże nieskończony!`
           } />
           <h2>Rozmowa duszy z Matką Bolesną</h2>
+          <h4>in {gorzkie_tonacje[3]}</h4>
           <img src="nuty/gorzkieżale_rozmowa.png" />
           <Lyrics raw={
             `1.\nAch! Ja Matka tak żałosna! * Boleść mnie ściska nieznośna. * Miecz me serce przenika.
@@ -714,7 +718,13 @@ function SongAdder({setAddmode}){
   };
 
   // sugestie pieśni
-  var piesni_sugg = {"Fitting" : [], "Okresowe" : [], "Maryjne" : [], "Do Serca" : []};
+  var piesni_sugg = {
+    "Fitting" : [],
+    "Okresowe" : [],
+    "Maryjne" : [],
+    "Do Serca" : [],
+    "Nietypowe" : []
+  };
   for(const song of Object.keys(window.piesni)){
     // sugestia na podstawie tego, gdzie jestem
     if(window.piesni[song]["naco"].match(whereami_kody[whereami])){
@@ -729,6 +739,9 @@ function SongAdder({setAddmode}){
     if(window.piesni[song]["klasa"] == 4){
       piesni_sugg["Do Serca"][song] = window.piesni[song];
     }
+    if(window.piesni[song]["klasa"] == 2){
+      piesni_sugg["Nietypowe"][song] = window.piesni[song];
+    }
   }
 
   function songAdd(addwhat){
@@ -738,26 +751,33 @@ function SongAdder({setAddmode}){
 
   function SongSuggestions({header, list}){
     return(
-      <>
-        <h2>{header}</h2>
+      <div>
+        <h4>{header}</h4>
         <select onChange={songAdd}>
           <option value=""></option>
         {Object.keys(list).map((value, index) => {
           return <option key={index} value={value}>{value}</option>;
         })}
         </select>
-      </>
+      </div>
     )
   }
 
   return(
     <div id="songadder">
       <h1>Dodaj pieśń</h1>
-      <SongSuggestions header={"Pasujące na "+whereami} list={piesni_sugg["Fitting"]} />
-      {window.okazja != 0 && <SongSuggestions header={"Pasujące na "+window.a_formula} list={piesni_sugg["Okresowe"]} />}
-      <SongSuggestions header={"Maryjne"} list={piesni_sugg["Maryjne"]} />
-      <SongSuggestions header={"Do Serca"} list={piesni_sugg["Do Serca"]} />
-      <SongSuggestions header={"Dowolne"} list={window.piesni} />
+      <div className="a_container">
+        <SongSuggestions header={"Pasujące na "+whereami} list={piesni_sugg["Fitting"]} />
+        {window.okazja != 0 && <SongSuggestions header={"Pasujące na "+window.a_formula} list={piesni_sugg["Okresowe"]} />}
+      </div>
+      <div className="a_container">
+        <SongSuggestions header={"Maryjne"} list={piesni_sugg["Maryjne"]} />
+        <SongSuggestions header={"Do Serca"} list={piesni_sugg["Do Serca"]} />
+      </div>
+      <div className="a_container">
+        <SongSuggestions header={"Z reguły na mszy nie grane"} list={piesni_sugg["Nietypowe"]} />
+        <SongSuggestions header={"Dowolne"} list={window.piesni} />
+      </div>
       <a className="button" onClick={() => setAddmode(false)}>×</a>
     </div>
   );
