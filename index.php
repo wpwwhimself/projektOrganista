@@ -157,7 +157,7 @@
 		<div>
 			<script>
 			function formshow() {
-				document.forms[0].action = 'out.php';
+				document.forms[0].action = '_OUT/out.php';
 			}
 			function formproc() {
 				document.forms[0].action = 'process.php';

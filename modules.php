@@ -4,7 +4,7 @@ if($conn->connect_error) echo "Nie można połączyć się z bazą: ".$conn->con
 $conn->set_charset("utf8");
 
 if(preg_match("/ostatni/", $_GET['sub'])){
-  $_GET = json_decode(file_get_contents("songhistory.json"), true);
+  $_GET = json_decode(file_get_contents("../songhistory.json"), true);
 }
 ?>
 <script type="text/babel">
@@ -86,9 +86,9 @@ function CzescStala({name}){
   const color = React.useContext(ColorContext);
 
   if(name == "post_aklamacja"){
-    return <img className="czescstala" src={"nuty/czescistale/"+name.toLowerCase().replace(/\s/g, "")+".png"} />;
+    return <img className="czescstala" src={"../nuty/czescistale/"+name.toLowerCase().replace(/\s/g, "")+".png"} />;
   }else{
-    return <img className="czescstala" src={"nuty/czescistale/"+color+"_"+name.toLowerCase().replace(/\s/g, "")+".png"} />;
+    return <img className="czescstala" src={"../nuty/czescistale/"+color+"_"+name.toLowerCase().replace(/\s/g, "")+".png"} />;
   }
 }
 
@@ -161,7 +161,7 @@ function Song(){
         <>
           <h1>Nabożeństwo {title}</h1>
           <h2>Litania {flag ? "Loretańska" : "do Serca"}</h2>
-          <img src={"nuty/"+title+".png"} />
+          <img src={"../nuty/"+title+".png"} />
           <h2>Antyfona</h2>
           {
             flag ?
@@ -196,7 +196,7 @@ function Song(){
           <h1>Gorzkie żale</h1>
           <h2>Pobudka</h2>
           <h4>in {gorzkie_tonacje[0]}</h4>
-          <img src="nuty/gorzkieżale_pobudka.png" />
+          <img src="../nuty/gorzkieżale_pobudka.png" />
           <ol className="lyrics">
           {[
             "Gorzkie żale, przybywajcie * Serca nasze przenikajcie.",
@@ -220,7 +220,7 @@ function Song(){
           ].map((val, i) => <p key={i}>{val}</p>)}
           <h2>Hymn</h2>
           <h4>in {gorzkie_tonacje[1]}</h4>
-          <img src="nuty/gorzkieżale_hymn.png" />
+          <img src="../nuty/gorzkieżale_hymn.png" />
           <Lyrics raw={
             `1.\nŻal duszę ściska, serce boleść czuje, * Gdy słodki Jezus na śmierć się gotuje;
             Klęczy w Ogrójcu, gdy krwawy pot leje, * Me serce mdleje.
@@ -263,7 +263,7 @@ function Song(){
           } />
           <h2>Lament duszy nad cierpiącym Jezusem</h2>
           <h4>in {gorzkie_tonacje[2]}</h4>
-          <img src="nuty/gorzkieżale_lament.png" />
+          <img src="../nuty/gorzkieżale_lament.png" />
           <Lyrics raw={
             `1.\nJezu, na zabicie okrutne, * Cichy Ba_ran_ku od wro_gów_ szukany, * Jezu mój kochany!
             2.\nJezu, za trzydzieści srebrników * Od niewdzięcz_ne_go ucznia _za_przedany, * Jezu mój kochany!
@@ -310,7 +310,7 @@ function Song(){
           } />
           <h2>Rozmowa duszy z Matką Bolesną</h2>
           <h4>in {gorzkie_tonacje[3]}</h4>
-          <img src="nuty/gorzkieżale_rozmowa.png" />
+          <img src="../nuty/gorzkieżale_rozmowa.png" />
           <Lyrics raw={
             `1.\nAch! Ja Matka tak żałosna! * Boleść mnie ściska nieznośna. * Miecz me serce przenika.
             2.\nCzemuś, Matko ukochana, * Ciężko na sercu stroskana? * Czemu wszystka truchlejesz?
@@ -644,7 +644,7 @@ function Song(){
           <h2>{kiedy}</h2>
           <h1>{title}</h1>
           <h4>{dane}</h4>
-          <img src={"nuty/"+title+".png"} />
+          <img src={"../nuty/"+title+".png"} />
           <Lyrics raw={window.piesni[title]['tekst']} />
         </>
       )
@@ -684,8 +684,8 @@ function RightSide(props) {
             <li key={i} onClick={() => setPageno(i+1)}>{val[0]}</li>;
         }else{
           return (i+1 == page) ?
-            <li className="currentpage" key={i}>{val[1]}</li> :
-            <li key={i} onClick={() => setPageno(i+1)}>{val[1]}</li>;
+            <li className="currentpage" key={i}>{val[0].substring(0, 1)} • {val[1]}</li> :
+            <li key={i} onClick={() => setPageno(i+1)}>{val[0].substring(0, 1)} • {val[1]}</li>;
         }
       })}
       </ol>
