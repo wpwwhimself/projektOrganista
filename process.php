@@ -8,7 +8,7 @@ if(isset($_GET['savehistory'])){
 $getparams = substr($_SERVER["REQUEST_URI"], strpos($_SERVER["REQUEST_URI"], "?")+1);
 $url = "http://$_SERVER[HTTP_HOST]/projektOrganista/out.php?$getparams";
 $lines = file_get_contents($url);
-$file = fopen("./szszsz.html", "w");
+$file = fopen("./_OUT/".$_GET['a_formula'].".html", "w");
 fwrite($file, $lines);
 fclose($file);
 ?>
