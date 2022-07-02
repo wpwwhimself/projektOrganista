@@ -50,17 +50,25 @@
 		$conn->set_charset("utf8");
 
 		/*Zdobądź pieśni*/
-		$q = "SELECT tytuł 
+		$q = "SELECT *
 					FROM pieśni
 					ORDER BY klasa, tytuł";
 		$r = $conn->query($q) or die($conn->error);
+
+		$naco_decode = ["Wejście", "Przygotowanie darów", "Komunia", "Uwielbienie", "Zakończenie"];
+
 		while($a = $r->fetch_array()){
-				$titles[] = $a['tytuł'];
+			$tmp = explode("/", $a['naco']);
+			$naco = "";
+			for($i = 0; $i < count($naco_decode); $i++){
+				$naco .= ($tmp[$i]) ? $naco_decode[$i]."," : "";
+			}
+			$songs[] = ["tytuł" => $a["tytuł"], "naco" => $naco];
 		}
 		$r->free_result();
 
-		function a_piesn($etykieta, $kod, $przeklejane = false){
-			global $titles;
+		function a_piesn($etykieta, $kod, $przeklejane = false, $nietypowe = false){
+			global $songs;
 			echo "<div class='a_cell'>";
 			echo "<p><b>$etykieta</b></p>";
 			if($przeklejane){
@@ -68,8 +76,11 @@
 			}else{
 				echo "<select name='a_$kod'>";
 					echo "<option value='' />";
-				foreach($titles as $value){
-					echo "<option value='$value'>$value</option>";
+				foreach($songs as $x){
+					$etykieta = preg_replace("/(.*)\s\d/", "$1", $etykieta);
+					if(preg_match("/$etykieta/", $x['naco']) || $nietypowe){
+						echo "<option value='$x[tytuł]'>$x[tytuł]</option>";
+					}
 				}
 				echo "</select>";
 			}
@@ -107,8 +118,8 @@
 			<h2>Dodatkowe</h2>
 			<div class='a_container'>
 				<?php
-				a_piesn("Przed mszą", "pre");
-				a_piesn("Przed gloria", "piesn_przedgloria");
+				a_piesn("Przed mszą", "pre", false, true);
+				a_piesn("Przed gloria", "piesn_przedgloria", false, true);
 				?>
 			</div>
 
