@@ -29,8 +29,7 @@ okazja = <?php echo substr($inneokazje, -1); ?>;
 
 $q = "SELECT * 
       FROM pieśni p 
-      WHERE p.klasa IN (1, 2, 3, 4$inneokazje)
-      ORDER BY p.klasa, p.tytuł";
+      WHERE p.klasa IN (1, 2, 3, 4$inneokazje)";
 $r = $conn->query($q) or die($q.$conn->error);
 while($a = $r->fetch_assoc()){?>
 piesni["<?php echo $a['tytuł']; ?>"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
@@ -47,7 +46,6 @@ var a_formula = "<?php echo $_GET['a_formula']; ?>";
 
 /* KOMPONENTY */
 
-const PageNumber = React.createContext();
 const ColorContext = React.createContext();
 
 function TitlePage(){
@@ -64,6 +62,30 @@ function TitlePage(){
       </h4>
     </>
   );
+}
+
+function Summary(){
+  return(
+    <div className="page">
+      <h2>W skrócie</h2>
+      <ol>
+      {window.songlist.map((value, ind) => {
+        let [kiedy, co] = value;
+        if(co != "czst" && kiedy != "Aklamacja"){
+          if(kiedy == "Psalm") co = co.substring(0, co.indexOf("\n")); //pierwsza linijka
+          return(
+            <li key={ind}>
+              {kiedy} – 
+              <a href={"#page" + (ind+1)}>
+                {co}
+              </a>
+            </li>
+          );
+        }
+      })}
+      </ol>
+    </div>
+  )
 }
 
 function Antyfona(props){
@@ -148,8 +170,8 @@ function Lyrics(props){
   return(<ol className="lyrics" dangerouslySetInnerHTML={{ __html: raw}} />);
 }
 
-function Song(){
-  const page = React.useContext(PageNumber);
+function Song({page, setAddmode}){
+  //const page = React.useContext(PageNumber);
   const [kiedy, title] = window.songlist[page - 1];
   
   switch(kiedy){
@@ -351,7 +373,6 @@ function Song(){
     case "Kyrie":
       return(
         <>
-          <h1>Kyrie</h1>
           <Antyfona
             ksiadz="W imię Ojca i Syna i Ducha Świętego"
             wierni="Amen"
@@ -368,6 +389,7 @@ function Song(){
             wierni="Zmiłuj się nad nami"
           />
           <Albo />
+          <h1>Kyrie</h1>
           <CzescStala name={kiedy} />
           <p>
             Panie, zmiłuj się nad nami<br />
@@ -641,8 +663,9 @@ function Song(){
 
       return(
         <>
+          <a className="button" onClick={() => setAddmode(page)}>+</a>
           <h2>{kiedy}</h2>
-          <h1>{title}</h1>
+          <h1>{title.toUpperCase()}</h1>
           <h4>{dane}</h4>
           <img src={"../nuty/"+title+".png"} />
           <Lyrics raw={window.piesni[title]['tekst']} />
@@ -652,8 +675,6 @@ function Song(){
 }
 
 function RightSide(props) {
-  const page = React.useContext(PageNumber);
-  const setPageno = props.setPageno;
   const color = React.useContext(ColorContext);
   const setColor = props.setColor;
 
@@ -676,37 +697,30 @@ function RightSide(props) {
         })}
         </select>
       </div>
-      <ol id="list">
-      {songlist.map((val, i) => {
-        if(["czst"].includes(val[1]) || ["Psalm", "Aklamacja"].includes(val[0])){
-          return (i+1 == page) ? 
-            <li className="currentpage" key={i}>{val[0]}</li> :
-            <li key={i} onClick={() => setPageno(i+1)}>{val[0]}</li>;
-        }else{
-          return (i+1 == page) ?
-            <li className="currentpage" key={i}>{val[0].substring(0, 1)} • {val[1]}</li> :
-            <li key={i} onClick={() => setPageno(i+1)}>{val[0].substring(0, 1)} • {val[1]}</li>;
-        }
-      })}
-      </ol>
     </div>
   );
 }
 
 function CurrentPage({setPageno}){
-  const [color, setColor] = React.useState(window.czst_color);
-
   return(
-    <ColorContext.Provider value={color}>
+    <>
       <RightSide setColor={setColor} setPageno={setPageno} />
       <Song />
-    </ColorContext.Provider>
+    </>
   )
 }
 
-function SongAdder({setAddmode}){
-  const page = React.useContext(PageNumber);
-  const whereami = window.songlist[Math.max(page - 1, 0)][0];
+function SinglePage({page, setAddmode}){
+  return(
+    <div className="page">
+      <a id={"page" + page} />
+      <Song page={page} setAddmode={setAddmode} />
+    </div>
+  )
+}
+
+function SongAdder({setAddmode, wheretoadd}){
+  const whereami = window.songlist[Math.max(wheretoadd - 1, 0)][0];
   const whereami_kody = {
     "Wejście" : "1/./././.",
     "Przygotowanie darów" : "./1/././.",
@@ -745,7 +759,7 @@ function SongAdder({setAddmode}){
   }
 
   function songAdd(addwhat){
-    window.songlist.splice(page, 0, ["Dodana", addwhat.target.value]);
+    window.songlist.splice(wheretoadd, 0, [whereami, addwhat.target.value]);
     setAddmode(false);
   }
 
@@ -784,24 +798,24 @@ function SongAdder({setAddmode}){
 }
 
 function Everything(){
-  const [pageno, setPageno] = React.useState(0);
+  const [color, setColor] = React.useState(window.czst_color);
   const [addmode, setAddmode] = React.useState(false);
   
   return(
-    <PageNumber.Provider value={pageno}>
+    <ColorContext.Provider value={color}>
       <div id="overlay">
-        {addmode && <SongAdder setAddmode={setAddmode} />}
-        <a className="button" onClick={() => {if(pageno > 0) setPageno(pageno - 1);}}>«</a>
-        <a className="button" onClick={() => setAddmode(true)}>+</a>
-        <a className="button" onClick={() => {if(pageno < window.songlist.length) setPageno(pageno + 1);}}>»</a>
+        {addmode && <SongAdder setAddmode={setAddmode} wheretoadd={addmode} />}
+        <RightSide setColor={setColor} />
       </div>
-      <div className="page">
-      {(pageno == 0) ? <TitlePage /> : <CurrentPage setPageno={setPageno} /> }
-      </div>
-    </PageNumber.Provider>
+      <TitlePage />
+      <Summary />
+      {window.songlist.map((value, ind) =>{
+        return( <SinglePage key={ind} page={ind+1} setAddmode={setAddmode} /> );
+      })}
+    </ColorContext.Provider>
   )
 }
-
+    
 const root = ReactDOM.createRoot(document.getElementById("main"));
 root.render(<Everything />);
 </script>
