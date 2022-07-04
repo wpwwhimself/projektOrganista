@@ -113,7 +113,7 @@ li.currentpage{ background: #0099ff33; }
 	margin: 0 auto;
 }
 img{
-	width: fit-content;
+	max-width: 92vw;
 	margin: 0 auto;
 }
 .lyrics{
