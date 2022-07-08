@@ -75,7 +75,7 @@ function Summary(){
           if(kiedy == "Psalm") co = co.substring(0, co.indexOf("\n")); //pierwsza linijka
           return(
             <li key={ind}>
-              {kiedy} – 
+              {kiedy + " – "}
               <a href={"#page" + (ind+1)}>
                 {co}
               </a>
