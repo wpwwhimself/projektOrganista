@@ -163,7 +163,7 @@ function Lyrics(props){
   let raw = props.raw;
   raw = raw.replace(/\*\*\n/g, '</span><br>');
   raw = raw.replace(/\*\n/g, '<span class="chorus">');
-  raw = raw.replace(/_(.{1,5})_/g, '<u>$1</u>');
+  raw = raw.replace(/_(.+)_/g, '<u>$1</u>');
   raw = raw.replace(/\d+\.\n/g, match => {return "<li start="+match.substring(0, match.length - 2)+">"});
   raw = raw.replace(/\n/g, "<br />");
 
