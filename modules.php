@@ -542,17 +542,15 @@ function Song({page, setAddmode}){
             ksiadz="Uwielbiajmy tajemnicę wiary"
             wierni="Panie, Ty nas wybawiłeś <br />przez krzyż i zmartwychwstanie swoje, <br />Ty jesteś zbawicielem świata"
           />
-
-          <hr />
-          <Antyfona 
-            ksiadz="Przez Chrystusa, z Chrystusem i w Chrystusie..."
-            wierni="Amen"
-          />
         </>
       )
     case "Ojcze nasz":
       return(
         <>
+          <Antyfona 
+            ksiadz="Przez Chrystusa, z Chrystusem i w Chrystusie..."
+            wierni="Amen"
+          />
           <p className="ksiadz">Nazywamy się dziećmi bożymi...</p>
           <h1>Ojcze nasz</h1>
           <p>
@@ -664,6 +662,13 @@ function Song({page, setAddmode}){
       return(
         <>
           <a className="button" onClick={() => setAddmode(page)}>+</a>
+          <div className="eraserButton">
+            <a className="e_first">–</a>
+            <a className="e_second" onClick={() => {
+              window.songlist.splice(page - 1, 1);
+              setAddmode(-1);
+            }}>&#x2713;</a>
+          </div>
           <h2>{kiedy}</h2>
           <h1>{title.toUpperCase()}</h1>
           <h4>{dane}</h4>
@@ -699,15 +704,6 @@ function RightSide(props) {
       </div>
     </div>
   );
-}
-
-function CurrentPage({setPageno}){
-  return(
-    <>
-      <RightSide setColor={setColor} setPageno={setPageno} />
-      <Song />
-    </>
-  )
 }
 
 function SinglePage({page, setAddmode}){
@@ -800,6 +796,8 @@ function SongAdder({setAddmode, wheretoadd}){
 function Everything(){
   const [color, setColor] = React.useState(window.czst_color);
   const [addmode, setAddmode] = React.useState(false);
+  //gdybym coś usuwał, a potrzebuję innego state'a
+  if(addmode < 0) setAddmode(false);
   
   return(
     <ColorContext.Provider value={color}>
@@ -812,6 +810,9 @@ function Everything(){
       {window.songlist.map((value, ind) =>{
         return( <SinglePage key={ind} page={ind+1} setAddmode={setAddmode} /> );
       })}
+      <a href="#title" className="page">
+        <h2>Na początek</h2>
+      </a>
     </ColorContext.Provider>
   )
 }

@@ -78,16 +78,24 @@ body{
 	font-size: min(2vw, 1em);
 	background-color: #ffffffcc;
 }
-.button{
-	width: 60px; height: 60px; background: #666;
+.button, .e_first, .e_second{
+	width: 60px; height: 60px; background: #66666677;
 	border-radius: 15px;
 	margin: 5px;
 	display: flex; justify-content: center; align-items: center;
-	position: absolute; top: 10px; right: 10px;
 	font-size: 30px;
 	user-select: none;
 	color: white;
 }
+.button{ position: absolute; top: 10px; right: 10px; }
+.eraserButton{
+	position: absolute; top: 10px; left: 10px;
+}
+.e_second{
+	display: none;
+	background: #0099ff77;
+}
+.eraserButton:hover .e_second{ display: flex; }
 .page{
 	width: calc(100% - 16px);
 	padding: 8px;
