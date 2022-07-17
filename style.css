@@ -1,5 +1,14 @@
+@font-face{
+	font-family: "Krona One";
+	src: url("../offlinecore/KronaOne-Regular.ttf");
+}
+@font-face{
+	font-family: "Raleway";
+	src: url("../offlinecore/Raleway-Regular.ttf");
+}
+
 *{
-	font-family: "Raleway", "Calibri";
+	font-family: "Raleway";
 }
 a, a:visited{
 	text-decoration: none;
@@ -48,10 +57,10 @@ hr{
 
 /******* NAGŁÓWKI ********/
 h1, .titleselect{	
-	color: #f90; text-shadow: 2px 2px 6px #000000aa;
+	color: #09f; text-shadow: 2px 2px 6px #000000aa;
 	margin: 10px 0;
 	font-size: 40px;
-	border-top: 1px solid #f90; border-bottom: 1px solid #f90;
+	border-top: 1px solid #09f; border-bottom: 1px solid #09f;
 }
 h2{ margin: 0; }
 h3{ margin: 0; }
@@ -78,24 +87,34 @@ body{
 	font-size: min(2vw, 1em);
 	background-color: #ffffffcc;
 }
-.button, .e_first, .e_second{
-	width: 60px; height: 60px; background: #66666677;
+
+.buttoncase{
+	position: absolute; top: calc(1.5em + 15px);
+	display: flex; flex-direction: row;
+}
+.abs_left{ left: 10px; }
+.abs_right{ right: 10px; }
+.button, .interactive{
+	background: #ffb648;
 	border-radius: 15px;
-	margin: 5px;
-	display: flex; justify-content: center; align-items: center;
-	font-size: 30px;
+	margin: 5px; padding: 10px;
+	display: flex; 
+	flex-direction: column; justify-content: center; align-items: center;
 	user-select: none;
-	color: white;
+	color: white !important;
+	cursor: pointer;
 }
-.button{ position: absolute; top: 10px; right: 10px; }
-.eraserButton{
-	position: absolute; top: 10px; left: 10px;
+.button{
+	width: 40px; height: 40px;
+	font-size: 30px;
 }
+
 .e_second{
 	display: none;
 	background: #0099ff77;
 }
 .eraserButton:hover .e_second{ display: flex; }
+
 .page{
 	width: calc(100% - 16px);
 	padding: 8px;
@@ -142,6 +161,10 @@ img{
 .credo tr:nth-child(odd){
 	background-color: #0099ff33;
 }
+
+.psalm{
+	padding-left: 40px;
+}
 .psalm p:nth-child(odd){
 	font-weight: bold;
 }
@@ -157,4 +180,11 @@ img{
 }
 #songadder .button{
 	position: static;
+}
+
+.summary{
+	display: flex;
+	flex-direction: row;
+	justify-content: center; align-items: baseline;
+	flex-wrap: wrap;
 }

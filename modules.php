@@ -8,12 +8,14 @@ if(preg_match("/ostatni/", $_GET['sub'])){
 }
 ?>
 <script type="text/babel">
-/* BETONIARKA DANYCH */
 
 var piesni = [];
 var okazja = 0;
 
 <?php
+
+/* dodanie sezonowych okazji do puli wszystkich pieśni */
+
 switch($_GET['a_formula']){
   case "Adwent": $inneokazje = ", 5"; break;
   case "Boże Narodzenie": $inneokazje = ", 6"; break;
@@ -27,92 +29,35 @@ if($inneokazje != ""){ ?>
 okazja = <?php echo substr($inneokazje, -1); ?>;
 <?php }
 
+/* kwerenda wszystkich pieśni */
+
 $q = "SELECT * 
       FROM pieśni p 
       WHERE p.klasa IN (1, 2, 3, 4$inneokazje)";
 $r = $conn->query($q) or die($q.$conn->error);
 while($a = $r->fetch_assoc()){?>
+
 piesni["<?php echo $a['tytuł']; ?>"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
-<?php
+<?php 
 foreach($a as $name => $value){
 	if(!in_array($name, ['tytuł', 'id'])){ ?>
 piesni["<?php echo $a['tytuł']; ?>"]['<?php echo $name; ?>'] = `<?php echo $a[$name]; ?>`;
+
 <?php
 }}}
 $r->free_result();
 ?>
 
-var a_formula = "<?php echo $_GET['a_formula']; ?>";
+/* zmienne window (globalne) */
 
-/* KOMPONENTY */
+var a_identyfikator = "<?php echo $_GET['a_identyfikator']; ?>"
+var a_formula = "<?php echo $_GET['a_formula']; ?>";
+const czst_color = "<?php echo $_GET['a_czescistale']; ?>";
+var preferencje_names = ["Wejście", "Przygotowanie darów", "Komunia", "Uwielbienie", "Zakończenie"];
 
 const ColorContext = React.createContext();
 
-function TitlePage(){
-  const date = new Date();
-  let today = date.getDate() + "-" + ("0"+(date.getMonth()+1)).slice(-2) + "-" + date.getFullYear();
-
-  let a_identyfikator = "<?php echo $_GET['a_identyfikator']; ?>";
-  return(
-    <>
-      <h1 id="title">Szpiewnik Szybkiego Szukania 2</h1>
-      <h4>
-      Przygotowany na dzień {today},<br />
-      tj. {a_identyfikator}, formuła: {window.a_formula}
-      </h4>
-    </>
-  );
-}
-
-function Summary(){
-  return(
-    <div className="page">
-      <h2>W skrócie</h2>
-      <ol>
-      {window.songlist.map((value, ind) => {
-        let [kiedy, co] = value;
-        if(co != "czst" && kiedy != "Aklamacja"){
-          if(kiedy == "Psalm") co = co.substring(0, co.indexOf("\n")); //pierwsza linijka
-          return(
-            <li key={ind}>
-              {kiedy + " – "}
-              <a href={"#page" + (ind+1)}>
-                {co}
-              </a>
-            </li>
-          );
-        }
-      })}
-      </ol>
-    </div>
-  )
-}
-
-function Antyfona(props){
-  return(
-    <table className='antyfona'><tbody>
-      <tr>
-        <td>{props.ksiadz}</td>
-        <td>→</td>
-        <td dangerouslySetInnerHTML={{ __html : props.wierni}}></td>
-      </tr>
-    </tbody></table>
-  )
-}
-
-function Albo(){
-  return(<p className='albo'>albo</p>)
-}
-
-function CzescStala({name}){
-  const color = React.useContext(ColorContext);
-
-  if(name == "post_aklamacja"){
-    return <img className="czescstala" src={"../nuty/czescistale/"+name.toLowerCase().replace(/\s/g, "")+".png"} />;
-  }else{
-    return <img className="czescstala" src={"../nuty/czescistale/"+color+"_"+name.toLowerCase().replace(/\s/g, "")+".png"} />;
-  }
-}
+/* pieśni w tym secie */
 
 var songlist = new Array();
 <?php
@@ -150,14 +95,66 @@ foreach($songlist as $name => $value){
     unset($songlist[$name]);
     continue;
   }
+  if(preg_match("/Komunia/", $name)) $name = "Komunia";
 ?>
 songlist[<?php echo $i++; ?>] = ['<?php echo $name; ?>', `<?php echo $value; ?>`];
 <?php }
 unset($i);
 ?>
 
-var preferencje_names = ["Wejście", "Przygotowanie darów", "Komunia", "Uwielbienie", "Zakończenie"];
-const czst_color = "<?php echo $_GET['a_czescistale']; ?>";
+/* KOMPONENTY */
+
+function Albo(){
+  return(<p className='albo'>albo</p>)
+}
+
+function Antyfona(props){
+  return(
+    <table className='antyfona'><tbody>
+      <tr>
+        <td>{props.ksiadz}</td>
+        <td>→</td>
+        <td dangerouslySetInnerHTML={{ __html : props.wierni}}></td>
+      </tr>
+    </tbody></table>
+  )
+}
+
+function CzescStala({name}){
+  const color = React.useContext(ColorContext);
+
+  if(name == "post_aklamacja"){
+    return <img className="czescstala" src={"../nuty/czescistale/"+name.toLowerCase().replace(/\s/g, "")+".png"} />;
+  }else{
+    return <img className="czescstala" src={"../nuty/czescistale/"+color+"_"+name.toLowerCase().replace(/\s/g, "")+".png"} />;
+  }
+}
+
+function Everything(){
+  const [color, setColor] = React.useState(window.czst_color);
+  const [addmode, setAddmode] = React.useState(false);
+  //gdybym coś usuwał, a potrzebuję innego state'a
+  if(addmode < 0) setAddmode(false);
+  
+  return(
+    <ColorContext.Provider value={color}>
+      <div id="overlay">
+        {addmode && <SongAdder setAddmode={setAddmode} wheretoadd={addmode} />}
+        <RightSide setColor={setColor} />
+      </div>
+      <TitlePage />
+      <Summary />
+      {window.songlist.map((value, ind) =>{
+        return( <SinglePage key={ind} page={ind+1} setAddmode={setAddmode} /> );
+      })}
+      <div className="page">
+        <a href="#title" className="interactive">  
+          <h2>Na początek</h2>
+        </a>
+      </div>
+    </ColorContext.Provider>
+  )
+}
 
 function Lyrics(props){
   let raw = props.raw;
@@ -168,6 +165,43 @@ function Lyrics(props){
   raw = raw.replace(/\n/g, "<br />");
 
   return(<ol className="lyrics" dangerouslySetInnerHTML={{ __html: raw}} />);
+}
+
+function RightSide(props) {
+  /* settings panel */
+  const color = React.useContext(ColorContext);
+  const setColor = props.setColor;
+
+  return (
+    <div id="rightside">
+      <div>
+        <h4>Kolor cz. st.</h4>
+        <select 
+          value={color}
+          onChange={val => {setColor(val.target.value);}}
+        >
+        {[
+          ["zielony", "green"],
+          ["biały", "white"],
+          ["purpurowy", "purple"],
+          ["czerwony (Piasecki)", "red"],
+          ["niebieski (Pawlak)", "blue"]
+        ].map(thing => {
+          return <option key={thing[1]} value={thing[1]}>{thing[0]}</option>
+        })}
+        </select>
+      </div>
+    </div>
+  );
+}
+
+function SinglePage({page, setAddmode}){
+  return(
+    <div className="page">
+      <a id={"page" + page} />
+      <Song page={page} setAddmode={setAddmode} />
+    </div>
+  )
 }
 
 function Song({page, setAddmode}){
@@ -383,19 +417,18 @@ function Song({page, setAddmode}){
           />
           <h2>Akt pokutny</h2>
           <p className="ksiadz">Spowiadam się Bogu Wszechmogącemu...</p>
+          <h1>Kyrie</h1>
+          <CzescStala name={kiedy} />
+          <Lyrics raw={
+            `Panie, zmiłuj się nad nami
+            Chryste, zmiłuj się nad nami
+            Panie, zmiłuj się nad nami`
+          } />
           <Albo />
           <Antyfona
             ksiadz="...Zmiłuj się nad nami"
             wierni="Zmiłuj się nad nami"
           />
-          <Albo />
-          <h1>Kyrie</h1>
-          <CzescStala name={kiedy} />
-          <p>
-            Panie, zmiłuj się nad nami<br />
-            Chryste, zmiłuj się nad nami<br />
-            Panie, zmiłuj się nad nami
-          </p>
         </>
       )
     case "Gloria":
@@ -403,21 +436,24 @@ function Song({page, setAddmode}){
         <>
           <h1>Gloria</h1>
           <CzescStala name={kiedy} />
+          <Lyrics raw={
+            `Chwała na wysokości Bogu
+            A na ziemi pokój ludziom dobrej woli
+            Chwalimy Cię • Błogosławimy Cię
+            Wielbimy Cię • Wysławiamy Cię
+            Dzięki Ci składamy • Bo wielka jest chwała Twoja
+            Panie Boże, królu nieba • Boże, Ojcze wszechmogący
+            Panie, Synu jednorodzony • Jezu Chryste
+            Panie Boże, Baranku Boży • Synu Ojca
+            Który gładzisz grzechy świata • Zmiłuj się nad nami
+            Który gładzisz grzechy świata • Przyjm błagania nasze
+            Który siedzisz po prawicy Ojca • Zmiłuj się nad nami
+            Albowiem tylko Tyś jest święty • Tylko Tyś jest Panem
+            Tylko Tyś najwyższy • Jezu Chryste
+            Z Duchem Świętym, w chwale Boga Ojca, amen`
+          } />
           <p>
-            Chwała na wysokości Bogu<br />
-            A na ziemi pokój ludziom dobrej woli<br />
-            Chwalimy Cię • Błogosławimy Cię<br />
-            Wielbimy Cię • Wysławiamy Cię<br />
-            Dzięki Ci składamy • Bo wielka jest chwała Twoja<br />
-            Panie Boże, królu nieba • Boże, Ojcze wszechmogący<br />
-            Panie, Synu jednorodzony • Jezu Chryste<br />
-            Panie Boże, Baranku Boży • Synu Ojca<br />
-            Który gładzisz grzechy świata • Zmiłuj się nad nami<br />
-            Który gładzisz grzechy świata • Przyjm błagania nasze<br />
-            Który siedzisz po prawicy Ojca • Zmiłuj się nad nami<br />
-            Albowiem tylko Tyś jest święty • Tylko Tyś jest Panem<br />
-            Tylko Tyś najwyższy • Jezu Chryste<br />
-            Z Duchem Świętym, w chwale Boga Ojca, amen
+            
           </p>
           <Antyfona
             ksiadz="Módlmy się..."
@@ -505,18 +541,17 @@ function Song({page, setAddmode}){
           />
           <h1>Sanctus</h1>
           <CzescStala name={kiedy} />
-          <p>
-            Święty, Święty, Święty<br />
-            Pan Bóg zastępów<br />
-            Pełne są niebiosa<br />
-            I ziema chwały Twojej<br />
+          <Lyrics raw={
+            `Święty, Święty, Święty
+            Pan Bóg zastępów
+            Pełne są niebiosa
+            I ziema chwały Twojej
             Hosanna na wysokości
-          </p>
-          <p>
-            Błogosławiony<br />
-            Który idzie w imię Pańskie<br />
-            Hosanna na wysokości
-          </p>
+
+            Błogosławiony
+            Który idzie w imię Pańskie
+            Hosanna na wysokości`
+          } />
         </>
       )
     case "Przemienienie":
@@ -553,18 +588,18 @@ function Song({page, setAddmode}){
           />
           <p className="ksiadz">Nazywamy się dziećmi bożymi...</p>
           <h1>Ojcze nasz</h1>
-          <p>
-            Ojcze nasz, któryś jest w niebie<br />
-            Święć się, imię Twoje<br />
-            Przyjdź Królestwo Twoje<br />
-            Bądź wola Twoja<br />
-            Jako w niebie, tak i na ziemi<br />
-            Chleba naszego powszedniego daj nam dzisiaj<br />
-            I odpuść nam nasze winy<br />
-            Jako i my odpuszczamy naszem winowajcom<br />
-            I nie wódź nas na pokuszenie<br />
-            Ale nas zbaw ode złego
-          </p>
+          <Lyrics raw={
+            `Ojcze nasz, któryś jest w niebie
+            Święć się, imię Twoje
+            Przyjdź Królestwo Twoje
+            Bądź wola Twoja
+            Jako w niebie, tak i na ziemi
+            Chleba naszego powszedniego daj nam dzisiaj
+            I odpuść nam nasze winy
+            Jako i my odpuszczamy naszem winowajcom
+            I nie wódź nas na pokuszenie
+            Ale nas zbaw ode złego`
+          } />
           <Antyfona 
             ksiadz="Wybaw nas, Panie, od zła wszelkiego..."
             wierni="Bo Twoje jest Królestwo, i potęga i chwała na wieki"
@@ -581,21 +616,19 @@ function Song({page, setAddmode}){
           <p className="ksiadz">Przekażcie sobie znak pokoju</p>
           <h1>Agnus Dei</h1>
           <CzescStala name={kiedy} />
-          <p>
-            Baranku Boży<br />
-            Który gładzisz grzechy świata<br />
+          <Lyrics raw={
+            `Baranku Boży
+            Który gładzisz grzechy świata
             Zmiłuj się nad nami
-          </p>
-          <p>
-            Baranku Boży<br />
-            Który gładzisz grzechy świata<br />
+            
+            Baranku Boży
+            Który gładzisz grzechy świata
             Zmiłuj się nad nami
-          </p>
-          <p>
-            Baranku Boży<br />
-            Który gładzisz grzechy świata<br />
-            Obdarz nas pokojem
-          </p>
+            
+            Baranku Boży
+            Który gładzisz grzechy świata
+            Obdarz nas pokojem`
+          } />
         </>
       )
     case "Błogosławieństwo":
@@ -630,6 +663,7 @@ function Song({page, setAddmode}){
             <CzescStala name={kiedy} />
           }
           <div className="psalm">
+
           {title.split(/\n\n/).map(out => {
             return(
               <p>
@@ -661,10 +695,14 @@ function Song({page, setAddmode}){
 
       return(
         <>
-          <a className="button" onClick={() => setAddmode(page)}>+</a>
-          <div className="eraserButton">
-            <a className="e_first">–</a>
-            <a className="e_second" onClick={() => {
+          <div className="buttoncase abs_right">
+            {kiedy == "Komunia" && <a className="button" href="#uwielbienie">U</a>}
+            {kiedy == "Uwielbienie" && <a id="uwielbienie"></a>}
+            <a className="button" onClick={() => setAddmode(page)}>+</a>
+          </div>
+          <div className="eraserButton buttoncase abs_left">
+            <a className="button e_first">–</a>
+            <a className="button e_second" onClick={() => {
               window.songlist.splice(page - 1, 1);
               setAddmode(-1);
             }}>&#x2713;</a>
@@ -677,42 +715,6 @@ function Song({page, setAddmode}){
         </>
       )
   }
-}
-
-function RightSide(props) {
-  const color = React.useContext(ColorContext);
-  const setColor = props.setColor;
-
-  return (
-    <div id="rightside">
-      <div>
-        <h4>Kolor</h4>
-        <select 
-          value={color}
-          onChange={val => {setColor(val.target.value);}}
-        >
-        {[
-          ["zielony", "green"],
-          ["biały", "white"],
-          ["purpurowy", "purple"],
-          ["czerwony (Piasecki)", "red"],
-          ["niebieski (Pawlak)", "blue"]
-        ].map(thing => {
-          return <option key={thing[1]} value={thing[1]}>{thing[0]}</option>
-        })}
-        </select>
-      </div>
-    </div>
-  );
-}
-
-function SinglePage({page, setAddmode}){
-  return(
-    <div className="page">
-      <a id={"page" + page} />
-      <Song page={page} setAddmode={setAddmode} />
-    </div>
-  )
 }
 
 function SongAdder({setAddmode, wheretoadd}){
@@ -793,28 +795,37 @@ function SongAdder({setAddmode, wheretoadd}){
   );
 }
 
-function Everything(){
-  const [color, setColor] = React.useState(window.czst_color);
-  const [addmode, setAddmode] = React.useState(false);
-  //gdybym coś usuwał, a potrzebuję innego state'a
-  if(addmode < 0) setAddmode(false);
-  
+function Summary(){
   return(
-    <ColorContext.Provider value={color}>
-      <div id="overlay">
-        {addmode && <SongAdder setAddmode={setAddmode} wheretoadd={addmode} />}
-        <RightSide setColor={setColor} />
-      </div>
-      <TitlePage />
-      <Summary />
-      {window.songlist.map((value, ind) =>{
-        return( <SinglePage key={ind} page={ind+1} setAddmode={setAddmode} /> );
+    <div className="page">
+      <h2>W skrócie</h2>
+      <div className="summary">
+      {window.songlist.map((value, ind) => {
+        let [kiedy, co] = value;
+        if(co != "czst" && kiedy != "Aklamacja"){
+          if(kiedy == "Psalm") co = co.substring(0, co.indexOf("\n")); //pierwsza linijka
+          return(
+            <a key={ind} href={"#page" + (ind+1)} className="interactive">
+              <h4>{kiedy}</h4>
+              <h3>{co}</h3>
+            </a>
+          );
+        }
       })}
-      <a href="#title" className="page">
-        <h2>Na początek</h2>
-      </a>
-    </ColorContext.Provider>
+      </div>
+    </div>
   )
+}
+
+function TitlePage(){
+  return(
+    <>
+      <h1 id="title">Szpiewnik Szybkiego Szukania 2</h1>
+      <h4>
+      Przygotowany na: {window.a_identyfikator}, formuła: {window.a_formula}
+      </h4>
+    </>
+  );
 }
     
 const root = ReactDOM.createRoot(document.getElementById("main"));
