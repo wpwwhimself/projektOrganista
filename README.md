@@ -15,3 +15,4 @@ Using React and PHP.
 
 - db -- folder containing the database in a spreadsheet and CSV version
 - songhistory.json -- info about the last saved playlist
+- nuty -- charts for songs
