@@ -1,4 +1,5 @@
-﻿A wczora z wieczora;6;Pieśni na Boże Narodzenie;4;D;0/0/0/0/0/0;"1.
+﻿tytuł;klasa;katsiedlecki;nr;tonacja;naco;tekst
+A wczora z wieczora;6;Pieśni na Boże Narodzenie;4;D;0/0/0/0/0/0;"1.
 A wczora z wieczora,
 a wczora z wieczora, z niebieskiego dwora,
 z niebieskiego dwora.
@@ -106,31 +107,7 @@ tak słodko przemawia do naszych serc
 Widząc tę miłość, któż zimnym zostanie?
 *
 Pokłońmy się Królowi…"
-Alleluja, biją dzwony;8;Pieśni na Wielkanoc;20;G;1/0/0/0/0/0;"1.
-Alleluja! Biją dzwony, * głosząc w świata wszystkie strony,
-że zmartwychwstał Pan.
-*
-Alleluja, alleluja, alleluja.
-2.
-Biją długo i radośnie, * że aż w piersiach serce rośnie, 
-tryumf prawdzie dan. 
-*
-Alleluja…
-3.
-W majestacie Boskiej chwały * idzie Chrystus Zmartwychwstały
-między uczniów swych.
-*
-Alleluja…
-4.
-Dzień wesoły nam dziś nastał, * Pan po męce zmartwychpowstał,
-płynie pieśni ton:
-*
-Alleluja…
-5.
-Każda dusza rozśpiewana * wielbi głośno swego Pana,
-a wtóruje dzwon!
-*
-Alleluja…"
+Alleluja, biją dzwony;8;Pieśni na Wielkanoc;20;G;1/0/0/0/0/0;
 Anioł pasterzom;6;Pieśni na Boże Narodzenie;42;C;0/0/0/0/0/0;"1.
 Anioł pasterzom mówił: * „Chrystus się wam narodził
 w Betlejem, nie bardzo sławnym mieście, * narodził się w ubóstwie * Pan wszego stworzenia”.
@@ -999,7 +976,7 @@ by żyła w Nim dla nieba.
 W to wierzyć zawsze mocno chcę,
 bo tego Kościół uczy mnie.
 W Nim żyć umierać pragnę."
-Cóż Ci, Jezu, damy;1;Pieśni przygodne;218;D;0/1/0/1/0/0;"1.
+Cóż Ci, Jezu, damy;1;Pieśni przygodne;218;D;0/1/0/1/1/0;"1.
 Cóż Ci, Jezu, damy za Twych łask strumienie
 Z serca Ci składamy korne dziękczynienie
 *
@@ -1035,6 +1012,23 @@ Bądź na wieki pochwalon, nieśmiertelny Panie
 Twoja łaska, Twoja dobroć nigdy nie ustanie
 Chowaj nas, póki raczysz, na tej niskiej ziemi
 Jeno zawżdy niech będziem pod skrzydłami Twymi"
+Czekam na Ciebie, dobry Boże;1;;225;a;0/0/1/0/0/0;"1.
+Czekam na Ciebie, dobry Boże,
+przyjdź do mnie, Panie, pośpiesz się,
+niechaj mi łaska Twa pomoże,
+chcę czystym sercem przyjąć Cię.
+*
+Przyjdź do mnie Panie, mój dobry Boże,
+przyjdź i nie spóźniaj się.
+Przyjdź do mnie Panie, przyjdź z łaską swoją,
+przyjdź i nie spóźniaj się.
+2.
+Wśród licznych trosk i niepokojów,
+kiedy już sił nie starcza nam,
+karmisz nas, Panie, swoim Ciałem,
+Tyś nasza moc, nasz Bóg i Pan
+*
+Przyjdź do mnie Panie..."
 Czekam na Ciebie, Jezu mój mały;5;Pieśni na Adwent;226;h;0/0/0/0/0/do 16 grudnia;"1.
 Czekam na Ciebie, Jezu mój mały,
 ciche błagania ku niebu ślę.
@@ -1307,30 +1301,7 @@ I Trzej Królowie, i Trzej Królowie od wschodu przybyli
 i dary Panu, i dary Panu kosztowne złożyli.
 *
 Chrystus się rodzi, nas oswobodzi..."
-Dziś Chrystus Król;8;Pieśni na Wielkanoc;294;F;0/0/1/0/0/0;"1.
-Dziś Chrystus, Król wiecznej chwały,
-wiedzie tryumf okazały.
-Ozdobny w ślicznej koronie,
-odbiera cześć na Syjonie.
-Alleluja, alleluja!
-2.
-Śmierci, gdzież moc teraz twoja?
-Kędy twa, szatanie, zbroja?
-Naszedł mocniejszy zbrojnego
-mocarza i wziął łup jego.
-Alleluja, alleluja!
-3.
-Jezu mój, na wieczne lata,
-Tyś ozdobą tego świata,
-z łaski przypuść nas do swego
-zwycięstwa nieśmiertelnego.
-Alleluja, alleluja!
-4.
-Chwała wiecznemu Królowi,
-Bogu Ojcu i Synowi,
-chwała Duchowi Świętemu,
-jednemu Bogu naszemu.
-Alleluja, alleluja!"
+Dziś Chrystus Król;8;Pieśni na Wielkanoc;294;F;0/0/1/0/0/0;
 Dziś moją duszę;2;Nabożeństwa;297;D;0/0/0/0/0/Pogrzebowo;"*
 Dziś moją duszę w ręce Twe powierzam
 Mój Stworzycielu i najlepszy Ojcze
@@ -1358,6 +1329,30 @@ W Tobie, mój Panie, znajdę pokój wieczny
 Ty będziesz dla mnie nie gasnącym światłem 
 *
 Dziś moją duszę w ręce Twe powierzam…"
+Gdy klęczę przed Tobą;3;;306;F;0/0/0/0/1/0;"1.
+Gdy klęczę przed Tobą,
+modlę się i składam hołd,
+Weź ten dzień, uczyń go Twym,
+i we mnie miłość wznieć.
+*
+Ave Maria,
+gratia plena,
+Dominus tecum,
+benedicta tu =
+2.
+Wszystko Tobie daję,
+każdy sen i każdą myśl.
+Matko Boga, Matko moja,
+wznieś je przed Pana tron!
+*
+Ave Maria...
+3.
+Gdy klęczę przed Tobą,
+widzę Twą radosną twarz.
+Każda myśl, każde słowo,
+niech spocznie w dłoniach Twych.
+*
+Ave Maria..."
 Gdy się Chrystus rodzi;6;Pieśni na Boże Narodzenie;313;B;0/0/0/0/0/0;"1.
 Gdy się Chrystus rodzi i na świat przychodzi,
 ciemna noc w jasności promienistej brodzi.
@@ -1635,7 +1630,7 @@ Ty nas kochasz, a my Ciebie
 niech się z Tobą złączym w niebie
 Matko, kto nie kocha Cię
 dzieckiem Twym nie zowie się"
-Jak miłe przybytki;1;Sakramenty i sakramentalia;386;Es;1/0/0/0/0/0;"1.
+Jak miłe przybytki;1;Sakramenty i sakramentalia;386;Es;1/0/1/0/0/0;"1.
 Jak miłe przybytki nam dał
 Wszechmocny i dobry nasz Bóg
 Że sam w nich zamieszkał, wszak chciał
@@ -1682,7 +1677,7 @@ Jam jest chlebem żywym
 Który zstąpił z nieba
 **
 1.
-Ciało moje _est pokarmem
+Ciało moje _jest_ pokarmem
 A krew mo_ja_ jest napojem
 *
 Jam jest chlebem żywym…
@@ -2593,21 +2588,7 @@ I z taką wiarą ruszy lud
 Synowie Polski, córy,
 Że jak mgławica pierzchnie wróg.
 Tak nam dopomóż Bóg! ="
-Nie zna śmierci Pan żywota;8;Pieśni na Wielkanoc;655;F;0/1/0/0/0/0;"1.
-Nie zna śmierci Pan żywota, * chociaż przeszedł przez je wrota;
-rozerwała grobu pęta * ręka święta. Alleluja!
-2.
-Twój, Adamie, dług spłacony, * okup ludzki dokończony;
-wejdziesz w niebo z szczęśliwymi * dziećmi twymi. Alleluja!
-3.
-Próżno, straże, grób strzeżecie! * Już Go tutaj nie znajdziecie;
-wstał, przeniknął skalne mury * Bóg natury. Alleluja!
-4.
-Teraz On na ludzkie plemię * i na miłą patrzy ziemię,
-która drogo dziś przybrana * kosztem Pana. Alleluja!
-5.
-Przez Twe święte zmartwychwstanie * z grzechów powstać daj nam, Panie,
-potem z Tobą królowanie. * Alleluja, alleluja!"
+Nie zna śmierci Pan żywota;8;Pieśni na Wielkanoc;655;F;0/1/0/0/0/0;
 Niebiosa, rosę;5;Pieśni na Adwent;656;d;0/0/0/0/0/od 17 grudnia;"1.
 *
 Niebiosa, rosę spuśćcie nam z góry
@@ -2637,24 +2618,7 @@ Niech będzie chwała;1;;0;F;0/0/0/1/0/0;"Niech będzie chwała i cześć, i uwi
 Chwała i cześć Jezusowi
 Chwała, niech będzie chwała
 Tak, Jemu chwała i cześć"
-Niech w święto radosne;8;Śpiewy na Wielki Tydzień;672;c;0/0/0/0/0/Sekwencja;"1.
-Niech w święto radosne Paschalnej Ofiary
-Składają jej wierni uwielbień swych dary.
-Odkupił swe owce Baranek bez skazy,
-Pojednał nas z Ojcem i zmył grzechów zmazy.
-2.
-Śmierć zwarła się z życiem i w boju, o dziwy,
-Choć poległ Wódz życia, króluje dziś żywy.
-Maryjo, ty powiedz, coś w drodze widziała?
-Jam Zmartwychwstałego blask chwały ujrzała.
-3.
-Żywego już Pana widziałam, grób pusty,
-I świadków anielskich, i odzież, i chusty.
-Zmartwychwstał już Chrystus, Pan mój i nadzieja,
-A miejscem spotkania będzie Galilea.
-4.
-Wiemy, żeś zmartwychwstał, że ten cud prawdziwy,
-O Królu Zwycięzco, bądź nam miłościwy. "
+Niech w święto radosne;2;Śpiewy na Wielki Tydzień;672;c;0/0/0/0/0/Sekwencja;
 Niechaj będzie pochwalony;2;Pieśni do Najświętszego Sakramentu/Nabożeństwa;1308;C;0/0/0/0/0/0;"Niechaj będzie pochwalony * od nas wszystkich uwielbiony
 Przenajświętszy Sakrament * ten niebieski testament"
 Niechaj z nami będzie Pan;1;Pieśni przygodne;677;Es;1/1/0/0/0/0;"1.
@@ -2929,79 +2893,7 @@ Wraca do Ojca jako Syn prawy
 Słowo Przedwieczne, Bóg wielki
 By Go na tronie mocy i sławy
 Wielbił i kochał dusz wszelki"
-Otrzyjcie już łzy;8;Pieśni na Wielkanoc;797;B;0/0/1/0/0/0;"1.
-Otrzyjcie już łzy, płaczący,
-żale z serca wyzujcie. 
-Wszyscy w Chrystusa wierzący 
-weselcie się, radujcie,
-bo zmartwychwstał samowładnie,
-jak przepowiedział dokładnie.
-*
-Alleluja, alleluja;
-niechaj zabrzmi: Alleluja!
-2.
-Darmo kamień wagi wielkiej
-Żydzi na grób wtoczyli,
-darmo dla pewności wszelkiej
-zbrojnej straży użyli.
-Na nic straż, pieczęć i skała
-nad grobem Pana się zdała.
-*
-Alleluja, alleluja…
-3.
-Bóg Wszechmocny, Bóg natury,
-wyższy nad wszystkie twory,
-wstaje z grobu, kruszy mury,
-nie zna żadnej zapory.
-Zdjęta trwogą straż upada
-i prawie sobą nie włada.
-*
-Alleluja, alleluja…
-4.
-Salome i dwie Maryje
-w grobie czasu rannego
-słyszały głos: „Pan wasz żyje,
-tu tylko odzież Jego.
-Idźcie i to wszystko, coście
-widziały, uczniom ogłoście”
-*
-Alleluja, alleluja…
-5.
-Także Pan i Magdalenie
-żywy widzieć się daje,
-która słodkie to widzenie
-głośno wszędzie wyznaje:
-„Jezus zmartwychwstał prawdziwie,
-który cierpiał był zelżywie”.
-*
-Alleluja, alleluja…
-6.
-Bądźmy przeto zapewnieni,
-że wiecznie nie zaśniemy
-w grobie, lecz niegdyś zbudzeni,
-także zmartwychwstaniemy.
-I że potem żyć bezpiecznie,
-od śmierci będziemy wiecznie.
-*
-Alleluja, alleluja…
-7.
-Że Chrystus spod mocy czarta
-plemię dobył Adama,
-i przez Zbawcę nam otwarta
-stoi do nieba brama,
-przez którą z otchłań ciemności
-zawiódł rzesze do jasności.
-*
-Alleluja, alleluja…
-8.
-Jezu Chryste, dobry Panie!
-Ciebie kornie prosimy:
-Niech przez Twoje zmartwychwstanie,
-gdy i my powstaniemy,
-z wybranymi Twymi w niebie
-wiecznie oglądamy Ciebie.
-*
-Alleluja, alleluja…"
+Otrzyjcie już łzy;8;Pieśni na Wielkanoc;797;B;0/0/1/0/0/0;
 Pan blisko jest;4;;806;d;0/1/0/0/0/0;"Pan blisko jest, oczekuj Go.
 Pan blisko jest, w Nim serca moc!"
 Pan Jezus już się zbliża;1;Pieśni do Najświętszego Sakramentu;812;A;0/0/1/0/0/0;"1.
@@ -3926,18 +3818,7 @@ Naprzód tedy niechaj wszędy * zabrzmi świat w wesołości,
 że posłany nam jest dany * Emmanuel w niskości
 Jego tedy przywitajmy, * z aniołami zaśpiewajmy:
 „Chwała na wysokości”."
-Wesel się, Królowo;8;Pieśni na Wielkanoc;1135;F;0/0/0/0/1/0;"1.
-Wesel się, Królowo miła,
-bo Ten, któregoś zrodziła,
-zmartwychwstał Pan nad panami;
-módl się do Niego za nami!
-Alleluja, alleluja!
-2.
-Ciesz się i wesel się w niebie,
-proś Go za nami w potrzebie,
-byśmy się też tam dostali
-i na wiek wieków śpiewali:
-Alleluja, alleluja!"
+Wesel się, Królowo;8;Pieśni na Wielkanoc;1135;F;0/0/0/0/1/0;
 Wesołą nowinę;6;Pieśni na Boże Narodzenie;1139;D;0/0/0/0/0/0;"1.
 Wesołą nowinę, bracia słuchajcie, * niebieską Dziecinę ze mną witajcie.
 *
@@ -3951,41 +3832,7 @@ Jak miła ta nowina…
 Panna nam powiła Boskie Dzieciątko, * pokłonem uczciła to Niemowlątko.
 *
 Jak miła ta nowina…"
-Wesoły nam dzień;8;Pieśni na Wielkanoc;1140;G;1/0/0/0/0/Procesja;"1.
-Wesoły nam dzień dziś nastał, * którego z nas każdy żądał;
-tego dnia Chrystus zmartwychwstał. * Alleluja, alleluja!
-2.
-Król Niebieski k’nam zawitał, * jako śliczny kwiat zakwitał;
-po śmierci się nam pokazał. * Alleluja…
-3.
-Piekielne moce zwojował, * nieprzyjaciele podeptał,
-nad nędznymi się zmiłował. * Alleluja…
-4.
-Do trzeciego dnia tam mieszkał, * ojce święte tam pocieszał,
-potem iść za sobą kazał. * Alleluja…
-5.
-Którzy w otchłaniach mieszkali, * płaczliwie tam zawołali,
-gdy Zbawiciela ujrzeli. * Alleluja…
-6.
-„Zawitaj, przybywający, * Boży Synu Wszechmogący,
-wybaw nas z piekielnej mocy”! * Alleluja…
-7.
-Wielkie tam wesele mieli, * gdy Zbawiciela ujrzeli,
-którego z dawna żądali. * Alleluja…
-8.
-Potem swą mocą zmartwychwstał, * pieczęci z grobu nie ruszał,
-na stróże wielki strach powstał. * Alleluja…
-9.
-A gdy Chrystus Pan zmartwychwstał, * miłośnikom się pokazał,
-anioły do Matki posłał. * Alleluja…
-10.
-O anieli najmilejsi, * idźcież do Panny Najświętszej,
-do Matki mej najmilejszej! * Alleluja…
-11.
-Ode Mnie Ją pozdrawiajcie * i wesoło zaśpiewajcie:
-Królowo rajska, wesel się! * Alleluja…
-12.
-..."
+Wesoły nam dzień;8;Pieśni na Wielkanoc;1140;G;1/0/0/0/0/Procesja;
 Wielbię Ciebie;1;Pieśni do Najświętszego Sakramentu;1151;C;0/0/0/1/0/0;"Wielbię Ciebie w każdym momencie
 O, Żywy Chlebie nasz, w tym Sakramencie"
 Wisi na krzyżu;7;Pieśni na Wielki Post;1165;A;0/0/1/0/0/0;"1.
@@ -4093,16 +3940,7 @@ Przyjmij od nas za Twą mękę korne dziękczynienie
 chwała Ci po wszystkie czasy, miłość, uwielbienie.
 *
 Hosanna, hosanna Synowi Bożemu…"
-Wstał Pan Chrystus;8;Pieśni na Wielkanoc;1196;C;0/1/0/0/0/0;"1.
-Wstał Pan Chrystus z martwych ninie, * alleluja, alleluja!
-Uweselił lud swój mile, * alleluja, alleluja!
-Nie żałował życia swego, * alleluja, alleluja!
-Dla człowieka mizernego, * alleluja, alleluja!
-2.
-Tego dnia wielkanocnego, * alleluja, alleluja!
-Chwal każdy Syna Bożego, * alleluja, alleluja!
-Świętą Trójcę wyznawajmy, * alleluja, alleluja!
-Bogu cześć i chwałę dajmy, * alleluja, alleluja!"
+Wstał Pan Chrystus;8;Pieśni na Wielkanoc;1196;C;0/1/0/0/0/0;
 Wszystkie nasze dzienne sprawy;2;Pieśni przygodne;1203;D;0/0/0/0/1/0;"1.
 Wszystkie nasze dzienne sprawy,
 przyjm litośnie, Boże prawy,
@@ -4372,23 +4210,4 @@ Zielem, kwiatami ścielcie Mu drogi
 Którędy Pańskie iść będą nogi
 I okrzyknijcie na wszystkie strony
 Pośród nas idzie błogosławiony"
-Zwycięzca śmierci;8;Pieśni na Wielkanoc;1279;F;1/0/1/0/1/0;"1.
-Zwycięzca śmierci, piekła i szatana,
-wychodzi z grobu dnia trzeciego z rana.
-Naród niewierny trwoży się, przestrasza,
-na cud Jonasza. Alleluja!
-2.
-Ziemia się trzęsie, straż się grobu miesza,
-anioł zstępuje, niewiasty pociesza:
-„Patrzcie, tak mówi, grób ten pusty został,
-Pan zmartwychpowstał”. Alleluja!
-3.
-Ustąpcie od nas smutki i trosk fale,
-gdy Pan Zbawiciel tryumfuje w chwale;
-Ojcu swojemu już uczynił zadość,
-nam niesie radość. Alleluja!
-4.
-Cieszy swych uczniów, którzy wierni byli,
-utwierdza w wierze, aby nie wątpili;
-obcuje z nimi, daje nauk wiele
-o swym Kościele. Alleluja!"
+Zwycięzca śmierci;8;Pieśni na Wielkanoc;1279;F;1/0/1/0/1/0;
