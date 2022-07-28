@@ -10,7 +10,7 @@
 		<h1>Podstawowe</h1>
 		<div>
 			<h3>Formuła mszy</h3>
-			<select name="a_formula">
+			<select name="a_formula" id="a_formula">
 			<?php
 			foreach(
 				[
@@ -22,7 +22,7 @@
 			?>
 			</select>
 			<h3>Identyfikator mszy</h3>
-			<input type="text" name="a_identyfikator">
+			<input type="text" name="a_identyfikator" id="a_identyfikator">
 
 			<h3>Kolor części stałych</h3>
 			<div class='a_container'>
@@ -72,9 +72,9 @@
 			echo "<div class='a_cell'>";
 			echo "<p><b>$etykieta</b></p>";
 			if($przeklejane){
-				echo "<textarea name='a_$kod'></textarea>";
+				echo "<textarea id='a_$kod' name='a_$kod'></textarea>";
 			}else{
-				echo "<select name='a_$kod'>";
+				echo "<select id='a_$kod' name='a_$kod'>";
 					echo "<option value='' />";
 				foreach($songs as $x){
 					$etykieta = preg_replace("/(.*)\s\d/", "$1", $etykieta);
@@ -87,6 +87,35 @@
 			echo "</div>";
 		}
 		?>
+
+		<div class="framed">
+			<h2>Co było ostatnio?</h2>
+			<?php $history = json_decode(file_get_contents("songhistory.json"), true); ?>
+			<table id="songhistory">
+				<tr>
+					<th>Wejście</th>
+					<th>Przygotowanie darów</th>
+					<th colspan=3>Komunia</th>
+					<th>Uwielbienie</th>
+					<th>Zakończenie</th>
+				</tr>
+				<tr>
+					<td><?php echo $history['a_piesn_wejscie']; ?></td>
+					<td><?php echo $history['a_piesn_dary']; ?></td>
+					<td><?php echo $history['a_piesn_komunia1']; ?></td>
+					<td><?php echo $history['a_piesn_komunia2']; ?></td>
+					<td><?php echo $history['a_piesn_komunia3']; ?></td>
+					<td><?php echo $history['a_piesn_uwielbienie']; ?></td>
+					<td><?php echo $history['a_piesn_zakonczenie']; ?></td>
+				</tr>
+			</table>
+			<div class="a_container">
+				<!-- <input type="submit" name="sub" value="Wyświetl ostatni" onclick="formshow();return true;">
+				<input type="submit" name="sub" value="Procesuj ostatni" onclick="formproc();return true;"> -->
+				<input type="button" value="Skopiuj" onclick="copyhistory()" />
+			</div>
+		</div>
+
 		<div class="framed">
 			<h2>Esencja</h2>
 			<div class='a_container'>
@@ -123,45 +152,40 @@
 				?>
 			</div>
 
-			<input type="checkbox" id="savehistory" name="savehistory"></input>
+			<input type="checkbox" id="savehistory" name="savehistory" checked></input>
 			<label for="savehistory">Zapisz do historii</label>
 		</div>
 			
-		<div class="framed">
-			<h2>Co było ostatnio?</h2>
-			<?php $history = json_decode(file_get_contents("songhistory.json"), true); ?>
-			<table id="songhistory">
-				<tr>
-					<th>Wejście</th>
-					<th>Przygotowanie darów</th>
-					<th colspan=3>Komunia</th>
-					<th>Uwielbienie</th>
-					<th>Zakończenie</th>
-				</tr>
-				<tr>
-					<td><?php echo $history['a_piesn_wejscie']; ?></td>
-					<td><?php echo $history['a_piesn_dary']; ?></td>
-					<td><?php echo $history['a_piesn_komunia1']; ?></td>
-					<td><?php echo $history['a_piesn_komunia2']; ?></td>
-					<td><?php echo $history['a_piesn_komunia3']; ?></td>
-					<td><?php echo $history['a_piesn_uwielbienie']; ?></td>
-					<td><?php echo $history['a_piesn_zakonczenie']; ?></td>
-				</tr>
-			</table>
-			<div class="a_container">
-				<input type="submit" name="sub" value="Wyświetl ostatni" onclick="formshow();return true;">
-				<input type="submit" name="sub" value="Procesuj ostatni" onclick="formproc();return true;">
-			</div>
-		</div>
-
 		<div>
 			<script>
+			const history = <?php include("songhistory.json"); ?>;
+
 			function formshow() {
 				document.forms[0].action = '_OUT/out.php';
 			}
 			function formproc() {
 				document.forms[0].action = 'process.php';
 			}
+			function copyhistory() {
+				for(name in history) {
+					switch(name){
+						case "savehistory":
+						case "sub":
+							continue;
+						case "a_psalm":
+						case "a_aklamacja":
+							document.querySelector("#" + name).innerHTML = history[name];
+							break;
+						case "a_czescistale":
+							document.querySelector("#" + name + "_" + history[name]).checked = true;
+							break;
+						default:
+							document.querySelector("#" + name).value = history[name];
+							break;
+					}
+				}
+			}
+
 			</script>
 			<div class="a_container">
 				<input type="submit" name="sub" value="Wyświetl" onclick="formshow();return true;">

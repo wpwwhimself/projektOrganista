@@ -53,6 +53,12 @@ hr{
 }
 #songhistory td, #songhistory th{
 	text-align: center;
+	max-width: 12vw;
+}
+#songhistory th{
+	background-color: #666;
+	color: white;
+	border-radius: 10px;
 }
 
 /******* NAGŁÓWKI ********/

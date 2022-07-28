@@ -2,10 +2,6 @@
 $conn = new mysqli("localhost", "root", "", "szszsz");
 if($conn->connect_error) echo "Nie można połączyć się z bazą: ".$conn->connect_error;
 $conn->set_charset("utf8");
-
-if(preg_match("/ostatni/", $_GET['sub'])){
-  $_GET = json_decode(file_get_contents("../songhistory.json"), true);
-}
 ?>
 <script type="text/babel">
 
