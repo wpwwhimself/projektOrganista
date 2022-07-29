@@ -184,6 +184,7 @@
 							break;
 					}
 				}
+				document.querySelector("#savehistory").checked = false;
 			}
 
 			</script>
