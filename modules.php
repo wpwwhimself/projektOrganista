@@ -100,10 +100,6 @@ unset($i);
 
 /* KOMPONENTY */
 
-function Albo(){
-  return(<p className='albo'>albo</p>)
-}
-
 function Antyfona(props){
   return(
     <table className='antyfona'><tbody>
@@ -218,15 +214,21 @@ function Song({page, setAddmode}){
           {
             flag ?
             <>
-              <Antyfona
-                ksiadz="Módl się za nami, święta Boża rodzicielko"
-                wierni="Abyśmy się stali godnymi obietnic chrystusowych"
-                />
-              <Albo />
-              <Antyfona
-                ksiadz="Raduj się i wesel, Panno Maryjo, Alleluja"
-                wierni="Bo zmartwychwstał prawdziwie, Alleluja"
-              />
+              <div className="alternative">
+                <h4>Wybierz jedno:</h4>
+                <div>
+                  <Antyfona
+                    ksiadz="Módl się za nami, święta Boża rodzicielko"
+                    wierni="Abyśmy się stali godnymi obietnic chrystusowych"
+                    />
+                </div>
+                <div>
+                  <Antyfona
+                    ksiadz="Raduj się i wesel, Panno Maryjo, Alleluja"
+                    wierni="Bo zmartwychwstał prawdziwie, Alleluja"
+                  />
+                </div>
+              </div>
               <p>Módlmy się: Panie nasz, Boże, dozwól nam, sługom swoim, cieszyć się trwałym zdrowiem duszy i ciała. I za wstawiennictwem Najświętszej Maryi zawsze dziewicy, uwolnij nas od doczesnych utrapień i obdarz wieczną radością, przez Chrystusa, Pana naszego...</p>
             </> :
             <>
@@ -412,19 +414,25 @@ function Song({page, setAddmode}){
             wierni="I z duchem Twoim"
           />
           <h2>Akt pokutny</h2>
-          <p className="ksiadz">Spowiadam się Bogu Wszechmogącemu...</p>
-          <h1>Kyrie</h1>
-          <CzescStala name={kiedy} />
-          <Lyrics raw={
-            `Panie, zmiłuj się nad nami
-            Chryste, zmiłuj się nad nami
-            Panie, zmiłuj się nad nami`
-          } />
-          <Albo />
-          <Antyfona
-            ksiadz="...Zmiłuj się nad nami"
-            wierni="Zmiłuj się nad nami"
-          />
+          <div className="alternative">
+            <h4>Wybierz jedno:</h4>
+            <div>
+              <p className="ksiadz">Spowiadam się Bogu Wszechmogącemu...</p>
+              <h1>Kyrie</h1>
+              <CzescStala name={kiedy} />
+              <Lyrics raw={
+                `Panie, zmiłuj się nad nami
+                Chryste, zmiłuj się nad nami
+                Panie, zmiłuj się nad nami`
+              } />
+            </div>
+            <div>
+              <Antyfona
+                ksiadz="...Zmiłuj się nad nami"
+                wierni="Zmiłuj się nad nami"
+              />
+            </div>
+          </div>
         </>
       )
     case "Gloria":
@@ -554,25 +562,33 @@ function Song({page, setAddmode}){
       return(
         <>
           <h1>Przemienienie</h1>
-          <Antyfona 
-            ksiadz="Oto wielka tajemnica wiary"
-            wierni="Głosimy śmierć Twoją, Panie Jezu, <br />wyznajemy Twoje zmartwychwstanie <br />i oczekujemy Twego przyjścia w chwale"
-          />
-          <Albo />
-          <Antyfona 
-            ksiadz="Tajemnica wiary"
-            wierni="Chrystus umarł, <br />Chrystus zmartwychwstał, <br />Chrystus powróci"
-          />
-          <Albo />
-          <Antyfona 
-            ksiadz="Wielka jest tajemnica naszej wiary"
-            wierni="Ile razy ten chleb spożywamy <br />i pijemy z tego kielicha, <br />głosimy śmierć Twoją, Panie, <br />oczekując Twego przyjścia w chwale"
-          />
-          <Albo />
-          <Antyfona 
-            ksiadz="Uwielbiajmy tajemnicę wiary"
-            wierni="Panie, Ty nas wybawiłeś <br />przez krzyż i zmartwychwstanie swoje, <br />Ty jesteś zbawicielem świata"
-          />
+          <div className="alternative">
+            <h4>Wybierz jedno:</h4>
+            <div>
+              <Antyfona 
+              ksiadz="Oto wielka tajemnica wiary"
+              wierni="Głosimy śmierć Twoją, Panie Jezu, <br />wyznajemy Twoje zmartwychwstanie <br />i oczekujemy Twego przyjścia w chwale"
+              />
+            </div>
+            <div>
+              <Antyfona 
+              ksiadz="Tajemnica wiary"
+              wierni="Chrystus umarł, <br />Chrystus zmartwychwstał, <br />Chrystus powróci"
+              />
+            </div>
+            <div>
+              <Antyfona 
+              ksiadz="Wielka jest tajemnica naszej wiary"
+              wierni="Ile razy ten chleb spożywamy <br />i pijemy z tego kielicha, <br />głosimy śmierć Twoją, Panie, <br />oczekując Twego przyjścia w chwale"
+              />
+            </div>
+            <div>
+              <Antyfona 
+              ksiadz="Uwielbiajmy tajemnicę wiary"
+              wierni="Panie, Ty nas wybawiłeś <br />przez krzyż i zmartwychwstanie swoje, <br />Ty jesteś zbawicielem świata"
+              />
+            </div>
+          </div>
         </>
       )
     case "Ojcze nasz":
