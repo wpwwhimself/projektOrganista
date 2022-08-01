@@ -32,7 +32,8 @@
 				'biały' => 'white',
 				'purpurowy' => 'purple',
 				'czerwony (Piasecki)' => 'red',
-				'niebieski (Pawlak)' => 'blue'
+				'niebieski (Pawlak)' => 'blue',
+				'złoty (Machura)' => 'gold'
 				] as $label => $code){
 				echo "<input type='radio' name='a_czescistale' id='a_czescistale_$code' value='$code'";
 					if($label == "zielony") echo " checked";

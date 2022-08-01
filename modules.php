@@ -177,7 +177,8 @@ function RightSide(props) {
           ["biały", "white"],
           ["purpurowy", "purple"],
           ["czerwony (Piasecki)", "red"],
-          ["niebieski (Pawlak)", "blue"]
+          ["niebieski (Pawlak)", "blue"],
+          ["złoty (Machura)", "gold"]
         ].map(thing => {
           return <option key={thing[1]} value={thing[1]}>{thing[0]}</option>
         })}
