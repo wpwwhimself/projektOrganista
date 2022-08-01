@@ -14,4 +14,4 @@ fwrite($file, $lines);
 fclose($file);
 ?>
 <h2>Plik gotowy!</h2>
-<a href="_OUT/<?php echo $_GET['a_formula']; ?>.html" target="_blank">Otwórz</a>
+<a href="_OUT/<?php echo $filename; ?>.html" target="_blank">Otwórz</a>
