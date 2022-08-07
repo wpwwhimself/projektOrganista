@@ -733,13 +733,11 @@ function Song({page, setAddmode}){
 function SongAdder({setAddmode, wheretoadd}){
   const whereami = window.songlist[Math.max(wheretoadd - 1, 0)][0];
   const whereami_kody = {
-    "Wejście" : "1/./././.",
-    "Przygotowanie darów" : "./1/././.",
-    "Komunia 1" : "././1/./.",
-    "Komunia 2" : "././1/./.",
-    "Komunia 3" : "././1/./.",
-    "Uwielbienie" : "./././1/.",
-    "Zakończenie" : "././././1"
+    "Wejście" : /^1\/.\/.\/.\/./,
+    "Przygotowanie darów" : /^.\/1\/.\/.\/./,
+    "Komunia" : /^.\/.\/1\/.\/./,
+    "Uwielbienie" : /^.\/.\/.\/1\/./,
+    "Zakończenie" : /^.\/.\/.\/.\/1/
   };
 
   // sugestie pieśni
@@ -750,9 +748,11 @@ function SongAdder({setAddmode, wheretoadd}){
     "Do Serca" : [],
     "Nietypowe" : []
   };
+
+  console.log(whereami_kody[whereami]);
   for(const song of Object.keys(window.piesni)){
     // sugestia na podstawie tego, gdzie jestem
-    if(window.piesni[song]["naco"].match(whereami_kody[whereami])){
+    if(window.piesni[song]["naco"].match(new RegExp(whereami_kody[whereami]))){
       piesni_sugg["Fitting"][song] = window.piesni[song];
     }
     if(window.piesni[song]["klasa"] == window.okazja && window.okazja != 0){
