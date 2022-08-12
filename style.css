@@ -74,6 +74,7 @@ h4{ margin: 0; font-weight: normal; font-style: italic; color: gray; }
 /*************************/
 #title{
 	font-size: 10vw; border: none; color: initial;
+	margin-top: 0;
 }
 body{
 	width: 100vw; height: 100vh; margin: 0;

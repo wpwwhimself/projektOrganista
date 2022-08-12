@@ -134,7 +134,7 @@ function Everything(){
         {addmode && <SongAdder setAddmode={setAddmode} wheretoadd={addmode} />}
         <RightSide setColor={setColor} />
       </div>
-      <TitlePage />
+      <TitlePage color={color} />
       <Summary />
       {window.songlist.map((value, ind) =>{
         return( <SinglePage key={ind} page={ind+1} setAddmode={setAddmode} /> );
@@ -830,14 +830,14 @@ function Summary(){
   )
 }
 
-function TitlePage(){
+function TitlePage({color}){
   return(
-    <>
+    <div style={{background: `linear-gradient(${color}, white 50%)`}}>
       <h1 id="title">Szpiewnik Szybkiego Szukania 2</h1>
       <h4>
       Przygotowany na: {window.a_identyfikator}, formuła: {window.a_formula}
       </h4>
-    </>
+    </div>
   );
 }
     
