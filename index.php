@@ -4,6 +4,30 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
 	<link rel=stylesheet type='text/css' href='style.css?'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".songchoose").change(function(){
+				let id = $(this).attr("id");
+				const ids = [
+					"piesn_wejscie",
+					"piesn_dary",
+					"piesn_komunia1",
+					"piesn_komunia2",
+					"piesn_komunia3",
+					"piesn_uwielbienie",
+					"piesn_zakonczenie"
+				]
+				for(id of ids){
+					if($(this).val() == $("#h_"+id).text()){
+						$("#h_"+id).css("color", "red");
+					}else{
+						$("#h_"+id).css("color", "inherit");
+					}
+				}
+			})
+		});
+	</script>
 </head>
 <body>
 	<form method="get">
@@ -75,7 +99,7 @@
 			if($przeklejane){
 				echo "<textarea id='a_$kod' name='a_$kod'></textarea>";
 			}else{
-				echo "<select id='a_$kod' name='a_$kod'>";
+				echo "<select class='songchoose' id='a_$kod' name='a_$kod'>";
 					echo "<option value='' />";
 				foreach($songs as $x){
 					$etykieta = preg_replace("/(.*)\s\d/", "$1", $etykieta);
@@ -101,13 +125,19 @@
 					<th>Zakończenie</th>
 				</tr>
 				<tr>
-					<td><?php echo $history['a_piesn_wejscie']; ?></td>
-					<td><?php echo $history['a_piesn_dary']; ?></td>
-					<td><?php echo $history['a_piesn_komunia1']; ?></td>
-					<td><?php echo $history['a_piesn_komunia2']; ?></td>
-					<td><?php echo $history['a_piesn_komunia3']; ?></td>
-					<td><?php echo $history['a_piesn_uwielbienie']; ?></td>
-					<td><?php echo $history['a_piesn_zakonczenie']; ?></td>
+					<?php
+						function history($id){
+							global $history;
+							echo "<td id='h_$id'>".$history["a_".$id]."</td>";
+						}
+						history("piesn_wejscie");
+						history("piesn_dary");
+						history("piesn_komunia1");
+						history("piesn_komunia2");
+						history("piesn_komunia3");
+						history("piesn_uwielbienie");
+						history("piesn_zakonczenie");
+					?>
 				</tr>
 			</table>
 			<div class="a_container">
