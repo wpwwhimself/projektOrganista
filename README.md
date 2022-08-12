@@ -4,6 +4,16 @@ This is a simple app for creating a "playlist" for a church organ player during 
 
 Using React and PHP.
 
+## Screenshots
+
+- Main view -- playlist editor
+![main view](.demo/main.png)
+- Playlist
+![playlist](.demo/list.png)
+- Song editor
+![song editor](.demo/editor.png)
+
+
 ## Main files
 
 - index.php -- a survey for creating the playlist
