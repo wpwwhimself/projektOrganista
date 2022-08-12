@@ -33312,6 +33312,7 @@ h4{ margin: 0; font-weight: normal; font-style: italic; color: gray; }
 /*************************/
 #title{
 	font-size: 10vw; border: none; color: initial;
+	margin-top: 0;
 }
 body{
 	width: 100vw; height: 100vh; margin: 0;
@@ -34425,7 +34426,7 @@ piesni["Ciebie na wieki"]['nr'] = `1281`;
 
 piesni["Ciebie na wieki"]['tonacja'] = `F`;
 
-piesni["Ciebie na wieki"]['naco'] = `0/0/0/0/1/0`;
+piesni["Ciebie na wieki"]['naco'] = `0/1/0/0/1/0`;
 
 piesni["Ciebie na wieki"]['tekst'] = `1.
 Ciebie na wieki wychwalać będziemy,
@@ -38220,7 +38221,7 @@ piesni["Uwielbiaj, duszo moja"]['nr'] = `1100`;
 
 piesni["Uwielbiaj, duszo moja"]['tonacja'] = `Es`;
 
-piesni["Uwielbiaj, duszo moja"]['naco'] = `0/0/0/0/0/Magnificat`;
+piesni["Uwielbiaj, duszo moja"]['naco'] = `0/0/0/1/0/Magnificat`;
 
 piesni["Uwielbiaj, duszo moja"]['tekst'] = `1.
 Uwielbiaj, duszo moja, sławę Pana mego
@@ -38883,7 +38884,7 @@ function Everything(){
         {addmode && <SongAdder setAddmode={setAddmode} wheretoadd={addmode} />}
         <RightSide setColor={setColor} />
       </div>
-      <TitlePage />
+      <TitlePage color={color} />
       <Summary />
       {window.songlist.map((value, ind) =>{
         return( <SinglePage key={ind} page={ind+1} setAddmode={setAddmode} /> );
@@ -39579,14 +39580,14 @@ function Summary(){
   )
 }
 
-function TitlePage(){
+function TitlePage({color}){
   return(
-    <>
+    <div style={{background: `linear-gradient(${color}, white 50%)`}}>
       <h1 id="title">Szpiewnik Szybkiego Szukania 2</h1>
       <h4>
       Przygotowany na: {window.a_identyfikator}, formuła: {window.a_formula}
       </h4>
-    </>
+    </div>
   );
 }
     

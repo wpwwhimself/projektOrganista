@@ -3,7 +3,8 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
-	<link rel=stylesheet type='text/css' href='style.css?'>
+	<link rel=stylesheet type='text/css' href='style.css'>
+	<title>Śpiewnik Szybkiego Szukania</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
@@ -19,11 +20,7 @@
 					"piesn_zakonczenie"
 				]
 				for(id of ids){
-					if($(this).val() == $("#h_"+id).text()){
-						$("#h_"+id).css("color", "red");
-					}else{
-						$("#h_"+id).css("color", "inherit");
-					}
+					$("h_"+id).css("color", ($(this).val() == $("#h_"+id).text()) ? "red" : "inherit");
 				}
 			})
 		});
@@ -46,7 +43,7 @@
 			?>
 			</select>
 			<h3>Identyfikator mszy</h3>
-			<input type="text" name="a_identyfikator" id="a_identyfikator">
+			<input type="text" name="a_identyfikator" id="a_identyfikator" required>
 
 			<h3>Kolor części stałych</h3>
 			<div class='a_container'>
@@ -146,6 +143,8 @@
 				<input type="button" value="Skopiuj" onclick="copyhistory()" />
 			</div>
 		</div>
+		
+		<h3><a href="editor.php">Edycja pieśni</a></h3>
 
 		<div class="framed">
 			<h2>Esencja</h2>
