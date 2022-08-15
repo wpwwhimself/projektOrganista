@@ -87,7 +87,7 @@ $(document).ready(function(){
       </select>
     </div>
   
-    <div class="a_container framed">
+    <div class="framed">
     <?php
     function s_detail_field(string $display, string $name){
       echo "<div class='a_cell'>";
@@ -107,14 +107,26 @@ $(document).ready(function(){
       echo "</select>";
       echo "</div>";
     }
-    s_detail_field("Tytuł", "s_tytul");
-    s_detail_list("Klasa", "s_klasa", $categories);
-    s_detail_field("Kategoria w Siedleckim", "s_katsiedlecki");
-    s_detail_field("Numer w wyświetlaczu", "s_nr");
-    s_detail_field("Tonacja", "s_tonacja");
-    s_detail_field("Na co (W/PD/K/U/Z/uwagi)", "s_naco");
-    s_detail_field("Tekst", "s_tekst");
     ?>
+      <div class="a_container">
+      <?php
+      s_detail_field("Tytuł", "s_tytul");
+      s_detail_list("Klasa", "s_klasa", $categories);
+      ?>
+      </div>
+      <div class="a_container">
+      <?php
+      s_detail_field("Kategoria w Siedleckim", "s_katsiedlecki");
+      s_detail_field("Numer w wyświetlaczu", "s_nr");
+      s_detail_field("Tonacja", "s_tonacja");
+      s_detail_field("Na co (W/PD/K/U/Z/uwagi)", "s_naco");
+      ?>
+      </div>
+      <div class="a_container">
+      <?php
+      s_detail_field("Tekst", "s_tekst");
+      ?>
+      </div>
     </div>
     <div class="a_cell">
       <input type="submit" name="s_sub" value="Edytuj" />
