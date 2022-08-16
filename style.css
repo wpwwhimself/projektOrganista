@@ -1,10 +1,10 @@
 @font-face{
 	font-family: "Krona One";
-	src: url("./offlinecore/KronaOne-Regular.ttf");
+	src: url("../offlinecore/KronaOne-Regular.ttf");
 }
 @font-face{
 	font-family: "Raleway";
-	src: url("./offlinecore/Raleway-Regular.ttf");
+	src: url("../offlinecore/Raleway-Regular.ttf");
 }
 
 *{
@@ -186,13 +186,45 @@ img{
 	position: fixed; left: 0; top: 0;
 	background-color: #ffffffcc;
 	width: 100vw; height: 100vh;
-	display: flex; flex-direction: column; align-items: center; justify-content: center;
+	display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
 }
 #songadder select{
 	margin-bottom: 10px;
 }
 #songadder .button{
 	position: static;
+}
+.blurred{
+	filter: blur(3px);
+}
+
+.filterList, .filterFilters{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;	
+}
+.filterList{
+	max-height: 70vh; overflow-y: auto;
+}
+.filterList div, .filterFilters div{
+	border: 1px solid gray;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 5px;
+	background-color: white;
+	user-select: none;
+	cursor: pointer;
+}
+.filterFilters div{
+	font-weight: bold;
+	border: none;
+	color: #ffa928;
+	background-color: dimgray;
+}
+.filterFilters .filterActive{
+	background-color: #ffa928;
+	color: white;
 }
 
 .summary{

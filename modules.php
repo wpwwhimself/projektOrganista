@@ -5,7 +5,7 @@ $conn->set_charset("utf8");
 ?>
 <script type="text/babel">
 
-var piesni = [];
+let piesni = [];
 var okazja = 0;
 
 <?php
@@ -29,16 +29,16 @@ okazja = <?php echo substr($inneokazje, -1); ?>;
 
 $q = "SELECT * 
       FROM pieśni p 
-      WHERE p.klasa IN (1, 2, 3, 4$inneokazje)";
+      WHERE p.klasa IN (1, 2, 3, 4, 9$inneokazje)";
 $r = $conn->query($q) or die($q.$conn->error);
 while($a = $r->fetch_assoc()){?>
 
-piesni["<?php echo $a['tytuł']; ?>"] = new Array('klasa', 'katsiedlecki', 'nr', 'tonacja', 'naco', 'tekst');
+piesni["<?php echo $a['tytuł']; ?>"] = <?php echo json_encode($a); ?>
+
 <?php 
 foreach($a as $name => $value){
 	if(!in_array($name, ['tytuł', 'id'])){ ?>
-piesni["<?php echo $a['tytuł']; ?>"]['<?php echo $name; ?>'] = `<?php echo $a[$name]; ?>`;
-
+/*piesni["<?php echo $a['tytuł']; ?>"]['<?php echo $name; ?>'] = `<?php echo $a[$name]; ?>`;*/
 <?php
 }}}
 $r->free_result();
@@ -55,7 +55,7 @@ const ColorContext = React.createContext();
 
 /* pieśni w tym secie */
 
-var songlist = new Array();
+var songlist = [];
 <?php
 /* lista pieśni */
 $songlist = [
@@ -127,22 +127,28 @@ function Everything(){
   const [addmode, setAddmode] = React.useState(false);
   //gdybym coś usuwał, a potrzebuję innego state'a
   if(addmode < 0) setAddmode(false);
+  function addmodeHandler(arg){
+    setAddmode(arg);
+    if(arg != -1) document.getElementById("body").classList.toggle("blurred");
+  }
   
   return(
     <ColorContext.Provider value={color}>
       <div id="overlay">
-        {addmode && <SongAdder setAddmode={setAddmode} wheretoadd={addmode} />}
+        {addmode && <SongAdder setAddmode={addmodeHandler} wheretoadd={addmode} />}
         <RightSide setColor={setColor} />
       </div>
-      <TitlePage color={color} />
-      <Summary />
-      {window.songlist.map((value, ind) =>{
-        return( <SinglePage key={ind} page={ind+1} setAddmode={setAddmode} /> );
-      })}
-      <div className="page">
-        <a href="#title" className="interactive">  
-          <h2>Na początek</h2>
-        </a>
+      <div id="body">
+        <TitlePage color={color} />
+        <Summary />
+        {window.songlist.map((value, ind) =>{
+          return( <SinglePage key={ind} page={ind+1} setAddmode={addmodeHandler} /> );
+        })}
+        <div className="page">
+          <a href="#title" className="interactive">  
+            <h2>Na początek</h2>
+          </a>
+        </div>
       </div>
     </ColorContext.Provider>
   )
@@ -677,17 +683,9 @@ function Song({page, setAddmode}){
           }
           <div className="psalm">
 
-          {title.split(/\n\n/).map(out => {
+          {title.split(/\n\n/).map((out, i) => {
             return(
-              <p>
-                {out.split(/\n/).map(outt => {
-                  return(
-                    <>
-                      {outt}<br />
-                    </>
-                  )
-                })}
-              </p>
+              <p key={i} dangerouslySetInnerHTML={{ __html: out.replace(/\n/g, "<br>")}} />
             )
           })}
           </div>
@@ -731,6 +729,20 @@ function Song({page, setAddmode}){
 }
 
 function SongAdder({setAddmode, wheretoadd}){
+  const [filters, setFilters] = React.useState({
+    tutaj: true,
+    standard: true,
+    niestandard: false,
+    maryjne: false,
+    serce: false,
+    krzyż: false
+  });
+  function toggleFilter(whichone){
+    let f = { ...filters };
+    f[whichone] = !f[whichone];
+    setFilters(f);
+  }
+
   const whereami = window.songlist[Math.max(wheretoadd - 1, 0)][0];
   const whereami_kody = {
     "Wejście" : /^1\/.\/.\/.\/./,
@@ -743,13 +755,9 @@ function SongAdder({setAddmode, wheretoadd}){
   // sugestie pieśni
   var piesni_sugg = {
     "Fitting" : [],
-    "Okresowe" : [],
-    "Maryjne" : [],
-    "Do Serca" : [],
-    "Nietypowe" : []
+    "Okresowe" : []
   };
 
-  console.log(whereami_kody[whereami]);
   for(const song of Object.keys(window.piesni)){
     // sugestia na podstawie tego, gdzie jestem
     if(window.piesni[song]["naco"].match(new RegExp(whereami_kody[whereami]))){
@@ -758,50 +766,62 @@ function SongAdder({setAddmode, wheretoadd}){
     if(window.piesni[song]["klasa"] == window.okazja && window.okazja != 0){
       piesni_sugg["Okresowe"][song] = window.piesni[song];
     }
-    if(window.piesni[song]["klasa"] == 3){
-      piesni_sugg["Maryjne"][song] = window.piesni[song];
-    }
-    if(window.piesni[song]["klasa"] == 4){
-      piesni_sugg["Do Serca"][song] = window.piesni[song];
-    }
-    if(window.piesni[song]["klasa"] == 2){
-      piesni_sugg["Nietypowe"][song] = window.piesni[song];
-    }
   }
 
   function songAdd(addwhat){
-    window.songlist.splice(wheretoadd, 0, [whereami, addwhat.target.value]);
+    window.songlist.splice(wheretoadd, 0, [whereami, addwhat]);
     setAddmode(false);
   }
 
-  function SongSuggestions({header, list}){
+  function SongSuggestions({filter}){
+    let f_arr = [];
+    if(filter.standard) f_arr.push(1);
+    if(filter.niestandard) f_arr.push(2);
+    if(filter.maryjne) f_arr.push(3);
+    if(filter.serce) f_arr.push(4);
+    if(filter.krzyż) f_arr.push(9);
+
+    let f_piesni = [];
+    for(const song in window.piesni){
+      if(filter.tutaj){
+        if(Object.keys(piesni_sugg.Fitting).includes(song)){
+          if(f_arr.includes(parseInt(window.piesni[song].klasa))){
+            f_piesni[song] = window.piesni[song];
+          }
+        }
+      }else{
+        if(f_arr.includes(parseInt(window.piesni[song].klasa))){
+          f_piesni[song] = window.piesni[song];
+        }
+      }
+    }
+
     return(
-      <div>
-        <h4>{header}</h4>
-        <select onChange={songAdd}>
-          <option value=""></option>
-        {Object.keys(list).map((value, index) => {
-          return <option key={index} value={value}>{value}</option>;
+      <div className="filterList">
+        {Object.keys(f_piesni).map((value, index) => {
+          return <div key={index} onClick={() => songAdd(value)}>{value}</div>;
         })}
-        </select>
       </div>
     )
+  }
+  function FiltersItem({name, f}){
+    return (f[name]) ? 
+      <div onClick={() => toggleFilter(name)} className="filterActive">{name}</div> :
+      <div onClick={() => toggleFilter(name)}>{name}</div>;
   }
 
   return(
     <div id="songadder">
       <h1>Dodaj pieśń</h1>
       <div className="a_container">
-        <SongSuggestions header={"Pasujące na "+whereami} list={piesni_sugg["Fitting"]} />
-        {window.okazja != 0 && <SongSuggestions header={"Pasujące na "+window.a_formula} list={piesni_sugg["Okresowe"]} />}
+        <div className="filterFilters">
+        {Object.keys(filters).map((val, ind) => {
+          return <FiltersItem key={ind} name={val} f={filters} />;
+        })}
+        </div>
       </div>
       <div className="a_container">
-        <SongSuggestions header={"Maryjne"} list={piesni_sugg["Maryjne"]} />
-        <SongSuggestions header={"Do Serca"} list={piesni_sugg["Do Serca"]} />
-      </div>
-      <div className="a_container">
-        <SongSuggestions header={"Z reguły na mszy nie grane"} list={piesni_sugg["Nietypowe"]} />
-        <SongSuggestions header={"Dowolne"} list={window.piesni} />
+        <SongSuggestions filter={filters} />
       </div>
       <a className="button" onClick={() => setAddmode(false)}>×</a>
     </div>
@@ -844,4 +864,3 @@ function TitlePage({color}){
 const root = ReactDOM.createRoot(document.getElementById("main"));
 root.render(<Everything />);
 </script>
-  
