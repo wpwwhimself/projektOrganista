@@ -29,7 +29,7 @@ okazja = <?php echo substr($inneokazje, -1); ?>;
 
 $q = "SELECT * 
       FROM pieśni p 
-      WHERE p.klasa IN (1, 2, 3, 4, 9$inneokazje)";
+      WHERE p.klasa IN (1, 2, 3, 4$inneokazje)";
 $r = $conn->query($q) or die($q.$conn->error);
 while($a = $r->fetch_assoc()){?>
 
@@ -734,8 +734,7 @@ function SongAdder({setAddmode, wheretoadd}){
     standard: true,
     niestandard: false,
     maryjne: false,
-    serce: false,
-    krzyż: false
+    serce: false
   });
   function toggleFilter(whichone){
     let f = { ...filters };
