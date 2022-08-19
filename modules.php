@@ -31,18 +31,19 @@ $q = "SELECT *
       FROM pieśni p 
       WHERE p.klasa IN (1, 2, 3, 4$inneokazje)";
 $r = $conn->query($q) or die($q.$conn->error);
-while($a = $r->fetch_assoc()){?>
+while($a = $r->fetch_assoc()){
+  $piesni[$a['tytuł']] = $a;
+  ?>
 
 piesni["<?php echo $a['tytuł']; ?>"] = <?php echo json_encode($a); ?>
 
-<?php 
-foreach($a as $name => $value){
-	if(!in_array($name, ['tytuł', 'id'])){ ?>
-/*piesni["<?php echo $a['tytuł']; ?>"]['<?php echo $name; ?>'] = `<?php echo $a[$name]; ?>`;*/
 <?php
-}}}
+}
 $r->free_result();
+
+file_put_contents("../db/database.json", json_encode($piesni, JSON_PRETTY_PRINT));
 ?>
+
 
 /* zmienne window (globalne) */
 
