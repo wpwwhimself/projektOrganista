@@ -157,10 +157,10 @@ function Everything(){
 
 function Lyrics(props){
   let raw = props.raw;
-  raw = raw.replace(/\*\*\n/g, '</span><br>');
-  raw = raw.replace(/\*\n/g, '<span class="chorus">');
+  raw = raw.replace(/\*\*\s*\n/g, '</span><br>');
+  raw = raw.replace(/\*\s*\n/g, '<span class="chorus">');
   raw = raw.replace(/_(.+)_/g, '<u>$1</u>');
-  raw = raw.replace(/\d+\.\n/g, match => {return "<li start="+match.substring(0, match.length - 2)+">"});
+  raw = raw.replace(/\d+\.\s*\n/g, match => {return "<li start="+match.substring(0, match.length - 2)+">"});
   raw = raw.replace(/\n/g, "<br />");
 
   return(<ol className="lyrics" dangerouslySetInnerHTML={{ __html: raw}} />);
@@ -224,13 +224,13 @@ function Song({page, setAddmode}){
             <>
               <div className="alternative">
                 <h4>Wybierz jedno:</h4>
-                <div>
+                <div className="alt_option">
                   <Antyfona
                     ksiadz="Módl się za nami, święta Boża rodzicielko"
                     wierni="Abyśmy się stali godnymi obietnic chrystusowych"
                     />
                 </div>
-                <div>
+                <div className="alt_option">
                   <Antyfona
                     ksiadz="Raduj się i wesel, Panno Maryjo, Alleluja"
                     wierni="Bo zmartwychwstał prawdziwie, Alleluja"
@@ -424,23 +424,42 @@ function Song({page, setAddmode}){
           <h2>Akt pokutny</h2>
           <div className="alternative">
             <h4>Wybierz jedno:</h4>
-            <div>
-              <p className="ksiadz">Spowiadam się Bogu Wszechmogącemu...</p>
-              <h1>Kyrie</h1>
-              <CzescStala name={kiedy} />
-              <Lyrics raw={
-                `Panie, zmiłuj się nad nami
-                Chryste, zmiłuj się nad nami
-                Panie, zmiłuj się nad nami`
-              } />
+            <div className="alt_group">
+              <h4><strong>Kyrie</strong> zostaje</h4>
+              <div className="alt_option">
+                <p className="ksiadz">Spowiadam się Bogu Wszechmogącemu...</p>
+              </div>
+              <div className="alt_option">
+                <Antyfona
+                  ksiadz="Zmiłuj się nad nami, Panie"
+                  wierni="Bo zgrzeszyliśmy przeciw Tobie"
+                />
+                <Antyfona
+                  ksiadz="Okaż nam, Panie, miłosierdzie swoje"
+                  wierni="I daj nam swoje zbawienie"
+                />
+              </div>
             </div>
-            <div>
-              <Antyfona
-                ksiadz="...Zmiłuj się nad nami"
-                wierni="Zmiłuj się nad nami"
-              />
+            <div className="alt_group">
+              <h4><strong>Kyrie</strong> pominięte</h4>
+              <div className="alt_option">
+                <Antyfona
+                  ksiadz="Panie... ...Zmiłuj się nad nami"
+                  wierni="Zmiłuj się nad nami"
+                />
+              </div>
+              <div className="alt_option">
+                <p><i>Aspersja</i></p>
+              </div>
             </div>
           </div>
+          <h1>Kyrie</h1>
+          <CzescStala name={kiedy} />
+          <Lyrics raw={
+            `Panie, zmiłuj się nad nami
+            Chryste, zmiłuj się nad nami
+            Panie, zmiłuj się nad nami`
+          } />
         </>
       )
     case "Gloria":
@@ -572,25 +591,25 @@ function Song({page, setAddmode}){
           <h1>Przemienienie</h1>
           <div className="alternative">
             <h4>Wybierz jedno:</h4>
-            <div>
+            <div className="alt_option">
               <Antyfona 
               ksiadz="Oto wielka tajemnica wiary"
               wierni="Głosimy śmierć Twoją, Panie Jezu, <br />wyznajemy Twoje zmartwychwstanie <br />i oczekujemy Twego przyjścia w chwale"
               />
             </div>
-            <div>
+            <div className="alt_option">
               <Antyfona 
               ksiadz="Tajemnica wiary"
               wierni="Chrystus umarł, <br />Chrystus zmartwychwstał, <br />Chrystus powróci"
               />
             </div>
-            <div>
+            <div className="alt_option">
               <Antyfona 
               ksiadz="Wielka jest tajemnica naszej wiary"
               wierni="Ile razy ten chleb spożywamy <br />i pijemy z tego kielicha, <br />głosimy śmierć Twoją, Panie, <br />oczekując Twego przyjścia w chwale"
               />
             </div>
-            <div>
+            <div className="alt_option">
               <Antyfona 
               ksiadz="Uwielbiajmy tajemnicę wiary"
               wierni="Panie, Ty nas wybawiłeś <br />przez krzyż i zmartwychwstanie swoje, <br />Ty jesteś zbawicielem świata"
@@ -733,7 +752,7 @@ function SongAdder({setAddmode, wheretoadd}){
   const [filters, setFilters] = React.useState({
     tutaj: true,
     standard: true,
-    niestandard: false,
+    niestandard: (window.a_formula.match(/zwykła/)),
     maryjne: false,
     serce: false
   });

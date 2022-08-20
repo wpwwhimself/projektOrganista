@@ -38,12 +38,14 @@
 					'zwykła', 'zwykła wielkanocna', 'ślubna', 'pogrzebowa', 'majowe', 'czerwcowe',
 					'Adwent', 'Boże Narodzenie', 'Wielki Post', 'Wielkanoc'
 				] as $x){
-				echo "<option value='$x'>$x</option>";
+				echo "<option value='$x'";
+				if(isset($_GET["a_formula"]) && $_GET["a_formula"] === $x) echo " selected";
+				echo ">$x</option>";
 			}
 			?>
 			</select>
 			<h3>Identyfikator mszy</h3>
-			<input type="text" name="a_identyfikator" id="a_identyfikator" required>
+			<input type="text" name="a_identyfikator" id="a_identyfikator" required <?php if(isset($_GET["a_identyfikator"])) echo "value='$_GET[a_identyfikator]'"; ?>>
 
 			<h3>Kolor części stałych</h3>
 			<div class='a_container'>
@@ -57,7 +59,7 @@
 				'złoty (Machura)' => 'gold'
 				] as $label => $code){
 				echo "<input type='radio' name='a_czescistale' id='a_czescistale_$code' value='$code'";
-					if($label == "zielony") echo " checked";
+					if($label == "zielony" || (isset($_GET["a_czescistale"]) && $_GET["a_czescistale"] === $code)) echo " checked";
 				echo ">";
 				echo "<label for='a_czescistale_$code'>$label</label>";
 				}
@@ -94,14 +96,18 @@
 			echo "<div class='a_cell'>";
 			echo "<p><b>$etykieta</b></p>";
 			if($przeklejane){
-				echo "<textarea id='a_$kod' name='a_$kod'></textarea>";
+				echo "<textarea id='a_$kod' name='a_$kod'>";
+				if(isset($_GET["a_$kod"])) echo $_GET["a_$kod"];
+				echo "</textarea>";
 			}else{
 				echo "<select class='songchoose' id='a_$kod' name='a_$kod'>";
 					echo "<option value='' />";
 				foreach($songs as $x){
 					$etykieta = preg_replace("/(.*)\s\d/", "$1", $etykieta);
 					if(preg_match("/$etykieta/", $x['naco']) || $nietypowe){
-						echo "<option value='$x[tytuł]'>$x[tytuł]</option>";
+						echo "<option value='$x[tytuł]'";
+						if(isset($_GET["a_$kod"]) && $_GET["a_$kod"] === $x["tytuł"]) echo " selected";
+						echo ">$x[tytuł]</option>";
 					}
 				}
 				echo "</select>";

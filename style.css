@@ -140,11 +140,21 @@ li.currentpage{ background: #0099ff33; }
 	color: #0099ff;
 }
 
-.alternative{
+.alternative, .alt_group{
 	border: 3px solid gray;
 	border-radius: 15px;
+	margin: 10px;
 }
-.alternative>div{
+.alt_group{
+	position: relative;
+	border-left: none; border-top: none; border-bottom: none;
+	margin-left: 0; margin-top: 0; margin-bottom: 0;
+}
+.alt_group h4{
+	position: absolute;
+	right: 10px; top: 0;
+}
+.alt_option{
 	border-top: 2px dashed gray;
 	display: flex;
 	flex-direction: column;
@@ -159,6 +169,7 @@ img{
 .lyrics{
 	display: flex;
 	flex-direction: column; flex-wrap: wrap;
+	max-height: 100vh;
 }
 .lyrics li{
 	width: fit-content;
@@ -232,4 +243,15 @@ img{
 	flex-direction: row;
 	justify-content: center; align-items: baseline;
 	flex-wrap: wrap;
+}
+/****************/
+
+.backstage-links{
+	/* position: absolute; top: 0; */
+	display: flex;
+	justify-content: space-around;
+}
+.backstage-links a{
+	margin: 10px 30px 30px;
+	display: inline-block;
 }
