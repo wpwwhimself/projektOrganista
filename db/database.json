@@ -590,8 +590,8 @@
         "katsiedlecki": "Pie\u015bni do Serca Jezusowego",
         "nr": "483",
         "tonacja": "G",
-        "naco": "0\/1\/0\/0\/0\/0",
-        "tekst": "1.\nKa\u017cda \u017cyj\u0105ca dusza\nNiech si\u0119 mi\u0142o\u015bci\u0105 wzrusza\nUwielbiaj\u0105c, wychwalaj\u0105c\nSerce Jezusa\n2.\nBo niebo ani ziemia\nNic tak s\u0142odkiego nie ma\nJako Serce Jezusowe\nPe\u0142ne zbawienia\n3.\nDla nas otwarte stoi\nNiech grzesznik si\u0119 nie boi\nNiech \u017ca\u0142uje, pokutuje\nTu rany zgoi\n4.\nW Naj\u015bwi\u0119tszym Sakramencie\nTo Serce uwielbiajcie\nZa te dary serc ofiary\nCh\u0119tnie oddajcie\n5.\nNiech, Jezu, Twe mieszkanie\nW\u015br\u00f3d naszych serc zostanie\nNiechaj dusza ma Jezusa\nNa posilanie\n6.\nPosilaj, Jezu drogi\nRzucam si\u0119 pod Twe nogi\nSerce krusz\u0119, daj\u0105c dusz\u0119\nCz\u0142owiek ubogi\n7.\nGdy zbli\u017cy si\u0119 konanie\nA serce me ustanie\nZ Twej opieki mnie na wieki\nNie wypu\u015b\u0107, Panie"
+        "naco": "0\/1\/1\/0\/0\/0",
+        "tekst": "1.\r\nKa\u017cda \u017cyj\u0105ca dusza\r\nNiech si\u0119 mi\u0142o\u015bci\u0105 wzrusza\r\nUwielbiaj\u0105c, wychwalaj\u0105c\r\nSerce Jezusa\r\n2.\r\nBo niebo ani ziemia\r\nNic tak s\u0142odkiego nie ma\r\nJako Serce Jezusowe\r\nPe\u0142ne zbawienia\r\n3.\r\nDla nas otwarte stoi\r\nNiech grzesznik si\u0119 nie boi\r\nNiech \u017ca\u0142uje, pokutuje\r\nTu rany zgoi\r\n4.\r\nW Naj\u015bwi\u0119tszym Sakramencie\r\nTo Serce uwielbiajcie\r\nZa te dary serc ofiary\r\nCh\u0119tnie oddajcie\r\n5.\r\nNiech, Jezu, Twe mieszkanie\r\nW\u015br\u00f3d naszych serc zostanie\r\nNiechaj dusza ma Jezusa\r\nNa posilanie\r\n6.\r\nPosilaj, Jezu drogi\r\nRzucam si\u0119 pod Twe nogi\r\nSerce krusz\u0119, daj\u0105c dusz\u0119\r\nCz\u0142owiek ubogi\r\n7.\r\nGdy zbli\u017cy si\u0119 konanie\r\nA serce me ustanie\r\nZ Twej opieki mnie na wieki\r\nNie wypu\u015b\u0107, Panie"
     },
     "Kiedy ranne wstaj\u0105 zorze": {
         "tytu\u0142": "Kiedy ranne wstaj\u0105 zorze",
@@ -914,8 +914,8 @@
         "katsiedlecki": "Pie\u015bni przygodne",
         "nr": "778",
         "tonacja": "D",
-        "naco": "0\/0\/1\/0\/0\/0",
-        "tekst": "1.\nOjcze z niebios, Bo\u017ce Panie,\ntu na ziemi\u0119 ze\u015blij nam,\nTwoje \u015bwi\u0119te zmi\u0142owanie,\ntu na ziemi\u0119 ze\u015blij nam.\n2.\nBo\u017ce wielki! My w pokorze\ndo Twych st\u00f3p garniemy si\u0119,\nwola Twoja wszystko mo\u017ce,\nTy nad nami zlituj si\u0119.\n3.\nA przez Syna Twego m\u0119k\u0119\nul\u017cyj ludzkiej doli z\u0142ej.\nKa\u017cd\u0105 \u017cycia skr\u00f3\u0107 udr\u0119k\u0119,\nBo\u017ce wielki, zlituj si\u0119."
+        "naco": "1\/0\/1\/0\/0\/0",
+        "tekst": "1.\r\nOjcze z niebios, Bo\u017ce Panie,\r\ntu na ziemi\u0119 ze\u015blij nam,\r\nTwoje \u015bwi\u0119te zmi\u0142owanie,\r\ntu na ziemi\u0119 ze\u015blij nam.\r\n2.\r\nBo\u017ce wielki! My w pokorze\r\ndo Twych st\u00f3p garniemy si\u0119,\r\nwola Twoja wszystko mo\u017ce,\r\nTy nad nami zlituj si\u0119.\r\n3.\r\nA przez Syna Twego m\u0119k\u0119\r\nul\u017cyj ludzkiej doli z\u0142ej.\r\nKa\u017cd\u0105 \u017cycia skr\u00f3\u0107 udr\u0119k\u0119,\r\nBo\u017ce wielki, zlituj si\u0119."
     },
     "Otoczon gronem \u015bwi\u0119tych": {
         "tytu\u0142": "Otoczon gronem \u015bwi\u0119tych",
@@ -1109,11 +1109,11 @@
     "Schowaj mnie": {
         "tytu\u0142": "Schowaj mnie",
         "klasa": "1",
-        "katsiedlecki": "",
+        "katsiedlecki": null,
         "nr": "1295",
         "tonacja": "B",
-        "naco": "0\/0\/1\/0\/0\/0",
-        "tekst": "1.\nSchowaj mnie pod skrzyd\u0142a Twe\nUkryj mnie w silnej d\u0142oni Swej.\n*\nKiedy fale m\u00f3rz chc\u0105 porwa\u0107 mnie\nZ Tob\u0105 wznios\u0119 si\u0119, podniesiesz mnie\nPanie Kr\u00f3lem Ty\u015b spienionych w\u00f3d\nJa ufam Ci - Ty jeste\u015b B\u00f3g.\n2.\nOdpoczn\u0119 dzi\u015b w ramionach Twych\nDusza ma w Tobie b\u0119dzie trwa\u0107.\n*\nKiedy fale m\u00f3rz chc\u0105 porwa\u0107 mnie\u2026"
+        "naco": "0\/0\/1\/1\/1\/0",
+        "tekst": "1.\r\nSchowaj mnie pod skrzyd\u0142a Twe\r\nUkryj mnie w silnej d\u0142oni Swej.\r\n*\r\nKiedy fale m\u00f3rz chc\u0105 porwa\u0107 mnie\r\nZ Tob\u0105 wznios\u0119 si\u0119, podniesiesz mnie\r\nPanie Kr\u00f3lem Ty\u015b spienionych w\u00f3d\r\nJa ufam Ci - Ty jeste\u015b B\u00f3g.\r\n2.\r\nOdpoczn\u0119 dzi\u015b w ramionach Twych\r\nDusza ma w Tobie b\u0119dzie trwa\u0107.\r\n*\r\nKiedy fale m\u00f3rz chc\u0105 porwa\u0107 mnie\u2026"
     },
     "Serce me do Ciebie wznosz\u0119": {
         "tytu\u0142": "Serce me do Ciebie wznosz\u0119",
