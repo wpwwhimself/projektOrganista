@@ -33,7 +33,10 @@ if(isset($_POST["s_sub"])){
   <meta charset="UTF-8">
   <link rel=stylesheet type='text/css' href='style.css'>
   <title>Edytor pieśni | SzSzSz</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+  <script src="offlinecore/jquery-3.6.1.min.js"></script>
+  
   <script>
 <?php
 /* zebranie pieśni */
