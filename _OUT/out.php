@@ -20,10 +20,10 @@ if(isset($_GET['savehistory'])){
 <body class='kontener'>
 	<div id="main"></div>
 	<div class="backstage-links">
-		<a href="/projektOrganista/process.php?<?php echo parse_url($_SERVER["REQUEST_URI"])["query"]; ?>">
+		<a href="localhost/projektOrganista/process.php?<?php echo parse_url($_SERVER["REQUEST_URI"])["query"]; ?>">
 			<h3>Procesuj ponownie</h3>
 		</a>
-		<a href="/projektOrganista/?<?php echo parse_url($_SERVER["REQUEST_URI"])["query"]; ?>">
+		<a href="localhost/projektOrganista/?<?php echo parse_url($_SERVER["REQUEST_URI"])["query"]; ?>">
 			<h3>Modyfikuj</h3>
 		</a>
 	</div>
