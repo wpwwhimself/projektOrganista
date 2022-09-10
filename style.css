@@ -61,6 +61,11 @@ hr{
 	border-radius: 10px;
 }
 
+.sticky{
+	position: sticky; top: 0;
+	background-color: white;
+}
+
 /******* NAGŁÓWKI ********/
 h1, .titleselect{	
 	color: #09f; text-shadow: 2px 2px 6px #000000aa;

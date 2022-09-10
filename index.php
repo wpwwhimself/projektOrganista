@@ -116,7 +116,7 @@
 		}
 		?>
 
-		<div class="framed">
+		<div class="framed sticky">
 			<h2>Co było ostatnio?</h2>
 			<?php $history = json_decode(file_get_contents("songhistory.json"), true); ?>
 			<table id="songhistory">
