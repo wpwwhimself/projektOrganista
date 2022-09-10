@@ -54,11 +54,16 @@ hr{
 #songhistory td, #songhistory th{
 	text-align: center;
 	max-width: 12vw;
+	border-radius: 10px;
 }
 #songhistory th{
 	background-color: #666;
 	color: white;
-	border-radius: 10px;
+}
+.duplicate{
+	color: white;
+	background-color: red;
+	transition-duration: 0.3s;
 }
 
 .sticky{

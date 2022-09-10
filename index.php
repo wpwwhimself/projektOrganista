@@ -8,8 +8,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
+			//check for repeated use of song
 			$(".songchoose").change(function(){
-				let id = $(this).attr("id");
+				// let current_id = $(this).attr("id").substring(2);
 				const ids = [
 					"piesn_wejscie",
 					"piesn_dary",
@@ -20,8 +21,14 @@
 					"piesn_zakonczenie"
 				]
 				for(id of ids){
-					$("h_"+id).css("color", ($(this).val() == $("#h_"+id).text()) ? "red" : "inherit");
+					if($(this).val() == $("#h_"+id).text()){
+						$("#h_"+id).addClass("duplicate");
+					}else{
+						$("#h_"+id).removeClass("duplicate");
+					}
 				}
+
+				console.log(`${$(this).val()}`);
 			})
 		});
 	</script>
