@@ -67,7 +67,9 @@ $songlist = [
   "Kyrie" => "czst",
   "Przed Gloria" => $_GET["a_piesn_przedgloria"],
   "Gloria" => (in_array($_GET["a_formula"], ["Adwent", "Wielki Post"])) ? "" : "czst",
+  "1. czytanie" => "czst",
   "Psalm" => $_GET["a_psalm"],
+  "2. czytanie" => "czst",
   "Sekwencja wielkanocna" => (in_array($_GET["a_formula"], ["Wielkanoc", "zwykła wielkanocna"])) ? "Niech w święto radosne" : "",
   "Aklamacja" => $_GET["a_aklamacja"],
   "Credo" => ($_GET['a_formula'] == "ślubna") ? "" : "czst",
@@ -465,6 +467,13 @@ function Song({page, setAddmode}){
     case "Gloria":
       return(
         <>
+          <div className="eraserButton buttoncase abs_left">
+            <a className="button e_first">–</a>
+            <a className="button e_second" onClick={() => {
+              window.songlist.splice(page - 1, 1);
+              setAddmode(-1);
+            }}>&#x2713;</a>
+          </div>
           <h1>Gloria</h1>
           <CzescStala name={kiedy} />
           <Lyrics raw={
@@ -482,14 +491,30 @@ function Song({page, setAddmode}){
             Albowiem tylko Tyś jest święty • Tylko Tyś jest Panem
             Tylko Tyś najwyższy • Jezu Chryste
             Z Duchem Świętym, w chwale Boga Ojca, amen`
-          } />
-          <p>
-            
-          </p>
+          } />         
+        </>
+      )
+    case "1. czytanie":
+      return(
+        <>
           <Antyfona
             ksiadz="Módlmy się..."
             wierni="Amen"
           />
+          <h1>{kiedy}</h1>
+        </>
+      )
+    case "2. czytanie":
+      return(
+        <>
+          <div className="eraserButton buttoncase abs_left">
+            <a className="button e_first">–</a>
+            <a className="button e_second" onClick={() => {
+              window.songlist.splice(page - 1, 1);
+              setAddmode(-1);
+            }}>&#x2713;</a>
+          </div>
+          <h1>{kiedy}</h1>
         </>
       )
     case "Credo":
