@@ -749,6 +749,8 @@ function Song({page, setAddmode}){
         preferencje.join(" • ")
       ].join(" • ");
 
+      if(window.piesni[title]["nuty"])
+
       return(
         <>
           <div className="buttoncase abs_right">
@@ -766,7 +768,14 @@ function Song({page, setAddmode}){
           <h2>{kiedy}</h2>
           <h1>{title.toUpperCase()}</h1>
           <h4>{dane}</h4>
-          <img src={"../nuty/"+title+".png"} />
+          {
+            window.piesni[title]["nuty"] ?
+            <Abcjs
+              abcNotation={window.piesni[title]["nuty"]}
+              engraverParams={{ responsive: 'resize' }}
+              /> :
+            <img src={"../nuty/"+title+".png"} />
+          }
           <Lyrics raw={window.piesni[title]['tekst']} />
         </>
       )
@@ -903,6 +912,41 @@ function TitlePage({color}){
       </h4>
     </div>
   );
+}
+
+/* POŻYCZONE */
+
+class Abcjs extends React.PureComponent {
+  // lifted from https://github.com/rigobauer/react-abcjs //
+  uniqueNumber = Date.now() + Math.random()
+
+  renderAbcNotation(abcNotation, parserParams, engraverParams, renderParams) {
+    const res = ABCJS.renderAbc(
+      'abcjs-result-' + this.uniqueNumber,
+      abcNotation,
+      parserParams,
+      engraverParams,
+      renderParams
+    )
+  }
+
+  componentDidMount() {
+    const { abcNotation, parserParams, engraverParams, renderParams } = this.props
+    this.renderAbcNotation(abcNotation, parserParams, engraverParams, renderParams)
+  }
+
+  componentDidUpdate() {
+    const { abcNotation, parserParams, engraverParams, renderParams } = this.props
+    this.renderAbcNotation(abcNotation, parserParams, engraverParams, renderParams)
+  }
+
+  render() {
+    return (
+      <div style={{ width: '100%' }}>
+        <div id={'abcjs-result-' + this.uniqueNumber} style={{ width: '100%' }} />
+      </div>
+    )
+  }
 }
     
 const root = ReactDOM.createRoot(document.getElementById("main"));

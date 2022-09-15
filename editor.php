@@ -18,10 +18,11 @@ if(isset($_POST["s_sub"])){
       nr = $_POST[s_nr],
       tonacja = $_POST[s_tonacja],
       naco = $_POST[s_naco],
-      tekst = $_POST[s_tekst]
+      tekst = $_POST[s_tekst],
+      nuty = $_POST[s_nuty],
       WHERE tytuł LIKE $_POST[s_tytul]" : 
     "INSERT INTO pieśni VALUES
-      ($_POST[s_tytul], $_POST[s_klasa], $_POST[s_katsiedlecki], $_POST[s_nr], $_POST[s_tonacja], $_POST[s_naco], $_POST[s_tekst])";
+      ($_POST[s_tytul], $_POST[s_klasa], $_POST[s_katsiedlecki], $_POST[s_nr], $_POST[s_tonacja], $_POST[s_naco], $_POST[s_tekst], $_POST[s_nuty])";
   $r = $conn->query($q) or die($conn->error);
   $heraldic_text = ($flag_edit) ? "Pieśń zmodyfikowana" : "Pieśń dodana";
 }
@@ -36,7 +37,7 @@ if(isset($_POST["s_sub"])){
 
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
   <script src="offlinecore/jquery-3.6.1.min.js"></script>
-  
+  <script src="offlinecore/abcjs-basic-min.js"></script>
   <script>
 <?php
 /* zebranie pieśni */
@@ -65,12 +66,17 @@ $(document).ready(function(){
       $(`input[name=\"s_${detail}\"]`).val(songs[$(this).val()][detail]);
     }
     $("textarea[name=\"s_tekst\"]").text(songs[$(this).val()].tekst);
+    $("textarea[name=\"s_nuty\"]").text(songs[$(this).val()].nuty);
     $("input[type=\"submit\"]").attr("value", "Edytuj");
     $("h2").hide();
   });
   /* nadzorowanie edycji kontra dodawaniu */
   $("input[name=\"s_tytul\"]").change(function(){
     $("input[type=\"submit\"]").attr("value", (Object.keys(songs).includes($(this).val())) ? "Edytuj" : "Dodaj");
+  });
+  /* aktualizacja nut */
+  $("textarea[name=\"s_nuty\"], select[name=\"s_name\"]").keyup(function(){
+    ABCJS.renderAbc("nuty-preview", $("textarea[name=\"s_nuty\"]").val());
   });
 });
   </script>
@@ -95,7 +101,7 @@ $(document).ready(function(){
     function s_detail_field(string $display, string $name){
       echo "<div class='a_cell'>";
       echo "<p>$display</p>";
-      echo ($name == "s_tekst") ?
+      echo (in_array($name, ["s_tekst", "s_nuty"])) ?
         "<textarea name=\"$name\"></textarea>" :
         "<input type=\"text\" name=\"$name\" />";
       echo "</div>";
@@ -128,8 +134,10 @@ $(document).ready(function(){
       <div class="a_container">
       <?php
       s_detail_field("Tekst", "s_tekst");
+      s_detail_field("Nuty", "s_nuty");
       ?>
       </div>
+      <div class="a_cell" id="nuty-preview"></div>
     </div>
     <div class="a_cell">
       <input type="submit" name="s_sub" value="Edytuj" />

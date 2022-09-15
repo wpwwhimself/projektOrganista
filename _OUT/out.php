@@ -13,6 +13,7 @@ if(isset($_GET['savehistory'])){
 		<script><?php require("../offlinecore/react.development.js"); ?></script>
 		<script><?php require("../offlinecore/react-dom.development.js"); ?></script>
 		<script><?php require("../offlinecore/babel.min.js"); ?></script>
+		<script><?php require("../offlinecore/abcjs-basic-min.js"); ?></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="UTF-8">
 		<style><?php require("../style.css"); ?></style>
