@@ -1,4 +1,9 @@
 <?php
+/* wpięcie do bazy */
+$conn = new mysqli("localhost", "root", "", "szszsz");
+if($conn->connect_error) echo "Nie można połączyć się z bazą: ".$conn->connect_error;
+$conn->set_charset("utf8");
+
 /* zapisz poprzednie */
 if(isset($_GET['savehistory'])){
 	file_put_contents('songhistory.json', json_encode($_GET, JSON_PRETTY_PRINT));
@@ -16,17 +21,18 @@ $nacos_target = [
 	"a_piesn_zakonczenie" => "/^(.\/.\/.\/.\/)0()/"
 ];
 foreach($nacos_target as $key => $val){
-	if(!isset($_GET[$val])) continue;
-	$songs_to_update[$key] = $_GET[$key];
+	if($_GET[$key] != "") $songs_to_update[$key] = $_GET[$key];
 }
-$q = "SELECT tytuł, naco FROM pieśni WHERE tytuł IN (".implode(", ", $songs_to_update).")";
+$q = "SELECT tytuł, naco FROM pieśni WHERE tytuł IN (".implode(", ", array_map(function($val) {return "\"$val\""; }, $songs_to_update)).")";
 $r = $conn->query($q) or die($conn->error);
 while($a = $r->fetch_assoc()){ $nacos_to_update[$a['tytuł']] = $a['naco']; }
 $r->free_result();
 foreach($songs_to_update as $position => $title){
-	$q = "UPDATE pieśni SET naco = \"".str_replace($nacos_target[$position], "$11$2", $nacos_to_update[$title])."\" WHERE tytuł = \"$title\"";
-	$r = $conn->query($q) or die($conn->error);
-	$r->free_result();
+	if(preg_match($nacos_target[$position], $nacos_to_update[$title]) === 1){
+		$q = "UPDATE pieśni SET naco = \"".preg_replace($nacos_target[$position], "\${1}1\${2}", $nacos_to_update[$title])."\" WHERE tytuł = \"$title\"";
+		$r = $conn->query($q) or die($conn->error);
+		$replaced[] = $title;
+	}
 }
 
 //funkcja do zapisywania pliku
@@ -40,3 +46,6 @@ fclose($file);
 ?>
 <h2>Plik gotowy!</h2>
 <a href="_OUT/<?php echo $filename; ?>.html" target="_blank">Otwórz</a>
+<?php if(isset($replaced)): ?>
+<h3>Poprawiono "naco" w pieśniach: <?= implode(", ", $replaced) ?></h3>
+<?php endif; ?>

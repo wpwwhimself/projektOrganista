@@ -117,9 +117,9 @@
 						if(!preg_match("/$etykieta/", $x['naco'])) $add_naco = " [".substr($etykieta, 0, 1)."]";
 					}
 
-					echo "<option value='$x[tytuł]$add_naco'";
+					echo "<option value='$x[tytuł]'";
 					if(isset($_GET["a_$kod"]) && $_GET["a_$kod"] === $x["tytuł"]) echo " selected";
-					echo ">$x[tytuł]</option>";
+					echo ">$x[tytuł]$add_naco</option>";
 				}
 				echo "</select>";
 			}
@@ -204,7 +204,7 @@
 		<div>
 			<script>
 			$("select.songchoose").change(function(){
-				$(this).css("background", ($(this).val().match(/\[[A-Z]{1}\]/)) ? "gold" : "none"); 
+				$(this).css("background", ($("select.songchoose option:selected").text().match(/\[[A-Z]{1}\]/)) ? "gold" : "none"); 
 			});
 
 			const history = <?php include("songhistory.json"); ?>;
