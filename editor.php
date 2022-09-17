@@ -7,9 +7,16 @@ $conn->set_charset("utf8");
 if(isset($_POST["s_sub"])){
   foreach($_POST as $key => $val){
     if(in_array($key, ["s_sub", "s_klasa"])) continue;
-    $_POST[$key] = ($val == "") ? "null" : "\"$val\"";
+    $_POST[$key] = ($val == "") ? "null" :
+      "\"".
+      str_replace("\"", "\\\"", 
+      str_replace("\\", "\\\\", 
+      $val)).
+      "\"";
   }
   $flag_edit = ($_POST["s_sub"] == "Edytuj");
+
+  die($_POST['s_nuty']);
 
   $q = ($flag_edit) ?
     "UPDATE pieśni SET
@@ -19,7 +26,7 @@ if(isset($_POST["s_sub"])){
       tonacja = $_POST[s_tonacja],
       naco = $_POST[s_naco],
       tekst = $_POST[s_tekst],
-      nuty = $_POST[s_nuty],
+      nuty = $_POST[s_nuty]
       WHERE tytuł LIKE $_POST[s_tytul]" : 
     "INSERT INTO pieśni VALUES
       ($_POST[s_tytul], $_POST[s_klasa], $_POST[s_katsiedlecki], $_POST[s_nr], $_POST[s_tonacja], $_POST[s_naco], $_POST[s_tekst], $_POST[s_nuty])";
@@ -58,33 +65,49 @@ $r->free_result();
 const songs = <?php echo json_encode($songs); ?>;
 
 $(document).ready(function(){
-  /* wypełnianie pól danymi */
-  $("select[name=\"s_name\"]").change(function(){
-    $("input[name=\"s_tytul\"]").val($(this).val());
-    $("select[name=\"s_klasa\"]").val(songs[$(this).val()].klasa);
-    for(detail of ["katsiedlecki", "nr", "tonacja", "naco"]){
-      $(`input[name=\"s_${detail}\"]`).val(songs[$(this).val()][detail]);
-    }
-    $("textarea[name=\"s_tekst\"]").text(songs[$(this).val()].tekst);
-    $("textarea[name=\"s_nuty\"]").text(songs[$(this).val()].nuty);
-    $("input[type=\"submit\"]").attr("value", "Edytuj");
+  /* auto-hide h2 */
+    setTimeout(() => {
     $("h2").hide();
-  });
+  }, 2000);
+  /* wypełnianie pól danymi */
+  function data_fill(title){
+    $("input[name=\"s_tytul\"]").val(title);
+    $("select[name=\"s_klasa\"]").val(songs[title].klasa);
+    for(detail of ["katsiedlecki", "nr", "tonacja", "naco"]){
+      $(`input[name=\"s_${detail}\"]`).val(songs[title][detail]);
+    }
+    $("textarea[name=\"s_tekst\"]").text(songs[title].tekst);
+    $("textarea[name=\"s_nuty\"]").text(songs[title].nuty);
+    $("input[type=\"submit\"]").attr("value", "Edytuj");
+    notes_render();
+  }
+  function notes_render(){
+    ABCJS.renderAbc(
+      "nuty-preview",
+      $("textarea[name=\"s_nuty\"]").val(),
+      { responsive: "resize" }
+    );
+  }
+
+  $("select[name=\"s_name\"]").change(x => {data_fill(x.target.value)});
   /* nadzorowanie edycji kontra dodawaniu */
   $("input[name=\"s_tytul\"]").change(function(){
     $("input[type=\"submit\"]").attr("value", (Object.keys(songs).includes($(this).val())) ? "Edytuj" : "Dodaj");
   });
   /* aktualizacja nut */
-  $("textarea[name=\"s_nuty\"], select[name=\"s_name\"]").keyup(function(){
-    ABCJS.renderAbc("nuty-preview", $("textarea[name=\"s_nuty\"]").val());
-  });
+  $("textarea[name=\"s_nuty\"], select[name=\"s_name\"]").keyup(() => {notes_render()});
+  /* od razu wyświetl po submicie */
+  <?php if(isset($heraldic_text)): ?>
+  $("select[name=\"s_name\"]").val(<?= $_POST['s_tytul'] ?>);
+  data_fill(<?= $_POST['s_tytul'] ?>); notes_render();
+  <?php endif; ?>
 });
   </script>
 </head>
 <body>
   <form method="post">
     <h1>Edycja pieśni</h1>
-    <?php if(isset($heraldic_text)) echo "<h2>Zapisano</h2>"; ?>
+    <?php if(isset($heraldic_text)) echo "<h2>$heraldic_text</h2>"; ?>
     <div class="a_cell">
       <select name="s_name" autofocus>
         <option value="">--wybierz pieśń albo zacznij pisać--</option>

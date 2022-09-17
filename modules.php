@@ -6,6 +6,14 @@ $conn->set_charset("utf8");
 <script type="text/babel">
 
 let piesni = [];
+let czst = {
+  green: {kyrie: ``, gloria: ``, psalm: ``, aklamacja: ``, sanctus: ``, agnusdei: ``},
+  white: {kyrie: ``, gloria: ``, psalm: ``, aklamacja: ``, sanctus: ``, agnusdei: ``},
+  purple: {kyrie: ``, gloria: ``, psalm: ``, aklamacja: ``, sanctus: ``, agnusdei: ``},
+  red: {kyrie: ``, gloria: ``, psalm: ``, aklamacja: ``, sanctus: ``, agnusdei: ``},
+  blue: {kyrie: ``, gloria: ``, psalm: ``, aklamacja: ``, sanctus: ``, agnusdei: ``},
+  gold: {kyrie: ``, gloria: ``, psalm: ``, aklamacja: ``, sanctus: ``, agnusdei: ``}
+};
 var okazja = 0;
 
 <?php
@@ -21,9 +29,9 @@ switch($_GET['a_formula']){
   default: $inneokazje = "";
 }
 
-if($inneokazje != ""){ ?>
+if($inneokazje != ""): ?>
 okazja = <?php echo substr($inneokazje, -1); ?>;
-<?php }
+<?php endif;
 
 /* kwerenda wszystkich pieśni */
 
@@ -42,6 +50,17 @@ piesni["<?php echo $a['tytuł']; ?>"] = <?php echo json_encode($a); ?>
 $r->free_result();
 
 file_put_contents("../db/database.json", json_encode($piesni, JSON_PRETTY_PRINT));
+
+/* kwerenda części stałych */
+
+$q = "SELECT * FROM części_stałe";
+$r = $conn->query($q) or die($q.$conn->error);
+while($a = $r->fetch_assoc()){
+  $czst[$a['kolor']][$a['part']] = $a['nuty'];
+  ?>
+czst["<?= $a['kolor'] ?>"]["<?= $a['part'] ?>"] = `<?= $a['nuty'] ?>`;
+<?php
+}
 ?>
 
 
@@ -118,10 +137,35 @@ function Antyfona(props){
 function CzescStala({name}){
   const color = React.useContext(ColorContext);
 
+  // if(name == "post_aklamacja"){
+  //   return <img className="czescstala" src={"../nuty/czescistale/"+name.toLowerCase().replace(/\s/g, "")+".png"} />;
+  // }else{
+  //   return <img className="czescstala" src={"../nuty/czescistale/"+color+"_"+name.toLowerCase().replace(/\s/g, "")+".png"} />;
+  // }
+  
   if(name == "post_aklamacja"){
-    return <img className="czescstala" src={"../nuty/czescistale/"+name.toLowerCase().replace(/\s/g, "")+".png"} />;
+    return <Abcjs
+              abcNotation={`K:D
+L:1/4
+"^555a"\
+F (E/D/) GF | A(F/D/)ED !fine!|| F4 B/A/FF | D4E/D/E/FF !D.C.! |]
+%%%%%%%%%%%
+K:Dm
+L:1/8
+"^555b"\
+FF(GA)G2|(FG)(FE)D2D2 !fine! || F8 EFG2G2 | F8GFE2D2 !D.C.! |]
+%%%%%%%%%%%%%
+K:Eb
+L:1/8
+"^555c"\
+BB (GF) D2 | FGE2E2 !fine! || G8 AGF2G2 | G8 FEF2E2 !D.C.! |]`}
+              engraverParams={{ responsive: 'resize' }}
+              />;
   }else{
-    return <img className="czescstala" src={"../nuty/czescistale/"+color+"_"+name.toLowerCase().replace(/\s/g, "")+".png"} />;
+    return <Abcjs
+              abcNotation={window.czst[color][name.toLowerCase().replace(/\s/g, "")]}
+              engraverParams={{ responsive: 'resize' }}
+              />
   }
 }
 
@@ -189,7 +233,7 @@ function RightSide(props) {
           ["niebieski (Pawlak)", "blue"],
           ["złoty (Machura)", "gold"]
         ].map(thing => {
-          return <option key={thing[1]} value={thing[1]}>{thing[0]}</option>
+          return <option key={thing[1]} style={{backgroundColor: thing[1]}} value={thing[1]}>{thing[0]}</option>
         })}
         </select>
       </div>
@@ -749,8 +793,6 @@ function Song({page, setAddmode}){
         preferencje.join(" • ")
       ].join(" • ");
 
-      if(window.piesni[title]["nuty"])
-
       return(
         <>
           <div className="buttoncase abs_right">
@@ -769,12 +811,11 @@ function Song({page, setAddmode}){
           <h1>{title.toUpperCase()}</h1>
           <h4>{dane}</h4>
           {
-            window.piesni[title]["nuty"] ?
+            window.piesni[title]["nuty"] !== null &&
             <Abcjs
               abcNotation={window.piesni[title]["nuty"]}
               engraverParams={{ responsive: 'resize' }}
-              /> :
-            <img src={"../nuty/"+title+".png"} />
+              />
           }
           <Lyrics raw={window.piesni[title]['tekst']} />
         </>

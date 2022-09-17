@@ -27,9 +27,7 @@
 						$("#h_"+id).removeClass("duplicate");
 					}
 				}
-
-				console.log(`${$(this).val()}`);
-			})
+			});
 		});
 	</script>
 </head>
@@ -73,6 +71,7 @@
 				}
 			?>
 			</div>
+			<a href="czst_editor.php">Edycja części stałych</a>
 		</div>
 
 		<h1>Pieśni</h1>
@@ -111,12 +110,16 @@
 				echo "<select class='songchoose' id='a_$kod' name='a_$kod'>";
 					echo "<option value='' />";
 				foreach($songs as $x){
-					$etykieta = preg_replace("/(.*)\s\d/", "$1", $etykieta);
-					if(preg_match("/$etykieta/", $x['naco']) || $nietypowe){
-						echo "<option value='$x[tytuł]'";
-						if(isset($_GET["a_$kod"]) && $_GET["a_$kod"] === $x["tytuł"]) echo " selected";
-						echo ">$x[tytuł]</option>";
+					// jeśli pieśń nie ma odpowiedniego naco, to doda się ono samo po submicie
+					$add_naco = "";
+					if(!in_array($etykieta, ["Przed gloria", "Przed mszą"])){
+						$etykieta = preg_replace("/(.*)\s\d/", "$1", $etykieta);
+						if(!preg_match("/$etykieta/", $x['naco'])) $add_naco = " [".substr($etykieta, 0, 1)."]";
 					}
+
+					echo "<option value='$x[tytuł]$add_naco'";
+					if(isset($_GET["a_$kod"]) && $_GET["a_$kod"] === $x["tytuł"]) echo " selected";
+					echo ">$x[tytuł]</option>";
 				}
 				echo "</select>";
 			}
@@ -152,8 +155,6 @@
 				</tr>
 			</table>
 			<div class="a_container">
-				<!-- <input type="submit" name="sub" value="Wyświetl ostatni" onclick="formshow();return true;">
-				<input type="submit" name="sub" value="Procesuj ostatni" onclick="formproc();return true;"> -->
 				<input type="button" value="Skopiuj" onclick="copyhistory()" />
 			</div>
 		</div>
@@ -202,6 +203,10 @@
 			
 		<div>
 			<script>
+			$("select.songchoose").change(function(){
+				$(this).css("background", ($(this).val().match(/\[[A-Z]{1}\]/)) ? "gold" : "none"); 
+			});
+
 			const history = <?php include("songhistory.json"); ?>;
 
 			function formshow() {
@@ -229,6 +234,7 @@
 					}
 				}
 				document.querySelector("#savehistory").checked = false;
+				$("select.songchoose").css("background", "none");
 			}
 
 			</script>

@@ -1,14 +1,4 @@
 {
-    "A wczora z wieczora": {
-        "tytu\u0142": "A wczora z wieczora",
-        "klasa": "6",
-        "katsiedlecki": "Pie\u015bni na Bo\u017ce Narodzenie",
-        "nr": "4",
-        "tonacja": "D",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\r\nA wczora z wieczora * z niebieskiego dwora,\r\nPrzysz\u0142a nam nowina, * Panna rodzi Syna,\r\n2.\r\nBoga prawdziwego, * nieogarnionego,\r\nZa wyrokiem Boskim, * w Betlejem \u017cydowskim,\r\n3.\r\nPastuszkowie mali, * w polu wtenczas spali,\r\nGdy anio\u0142 z p\u00f3\u0142nocy, * \u015bwiat\u0142o\u015b\u0107 z nieba toczy,\r\n4.\r\nChwa\u0142\u0119 oznajmuj\u0105c, * szop\u0119 pokazuj\u0105c,\r\nChwa\u0142\u0119 Boga tego, * dzi\u015b tam zrodzonego,\r\n5.\r\n\u201eTam Panna Dzieci\u0105tko, * mi\u0142e Niemowl\u0105tko,\r\nUwija w pieluszki, * Po\u015bpieszcie pastuszki,\r\n6.\r\nNatychmiast pastuszy, * \u015bpiesz\u0105 z ca\u0142ej duszy,\r\nWeseli bez miary, * nios\u0105 z sob\u0105 dary,",
-        "nuty": "X:1\nM:2\/4\nL:1\/4\nK:D\n\"D5\" FF | G\/F\/E | D2 |\\\n\"D\" AA | \"h\" B\/A\/G\/F\/ | \"e7\" GB | \"A\" A\/G\/F\/E\/ |\\\n\"D\" F \"h\" A | \"G\" G\/F\/ \"A\" E | \"D\"D2 !D.C.! |]"
-    },
     "Abba Ojcze": {
         "tytu\u0142": "Abba Ojcze",
         "klasa": "1",
@@ -17,36 +7,6 @@
         "tonacja": "B",
         "naco": "0\/0\/1\/0\/1\/0",
         "tekst": "1.\nTy wyzwoli\u0142e\u015b nas Panie\nZ kajdan i samych siebie\nA Chrystus staj\u0105c si\u0119 bratem\nNauczy\u0142 nas wo\u0142a\u0107 do Ciebie:\n*\nAbba Ojcze!\nAbba Ojcze!\nAbba Ojcze!\nAbba Ojcze!\n2.\nBo Ko\u015bci\u00f3\u0142 jak drzewo \u017cycia\nW wieczno\u015bci zapuszcza korzenie\nPrzenika nasz\u0105 codzienno\u015b\u0107\nI pokazuje nam Ciebie\n*\nAbba Ojcze...\n3.\nB\u00f3g hojnym Dawc\u0105 jest \u017cycia\nOn wyswobodzi\u0142 nas od \u015bmierci\nI przygarniaj\u0105c do siebie\nUczyni\u0142 swoimi dzie\u0107mi.\n*\nAbba Ojcze...\n4.\nWszyscy jeste\u015bmy bra\u0107mi\nJeste\u015bmy jedn\u0105 rodzin\u0105.\nTej prawdy nic ju\u017c nie za\u0107mi\nI teraz jest jej godzina.\n*\nAbba Ojcze...",
-        "nuty": null
-    },
-    "Ach ubogi \u017c\u0142obie": {
-        "tytu\u0142": "Ach ubogi \u017c\u0142obie",
-        "klasa": "6",
-        "katsiedlecki": "Pie\u015bni na Bo\u017ce Narodzenie",
-        "nr": "9",
-        "tonacja": "E",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nAch, ubogi \u017c\u0142obie, * c\u00f3\u017c ja widz\u0119 w tobie?\n= Dro\u017cszy widok ni\u017c ma niebo, * w male\u0144kiej osobie.\n2.\nZbawicielu drogi, * tak\u017ce\u015b to ubogi!\n= Opu\u015bci\u0142e\u015b \u015bliczne niebo, * obra\u0142e\u015b bar\u0142ogi.\n3.\nCzy\u017ce\u015b nie m\u00f3g\u0142 sobie * w najwi\u0119kszej ozdobie\n= obra\u0107 pa\u0142acu drogiego, * nie w tym le\u017ce\u0107 \u017c\u0142obie?\n4.\nGdy na \u015bwiat przybywasz, * grzechy z niego zmywasz.\n= A na zmycie naszych z\u0142o\u015bci, * gorzkie \u0142zy wylewasz.\n5.\nNa twarz upadamy, * czo\u0142em uderzamy,\n= witaj\u0105c Ci\u0119 w tej stajence * mi\u0119dzy bydl\u0119tami.\n6.\nZmi\u0142uj si\u0119 nad nami, * obmyj z grzech\u00f3w \u0142zami.\n= Przyjmij serca te skruszone, * kt\u00f3re Ci sk\u0142adamy",
-        "nuty": null
-    },
-    "Adeste fideles": {
-        "tytu\u0142": "Adeste fideles",
-        "klasa": "6",
-        "katsiedlecki": "Pie\u015bni na Bo\u017ce Narodzenie",
-        "nr": "896",
-        "tonacja": "Es",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nPrzyb\u0105d\u017acie tu z wiar\u0105 i rado\u015bci\u0105 wielk\u0105,\nprzyb\u0105d\u017acie, przyb\u0105d\u017acie do Betlejem\nOto Dzieci\u0105tko z Bo\u017c\u0105 Rodzicielk\u0105!\n*\nPok\u0142o\u0144my si\u0119 Kr\u00f3lowi,\nKr\u00f3lowi anielskiemu,\ndzi\u015b nam narodzonemu,\npok\u0142o\u0144my si\u0119.\n2.\nPasterze przybiegli, zostawiwszy trzody,\npokornie przed \u017c\u0142\u00f3bkiem stan\u0119li wraz\n\u015apieszmy za nimi, po\u015bpieszcie, narody!\n*\nPok\u0142o\u0144my si\u0119 Kr\u00f3lowi\u2026\n3.\nBlask wiecznej \u015bwiat\u0142o\u015bci Ojca przedwiecznego,\nw male\u0144kim Dzieci\u0105tku jawi si\u0119 nam.\nBoga uczcijmy w \u017c\u0142obie z\u0142o\u017conego!\n*\nPok\u0142o\u0144my si\u0119 Kr\u00f3lowi\u2026\n4.\nB\u00f3g dla nas le\u017c\u0105cy na ubogim sianie\ntak s\u0142odko przemawia do naszych serc\nWidz\u0105c t\u0119 mi\u0142o\u015b\u0107, kt\u00f3\u017c zimnym zostanie?\n*\nPok\u0142o\u0144my si\u0119 Kr\u00f3lowi\u2026",
-        "nuty": null
-    },
-    "Anio\u0142 pasterzom": {
-        "tytu\u0142": "Anio\u0142 pasterzom",
-        "klasa": "6",
-        "katsiedlecki": "Pie\u015bni na Bo\u017ce Narodzenie",
-        "nr": "42",
-        "tonacja": "C",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\r\nAnio\u0142 pasterzom m\u00f3wi\u0142: * \u201eChrystus si\u0119 wam narodzi\u0142\r\nw Betlejem, nie bardzo s\u0142awnym mie\u015bcie, * narodzi\u0142 si\u0119 w ub\u00f3stwie * Pan wszego stworzenia\u201d.\r\n2.\r\nChc\u0105c si\u0119 dowiedzie\u0107 tego * poselstwa weso\u0142ego,\r\nbie\u017celi do Betlejem skwapliwie, * znale\u017ali Dzieci\u0119 w \u017c\u0142obie, * Maryj\u0119 z J\u00f3zefem.\r\n3.\r\nTaki Pan chwa\u0142y wielkiej * uni\u017cy\u0142 si\u0119 Wysoki;\r\npa\u0142acu kosztownego \u017cadnego * nie mia\u0142 zbudowanego, * Pan wszego stworzenia!\r\n4.\r\nO, dziwne narodzenie, * nigdy nie wys\u0142awione:\r\npocz\u0119\u0142a Panna Syna w czysto\u015bci, * porodzi\u0142a w ca\u0142o\u015bci * panie\u0144stwa swojego.",
         "nuty": null
     },
     "Barka": {
@@ -85,9 +45,9 @@
         "katsiedlecki": "Pie\u015bni przygodne",
         "nr": "69",
         "tonacja": "d",
-        "naco": "1\/0\/0\/0\/0\/0",
-        "tekst": "1.\nB\u0119d\u0119 Ci\u0119 wielbi\u0142, m\u00f3j Panie\nP\u00f3ki mnie na \u015bwiecie stanie\nBo\u015b mnie w przygodzie ratowa\u0142\nI \u015bmiech\u00f3w ludzkich uchowa\u0142\n2.\nPanie, wo\u0142a\u0142em ku Tobie\nA Ty\u015b mnie wspar\u0142 w mej chorobie\nDoda\u0142e\u015b mi swej pomocy\n\u017bem wiecznej nie ujrza\u0142 nocy\n3.\nU\u017cy\u0142e\u015b zwyk\u0142ej lito\u015bci\nP\u0142acz obr\u00f3ci\u0142e\u015b w rado\u015bci\nW\u00f3r ze mnie zdj\u0105\u0142e\u015b \u017ca\u0142obny\nA p\u0142aszcz w\u0142o\u017cy\u0142e\u015b ozdobny\n4.\nPrzeto Ci\u0119 weso\u0142a wsz\u0119dzie\nLutnia ma uwielbia\u0107 b\u0119dzie\nTwa chwa\u0142a, o wieczny Panie\nW mych ustach ju\u017c nie ustanie",
-        "nuty": null
+        "naco": "1\/0\/0\/1\/0\/0",
+        "tekst": "1.\r\nB\u0119d\u0119 Ci\u0119 wielbi\u0142, m\u00f3j Panie\r\nP\u00f3ki mnie na \u015bwiecie stanie\r\nBo\u015b mnie w przygodzie ratowa\u0142\r\nI \u015bmiech\u00f3w ludzkich uchowa\u0142\r\n2.\r\nPanie, wo\u0142a\u0142em ku Tobie\r\nA Ty\u015b mnie wspar\u0142 w mej chorobie\r\nDoda\u0142e\u015b mi swej pomocy\r\n\u017bem wiecznej nie ujrza\u0142 nocy\r\n3.\r\nU\u017cy\u0142e\u015b zwyk\u0142ej lito\u015bci\r\nP\u0142acz obr\u00f3ci\u0142e\u015b w rado\u015bci\r\nW\u00f3r ze mnie zdj\u0105\u0142e\u015b \u017ca\u0142obny\r\nA p\u0142aszcz w\u0142o\u017cy\u0142e\u015b ozdobny\r\n4.\r\nPrzeto Ci\u0119 weso\u0142a wsz\u0119dzie\r\nLutnia ma uwielbia\u0107 b\u0119dzie\r\nTwa chwa\u0142a, o wieczny Panie\r\nW mych ustach ju\u017c nie ustanie",
+        "nuty": "K:Dm\r\nM:2\/4\r\nL:1\/8\r\n\"d\"F2 EF | \"C\" G2FG | \"d\" E2D2:|\\\r\n\"g\" D2 GG | \"F\" F2AA | F2\"A\"E2 |\\\r\n\"B\" F2AA | \"C\" G2EF | \"A\"E2\"d\"D2 |]\\"
     },
     "Bliskie jest Kr\u00f3lestwo Bo\u017ce": {
         "tytu\u0142": "Bliskie jest Kr\u00f3lestwo Bo\u017ce",
@@ -137,7 +97,7 @@
         "tonacja": "Es",
         "naco": "1\/1\/0\/0\/1\/0",
         "tekst": "1.\r\nBo\u017ce w dobroci nigdy nie przebrany\r\n\u017badnym j\u0119zykiem niewypowiedziany\r\nTy jeste\u015b godzien, Ty jeste\u015b godzien wszelakiej mi\u0142o\u015bci\r\nPoszanowania, poszanowania, chwa\u0142y, uczciwo\u015bci\r\n2.\r\nCiebie czcz\u0119, pragn\u0119 i wa\u017c\u0119 samego\r\nNad wszystkie dobra Ty\u015b u serca mego\r\nNajwy\u017csze dobro, najwy\u017csze dobro, Ty\u015b w najwy\u017cszej cenie\r\nSam jeden u mnie, sam jeden u mnie nad wszystko stworzenie\r\n3.\r\nCho\u0107by\u015b za grzechy nie kara\u0142 mnie, Panie\r\nPrzecie\u017c skruszony \u017ca\u0142owa\u0142bym za nie\r\nA \u017ca\u0142owa\u0142bym, a \u017ca\u0142owa\u0142bym dla tego samego\r\n\u017bem Ci\u0119 obrazi\u0142, \u017cem Ci\u0119 obrazi\u0142, Pana tak dobrego\r\n4.\r\nWi\u0119c, o m\u00f3j Bo\u017ce, i teraz \u017ca\u0142uj\u0119\r\nDlatego, \u017ce Ci\u0119 nad wszystko mi\u0142uj\u0119\r\nI to u siebie, i to u siebie, statecznie stanowi\u0119\r\n\u017be grzech\u00f3w swoich, \u017ce grzech\u00f3w swoich nigdy nie ponowi\u0119\r\n5.\r\nMam mocn\u0105 wol\u0119 spowiada\u0107 si\u0119 szczerze\r\nI zawsze trzyma\u0107 z Tob\u0105 to przymierze\r\nCo gdy uczyni\u0119, co gdy uczyni\u0119, spodziewam si\u0119, Panie\r\nMie\u0107 w niebie z Tob\u0105, mie\u0107 w niebie z Tob\u0105 wieczne kr\u00f3lowanie",
-        "nuty": null
+        "nuty": "M:C\r\nK:D\r\nL:1\/4\r\n\"D\" D2DD | \"A\" E2 \"h\" F2 | \"fis\" FA \"G\" GF | \"A\" E2 \"D\" F2 ::\r\n\"Fis\" F2FF | \"h\" (FE)D2 | \"e\" E2EE | \"D\"F2\"A\"E2 | \"G\"EGFE |1 \"Fis\"(DC)\"h\"B,2 :|2 \"A\"(DC)\"D\"D2 |]"
     },
     "Bo\u017ce, co\u015b Polsk\u0119": {
         "tytu\u0142": "Bo\u017ce, co\u015b Polsk\u0119",
@@ -146,8 +106,8 @@
         "nr": "129",
         "tonacja": "B",
         "naco": "0\/0\/0\/0\/1\/0",
-        "tekst": "1.\nBo\u017ce, co\u015b Polsk\u0119 przez tak liczne wieki,\notacza\u0142 blaskiem pot\u0119gi i chwa\u0142y,\nco\u015b j\u0105 os\u0142ania\u0142 tarcz\u0105 swej opieki \nod nieszcz\u0119\u015b\u0107, kt\u00f3re pogn\u0119bi\u0107 j\u0105 mia\u0142y.\n*\nPrzed Twe o\u0142tarze zanosim b\u0142aganie\nojczyzn\u0119 woln\u0105 pob\u0142ogos\u0142aw, Panie!\n2.\nTy, kt\u00f3ry\u015b potem, tkni\u0119ty jej upadkiem,\nwspiera\u0142 walcz\u0105cych za naj\u015bwi\u0119tsz\u0105 spraw\u0119 \ni chc\u0105c \u015bwiat ca\u0142y mie\u0107 jej m\u0119stwa \u015bwiadkiem, \nw nieszcz\u0119\u015bciach samych pomna\u017ca\u0142 jej s\u0142aw\u0119.\n*\nPrzed Twe o\u0142tarze zanosim b\u0142aganie\u2026\n3.\nPowsta\u0142a z grobu na Twe w\u0142adne s\u0142owo \nPolska, wolno\u015bci narod\u00f3w chor\u0105\u017cy, \npierzchn\u0119\u0142y stra\u017ce, a ponad jej g\u0142ow\u0105 \nznowu swobodnie orze\u0142 bia\u0142y kr\u0105\u017cy!\n*\nPrzed Twe o\u0142tarze zanosim b\u0142aganie\u2026",
-        "nuty": null
+        "tekst": "1.\r\nBo\u017ce, co\u015b Polsk\u0119 przez tak liczne wieki,\r\notacza\u0142 blaskiem pot\u0119gi i chwa\u0142y,\r\nco\u015b j\u0105 os\u0142ania\u0142 tarcz\u0105 swej opieki \r\nod nieszcz\u0119\u015b\u0107, kt\u00f3re pogn\u0119bi\u0107 j\u0105 mia\u0142y.\r\n*\r\nPrzed Twe o\u0142tarze zanosim b\u0142aganie\r\nojczyzn\u0119 woln\u0105 pob\u0142ogos\u0142aw, Panie!\r\n2.\r\nTy, kt\u00f3ry\u015b potem, tkni\u0119ty jej upadkiem,\r\nwspiera\u0142 walcz\u0105cych za naj\u015bwi\u0119tsz\u0105 spraw\u0119 \r\ni chc\u0105c \u015bwiat ca\u0142y mie\u0107 jej m\u0119stwa \u015bwiadkiem, \r\nw nieszcz\u0119\u015bciach samych pomna\u017ca\u0142 jej s\u0142aw\u0119.\r\n*\r\nPrzed Twe o\u0142tarze zanosim b\u0142aganie\u2026\r\n3.\r\nPowsta\u0142a z grobu na Twe w\u0142adne s\u0142owo \r\nPolska, wolno\u015bci narod\u00f3w chor\u0105\u017cy, \r\npierzchn\u0119\u0142y stra\u017ce, a ponad jej g\u0142ow\u0105 \r\nznowu swobodnie orze\u0142 bia\u0142y kr\u0105\u017cy!\r\n*\r\nPrzed Twe o\u0142tarze zanosim b\u0142aganie\u2026",
+        "nuty": "M:C\r\nK:Bb\r\nL:1\/8\r\n\"B\"F2FE \"g\"D2D2 | \"G\"DDCD \"c\"F2 E2 | \"As\"E2 ED \"F\"C2 C2 | \"Es\"GGFE \"B\"E2 D2 :: \r\n\"d\"F2 \"B\/D\"FF \"Es\"G2 \"c\"G2 | \"F\"AA\"D\"GA \"g7\"B2 F2 | \"Es9\"B2 AG \"B\/D\"F2 D2 | \"c7\"GFEC \"F\"C2 \"B\"B,2 :|"
     },
     "Bo\u017ce, lud Tw\u00f3j": {
         "tytu\u0142": "Bo\u017ce, lud Tw\u00f3j",
@@ -187,26 +147,6 @@
         "tonacja": "C",
         "naco": "0\/1\/1\/0\/0\/0",
         "tekst": "1.\nB\u00f3g kiedy\u015b sta\u0142 si\u0119 jednym z nas,\nby nas przemieni\u0107 w siebie.\n*\nPrzyjd\u017a, Jezu m\u00f3j,\nzosta\u0144 w\u015br\u00f3d nas\nna zawsze ju\u017c.=\n2.\nUczy\u0142, \u017ce Pan B\u00f3g kocha nas,\nwszyscy jeste\u015bmy bra\u0107mi.\n*\nPrzyjd\u017a, Jezu m\u00f3j\u2026\n3.\nCierpia\u0142 na krzy\u017cu wiele ran,\nby zmaza\u0107 nasze grzechy.\n*\nPrzyjd\u017a, Jezu m\u00f3j\u2026\n4.\nZmartwychwsta\u0142 z grobu po trzech dniach,\nby niebo nam otworzy\u0107.\n*\nPrzyjd\u017a, Jezu m\u00f3j\u2026\n5.\nDucha \u015awi\u0119tego zes\u0142a\u0142 nam,\nby wszystkich nas u\u015bwi\u0119ci\u0142.\n*\nPrzyjd\u017a, Jezu m\u00f3j\u2026\n6.\nZa\u0142o\u017cy\u0142 \u015awi\u0119ty Ko\u015bci\u00f3\u0142 sw\u00f3j,\nby\u015bmy z Nim jedno byli.\n*\nPrzyjd\u017a, Jezu m\u00f3j\u2026\n7.\nMaryj\u0119 Matk\u0119 ludziom da\u0142,\nby wspomo\u017ceniem by\u0142a.\n*\nPrzyjd\u017a, Jezu m\u00f3j\u2026",
-        "nuty": null
-    },
-    "B\u00f3g si\u0119 rodzi": {
-        "tytu\u0142": "B\u00f3g si\u0119 rodzi",
-        "klasa": "6",
-        "katsiedlecki": "Pie\u015bni na Bo\u017ce Narodzenie",
-        "nr": "105",
-        "tonacja": "C",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nB\u00f3g si\u0119 rodzi, moc truchleje, * Pan niebios\u00f3w obna\u017cony!\nOgie\u0144 krzepnie, blask ciemnieje, * ma granice niesko\u0144czony!\nWzgardzony, okryty chwa\u0142\u0105! * \u015amiertelny, Kr\u00f3l nad wiekami\nA S\u0142owo Cia\u0142em si\u0119 sta\u0142o i mieszka\u0142o mi\u0119dzy nami.\n2.\nC\u00f3\u017c masz, niebo, nad ziemiany? * B\u00f3g porzuci\u0142 szcz\u0119\u015bcie twoje.\nWszed\u0142 mi\u0119dzy lud ukochany, * dziel\u0105c z nim trudy i znoje.\nNiema\u0142o cierpia\u0142, niema\u0142o, * \u017ce\u015bmy byli winni sami.\nA S\u0142owo Cia\u0142em si\u0119 sta\u0142o i mieszka\u0142o mi\u0119dzy nami.\n3.\nW n\u0119dznej szopie urodzony, * \u017c\u0142\u00f3b Mu za kolebk\u0119 dano.\nC\u00f3\u017c jest, czym by\u0142 otoczony? * Byd\u0142o, pasterze i siano. \nUbodzy! Was to spotka\u0142o, * wita\u0107 Go przed bogaczami.\nA S\u0142owo Cia\u0142em si\u0119 sta\u0142o i mieszka\u0142o mi\u0119dzy nami.\n4.\nPotem i kr\u00f3le widziani * cisn\u0105 si\u0119 mi\u0119dzy prostot\u0105,\nnios\u0105c dary Panu w dani: * mirr\u0119, kadzid\u0142o i z\u0142oto.\nB\u00f3stwo to razem zmiesza\u0142o * z wie\u015bniaczymi ofiarami\nA S\u0142owo Cia\u0142em si\u0119 sta\u0142o i mieszka\u0142o mi\u0119dzy nami\n5.\nPodnie\u015b r\u0119k\u0119, Bo\u017ce Dzieci\u0119, * b\u0142ogos\u0142aw ojczyzn\u0119 mi\u0142\u0105!\nW dobrych radach, w dobrym bycie * wspieraj jej si\u0142\u0119 sw\u0105 si\u0142\u0105,\ndom nasz i maj\u0119tno\u015b\u0107 ca\u0142\u0105 * i wszystkie wioski z miastami.\nA S\u0142owo Cia\u0142em si\u0119 sta\u0142o i mieszka\u0142o mi\u0119dzy nami",
-        "nuty": null
-    },
-    "Bracia, patrzcie jeno": {
-        "tytu\u0142": "Bracia, patrzcie jeno",
-        "klasa": "6",
-        "katsiedlecki": "Kol\u0119dy domowe",
-        "nr": "136",
-        "tonacja": "F",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nBracia patrzcie jeno\njak niebo goreje\nzna\u0107, \u017ce co\u015b dziwnego\nw Betlejem si\u0119 dzieje.\nRzu\u0107my budy, warty, stada,\nniechaj nimi Pan B\u00f3g w\u0142\u0105da.\n= A my do Betlejem.\n2.\nPatrzcie, jak tam gwiazda\n\u015bwiat\u0142em swoim miga!\nPewnie do uczczenia\nPana swego \u015bciga.\nKrokiem \u015bmia\u0142ym i weso\u0142ym\n\u015bpieszmy i uderzmy czo\u0142em;\n= przed Panem w Betlejem\n3.\nWszak\u017ce powiedzia\u0142em,\n\u017ce cuda ujrzymy\nDzieci\u0119, Boga \u015bwiata,\nw \u017c\u0142obie zobaczymy.\nPatrzcie, jak biedne okryte,\nw \u017c\u0142obku Pani\u0119 znakomite.\n= W szopie przy Betlejem ",
         "nuty": null
     },
     "By\u0107 bli\u017cej Ciebie chc\u0119": {
@@ -309,16 +249,6 @@
         "tekst": "Chwa\u0142a Ojcu i Synowi,\ni Duchowi \u015awi\u0119temu,\njak by\u0142a na pocz\u0105tku,\nteraz, i zawsze, i na wieki wiek\u00f3w. Amen.",
         "nuty": null
     },
-    "Cicha noc": {
-        "tytu\u0142": "Cicha noc",
-        "klasa": "6",
-        "katsiedlecki": "Pie\u015bni na Bo\u017ce Narodzenie",
-        "nr": "201",
-        "tonacja": "G",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nCicha noc, \u015bwi\u0119ta noc! * Pok\u00f3j niesie ludziom wszem,\na u \u017c\u0142\u00f3bka Matka \u015awi\u0119ta * czuwa sama u\u015bmiechni\u0119ta * nad Dzieci\u0105tka snem\n2.\nCicha noc, \u015bwi\u0119ta noc, * pastuszkowie od swych trz\u00f3d\nbiegn\u0105 wielce zadziwieni * za anielskich g\u0142osem pieni, * gdzie si\u0119 spe\u0142ni\u0142 cud\n3.\nCicha noc, \u015bwi\u0119ta noc, * narodzony Bo\u017cy Syn, \nPan Wielkiego Majestatu * niesie dzi\u015b ca\u0142emu \u015bwiatu * odkupienie win",
-        "nuty": null
-    },
     "Ciebie na wieki": {
         "tytu\u0142": "Ciebie na wieki",
         "klasa": "3",
@@ -419,16 +349,6 @@
         "tekst": "Do Serca Twojego \u2022 uciekamy si\u0119 \u2022 Jezu, Boski Zbawicielu.\nNaszymi grzechami \u2022 racz si\u0119 nie zra\u017ca\u0107, \u2022 o Panie \u015bwi\u0119ty\nale od wszelakich z\u0142ych czyn\u00f3w \u2022 racz nas zawsze zachowa\u0107, \u2022 Bo\u017ce \u0142askawy \u2022 i najlito\u015bciwszy\nO Jezu, o Jezu, o Jezu dobry, \u2022 Zbawicielu s\u0142odki \u2022 Po\u015bredniku Boski \u2022 jedyna ucieczko nasza!\nW Sercu Twoim racz nas obmy\u0107 \u2022 Do Serca Twojego racz nas przytuli\u0107 \u2022 W Twym Sercu na wieki racz nas zachowa\u0107.\nO Jezu, o Jezu, o Jezu dobry, \u2022 Zbawicielu s\u0142odki \u2022 Po\u015bredniku Boski \u2022 jedyna ucieczko nasza!",
         "nuty": null
     },
-    "Do szopy, hej, pasterze": {
-        "tytu\u0142": "Do szopy, hej, pasterze",
-        "klasa": "6",
-        "katsiedlecki": "Pie\u015bni na Bo\u017ce Narodzenie",
-        "nr": "245",
-        "tonacja": "Es",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nDo szopy, hej, pasterze, do szopy, bo tam cud.\nSyn Bo\u017cy w \u017c\u0142obie le\u017cy, by zbawi\u0107 ludzki r\u00f3d.\n\u015apiewajcie, anio\u0142owie, pasterze grajcie Mu,\nk\u0142aniajcie si\u0119 kr\u00f3lowie, nie bud\u017acie Go ze snu.\n2.\nPadnijmy na kolana, to Dzieci\u0119 to nasz B\u00f3g.\nWitajmy swego Pana, wdzi\u0119czno\u015bci z\u0142\u00f3\u017cmy d\u0142ug.\n*\n\u015apiewajcie, anio\u0142owie, pasterze grajcie Mu...\n3.\nO Bo\u017ce niepoj\u0119ty, kto pojmie mi\u0142o\u015b\u0107 Tw\u0105?\nNa sianie w\u015br\u00f3d bydl\u0119ty masz tron i s\u0142u\u017cb\u0119 sw\u0105.\n*\n\u015apiewajcie, anio\u0142owie, pasterze grajcie Mu...\n4.\nOn Ojcu r\u00f3wny w B\u00f3stwie opuszcza niebo swe,\na rodzi si\u0119 w ub\u00f3stwie i cierpi wszystko z\u0142e.\n*\n\u015apiewajcie, anio\u0142owie, pasterze grajcie Mu...",
-        "nuty": null
-    },
     "Do Twej d\u0105\u017cym kaplicy": {
         "tytu\u0142": "Do Twej d\u0105\u017cym kaplicy",
         "klasa": "3",
@@ -489,16 +409,6 @@
         "tekst": "1.\nDzi\u0119kujemy Ci, Ojcze nasz\nZa \u015bwi\u0119ty winny szczep Dawida \nKt\u00f3ry nam pozna\u0107 da\u0142e\u015b\nPrzez Jezusa, Syna Twego\nTobie chwa\u0142a na wieki\n2.\nDzi\u0119kujemy Ci, Ojcze nasz\nZa \u017cycie i za wiar\u0119\nKt\u00f3r\u0105 nam pozna\u0107 da\u0142e\u015b\nPrzez Jezusa, Syna Twego\nTobie chwa\u0142a na wieki\n3.\nDzi\u0119kujemy Ci, Ojcze nasz\nZa \u015bwi\u0119te imi\u0119 Twoje\nKt\u00f3remu zgotowa\u0142e\u015b\nMieszkanie w sercach naszych \nTobie chwa\u0142a na wieki\n4.\nDzi\u0119kujemy Ci, Ojcze nasz\nZa wiar\u0119 i za nie\u015bmiertelno\u015b\u0107\nKt\u00f3r\u0105 nam pozna\u0107 da\u0142e\u015b\nPrzez Jezusa, Syna Twego \nTobie chwa\u0142a na wieki\n5.\nTy, o Panie wszechmocny\nStworzy\u0142e\u015b wszystko dla imienia swego\nPokarm i nap\u00f3j da\u0142e\u015b\nLudziom na po\u017cywienie \nTobie chwa\u0142a na wieki\n6.\nNam za\u015b darowa\u0142e\u015b\nPokarm duchowy oraz nap\u00f3j\nI \u017cywot wieczny\nPrzez Jezusa, Syna Twego \nTobie chwa\u0142a na wieki\n7.\nPomnij, Panie, na Tw\u00f3j Ko\u015bci\u00f3\u0142\nI wybaw go od wszelkiego z\u0142ego\nI doprowad\u017a go w mi\u0142o\u015bci swojej\nDo Kr\u00f3lestwa Twego \nTobie chwa\u0142a na wieki\n8.\nNiechaj przyjdzie Twa \u0142aska\nI niech przeminie ten \u015bwiat\nKto \u015bwi\u0119ty, niech przyst\u0105pi\nKto nim nie jest, niech czyni pokut\u0119 \nTobie chwa\u0142a na wieki",
         "nuty": null
     },
-    "Dzisiaj w Betlejem": {
-        "tytu\u0142": "Dzisiaj w Betlejem",
-        "klasa": "6",
-        "katsiedlecki": "Pie\u015bni na Bo\u017ce Narodzenie",
-        "nr": "300",
-        "tonacja": "D",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nDzisiaj w Betlejem, dzisiaj w Betlejem weso\u0142a nowina,\n\u017ce Panna czysta, \u017ce Panna czysta porodzi\u0142a Syna.\n*\nChrystus si\u0119 rodzi, nas oswobodzi,\nanieli graj\u0105, kr\u00f3le witaj\u0105,\npasterze \u015bpiewaj\u0105, bydl\u0119ta kl\u0119kaj\u0105,\ncuda, cuda og\u0142aszaj\u0105.\n2.\nMaryja Panna, Maryja Panna Dzieci\u0105tko piastuje\ni J\u00f3zef \u015awi\u0119ty, i J\u00f3zef \u015awi\u0119ty Ono piel\u0119gnuje.\n*\nChrystus si\u0119 rodzi, nas oswobodzi...\n3.\nCho\u0107 w stajeneczce, cho\u0107 w stajeneczce Panna Syna rodzi,\nprzecie\u017c On wkr\u00f3tce, przecie\u017c On wkr\u00f3tce ludzi oswobodzi.\n*\nChrystus si\u0119 rodzi, nas oswobodzi...\n4.\nI Trzej Kr\u00f3lowie, i Trzej Kr\u00f3lowie od wschodu przybyli\ni dary Panu, i dary Panu kosztowne z\u0142o\u017cyli.\n*\nChrystus si\u0119 rodzi, nas oswobodzi...",
-        "nuty": null
-    },
     "Dzi\u015b moj\u0105 dusz\u0119": {
         "tytu\u0142": "Dzi\u015b moj\u0105 dusz\u0119",
         "klasa": "2",
@@ -519,16 +429,6 @@
         "tekst": "1.\nGdy kl\u0119cz\u0119 przed Tob\u0105,\nmodl\u0119 si\u0119 i sk\u0142adam ho\u0142d,\nWe\u017a ten dzie\u0144, uczy\u0144 go Twym,\ni we mnie mi\u0142o\u015b\u0107 wznie\u0107.\n*\nAve Maria,\ngratia plena,\nDominus tecum,\nbenedicta tu =\n2.\nWszystko Tobie daj\u0119,\nka\u017cdy sen i ka\u017cd\u0105 my\u015bl.\nMatko Boga, Matko moja,\nwznie\u015b je przed Pana tron!\n*\nAve Maria...\n3.\nGdy kl\u0119cz\u0119 przed Tob\u0105,\nwidz\u0119 Tw\u0105 radosn\u0105 twarz.\nKa\u017cda my\u015bl, ka\u017cde s\u0142owo,\nniech spocznie w d\u0142oniach Twych.\n*\nAve Maria...",
         "nuty": null
     },
-    "Gdy si\u0119 Chrystus rodzi": {
-        "tytu\u0142": "Gdy si\u0119 Chrystus rodzi",
-        "klasa": "6",
-        "katsiedlecki": "Pie\u015bni na Bo\u017ce Narodzenie",
-        "nr": "313",
-        "tonacja": "B",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nGdy si\u0119 Chrystus rodzi i na \u015bwiat przychodzi,\nciemna noc w jasno\u015bci promienistej brodzi.\nAnio\u0142owie si\u0119 raduj\u0105, pod niebiosy wy\u015bpiewuj\u0105:\n\u201eGloria, gloria, gloria in excelsis Deo!\u201d.\n2.\nM\u00f3wi\u0105 do pasterzy, kt\u00f3rzy trz\u00f3d swych strzegli,\naby do Betlejem czym pr\u0119dzej pobiegli,\nbo si\u0119 narodzi\u0142 Zbawiciel, * wszego \u015bwiata Odkupiciel. \n\u201eGloria, gloria, gloria in excelsis Deo!\u201d.\n3.\n\u201eO niebieskie Duchy i pos\u0142owie nieba,\npowiedzcie\u017c wyra\u017aniej, co nam czyni\u0107 trzeba;\nbo my nic nie pojmujemy, * ledwo od strachu \u017cyjemy\u201d.\n\u201eGloria, gloria, gloria in excelsis Deo!\u201d",
-        "nuty": null
-    },
     "Gdy si\u0119 \u0142\u0105cz\u0105 r\u0119ce dwie": {
         "tytu\u0142": "Gdy si\u0119 \u0142\u0105cz\u0105 r\u0119ce dwie",
         "klasa": "2",
@@ -537,16 +437,6 @@
         "tonacja": "C",
         "naco": "1\/1\/1\/1\/1\/\u015blubne",
         "tekst": "1.\nGdy si\u0119 \u0142\u0105cz\u0105 r\u0119ce dwie w Imi\u0119 Bo\u017ce,\nPrzed o\u0142tarzem uroczystym w blasku \u015bwiec.\nWtedy zwyk\u0142a ludzka mi\u0142o\u015b\u0107 jest pot\u0119g\u0105,\nBo z mi\u0142o\u015bci\u0105 Jego wieczn\u0105 splata si\u0119.\n2.\nKiedy \u0142\u0105czysz serca dwa w Imi\u0119 swoje\nI zwi\u0105zujesz mi\u0119dzy nimi mocn\u0105 ni\u0107.\nB\u0142ogos\u0142awisz swoim dzieciom na w\u0119dr\u00f3wk\u0119,\nPokazujesz, co to znaczy umie\u0107 \u017cy\u0107.\n3.\nP\u00f3jd\u0105 odt\u0105d na rado\u015bci i na smutki,\nZawsze razem, przy nim \u2013 ona, przy niej \u2013 on\nTwoja \u0142aska szlak im b\u0119dzie wyznacza\u0142a\nI obroni od drapie\u017cnych \u015bwiata szpon.",
-        "nuty": null
-    },
-    "Gdy \u015bliczna Panna": {
-        "tytu\u0142": "Gdy \u015bliczna Panna",
-        "klasa": "6",
-        "katsiedlecki": "Kol\u0119dy domowe",
-        "nr": "315",
-        "tonacja": "F",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nGdy \u015bliczna panna syna ko\u0142ysa\u0142a, * z wielkim weselem tak jemu \u015bpiewa\u0142a\nLili lili laj, moje Dzieci\u0105teczko * lili lili laj, \u015bliczne Pani\u0105teczko\n2.\nWszystko stworzenie, \u015bpiewaj Panu swemu, * pom\u00f3\u017c w rado\u015bci wielkiej sercu memu.\nLili lili laj, wielki kr\u00f3lewiczu, * Lili lili laj, niebieski dziedzicu.\n3.\nSypcie z nieba liczni anio\u0142owie, * \u015bpiewajcie Panu niebiescy duchowie.\nLili lili laj, m\u00f3j wonny kwiateczku, * Lili lili laj, w ubogim \u017c\u0142obeczku.",
         "nuty": null
     },
     "Gdy trwoga nas ogarnie": {
@@ -566,8 +456,8 @@
         "nr": "324",
         "tonacja": "d",
         "naco": "0\/1\/0\/0\/0\/0",
-        "tekst": "*\nGdzie mi\u0142o\u015b\u0107 wzajemna i dobro\u0107\nTam znajdziesz Boga \u017cywego\n**\n1.\nW jedno nas tu zgromadzi\u0142a mi\u0142o\u015b\u0107 Chrystusa\nWeselmy si\u0119 w Nim i radujmy\n*\nGdzie mi\u0142o\u015b\u0107 wzajemna i dobro\u0107\u2026\n2.\nZ pokor\u0105 szczer\u0105 mi\u0142ujmy Boga\nZ czystego serca mi\u0142ujmy si\u0119 nawzajem \n*\nGdzie mi\u0142o\u015b\u0107 wzajemna i dobro\u0107\u2026\n3.\nSkoro si\u0119 wszyscy tu gromadzimy\nStrze\u017cmy si\u0119 tego, co nas rozdziela \n*\nGdzie mi\u0142o\u015b\u0107 wzajemna i dobro\u0107\u2026\n4.\nNiech ustan\u0105 wszystkie gniewy i spory\nA po\u015brodku nas niech b\u0119dzie Chrystus \n*\nGdzie mi\u0142o\u015b\u0107 wzajemna i dobro\u0107\u2026\n5.\nOby\u015bmy ogl\u0105dali Twoje oblicze, Chryste Bo\u017ce\nRazem ze \u015bwi\u0119tymi w chwale Twego Kr\u00f3lestwa \n*\nGdzie mi\u0142o\u015b\u0107 wzajemna i dobro\u0107\u2026\n6.\nTo b\u0119dzie nasz\u0105 rado\u015bci\u0105 czyst\u0105 i bez granic\nPrzez niesko\u0144czone wieki wiek\u00f3w, amen \n*\nGdzie mi\u0142o\u015b\u0107 wzajemna i dobro\u0107\u2026",
-        "nuty": null
+        "tekst": "*\r\nGdzie mi\u0142o\u015b\u0107 wzajemna i dobro\u0107\r\nTam znajdziesz Boga \u017cywego\r\n**\r\n1.\r\nW jedno nas tu zgromadzi\u0142a mi\u0142o\u015b\u0107 Chrystusa\r\nWeselmy si\u0119 w Nim i radujmy\r\n*\r\nGdzie mi\u0142o\u015b\u0107 wzajemna i dobro\u0107\u2026\r\n2.\r\nZ pokor\u0105 szczer\u0105 mi\u0142ujmy Boga\r\nZ czystego serca mi\u0142ujmy si\u0119 nawzajem \r\n*\r\nGdzie mi\u0142o\u015b\u0107 wzajemna i dobro\u0107\u2026\r\n3.\r\nSkoro si\u0119 wszyscy tu gromadzimy\r\nStrze\u017cmy si\u0119 tego, co nas rozdziela \r\n*\r\nGdzie mi\u0142o\u015b\u0107 wzajemna i dobro\u0107\u2026\r\n4.\r\nNiech ustan\u0105 wszystkie gniewy i spory\r\nA po\u015brodku nas niech b\u0119dzie Chrystus \r\n*\r\nGdzie mi\u0142o\u015b\u0107 wzajemna i dobro\u0107\u2026\r\n5.\r\nOby\u015bmy ogl\u0105dali Twoje oblicze, Chryste Bo\u017ce\r\nRazem ze \u015bwi\u0119tymi w chwale Twego Kr\u00f3lestwa \r\n*\r\nGdzie mi\u0142o\u015b\u0107 wzajemna i dobro\u0107\u2026\r\n6.\r\nTo b\u0119dzie nasz\u0105 rado\u015bci\u0105 czyst\u0105 i bez granic\r\nPrzez niesko\u0144czone wieki wiek\u00f3w, amen \r\n*\r\nGdzie mi\u0142o\u015b\u0107 wzajemna i dobro\u0107\u2026",
+        "nuty": "K:Dm\r\nL:1\/8\r\n\"d\" FFDF GFG (AG)\"B\"F2 | \"g7\" DGF \"C\" (BA)GA G2 \"F\"F2 !fine! ||\\\r\n\"B\" F8DF \"A\"G2\"d\"F2 | \"g7\"F8EF \"a\" D2C2 !D.C.! |]"
     },
     "G\u0142o\u015b imi\u0119 Pana": {
         "tytu\u0142": "G\u0142o\u015b imi\u0119 Pana",
@@ -577,16 +467,6 @@
         "tonacja": "D",
         "naco": "1\/1\/0\/1\/0\/0",
         "tekst": "1.\nG\u0142o\u015b imi\u0119 Pana, Kr\u00f3la wszechmocy i chwa\u0142y\nZ\u0142\u0105cz si\u0119 z ch\u00f3rami niebios, zast\u0119p\u00f3w wspania\u0142ych\nHarfa i r\u00f3g niech zagra \u201eKt\u00f3\u017c jest jak B\u00f3g\u201d\nBy kra\u0144ce ziemi s\u0142ysza\u0142y\n2.\nG\u0142o\u015b imi\u0119 Pana, On twoim losem kieruje\nNa skrzyd\u0142ach niesie, jak orze\u0142 si\u0119 opiekuje\nDaj Mu sw\u0105 d\u0142o\u0144, w przygodzie zawo\u0142aj do\u0144\nOn ci\u0119 od z\u0142a zachowuje\n3.\nG\u0142o\u015b imi\u0119 Pana, razem ze wszystkim, co \u017cyje\nOn twoim \u015bwiat\u0142em, Jemu niech serce twe bije\nOn \u017cyciem twym, wdzi\u0119czno\u015bci \u015bpiewaj mu hymn\nTeraz i na wieki, amen",
-        "nuty": null
-    },
-    "Gore gwiazda": {
-        "tytu\u0142": "Gore gwiazda",
-        "klasa": "6",
-        "katsiedlecki": "",
-        "nr": "338",
-        "tonacja": "d",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nGore gwiazda Jezusowi w ob\u0142oku, w ob\u0142oku\nJ\u00f3zef z Mari\u0105 asystuj\u0105 przy boku, przy boku\n*\nHej\u017ce ino dyna, dyna,\nnarodzi\u0142 si\u0119 B\u00f3g dziecina\nW Betlejem, w Betlejem=\n2.\nW\u00f3\u0142 i osio\u0142 w parze s\u0142u\u017c\u0105 przy \u017c\u0142obie, przy \u017c\u0142obie\nHucz\u0105, bucz\u0105 delikatnej osobie, osobie\n*\nHej\u017ce ino\u2026\n3.\nPastuszkowie z podarunki przybiegli, przybiegli\nW ko\u0142o szop\u0119 o p\u00f3\u0142nocy oblegli, oblegli\n*\nHej\u017ce ino\u2026\n4.\nAnio\u0142 Pa\u0144ski sam og\u0142osi\u0142 te dziwy, te dziwy\nKt\u00f3rych oni nie s\u0142yszeli jak \u017cywi, jak \u017cywi\n*\nHej\u017ce ino\u2026",
         "nuty": null
     },
     "Gwiazdo \u015bliczna, wspania\u0142a": {
@@ -637,7 +517,7 @@
         "tonacja": "e",
         "naco": "0\/0\/1\/0\/0\/0",
         "tekst": "1.\r\nJa wiem, w kogo ja wierz\u0119\r\nSta\u0142o\u015bci\u0105 duszy mej\r\nM\u00f3j Pan w tym Sakramencie\r\nPe\u0142en pot\u0119gi swej\r\n\r\nTo ten, co zst\u0105pi\u0142 z nieba\r\nCo \u017cycie za mnie da\u0142\r\nI pod postaci\u0105 chleba\r\nPozosta\u0107 z nami chcia\u0142 =\r\n2.\r\nJa wiem, w kim mam nadziej\u0119\r\nW s\u0142abo\u015bci mojej moc\r\nTo Ten, przed Kt\u00f3rym \u015bwiat\u0142o\r\nPali si\u0119 w dzie\u0144 i w noc\r\n\r\nOn moim szcz\u0119\u015bciem w \u017cyciu\r\nOn \u015bwiat\u0142em w zgonu dzie\u0144\r\nZwyci\u0119\u017ca mroki grzechu\r\nRozprasza \u015bmierci cie\u0144 =\r\n3.\r\nJa wiem, kogo mi\u0142uj\u0119\r\nNad wszelki \u015bwiata czar\r\nKto poi dusz\u0119 moj\u0105\r\nKto zna mi\u0142o\u015bci \u017car\r\n\r\nTo Kr\u00f3l nad wszystie kr\u00f3le\r\nWielki i s\u0142odki Pan\r\nCo karmi dusze g\u0142odne\r\nCia\u0142em i Krwi\u0105 swych ran =",
-        "nuty": null
+        "nuty": "K:Em\r\nM:3\/4\r\nL:1\/4\r\nB, | \"e\" E>G F\/E\/ | \"H7\" E ^D B, | ^D>E F\/D\/ | \"e\" E2 :: B | \"G\" B>B c\/B\/ | \"D\" AAG | \"C\" G>G B\/G\/ |\r\n\"H7\" F2G | \"e\" E>G F\/E\/ | \"H7\" E ^D B, | ^D>E F\/D\/ | \"e\" E2 :|"
     },
     "Jak mi\u0142e przybytki": {
         "tytu\u0142": "Jak mi\u0142e przybytki",
@@ -686,8 +566,8 @@
         "nr": "406",
         "tonacja": "F",
         "naco": "0\/0\/1\/0\/0\/0",
-        "tekst": "1.\nJeden chleb co zmienia si\u0119 w Chrystusa Cia\u0142o,\nz wielu ziaren pszenicznych si\u0119 rodzi.\nJedno wino, co si\u0119 Krwi\u0105 Chrystusa sta\u0142o,\nz soku wielu winnych gron pochodzi.\n*\nJak ten chleb, co z\u0142\u0105czy\u0142 z\u0142ote ziarna,\ntak niech mi\u0142o\u015b\u0107 z\u0142\u0105czy nas ofiarna.\nJak ten kielich \u0142\u0105czy kropel wiele,\ntak nas, Chryste, w swoim z\u0142\u0105cz Ko\u015bciele.\n2.\nO Pasterzu, zgromad\u017a w jednej swej owczarni\nzab\u0142\u0105kane owce, kt\u00f3re gin\u0105.\nW jeden Ko\u015bci\u00f3\u0142 zbierz na nowo i przygarnij,\nby\u015bmy jedn\u0105 stali si\u0119 rodzin\u0105\n*\nJak ten chleb, co z\u0142\u0105czy\u0142 z\u0142ote ziarna\u2026\n3.\nNa ramiona swoje we\u017a, o (dobry) Panie,\ntych, co sami wr\u00f3ci\u0107 ju\u017c nie mog\u0105!\nNiechaj zjednoczenia cud si\u0119 (wielki) stanie,\nprowad\u017a nas ku niebu wsp\u00f3ln\u0105 drog\u0105\n*\nJak ten chleb, co z\u0142\u0105czy\u0142 z\u0142ote ziarna\u2026",
-        "nuty": null
+        "tekst": "1.\r\nJeden chleb co zmienia si\u0119 w Chrystusa Cia\u0142o,\r\nz wielu ziaren pszenicznych si\u0119 rodzi.\r\nJedno wino, co si\u0119 Krwi\u0105 Chrystusa sta\u0142o,\r\nz soku wielu winnych gron pochodzi.\r\n*\r\nJak ten chleb, co z\u0142\u0105czy\u0142 z\u0142ote ziarna,\r\ntak niech mi\u0142o\u015b\u0107 z\u0142\u0105czy nas ofiarna.\r\nJak ten kielich \u0142\u0105czy kropel wiele,\r\ntak nas, Chryste, w swoim z\u0142\u0105cz Ko\u015bciele.\r\n2.\r\nO Pasterzu, zgromad\u017a w jednej swej owczarni\r\nzab\u0142\u0105kane owce, kt\u00f3re gin\u0105.\r\nW jeden Ko\u015bci\u00f3\u0142 zbierz na nowo i przygarnij,\r\nby\u015bmy jedn\u0105 stali si\u0119 rodzin\u0105\r\n*\r\nJak ten chleb, co z\u0142\u0105czy\u0142 z\u0142ote ziarna\u2026\r\n3.\r\nNa ramiona swoje we\u017a, o (dobry) Panie,\r\ntych, co sami wr\u00f3ci\u0107 ju\u017c nie mog\u0105!\r\nNiechaj zjednoczenia cud si\u0119 (wielki) stanie,\r\nprowad\u017a nas ku niebu wsp\u00f3ln\u0105 drog\u0105\r\n*\r\nJak ten chleb, co z\u0142\u0105czy\u0142 z\u0142ote ziarna\u2026",
+        "nuty": "K:F\r\nM:C\r\nL:1\/8\r\nA,C | \"F\" FFFF \"d\" FFEF | \"B\" D2D2 \"g\" z2 EF | \"C\" GGGG AFG2 | \"F\" F4 z2 :|\\\r\nFG | \"Bmaj7\" AAAA GA \"C7\" B2 | \"ciso7\" B4 z2 AG |\r\n\"d\" FFFF \"g7\" BA \"B6\" G2 | \"A7\" G4 z2 \"a\" A,C |\\\r\n\"d7\" FFFF \"C\" EF \"B\" D2 | \"g\" D4 z2 EF | \"C\" GGGG AF G2 | \"F\" F4 z2 |]"
     },
     "Jeste\u015bmy pi\u0119kni": {
         "tytu\u0142": "Jeste\u015bmy pi\u0119kni",
@@ -737,16 +617,6 @@
         "tonacja": "B",
         "naco": "0\/0\/1\/0\/0\/0",
         "tekst": "1.\nJezu w Hostii utajony\nDaj mi serce Twoje, daj\nTy\u015b mi jeden ulubiony\nTy\u015b mojego serca raj\n2.\nWsz\u0119dzie dobrze mi, o Panie\nCho\u0107by krzy\u017c me si\u0142y rwa\u0142\nS\u0142odkie ziemskie me wygnanie\nByle\u015b mi sam siebie da\u0142\n3.\nWszystko, wszystko ch\u0119tnie znios\u0119\nPanie, dla mi\u0142o\u015bci Twej\nTylko b\u0142agam, tylko prosz\u0119\nTy mnie w Sercu zawsze miej",
-        "nuty": null
-    },
-    "Jezus malusie\u0144ki": {
-        "tytu\u0142": "Jezus malusie\u0144ki",
-        "klasa": "6",
-        "katsiedlecki": "Kol\u0119dy domowe",
-        "nr": "457",
-        "tonacja": "g",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nJezus malusie\u0144ki le\u017cy w\u015br\u00f3d stajenki\n= P\u0142acze z zimna nie da\u0142a mu matula sukienki.\n2.\nBo uboga by\u0142a, r\u0105bek z g\u0142owy zdj\u0119\u0142a,\n= w kt\u00f3ry Dzieci\u0119 owin\u0105wszy, siankiem Je okry\u0142a\n3.\nNie ma kolebeczki, ani poduszeczki,\n= We \u017c\u0142obie Mu po\u0142o\u017cy\u0142a siana pod g\u0142\u00f3weczki.",
         "nuty": null
     },
     "Jezusa ukrytego": {
@@ -899,16 +769,6 @@
         "tekst": "",
         "nuty": null
     },
-    "Lulaj\u017ce, Jezuniu": {
-        "tytu\u0142": "Lulaj\u017ce, Jezuniu",
-        "klasa": "6",
-        "katsiedlecki": "Kol\u0119dy domowe",
-        "nr": "540",
-        "tonacja": "B",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nLulaj\u017ce, Jezuniu, moja pere\u0142ko\nLulaj, ulubione me pie\u015bcide\u0142ko\n*\nLulaj\u017ce, Jezuniu, lulaj\u017ce, lulaj\nA ty Go, Matulu, w p\u0142aczu utulaj\n2.\nZamknij\u017ce znu\u017cone p\u0142aczem powieczki\nUtul\u017ce zemdlone \u0142kaniem usteczki\n*\nLulaj\u017ce, Jezuniu\u2026\n3.\nLulaj\u017ce, pi\u0119kniuchny nasz anio\u0142eczku\nLulaj\u017ce, wdzi\u0119czniuchny \u015bwiata kwiateczku\n*\nLulaj\u017ce, Jezuniu\u2026\n4.\nLulaj\u017ce, r\u00f3\u017cyczko najozdobniejsza\nLulaj\u017ce, lilijko najprzyjemniejsza\n*\nLulaj\u017ce, Jezuniu\u2026",
-        "nuty": null
-    },
     "Maryjo, ja Twe dzieci\u0119": {
         "tytu\u0142": "Maryjo, ja Twe dzieci\u0119",
         "klasa": "3",
@@ -929,16 +789,6 @@
         "tekst": "Maryjo, Kr\u00f3lowo Polski =\n= Jestem przy Tobie, pami\u0119tam\nJestem przy Tobie, czuwam =",
         "nuty": null
     },
-    "M\u0119drcy \u015bwiata": {
-        "tytu\u0142": "M\u0119drcy \u015bwiata",
-        "klasa": "6",
-        "katsiedlecki": "Pie\u015bni na Bo\u017ce Narodzenie",
-        "nr": "580",
-        "tonacja": "B",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nM\u0119drcy \u015bwiata, monarchowie, * gdzie \u015bpiesznie d\u0105\u017cycie?\nPowiedzcie\u017c nam Trzej Kr\u00f3lowie, * chcecie widzie\u0107 Dzieci\u0119?\nOno w \u017c\u0142obie nie ma tronu, * i ber\u0142a nie dzier\u017cy,\na proroctwo jego zgonu, * ju\u017c si\u0119 w \u015bwiecie szerzy.\n2.\nM\u0119drcy \u015bwiata, z\u0142o\u015b\u0107 okrutna, * Dzieci\u0119 prze\u015bladuje,\nwie\u015b\u0107 okropna, wie\u015b\u0107 to smutna, * Herod spiski knuje.\nNic monarch\u00f3w nie odstrasza, * do Betlejem spiesz\u0105,\ngwiazda zbawc\u0119 im og\u0142asza, * nadziej\u0105 si\u0119 ciesz\u0105.\n3.\nPrzed Maryj\u0105 stoj\u0105 spo\u0142em, * Nios\u0105 Panu dary.\nPrzed Jezusem bij\u0105 czo\u0142em, * sk\u0142adaj\u0105 ofiary.\nTrzykro\u0107 szcz\u0119\u015bliwi kr\u00f3lowie, * Kt\u00f3\u017c wam nie zazdro\u015bci?\nC\u00f3\u017c my damy, kto nam powie, * pa\u0142aj\u0105c z mi\u0142o\u015bci.",
-        "nuty": null
-    },
     "Mi\u0142o\u015b\u0107 Twa": {
         "tytu\u0142": "Mi\u0142o\u015b\u0107 Twa",
         "klasa": "2",
@@ -957,16 +807,6 @@
         "tonacja": "c",
         "naco": "0\/1\/0\/0\/0\/0",
         "tekst": "*\nMi\u0142ujcie si\u0119 wzajemnie\nJak ja was umi\u0142owa\u0142em\n**\n1.\nTo jest nowe przykazanie\nAby\u015bcie si\u0119 wzajemnie mi\u0142owali\n*\nMi\u0142ujcie si\u0119 wzajemnie\u2026\n2.\nNie ma wi\u0119kszej mi\u0142o\u015bci\nJak odda\u0107 \u017cycie za przyjaci\u00f3\u0142 swoich \n*\nMi\u0142ujcie si\u0119 wzajemnie\u2026\n3.\nNie nazywam was s\u0142ugami\nAle przyjaci\u00f3\u0142mi \n*\nMi\u0142ujcie si\u0119 wzajemnie\u2026\n4.\nJeste\u015bcie przyjaci\u00f3\u0142mi moimi\nGdy czynicie, co wam nakaza\u0142em\n*\nMi\u0142ujcie si\u0119 wzajemnie\u2026",
-        "nuty": null
-    },
-    "Mizerna, cicha": {
-        "tytu\u0142": "Mizerna, cicha",
-        "klasa": "6",
-        "katsiedlecki": "Pie\u015bni na Bo\u017ce Narodzenie",
-        "nr": "598",
-        "tonacja": "c",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nMizerna, cicha, stajenka licha, * Pe\u0142na niebieskiej chwa\u0142y.\n= Oto le\u017c\u0105cy, przed nami \u015bpi\u0105cy * W promieniach Jezus ma\u0142y.\n2.\nNad nim anieli w locie stan\u0119li * I pochyleni kl\u0119cz\u0105\n= Z w\u0142osy z\u0142otymi, z skrzyd\u0142a bia\u0142ymi, * Pod malowan\u0105 t\u0119cz\u0105.\n3.\nWielkie zdziwienie: wszelkie stworzenie * Ca\u0142y \u015bwiat orze\u017awiony;\n= M\u0105dro\u015b\u0107 M\u0105dro\u015bci, \u015awiat\u0142o\u015b\u0107 \u015awiat\u0142o\u015bci, * B\u00f3g - cz\u0142owiek tu wcielony!",
         "nuty": null
     },
     "My chcemy Boga": {
@@ -1007,16 +847,6 @@
         "tonacja": "e",
         "naco": "0\/1\/0\/0\/0\/Posypanie g\u0142\u00f3w",
         "tekst": "1.\nNawr\u00f3\u0107 si\u0119, ludu, w pokorze\nW po\u015bcie i w p\u0142aczu, i w \u017calu\nA \u015bwiat\u0142o\u015b\u0107 twoja jak zorze\nRozb\u0142y\u015bnie nad Jeruzalem\n2.\nNawr\u00f3\u0107 si\u0119, c\u00f3rko Syjonu\nDo Pana, Boga swojego\nTu\u0142aczy przyjmij do domu\n\u0141akn\u0105cych obdaruj chlebem\n3.\nObmyj si\u0119 dzi\u015b \u017cyw\u0105 wod\u0105\nBo B\u00f3g ci przebaczy\u0107 got\u00f3w\nJak orze\u0142 odn\u00f3w sw\u0105 m\u0142odo\u015b\u0107\nI wzmocnij skrzyd\u0142a do lotu\n4.\nWtedy Pa\u0144skiego Imienia\nZawezwiesz, a On odpowie\nWprowadzi do bram zbawienia\nPasterzem b\u0119dzie swych owiec",
-        "nuty": null
-    },
-    "Nie by\u0142o miejsca dla Ciebie": {
-        "tytu\u0142": "Nie by\u0142o miejsca dla Ciebie",
-        "klasa": "6",
-        "katsiedlecki": "",
-        "nr": "640",
-        "tonacja": "e",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nNie by\u0142o miejsca dla Ciebie \u2022 W Betlejem w \u017cadnej gospodzie\nI narodzi\u0142e\u015b si\u0119, Jezu \u2022 W stajni, w ub\u00f3stwie i ch\u0142odzie\nNie by\u0142o miejsca, cho\u0107 zszed\u0142e\u015b \u2022 Jako Zbawiciel na ziemi\u0119\nBy wyrwa\u0107 z czarta niewoli \u2022 Nieszcz\u0119sne Adama plemi\u0119\n2.\nNie by\u0142o miejsca, cho\u0107 chcia\u0142e\u015b \u2022 Ludzko\u015b\u0107 przytuli\u0107 do \u0142ona\nI poda\u0107 z krzy\u017ca grzesznikom \u2022 Zbawcze, skrwawione ramiona\nNie by\u0142o miejsca, cho\u0107 zszed\u0142e\u015b \u2022 Ogie\u0144 mi\u0142o\u015bci zapali\u0107\nI przez sw\u0105 m\u0119k\u0119 najdro\u017csz\u0105 \u2022 \u015awiat od zag\u0142ady ocali\u0107\n3.\nGdy liszki maj\u0105 swe jamy \u2022 I ptaszki swoje gniazdeczka\nDla ciebie brak\u0142o gospody \u2022 Ty\u015b musia\u0142 szuka\u0107 \u017c\u0142\u00f3beczka\nA dzisiaj czemu w\u015br\u00f3d ludzi \u2022 Tyle \u0142ez, j\u0119k\u00f3w, katuszy\nBo nie ma miejsca dla Ciebie \u2022 W niejednej cz\u0142owieczej duszy",
         "nuty": null
     },
     "Nie l\u0119kajcie si\u0119": {
@@ -1099,16 +929,6 @@
         "tekst": "1.\r\nNiechaj z nami b\u0119dzie Pan, Alleluja\r\nNiech obron\u0105 b\u0119dzie nam, Alleluja\r\n2.\r\nJego S\u0142owo zawsze trwa, Alleluja\r\nWieczn\u0105 prawd\u0119 w sobie ma, Alleluja\r\n3.\r\nChcemy zg\u0142\u0119bia\u0107 S\u0142owa tre\u015b\u0107, Alleluja\r\nBraciom je rado\u015bnie nie\u015b\u0107, Alleluja\r\n4.\r\nChcemy Nim na co dzie\u0144 \u017cy\u0107, Alleluja\r\nI w przyja\u017ani z Bogiem by\u0107, Alleluja\r\n5.\r\n\u0179r\u00f3d\u0142o \u017cycia, Panie nasz, Alleluja\r\nTy nam wieczne \u017cycie dasz, Alleluja\r\n6.\r\nProwad\u017a w\u015br\u00f3d zawi\u0142ych dr\u00f3g, Alleluja\r\nW Tr\u00f3jcy \u015awi\u0119tej Jeden B\u00f3g, Alleluja",
         "nuty": null
     },
-    "Nowy rok bie\u017cy": {
-        "tytu\u0142": "Nowy rok bie\u017cy",
-        "klasa": "6",
-        "katsiedlecki": "Pie\u015bni na Bo\u017ce Narodzenie",
-        "nr": "687",
-        "tonacja": "C",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nNowy rok bie\u017cy, w jase\u0142kach le\u017cy: a kto, kto?\n=Dzieci\u0105tko ma\u0142e, dajcie Mu chwa\u0142\u0119 na ziemi.\n2.\nLe\u017cy Dzieci\u0105tko jako jagni\u0105tko, a gdzie, gdzie?\n=W Betlejem mie\u015bcie, tam si\u0119 po\u015bpieszcie, znajdziecie.\n3.\nJak Go poznamy, gdy Go nie znamy, Jezusa?\n=Biednie uwity, nie w aksamity, ubogo.\n4.\nAnieli graj\u0105, wdzi\u0119cznie \u015bpiewaj\u0105: A co, co?\n=Niech chwa\u0142a b\u0119dzie zawsze i wsz\u0119dzie Dzieci\u0105tku.\n5.\nKr\u00f3lowie jad\u0105 z wielk\u0105 gromad\u0105, a sk\u0105d, sk\u0105d?\n=Od wschodu s\u0142o\u0144ca, szukaj\u0105 ko\u0144ca Zbawienia.",
-        "nuty": null
-    },
     "O Bo\u017ce, dzi\u0119ki Ci sk\u0142adamy": {
         "tytu\u0142": "O Bo\u017ce, dzi\u0119ki Ci sk\u0142adamy",
         "klasa": "1",
@@ -1117,16 +937,6 @@
         "tonacja": "Es",
         "naco": "0\/0\/0\/1\/1\/0",
         "tekst": "1.\nO Bo\u017ce, dzi\u0119ki Ci sk\u0142adamy za ten wielki cud.\nZa Twej mi\u0142o\u015bci wieczny zamys\u0142, by odkupi\u0107 lud.\nTy\u015b Syna swego da\u0142, by cz\u0142owiek \u017cycie mia\u0142.\nOn przyj\u0105\u0142 na si\u0119 ludzkie cia\u0142o, jednym z nas si\u0119 sta\u0142.\n2.\nLecz nie do\u015b\u0107 by\u0142o tej mi\u0142o\u015bci, \u017ce w\u015br\u00f3d ludzi \u017cy\u0142.\nOn w Eucharystii w\u015br\u00f3d nas go\u015bci, w Hostii tej si\u0119 skry\u0142.\nTu otwar\u0142 Serce swe i \u0142aski wiernym \u015ble,\nOn jest pokarmem naszych dusz i umocnieniem si\u0142.\n3.\nZawitaj, Jezu, drogi Go\u015bciu, \u017ar\u00f3d\u0142o hojnych \u0142ask.\nTy nas gromadzisz w jeden Ko\u015bci\u00f3\u0142, Ty jednoczysz nas.\nB\u0105d\u017a si\u0142\u0105 naszych dusz, ostoj\u0105 po\u015br\u00f3d burz,\npozosta\u0144 z nami w doczesno\u015bci i po wieczny czas.",
-        "nuty": null
-    },
-    "O gwiazdo betlejemska": {
-        "tytu\u0142": "O gwiazdo betlejemska",
-        "klasa": "6",
-        "katsiedlecki": "Pie\u015bni na Bo\u017ce Narodzenie",
-        "nr": "700",
-        "tonacja": "Es",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nO gwiazdo betlejemska, za\u015bwie\u0107 na niebie mym\nTak szukam Ci\u0119 w\u015br\u00f3d nocy, t\u0119skni\u0119 za \u015bwiat\u0142em Twym\nZaprowad\u017a do stajenki, le\u017cy tam Bo\u017cy Syn\nB\u00f3g Cz\u0142owiek z Panny \u015awi\u0119tej, dany na okup win\n2.\nO nie masz Go ju\u017c w szopce, nie masz Go w \u017c\u0142\u00f3bku tam\nWi\u0119c gdzie p\u00f3jdziemy, Chryste? Gdzie si\u0119 ukry\u0142e\u015b nam?\nP\u00f3jdziemy przed o\u0142tarze, wznieci\u0107 mi\u0142o\u015bci \u017car\nI ho\u0142d Ci niski odda\u0107, to jest nasz wszystek dar\n3.\nJa nie wiem, o m\u00f3j Panie, kt\u00f3ry\u015b mia\u0142 w \u017c\u0142obie tron\nCzy dusza moja biedna milsza Ci jest ni\u017c on\nUlituj si\u0119 nade mn\u0105, b\u0142aga\u0107 Ci\u0119 kornie \u015bmiem\nGdy\u015b stajni\u0105 nie pogardzi\u0142, nie gard\u017a i sercem mym",
         "nuty": null
     },
     "O m\u00f3j Jezu w Hostii skryty": {
@@ -1166,8 +976,8 @@
         "nr": "733",
         "tonacja": "D",
         "naco": "1\/1\/1\/0\/0\/0",
-        "tekst": "1.\nO Panie, Ty\u015b moim Pasterzem\nTak dobrym, \u017ce nic mi nie braknie\nDo \u017ar\u00f3de\u0142 w\u00f3d \u017cywych mnie wiedziesz\nProstymi \u015bcie\u017ckami prowadzisz\n*\nPasterzem moim jest Pan\nI nie brak mi niczego\n2.\nCho\u0107 id\u0119 przez ciemn\u0105 dolin\u0119\nNiczego nie musz\u0119 si\u0119 trwo\u017cy\u0107\nBo Pasterz m\u00f3j zawsze jest przy mnie\nW obronie mej stan\u0105\u0107 gotowy\n*\nPasterzem moim jest Pan\u2026\n3.\nDo sto\u0142u swojego zaprasza\nNa oczach mych wrog\u00f3w to czyni\nOlejkiem m\u0105 g\u0142ow\u0119 namaszcza\nA kielich nape\u0142nia obficie \n*\nPasterzem moim jest Pan\u2026\n4.\nTwa \u0142aska i dobro\u0107 pod\u0105\u017c\u0105\nW \u015blad za mn\u0105 po dzie\u0144 m\u00f3j ostatni\nA\u017c dotr\u0119, o Panie, do domu\nBy z Tob\u0105 zamieszka\u0107 na zawsze \n*\nPasterzem moim jest Pan\u2026",
-        "nuty": null
+        "tekst": "1.\r\nO Panie, Ty\u015b moim Pasterzem\r\nTak dobrym, \u017ce nic mi nie braknie\r\nDo \u017ar\u00f3de\u0142 w\u00f3d \u017cywych mnie wiedziesz\r\nProstymi \u015bcie\u017ckami prowadzisz\r\n*\r\nPasterzem moim jest Pan\r\nI nie brak mi niczego\r\n2.\r\nCho\u0107 id\u0119 przez ciemn\u0105 dolin\u0119\r\nNiczego nie musz\u0119 si\u0119 trwo\u017cy\u0107\r\nBo Pasterz m\u00f3j zawsze jest przy mnie\r\nW obronie mej stan\u0105\u0107 gotowy\r\n*\r\nPasterzem moim jest Pan\u2026\r\n3.\r\nDo sto\u0142u swojego zaprasza\r\nNa oczach mych wrog\u00f3w to czyni\r\nOlejkiem m\u0105 g\u0142ow\u0119 namaszcza\r\nA kielich nape\u0142nia obficie \r\n*\r\nPasterzem moim jest Pan\u2026\r\n4.\r\nTwa \u0142aska i dobro\u0107 pod\u0105\u017c\u0105\r\nW \u015blad za mn\u0105 po dzie\u0144 m\u00f3j ostatni\r\nA\u017c dotr\u0119, o Panie, do domu\r\nBy z Tob\u0105 zamieszka\u0107 na zawsze \r\n*\r\nPasterzem moim jest Pan\u2026",
+        "nuty": "K:D\r\nM:C\r\nL:1\/4\r\nA, |:\"G\\nh\"D C\/D\/ \"Fis7\\nA\" D\/E\/ | \"h\\nD\" F D \"Gis\u00f87\\nD\"z F | \"A\" E E\/F\/ \"(Aiso)\" G F\/E\/ |1 \"h\" FF z A, :|2 \"D\"DD2||\r\n|:D|\"e7\" GG\"A7\"BG\/B\/ | \"fis7\" A2 \"h\" z D | \"Gmaj7\" F>G \"A\" F E | \"D\" D2D :|"
     },
     "O Stworzycielu Duchu": {
         "tytu\u0142": "O Stworzycielu Duchu",
@@ -1207,7 +1017,7 @@
         "tonacja": "D",
         "naco": "1\/0\/1\/0\/0\/0",
         "tekst": "1.\r\nOjcze z niebios, Bo\u017ce Panie,\r\ntu na ziemi\u0119 ze\u015blij nam,\r\nTwoje \u015bwi\u0119te zmi\u0142owanie,\r\ntu na ziemi\u0119 ze\u015blij nam.\r\n2.\r\nBo\u017ce wielki! My w pokorze\r\ndo Twych st\u00f3p garniemy si\u0119,\r\nwola Twoja wszystko mo\u017ce,\r\nTy nad nami zlituj si\u0119.\r\n3.\r\nA przez Syna Twego m\u0119k\u0119\r\nul\u017cyj ludzkiej doli z\u0142ej.\r\nKa\u017cd\u0105 \u017cycia skr\u00f3\u0107 udr\u0119k\u0119,\r\nBo\u017ce wielki, zlituj si\u0119.",
-        "nuty": null
+        "nuty": "K:D\r\nM:C\r\nL:1\/4\r\n\"D\"A>GFE | \"h\" DEFD | \"Gmaj9\" A>GFG | \"e11\" A2B2 | \"fis\" A4 |\r\n|: \"G6\" E>F \"A7\" G \"aiso\" E | \"h7\" FBAF | \"G6\" E>F \"e7\" GB | \"A\" A2G2 | \"D\" F4 :|"
     },
     "Otoczon gronem \u015bwi\u0119tych": {
         "tytu\u0142": "Otoczon gronem \u015bwi\u0119tych",
@@ -1306,8 +1116,8 @@
         "nr": "863",
         "tonacja": "Es",
         "naco": "0\/0\/0\/0\/1\/0",
-        "tekst": "1.\nPob\u0142ogos\u0142aw, Jezu drogi\nTym, co Serce Twe kochaj\u0105\nNiechaj skarb ten cenny, drogi\nNa wiek wiek\u00f3w posiadaj\u0105\n2.\nZa Twe \u0142aski dzi\u0119kujemy\nKt\u00f3re Serce Twoje da\u0142o\nW dani dusze Ci niesiemy\nBy nas Serce Twe kocha\u0142o\n3.\nTrzykro\u0107 \u015bwi\u0119te Serce Boga\nTobie \u015bpiewa niebo ca\u0142e\nCiebie wielbi Matka droga\nTobie lud Tw\u00f3j sk\u0142ada chwa\u0142\u0119\n4.\nNie opuszczaj nas, o Panie\nOdpu\u015b\u0107 grzesznym liczne winy\nDaj nam w Serca Twego ranie\nB\u0142ogos\u0142awie\u0144stw zdr\u00f3j jedyny",
-        "nuty": null
+        "tekst": "1.\r\nPob\u0142ogos\u0142aw, Jezu drogi\r\nTym, co Serce Twe kochaj\u0105\r\nNiechaj skarb ten cenny, drogi\r\nNa wiek wiek\u00f3w posiadaj\u0105\r\n2.\r\nZa Twe \u0142aski dzi\u0119kujemy\r\nKt\u00f3re Serce Twoje da\u0142o\r\nW dani dusze Ci niesiemy\r\nBy nas Serce Twe kocha\u0142o\r\n3.\r\nTrzykro\u0107 \u015bwi\u0119te Serce Boga\r\nTobie \u015bpiewa niebo ca\u0142e\r\nCiebie wielbi Matka droga\r\nTobie lud Tw\u00f3j sk\u0142ada chwa\u0142\u0119\r\n4.\r\nNie opuszczaj nas, o Panie\r\nOdpu\u015b\u0107 grzesznym liczne winy\r\nDaj nam w Serca Twego ranie\r\nB\u0142ogos\u0142awie\u0144stw zdr\u00f3j jedyny",
+        "nuty": "K:Eb\r\nM:3\/4\r\nL:1\/8\r\n\"Es\" G3G FE | DE \"B\" F2 B,2 | \"As\" A3A GF | EF \"B\" G2 \"Es\" E2 \\\r\n|: \"g\" B3B \"f\" AG | AG \"As\" (AB) c2 |\\\r\n\"Es\" B3B \"B\" cB | ADF2\"Es\"E2 :|"
     },
     "Pod Tw\u0105 obron\u0119": {
         "tytu\u0142": "Pod Tw\u0105 obron\u0119",
@@ -1349,16 +1159,6 @@
         "tekst": "1.\nP\u00f3jd\u017amy do Pana z winnym pok\u0142onem\nA z\u0142\u00f3\u017cmy serca przed Jego tronem\nDobro\u0107 nam Jego, wszechmocno\u015b\u0107 znana\nP\u00f3jd\u017amy do Pana, p\u00f3jd\u017amy do Pana\n2.\nPan \u015bwi\u0119ty, mocny i nie\u015bmiertelny\nJeden w Osobach Trzech, nierozdzielny\nMoc, m\u0105dro\u015b\u0107, mi\u0142o\u015b\u0107 w Nim niezr\u00f3wnana\nP\u00f3jd\u017amy do Pana, p\u00f3jd\u017amy do Pana\n3.\nB\u00f3g Stw\u00f3rc\u0105 naszym, Ojcem i Panem\nWszelkim \u0142askawie zarz\u0105dza stanem\nJego Opatrzno\u015b\u0107 wsz\u0119dzie widziana\nP\u00f3jd\u017amy do Pana, p\u00f3jd\u017amy do Pana",
         "nuty": null
     },
-    "P\u00f3jd\u017amy wszyscy do stajenki": {
-        "tytu\u0142": "P\u00f3jd\u017amy wszyscy do stajenki",
-        "klasa": "6",
-        "katsiedlecki": "Pie\u015bni na Bo\u017ce Narodzenie",
-        "nr": "879",
-        "tonacja": "F",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nP\u00f3jd\u017amy wszyscy do stajenki, * do Jezusa i Panienki!\n=Powitajmy Male\u0144kiego * i Maryj\u0119 Matk\u0119 Jego.\n2.\nWitaj, Jezu ukochany, * od patriarch\u00f3w czekany, \n=od prorok\u00f3w og\u0142oszony, * od narod\u00f3w upragniony.\n3.\nWitaj, Dzieci\u0105teczko w \u017c\u0142obie, * wyznajemy Boga w Tobie. \n=Co\u015b si\u0119 narodzi\u0142 tej nocy, * by\u015b nas wyrwa\u0142 z czarta mocy.\n4.\nWitaj, Jezu nam zjawiony; * witaj, dwakro\u0107 narodzony, \n=raz z Ojca przed wiek\u00f3w wiekiem, * a teraz z Matki cz\u0142owiekiem.",
-        "nuty": null
-    },
     "Przed tak wielkim Sakramentem": {
         "tytu\u0142": "Przed tak wielkim Sakramentem",
         "klasa": "2",
@@ -1377,16 +1177,6 @@
         "tonacja": "f",
         "naco": "0\/0\/0\/0\/0\/Sekwencja",
         "tekst": "1.\nPrzyb\u0105d\u017a, Duchu \u015awi\u0119ty,\nZe\u015blij z nieba wzi\u0119ty\n\u015awiat\u0142a Twego strumie\u0144.\nPrzyjd\u017a, Ojcze ubogich,\nPrzyjd\u017a, Dawco \u0142ask drogich,\nPrzyjd\u017a, \u015awiat\u0142o\u015bci sumie\u0144.\n2.\nO, najmilszy z go\u015bci,\nS\u0142odka serc rado\u015bci,\nS\u0142odkie orze\u017awienie.\nW pracy Ty\u015b och\u0142od\u0105,\nW skwarze \u017cyw\u0105 wod\u0105,\nW p\u0142aczu utulenie.\n3.\n\u015awiat\u0142o\u015bci naj\u015bwi\u0119tsza,\nSerc wierz\u0105cych wn\u0119trza\nPoddaj Twej pot\u0119dze.\nBez Twojego tchnienia,\nC\u00f3\u017c jest w\u015br\u00f3d stworzenia?\nJeno cier\u0144 i n\u0119dze.\n4.\nObmyj, co nie\u015bwi\u0119te,\nOsch\u0142ym wlej zach\u0119t\u0119,\nUlecz serca ran\u0119.\nNagnij, co jest harde,\nRozgrzej serca twarde,\nProwad\u017a zab\u0142\u0105kane.\n5.\nDaj Twoim wierz\u0105cym,\nW Tobie ufaj\u0105cym,\nSiedmiorakie dary.\nDaj zas\u0142ug\u0119 m\u0119stwa,\nDaj wieniec zwyci\u0119stwa,\nDaj szcz\u0119\u015bcie bez miary.",
-        "nuty": null
-    },
-    "Przybie\u017celi do Betlejem": {
-        "tytu\u0142": "Przybie\u017celi do Betlejem",
-        "klasa": "6",
-        "katsiedlecki": "Pie\u015bni na Bo\u017ce Narodzenie",
-        "nr": "938",
-        "tonacja": "C",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nPrzybie\u017celi do Betlejem pasterze, * graj\u0105c skocznie Dzieci\u0105teczku na lirze.\n*\nChwa\u0142a na wysoko\u015bci, chwa\u0142a na wysoko\u015bci, * a pok\u00f3j na ziemi!\n2.\nOddawali swe uk\u0142ony w pokorze * Tobie z serca ochotnego, o Bo\u017ce!\n*\nChwa\u0142a na wysoko\u015bci\u2026\n3.\nAnio\u0142 Pa\u0144ski sam og\u0142osi\u0142 te dziwy, * kt\u00f3rych oni nie s\u0142yszeli, jak \u017cywi.\n*\nChwa\u0142a na wysoko\u015bci\u2026\n4.\nI anieli gromadami pilnuj\u0105, * Panna czysta wraz z J\u00f3zefem piastuj\u0105.\n*\nChwa\u0142a na wysoko\u015bci\u2026\n5.\nPoznali Go Mesyjaszem by\u0107 prawym, * narodzonym dzisiaj Panem \u0142askawym.\n*\nChwa\u0142a na wysoko\u015bci\u2026\n6.\nMy Go tak\u017ce Bogiem, Zbawc\u0105 ju\u017c znamy * i z ca\u0142ego serca wszyscy kochamy.\n*\nChwa\u0142a na wysoko\u015bci\u2026",
         "nuty": null
     },
     "Przygotuj\u0119 Ci serce": {
@@ -1539,16 +1329,6 @@
         "tekst": "\u015awi\u0119ty X, patronie nasz\n\u015awi\u0119ty X, patronie nasz\nM\u00f3dl si\u0119, m\u00f3dl si\u0119, m\u00f3dl si\u0119 za nami",
         "nuty": null
     },
-    "Tryumfy Kr\u00f3la Niebieskiego": {
-        "tytu\u0142": "Tryumfy Kr\u00f3la Niebieskiego",
-        "klasa": "6",
-        "katsiedlecki": "Pie\u015bni na Bo\u017ce Narodzenie",
-        "nr": "1067",
-        "tonacja": "F",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nTryumfy Kr\u00f3la Niebieskiego * zst\u0105pi\u0142y z nieba wysokiego.\nPobudzi\u0142y pasterz\u00f3w, * dobytku swego str\u00f3\u017c\u00f3w, * \u015bpiewaniem, \u015bpiewaniem, \u015bpiewaniem.\n2.\nChwa\u0142a b\u0105d\u017a Bogu w wysoko\u015bci, * a ludziom pok\u00f3j na nisko\u015bci.\nNarodzi\u0142 si\u0119 Zbawiciel, * dusz ludzkich Odkupiciel * na ziemi, na ziemi, na ziemi.\n3.\nZrodzi\u0142a Maryja Dziewica, * wiecznego Boga bez rodzica,\nby nas z piek\u0142a wybawi\u0142, * a w niebieskich postawi\u0142 * pa\u0142acach, pa\u0142acach, pa\u0142acach.",
-        "nuty": null
-    },
     "Twemu Sercu cze\u015b\u0107 sk\u0142adamy": {
         "tytu\u0142": "Twemu Sercu cze\u015b\u0107 sk\u0142adamy",
         "klasa": "4",
@@ -1629,36 +1409,6 @@
         "tekst": "1.\nUwielbiaj, duszo moja, s\u0142aw\u0119 Pana mego\nChwal Boga Stworzyciela tak bardzo dobrego\nB\u00f3g m\u00f3j, zbawienie moje jedyna otucha\nB\u00f3g mi rozkosz\u0105 serca i weselem ducha\n2.\nBo mile przyj\u0105\u0107 raczy\u0142 swej s\u0142ugi pokor\u0119\n\u0141askawym okiem wejrza\u0142 na Dawida c\u00f3r\u0119\nPrzeto wszystkie narody, co ziemi\u0119 osi\u0105d\u0105\nOdt\u0105d b\u0142ogos\u0142awion\u0105 mnie nazywa\u0107 b\u0119d\u0105\n3.\nBo wielkimi darami uczczonam od Tego,\nKt\u00f3rego moc przedziwna, \u015bwi\u0119te imi\u0119 Jego\nKt\u00f3rzy si\u0119 Pana boj\u0105, szcz\u0119\u015bliwi na wieki\nBo z nimi mi\u0142osierdzie z rodu w r\u00f3d daleki\n4.\nNa ca\u0142y \u015bwiat pokaza\u0142 moc swych ramion \u015bwi\u0119tych\nRozproszy\u0142 dumne my\u015bli g\u0142\u00f3w pych\u0105 nad\u0119tych\nWynios\u0142ych z\u0142o\u017cy\u0142 z tronu, znikczemni\u0142 wielmo\u017cne\nWywy\u017cszy\u0142, uwielmo\u017cni\u0142 w pokor\u0119 zamo\u017cne\n5.\nG\u0142odnych nasyci\u0142 hojnie i w dobra spanoszy\u0142\nBogacz\u00f3w z torb\u0105 pu\u015bci\u0142 i n\u0119dznie rozproszy\u0142\nPrzyj\u0105\u0142 do \u0142aski s\u0142ug\u0119 Izraela cnego\nWspomnia\u0142 na\u0144, u\u017cyczy\u0142 mu mi\u0142osierdzia swego\n6.\nWype\u0142ni\u0142, co by\u0142 przyrzek\u0142 niegdy\u015b ojcom naszym\nAbrahamowi z potomstwem jego, wiecznym czasem\nWszyscy \u015bpiewajmy Bogu w Tr\u00f3jcy Jedynemu\nChwa\u0142a Ojcu, Synowi, Duchowi \u015awi\u0119temu\n\nJak by\u0142a na pocz\u0105tku, tak zawsze niech b\u0119dzie\nTeraz i na wiek wiek\u00f3w niechaj s\u0142ynie wsz\u0119dzie",
         "nuty": null
     },
-    "W dzie\u0144 Bo\u017cego Narodzenia": {
-        "tytu\u0142": "W dzie\u0144 Bo\u017cego Narodzenia",
-        "klasa": "6",
-        "katsiedlecki": "Kol\u0119dy domowe",
-        "nr": "1114",
-        "tonacja": "D",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nW dzie\u0144 Bo\u017cego Narodzenia * Rado\u015b\u0107 wszelkiego stworzenia\nAnio\u0142owie si\u0119 raduj\u0105, * Jezusowi wy\u015bpiewuj\u0105\n2.\nNies\u0142ychana to nowina * Panna porodzi\u0142a Syna\nSyna Jednorodzonego * Boga Ojca Niebieskiego\n3.\nTo anieli oznajmuj\u0105 * Do Betlejem pokazuj\u0105 \nGdzie narodzi\u0142 si\u0119 Zbawiciel * Wszego \u015bwiata Odkupiciel",
-        "nuty": null
-    },
-    "W \u017c\u0142obie le\u017cy": {
-        "tytu\u0142": "W \u017c\u0142obie le\u017cy",
-        "klasa": "6",
-        "katsiedlecki": "Pie\u015bni na Bo\u017ce Narodzenie",
-        "nr": "1130",
-        "tonacja": "D",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nW \u017c\u0142obie le\u017cy, kt\u00f3\u017c pobie\u017cy * kol\u0119dowa\u0107 Ma\u0142emu,\nJezusowi Chrystusowi, * dzi\u015b nam narodzonemu?\nPastuszkowie, przybywajcie, * Jemu wdzi\u0119cznie przygrywajcie,\njako Panu naszemu.\n2.\nMy za\u015b sami z piosneczkami * za wami po\u015bpieszymy.\nA tak Tego Male\u0144kiego * niech wszyscy zobaczymy.\nJak ubogo narodzony, * p\u0142acze w stajni po\u0142o\u017cony,\nwi\u0119c Go dzi\u015b ucieszymy.\n3.\nNaprz\u00f3d tedy niechaj wsz\u0119dy * zabrzmi \u015bwiat w weso\u0142o\u015bci,\n\u017ce pos\u0142any nam jest dany * Emmanuel w nisko\u015bci\nJego tedy przywitajmy, * z anio\u0142ami za\u015bpiewajmy:\n\u201eChwa\u0142a na wysoko\u015bci\u201d.",
-        "nuty": null
-    },
-    "Weso\u0142\u0105 nowin\u0119": {
-        "tytu\u0142": "Weso\u0142\u0105 nowin\u0119",
-        "klasa": "6",
-        "katsiedlecki": "Pie\u015bni na Bo\u017ce Narodzenie",
-        "nr": "1139",
-        "tonacja": "D",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nWeso\u0142\u0105 nowin\u0119, bracia s\u0142uchajcie, * niebiesk\u0105 Dziecin\u0119 ze mn\u0105 witajcie.\n*\nJak mi\u0142a ta nowina! * M\u00f3w, gdzie jest ta Dziecina? * By\u015bmy tam pobie\u017celi i ujrzeli.\n*\n2.\nBogu chwa\u0142\u0119 wznosz\u0105 na wysoko\u015bci, * pok\u00f3j ludziom g\u0142osz\u0105 duchy \u015bwiat\u0142o\u015bci.\n*\nJak mi\u0142a ta nowina\u2026\n3.\nPanna nam powi\u0142a Boskie Dzieci\u0105tko, * pok\u0142onem uczci\u0142a to Niemowl\u0105tko.\n*\nJak mi\u0142a ta nowina\u2026",
-        "nuty": null
-    },
     "Wielbi\u0119 Ciebie": {
         "tytu\u0142": "Wielbi\u0119 Ciebie",
         "klasa": "1",
@@ -1729,16 +1479,6 @@
         "tekst": "1.\nWszystko Tobie odda\u0107 pragn\u0119\nI dla Ciebie tylko \u017cy\u0107\nChc\u0119 Ci\u0119, Jezu, kocha\u0107 wiernie\nDzieckiem Twoim zawsze by\u0107\n*\nSerce moje we\u017a\nNiech Tw\u0105 \u015bpiewa cze\u015b\u0107\nSerce moje, dusz\u0119 moj\u0105\nPanie Jezu we\u017a\n2.\nWszystko Tobie odda\u0107 pragn\u0119\nOd najm\u0142odszych moich lat\nPom\u00f3\u017c, Jezu, by mnie nie zwi\u00f3d\u0142\nPokusami swymi \u015bwiat\n*\nSerce moje we\u017a...",
         "nuty": null
     },
-    "W\u015br\u00f3d nocnej ciszy": {
-        "tytu\u0142": "W\u015br\u00f3d nocnej ciszy",
-        "klasa": "6",
-        "katsiedlecki": "Pie\u015bni na Bo\u017ce Narodzenie",
-        "nr": "1194",
-        "tonacja": "F",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nW\u015br\u00f3d nocnej ciszy g\u0142os si\u0119 rozchodzi: * \u201eWsta\u0144cie pasterze, B\u00f3g si\u0119 wam rodzi. \nCzym pr\u0119dzej si\u0119 wybierajcie, * do Betlejem po\u015bpieszajcie * przywita\u0107 Pana\u201d.\n2.\nPoszli, znale\u017ali Dzieci\u0105tko w \u017c\u0142obie * z wszystkimi znaki, danymi sobie. \nJako Bogu cze\u015b\u0107 Mu dali, * a witaj\u0105c zawo\u0142ali * z wielkiej rado\u015bci:\n3.\n\u201eAch witaj, Zbawco z dawna \u017c\u0105dany, * tyle tysi\u0119cy lat wygl\u0105dany! \nNa Ciebie kr\u00f3le, prorocy * czekali, a Ty\u015b tej nocy * nam si\u0119 objawi\u0142\u201d.\n4.\nI my czekamy na Ciebie, Pana, * a skoro przyjdziesz na g\u0142os kap\u0142ana, \npadniemy na twarz przed Tob\u0105, * wierz\u0105c, \u017ce\u015b jest pod os\u0142on\u0105 * chleba i wina.",
-        "nuty": null
-    },
     "Z dawna Polski Ty\u015b Kr\u00f3low\u0105": {
         "tytu\u0142": "Z dawna Polski Ty\u015b Kr\u00f3low\u0105",
         "klasa": "3",
@@ -1747,16 +1487,6 @@
         "tonacja": "d",
         "naco": "0\/0\/0\/0\/1\/0",
         "tekst": "1.\nZ dawna Polski Ty\u015b Kr\u00f3low\u0105, Maryjo\nTy za nami przem\u00f3w s\u0142owo, Maryjo\nOciemnia\u0142ym podaj r\u0119k\u0119\nniewytrwa\u0142ym skracaj m\u0119k\u0119\nTwe Kr\u00f3lestwo we\u017a pod r\u0119k\u0119, Maryjo\n2.\nGdy\u015b pod krzy\u017cem Syna sta\u0142a, Maryjo\nTyle\u015b, Matko, wycierpia\u0142a, Maryjo\nPrzez Twego Syna konanie\nupro\u015b sercom zmartwychwstanie\nw ojc\u00f3w wierze daj wytrwanie, Maryjo\n3.\nZ dawna Polski Ty\u015b Kr\u00f3low\u0105, Maryjo\nTy za nami przem\u00f3w s\u0142owo, Maryjo\nMiej w opiece nar\u00f3d ca\u0142y\nkt\u00f3ry \u017cyje dla Twej chwa\u0142y\nniech rozwija si\u0119 wspania\u0142y, Maryjo",
-        "nuty": null
-    },
-    "Z narodzenia Pana": {
-        "tytu\u0142": "Z narodzenia Pana",
-        "klasa": "6",
-        "katsiedlecki": "Pie\u015bni na Bo\u017ce Narodzenie",
-        "nr": "1224",
-        "tonacja": "C",
-        "naco": "0\/0\/0\/0\/0\/0",
-        "tekst": "1.\nZ narodzenia Pana dzie\u0144 dzi\u015b weso\u0142y. * Wy\u015bpiewuj\u0105 chwa\u0142\u0119 Bogu \u017cywio\u0142y\nRado\u015b\u0107 ludzi wsz\u0119dzie s\u0142ynie. * Anio\u0142 budzi przy dolinie * pasterzy, co pa\u015bli pod borem wo\u0142y.\n2.\nWypada w\u015br\u00f3d nocy ogie\u0144 z ob\u0142oku. * Dumaj\u0105 pasterze w takim widoku.\nKa\u017cdy pyta: \u201eCo si\u0119 dzieje? * Czy nie \u015bwita? Czy nie dnieje? * Sk\u0105d ta \u0142una bije, tak mi\u0142a oku?\u201d.\n3.\nAle gdy anielskie g\u0142osy s\u0142yszeli, * zaraz do Betlejem prosto bie\u017celi.\nTam witali w \u017c\u0142obie Pana, * pokl\u0119kali na kolana * i oddali dary, co z sob\u0105 wzi\u0119li.",
         "nuty": null
     },
     "Z r\u0105k kap\u0142a\u0144skich": {
