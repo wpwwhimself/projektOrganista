@@ -214,7 +214,7 @@ function Lyrics(props){
   let raw = props.raw;
   raw = raw.replace(/\*\*\s*\n/g, '</span><br>');
   raw = raw.replace(/\*\s*\n/g, '<span class="chorus">');
-  raw = raw.replace(/_(.+)_/g, '<u>$1</u>');
+  raw = raw.replace(/_(.{1,5})_/g, '<u>$1</u>');
   raw = raw.replace(/\d+\.\s*\n/g, match => {return "<li start="+match.substring(0, match.length - 2)+">"});
   raw = raw.replace(/\n/g, "<br />");
 
@@ -268,11 +268,18 @@ function Song({page, setAddmode}){
       let flag = (title == "majowe");
       let subtitle = (flag) ? "Pod Twoją obronę" : "Do Serca Twojego";
 
+      const melodia_litanii = (flag) ? 
+        `K:Eb\nL:1/8\nM:C\n"c7\\nEs"E8DE "B"(FD)B,2|"G7\\nB7"F2EF"c\\nEs"G2E2|"Asmaj9\\nc7"G8FGB2"f7"A2|"B7"B,2GFF2"Es"E2|]` : 
+        `K:Cm\nL:1/8\nM:C\n"C7\\nc"G2FG"f7"A2A2|"do7\\nB7"F8BA"c\\nEsmaj7"G2G2|"f7\\nAs"ED"do\\n(As)"EF"G7"G2"c"C|]`;
+
       return(
         <>
           <h1>Nabożeństwo {title}</h1>
           <h2>Litania {flag ? "Loretańska" : "do Serca"}</h2>
-          <img src={"../nuty/"+title+".png"} />
+          <Abcjs
+            abcNotation={melodia_litanii}
+            engraverParams={{ responsive: 'resize' }}
+            />
           <h2>Antyfona</h2>
           {
             flag ?
@@ -312,7 +319,10 @@ function Song({page, setAddmode}){
           <h1>Gorzkie żale</h1>
           <h2>Pobudka</h2>
           <h4>in {gorzkie_tonacje[0]}</h4>
-          <img src="../nuty/gorzkieżale_pobudka.png" />
+          <Abcjs
+            abcNotation={`K:Dm\nL:1/8\n"d"FE"B"FD "g6"GF"A7"E2"d"D2|"F"AA"g"GG "B"AG"aso7"F2"A7"E2|"d"FE"B"FD "g7"GF"A7"E2"d"D2|]`}
+            engraverParams={{ responsive: 'resize' }}
+            />
           <ol className="lyrics">
           {[
             "Gorzkie żale, przybywajcie * Serca nasze przenikajcie.",
@@ -336,7 +346,10 @@ function Song({page, setAddmode}){
           ].map((val, i) => <p key={i}>{val}</p>)}
           <h2>Hymn</h2>
           <h4>in {gorzkie_tonacje[1]}</h4>
-          <img src="../nuty/gorzkieżale_hymn.png" />
+          <Abcjs
+            abcNotation={`K:Gm\nL:1/8\nM:4/4\nG2GFG2D2|EDCF (DC)B,2:|G2B_AF2G2|GFE_AF2G2|G2CF (DC)B,2|]`}
+            engraverParams={{ responsive: 'resize' }}
+            />
           <Lyrics raw={
             `1.\nŻal duszę ściska, serce boleść czuje, * Gdy słodki Jezus na śmierć się gotuje;
             Klęczy w Ogrójcu, gdy krwawy pot leje, * Me serce mdleje.
@@ -379,7 +392,10 @@ function Song({page, setAddmode}){
           } />
           <h2>Lament duszy nad cierpiącym Jezusem</h2>
           <h4>in {gorzkie_tonacje[2]}</h4>
-          <img src="../nuty/gorzkieżale_lament.png" />
+          <Abcjs
+            abcNotation={`K:D\nL:1/8\n(DE)F2|FFGF FEF2 | EEEF8EDE2F2|FFEDE2D2:|\n|:A2GF (EG)F2 :: D2DD (EG)F2 :: A2GF (EG)F2 :| FFEDE2D2 |]`}
+            engraverParams={{ responsive: 'resize' }}
+            />
           <Lyrics raw={
             `1.\nJezu, na zabicie okrutne, * Cichy Ba_ran_ku od wro_gów_ szukany, * Jezu mój kochany!
             2.\nJezu, za trzydzieści srebrników * Od niewdzięcz_ne_go ucznia _za_przedany, * Jezu mój kochany!
@@ -426,7 +442,10 @@ function Song({page, setAddmode}){
           } />
           <h2>Rozmowa duszy z Matką Bolesną</h2>
           <h4>in {gorzkie_tonacje[3]}</h4>
-          <img src="../nuty/gorzkieżale_rozmowa.png" />
+          <Abcjs
+            abcNotation={`K:Am\nL:1/4\nM:4/4\nE(D/F/)ED|FG(E/D/)C|GAFE|FG(E/D/)C|DD(D/E/)F|EDE2|DD(D/E/)F|EDC2|]`}
+            engraverParams={{ responsive: 'resize' }}
+            />
           <Lyrics raw={
             `1.\nAch! Ja Matka tak żałosna! * Boleść mnie ściska nieznośna. * Miecz me serce przenika.
             2.\nCzemuś, Matko ukochana, * Ciężko na sercu stroskana? * Czemu wszystka truchlejesz?
