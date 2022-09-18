@@ -30,7 +30,7 @@ switch($_GET['a_formula']){
 }
 
 if($inneokazje != ""): ?>
-okazja = <?php echo substr($inneokazje, -1); ?>;
+okazja = <?= substr($inneokazje, -1) ?>;
 <?php endif;
 
 /* kwerenda wszystkich pieśni */
@@ -43,7 +43,7 @@ while($a = $r->fetch_assoc()){
   $piesni[$a['tytuł']] = $a;
   ?>
 
-piesni["<?php echo $a['tytuł']; ?>"] = <?php echo json_encode($a); ?>
+piesni["<?= $a['tytuł'] ?>"] = <?= json_encode($a) ?>
 
 <?php
 }
@@ -66,9 +66,9 @@ czst["<?= $a['kolor'] ?>"]["<?= $a['part'] ?>"] = `<?= $a['nuty'] ?>`;
 
 /* zmienne window (globalne) */
 
-var a_identyfikator = "<?php echo $_GET['a_identyfikator']; ?>"
-var a_formula = "<?php echo $_GET['a_formula']; ?>";
-const czst_color = "<?php echo $_GET['a_czescistale']; ?>";
+var a_identyfikator = "<?= $_GET['a_identyfikator'] ?>"
+var a_formula = "<?= $_GET['a_formula'] ?>";
+const czst_color = "<?= $_GET['a_czescistale'] ?>";
 var preferencje_names = ["Wejście", "Przygotowanie darów", "Komunia", "Uwielbienie", "Zakończenie"];
 
 const ColorContext = React.createContext();
@@ -115,12 +115,21 @@ foreach($songlist as $name => $value){
   }
   if(preg_match("/Komunia/", $name)) $name = "Komunia";
 ?>
-songlist[<?php echo $i++; ?>] = ['<?php echo $name; ?>', `<?php echo $value; ?>`];
+songlist[<?= $i++ ?>] = ['<?= $name ?>', `<?= $value ?>`];
 <?php }
 unset($i);
 ?>
 
 /* KOMPONENTY */
+
+function Alternative({children}){
+  return(
+    <div className="alternative">
+      <h4>Wybierz jedno:</h4>
+      {children}
+    </div>
+  )
+}
 
 function Antyfona(props){
   return(
@@ -268,8 +277,7 @@ function Song({page, setAddmode}){
           {
             flag ?
             <>
-              <div className="alternative">
-                <h4>Wybierz jedno:</h4>
+              <Alternative>
                 <div className="alt_option">
                   <Antyfona
                     ksiadz="Módl się za nami, święta Boża rodzicielko"
@@ -282,7 +290,7 @@ function Song({page, setAddmode}){
                     wierni="Bo zmartwychwstał prawdziwie, Alleluja"
                   />
                 </div>
-              </div>
+              </Alternative>
               <p>Módlmy się: Panie nasz, Boże, dozwól nam, sługom swoim, cieszyć się trwałym zdrowiem duszy i ciała. I za wstawiennictwem Najświętszej Maryi zawsze dziewicy, uwolnij nas od doczesnych utrapień i obdarz wieczną radością, przez Chrystusa, Pana naszego...</p>
             </> :
             <>
@@ -468,8 +476,7 @@ function Song({page, setAddmode}){
             wierni="I z duchem Twoim"
           />
           <h2>Akt pokutny</h2>
-          <div className="alternative">
-            <h4>Wybierz jedno:</h4>
+          <Alternative>
             <div className="alt_group">
               <h4><strong>Kyrie</strong> zostaje</h4>
               <div className="alt_option">
@@ -498,7 +505,7 @@ function Song({page, setAddmode}){
                 <p><i>Aspersja</i></p>
               </div>
             </div>
-          </div>
+          </Alternative>
           <h1>Kyrie</h1>
           <CzescStala name={kiedy} />
           <Lyrics raw={
@@ -658,8 +665,7 @@ function Song({page, setAddmode}){
       return(
         <>
           <h1>Przemienienie</h1>
-          <div className="alternative">
-            <h4>Wybierz jedno:</h4>
+          <Alternative>
             <div className="alt_option">
               <Antyfona 
               ksiadz="Oto wielka tajemnica wiary"
@@ -684,7 +690,7 @@ function Song({page, setAddmode}){
               wierni="Panie, Ty nas wybawiłeś <br />przez krzyż i zmartwychwstanie swoje, <br />Ty jesteś zbawicielem świata"
               />
             </div>
-          </div>
+          </Alternative>
         </>
       )
     case "Ojcze nasz":
