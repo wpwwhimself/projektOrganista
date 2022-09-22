@@ -16,8 +16,6 @@ if(isset($_POST["s_sub"])){
   }
   $flag_edit = ($_POST["s_sub"] == "Edytuj");
 
-  die($_POST['s_nuty']);
-
   $q = ($flag_edit) ?
     "UPDATE pieśni SET
       klasa = $_POST[s_klasa],

@@ -203,8 +203,9 @@
 			
 		<div>
 			<script>
+			// dodawanie naco pieśniom, które nie mają odpowiednich
 			$("select.songchoose").change(function(){
-				$(this).css("background", ($("select.songchoose option:selected").text().match(/\[[A-Z]{1}\]/)) ? "gold" : "none"); 
+				$(this).css("background", ($(this).find("option:selected").text().match(/\[[A-Z]{1}\]/)) ? "gold" : "none"); 
 			});
 
 			const history = <?php include("songhistory.json"); ?>;
