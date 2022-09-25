@@ -91,6 +91,7 @@ $songlist = [
   "2. czytanie" => "czst",
   "Sekwencja wielkanocna" => (in_array($_GET["a_formula"], ["Wielkanoc", "zwykła wielkanocna"])) ? "Niech w święto radosne" : "",
   "Aklamacja" => $_GET["a_aklamacja"],
+  "Ewangelia" => "czst",
   "Credo" => ($_GET['a_formula'] == "ślubna") ? "" : "czst",
   "Ślub" => ($_GET['a_formula'] == "ślubna") ? "czst" : "",
   "Przygotowanie darów" => $_GET["a_piesn_dary"],
@@ -585,6 +586,24 @@ function Song({page, setAddmode}){
             }}>&#x2713;</a>
           </div>
           <h1>{kiedy}</h1>
+        </>
+      )
+    case "Ewangelia":
+      return(
+        <>
+          <Antyfona
+            ksiadz="Pan z wami"
+            wierni="I z duchem Twoim"
+            />
+          <Antyfona
+            ksiadz="Słowa Ewangelii według Świętego X"
+            wierni="Chwała Tobie, Panie"
+            />
+          <h1>{kiedy}</h1>
+          <Antyfona
+            ksiadz="Oto Słowo Pańskie"
+            wierni="Chwała Tobie, Chryste"
+            />
         </>
       )
     case "Credo":
