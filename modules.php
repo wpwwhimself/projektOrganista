@@ -871,9 +871,10 @@ function SongAdder({setAddmode, wheretoadd}){
   const [filters, setFilters] = React.useState({
     tutaj: true,
     standard: true,
-    niestandard: (window.a_formula.match(/zwykła/)),
+    niestandard: (!window.a_formula.match(/zwykła/)),
     maryjne: false,
-    serce: false
+    serce: false,
+    okresowe: (!window.a_formula.match(/zwykła/))
   });
   function toggleFilter(whichone){
     let f = { ...filters };
@@ -918,6 +919,7 @@ function SongAdder({setAddmode, wheretoadd}){
     if(filter.maryjne) f_arr.push(3);
     if(filter.serce) f_arr.push(4);
     if(filter.krzyż) f_arr.push(9);
+    if(filter.okresowe) f_arr.push(window.okazja);
 
     let f_piesni = [];
     for(const song in window.piesni){
