@@ -85,7 +85,8 @@ $songlist = [
   "Wejście" => $_GET["a_piesn_wejscie"],
   "Kyrie" => "czst",
   "Przed Gloria" => $_GET["a_piesn_przedgloria"],
-  "Gloria" => (in_array($_GET["a_formula"], ["Adwent", "Wielki Post"])) ? "" : "czst",
+  "Gloria" => (in_array($_GET["a_formula"], ["Adwent", "Wielki Post"])) ? "" :
+    ($_GET['a_formula'] == "Boże Narodzenie" ? "Gdy się Chrystus rodzi" : "czst"),
   "1. czytanie" => "czst",
   "Psalm" => $_GET["a_psalm"],
   "2. czytanie" => "czst",
@@ -147,14 +148,9 @@ function Antyfona(props){
 function CzescStala({name}){
   const color = React.useContext(ColorContext);
 
-  // if(name == "post_aklamacja"){
-  //   return <img className="czescstala" src={"../nuty/czescistale/"+name.toLowerCase().replace(/\s/g, "")+".png"} />;
-  // }else{
-  //   return <img className="czescstala" src={"../nuty/czescistale/"+color+"_"+name.toLowerCase().replace(/\s/g, "")+".png"} />;
-  // }
-  
-  if(name == "post_aklamacja"){
-    return <Abcjs
+  switch(name){
+    case "post_aklamacja":
+      return <Abcjs
               abcNotation={`K:D
 L:1/4
 "^555a"\
@@ -171,8 +167,24 @@ L:1/8
 BB (GF) D2 | FGE2E2 !fine! || G8 AGF2G2 | G8 FEF2E2 !D.C.! |]`}
               engraverParams={{ responsive: 'resize' }}
               />;
-  }else{
-    return <Abcjs
+    case "bn_aklamacja":
+      return <Abcjs
+              abcNotation={`K:F
+L:1/8
+"^Na Boże Narodzenie"\
+CCF2F2|EFG2G2|ABc2B2|AGF4 !fine!||F8G2F2|F8EFD2C2!D.C.!||`}
+              engraverParams={{ responsive: 'resize' }}
+              />;
+    case "bn_psalm":
+      return <Abcjs
+              abcNotation={`K:F
+L:1/8
+"^Na Boże Narodzenie"\
+C2DEF2F2|GBAGG2F2 !fine!|| A8Bcc2G2|F8GAA2E2|D8EFC2F2|G8FEF2F2 !D.C.! |]`}
+              engraverParams={{ responsive: 'resize' }}
+              />;
+    default:
+      return <Abcjs
               abcNotation={window.czst[color][name.toLowerCase().replace(/\s/g, "")]}
               engraverParams={{ responsive: 'resize' }}
               />
@@ -546,23 +558,46 @@ function Song({page, setAddmode}){
             }}>&#x2713;</a>
           </div>
           <h1>Gloria</h1>
-          <CzescStala name={kiedy} />
-          <Lyrics raw={
-            `Chwała na wysokości Bogu
-            A na ziemi pokój ludziom dobrej woli
-            Chwalimy Cię • Błogosławimy Cię
-            Wielbimy Cię • Wysławiamy Cię
-            Dzięki Ci składamy • Bo wielka jest chwała Twoja
-            Panie Boże, królu nieba • Boże, Ojcze wszechmogący
-            Panie, Synu jednorodzony • Jezu Chryste
-            Panie Boże, Baranku Boży • Synu Ojca
-            Który gładzisz grzechy świata • Zmiłuj się nad nami
-            Który gładzisz grzechy świata • Przyjm błagania nasze
-            Który siedzisz po prawicy Ojca • Zmiłuj się nad nami
-            Albowiem tylko Tyś jest święty • Tylko Tyś jest Panem
-            Tylko Tyś najwyższy • Jezu Chryste
-            Z Duchem Świętym, w chwale Boga Ojca, amen`
-          } />         
+          {
+            window.a_formula == "Boże Narodzenie" ?
+            <>
+              <h2>{title.toUpperCase()}</h2>
+              <h4>{
+                [
+                  window.piesni["Gdy się Chrystus rodzi"]['katsiedlecki'],
+                  window.piesni["Gdy się Chrystus rodzi"]['nr'],
+                  "in " + window.piesni["Gdy się Chrystus rodzi"]['tonacja'],
+                ].join(" • ")
+              }</h4>
+              {
+                window.piesni["Gdy się Chrystus rodzi"]["nuty"] !== null &&
+                <Abcjs
+                  abcNotation={window.piesni["Gdy się Chrystus rodzi"]["nuty"]}
+                  engraverParams={{ responsive: 'resize' }}
+                  />
+              }
+              <Lyrics raw={window.piesni["Gdy się Chrystus rodzi"]['tekst']} />
+            </> :
+            <>
+              <CzescStala name={kiedy} />
+              <Lyrics raw={
+                `Chwała na wysokości Bogu
+                A na ziemi pokój ludziom dobrej woli
+                Chwalimy Cię • Błogosławimy Cię
+                Wielbimy Cię • Wysławiamy Cię
+                Dzięki Ci składamy • Bo wielka jest chwała Twoja
+                Panie Boże, królu nieba • Boże, Ojcze wszechmogący
+                Panie, Synu jednorodzony • Jezu Chryste
+                Panie Boże, Baranku Boży • Synu Ojca
+                Który gładzisz grzechy świata • Zmiłuj się nad nami
+                Który gładzisz grzechy świata • Przyjm błagania nasze
+                Który siedzisz po prawicy Ojca • Zmiłuj się nad nami
+                Albowiem tylko Tyś jest święty • Tylko Tyś jest Panem
+                Tylko Tyś najwyższy • Jezu Chryste
+                Z Duchem Świętym, w chwale Boga Ojca, amen`
+              } />
+            </>
+          }         
         </>
       )
     case "1. czytanie":
@@ -813,6 +848,12 @@ function Song({page, setAddmode}){
           {(kiedy == "Aklamacja" && window.a_formula == "Wielki Post") ?
             <CzescStala name="post_aklamacja" /> :
             <CzescStala name={kiedy} />
+          }
+          {(window.a_formula == "Boże Narodzenie") &&
+            (kiedy == "Aklamacja" ?
+              <CzescStala name="bn_aklamacja" /> :
+              <CzescStala name="bn_psalm" />
+            )
           }
           <div className="psalm">
 
