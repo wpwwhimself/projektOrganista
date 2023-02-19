@@ -4,6 +4,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
 	<link rel=stylesheet type='text/css' href='style.css'>
+	<style>
+	@font-face{
+		font-family: "Krona One";
+		src: url("offlinecore/KronaOne-Regular.ttf");
+	}
+	@font-face{
+		font-family: "Raleway";
+		src: url("offlinecore/Raleway-Regular.ttf");
+	}
+	</style>
 	<title>Śpiewnik Szybkiego Szukania</title>
 	<script src="offlinecore/jquery-3.6.1.min.js"></script>
 	<script>

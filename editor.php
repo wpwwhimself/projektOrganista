@@ -38,6 +38,16 @@ if(isset($_POST["s_sub"])){
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <link rel=stylesheet type='text/css' href='style.css'>
+  <style>
+	@font-face{
+		font-family: "Krona One";
+		src: url("offlinecore/KronaOne-Regular.ttf");
+	}
+	@font-face{
+		font-family: "Raleway";
+		src: url("offlinecore/Raleway-Regular.ttf");
+	}
+	</style>
   <title>Edytor pieśni | SzSzSz</title>
 
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
