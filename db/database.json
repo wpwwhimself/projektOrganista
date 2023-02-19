@@ -802,12 +802,12 @@
     "Maryjo, Kr\u00f3lowo Polski": {
         "tytu\u0142": "Maryjo, Kr\u00f3lowo Polski",
         "klasa": "3",
-        "katsiedlecki": "",
+        "katsiedlecki": null,
         "nr": "558",
-        "tonacja": "Es",
+        "tonacja": "D \/ Es",
         "naco": "0\/0\/0\/0\/1\/0",
-        "tekst": "Maryjo, Kr\u00f3lowo Polski =\n= Jestem przy Tobie, pami\u0119tam\nJestem przy Tobie, czuwam =",
-        "nuty": null
+        "tekst": "Maryjo, Kr\u00f3lowo Polski\r\nJestem przy Tobie, pami\u0119tam\r\nJestem przy Tobie, czuwam",
+        "nuty": "K:Eb\r\nM:C\r\nL:1\/4\r\nB,|EDCD\/E\/|F2EE|AGFG\/A\/|B2G2|:cF\/G\/AB\/c\/|B2G2|1AC\/D\/EF|G2G2:|2AC\/D\/EG|F2E|]\r\nK:D\r\nM:3\/4\r\nA,DF|AFD|A3|A3|B,EG|BGE|D3|F3|EEE|ECD|E3|E3|ABA|AGE|A3|d3|A3|A3|]"
     },
     "Mi\u0142o\u015b\u0107 Twa": {
         "tytu\u0142": "Mi\u0142o\u015b\u0107 Twa",

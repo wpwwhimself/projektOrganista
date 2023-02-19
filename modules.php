@@ -538,7 +538,10 @@ function Song({page, setAddmode}){
               </div>
             </div>
           </Alternative>
-          <h1>Kyrie</h1>
+          <div style={{ position: "relative" }}>
+            <h1>Kyrie</h1>
+            <SongAddButton page={page} kiedy={kiedy} setAddmode={setAddmode} />
+          </div>
           <CzescStala name={kiedy} />
           <Lyrics raw={
             `Panie, zmiłuj się nad nami
@@ -634,6 +637,9 @@ function Song({page, setAddmode}){
             ksiadz="Słowa Ewangelii według Świętego X"
             wierni="Chwała Tobie, Panie"
             />
+          <div style={{ position: "relative" }}>
+            <SongAddButton page={page} kiedy={kiedy} setAddmode={setAddmode} />
+          </div>
           <h1>{kiedy}</h1>
           <Antyfona
             ksiadz="Oto Słowo Pańskie"
@@ -880,11 +886,7 @@ function Song({page, setAddmode}){
 
       return(
         <>
-          <div className="buttoncase abs_right">
-            {kiedy == "Komunia" && <a className="button" href="#uwielbienie">U</a>}
-            {kiedy == "Uwielbienie" && <a id="uwielbienie"></a>}
-            <a className="button" onClick={() => setAddmode(page)}>+</a>
-          </div>
+          <SongAddButton page={page} kiedy={kiedy} setAddmode={setAddmode} />
           <div className="eraserButton buttoncase abs_left">
             <a className="button e_first">–</a>
             <a className="button e_second" onClick={() => {
@@ -908,6 +910,16 @@ function Song({page, setAddmode}){
   }
 }
 
+function SongAddButton({page, kiedy, setAddmode}){
+  return(
+    <div className="buttoncase abs_right">
+      {kiedy == "Komunia" && <a className="button" href="#uwielbienie">U</a>}
+      {kiedy == "Uwielbienie" && <a id="uwielbienie"></a>}
+      <a className="button" onClick={() => setAddmode(page)}>+</a>
+    </div>
+  )
+}
+
 function SongAdder({setAddmode, wheretoadd}){
   const [filters, setFilters] = React.useState({
     tutaj: true,
@@ -923,7 +935,8 @@ function SongAdder({setAddmode, wheretoadd}){
     setFilters(f);
   }
 
-  const whereami = window.songlist[Math.max(wheretoadd - 1, 0)][0];
+  let whereami = window.songlist[Math.max(wheretoadd - 1, 0)][0];
+  if(window.songlist[Math.max(wheretoadd - 1, 0)][1] == "czst") whereami = "Po " + whereami;
   const whereami_kody = {
     "Wejście" : /^1\/.\/.\/.\/./,
     "Przygotowanie darów" : /^.\/1\/.\/.\/./,
